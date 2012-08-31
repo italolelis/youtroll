@@ -1,3 +1,7 @@
+protected/runtime
+assets
+*.DS_Store
+*.Trash
 *.vo
 *.glob
 *.v.d
