@@ -1,9 +1,0 @@
-h1. "Youtroll"
-
-h2. Sobre
-
-O Youtroll é um projeto fechado de conclusão de curso para a Faculdade Estácio iDez.
-
-h2. Para a Equipe
-
-* Encontrar e "reportar bugs":https://github.com/italolelis/youtroll/issues
