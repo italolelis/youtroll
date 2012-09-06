@@ -106,7 +106,7 @@
         <header class="header_silverbackground">
             <div class="menu">
                 <!-- BEGIN logo -->
-                <a class="logo" href="index.html">
+                <a class="logo" href="<?= Yii::app()->baseUrl ?>">
                     <?= CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/logo.png", "logo") ?>
                 </a>
                 <!-- /END logo -->
@@ -114,7 +114,7 @@
                 <div class="blockeasing-wrapp">
                     <h6 class="blockeasing-header">Menu</h6>
                     <ul class="blockeasing">
-                        <li class="current"><a href="index.html">HOME</a>
+                        <li class="current"><a href="index.html"><?= Yii::t("app", "HOME") ?></a>
                             <ul>
                                 <li><a href="index.html">SLIDE 1</a>
                                     <ul>
@@ -133,7 +133,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="our-team.html">OUR TEAM</a></li>
+                        <li><a href="#">SOBRE</a></li>
                         <li><a href="blog.html">BLOG</a>
                             <ul>
                                 <li><a href="blog_post.html">POST EXAMPLE</a></li>
@@ -271,13 +271,11 @@
 
                 <!--loverbar menu-->
                 <ul class="footer-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About us</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="icons.html">Icons</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="<?= Yii::app()->baseUrl ?>">Home</a></li>
+                    <li><a href="<?= Yii::app()->createAbsoluteUrl("site/about") ?>"><?= Yii::t("app", "Sobre") ?></a></li>
+                    <li><a href="<?= Yii::app()->createAbsoluteUrl("site/privacy") ?>"><?= Yii::t("app", "Privacidade") ?></a></li>
+                    <li><a href="<?= Yii::app()->createAbsoluteUrl("site/terms") ?>"><?= Yii::t("app", "Termos de Uso") ?></a></li>
+                    <li><a href="<?= Yii::app()->createAbsoluteUrl("site/help") ?>"><?= Yii::t("app", "Ajuda") ?></a></li>
                 </ul>
 
                 <div class="footer-copyright">All rights reserved - Connect Studios 2012</div>

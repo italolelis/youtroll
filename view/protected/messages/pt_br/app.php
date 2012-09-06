@@ -5,10 +5,10 @@ return array(
 		'name' => 'You troll',
 	
 	// Páginas Gerais - Visíveis a todos os usuários
-		'home' => 'Página Inicial',
+		'HOME' => 'Página Inicial',
 	
 	// Páginas Abertas - Visíveis apenas para os visitantes
-
+    
 	
 	// Páginas Restritas - Vísivéis apenas para os usuários autenticados
 	
