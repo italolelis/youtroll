@@ -29,20 +29,19 @@ class LoginForm extends CFormModel
         );
     }
 
-    // O authenticate ainda naum funfa
     public function authenticate($attribute, $params)
     {
         if (!$this->hasErrors()) {
             $identity = new UserIdentity($this->username, $this->password);
 
             if ($identity->authenticate()) {
-                $duration = $this->rememberMe ? 3600 * 24 * 30 : 0;
-
-                Yii::app()->user->login($identity, $duration);
-            } else {
-                //addError
+                Yii::app()->user->login($identity, $this->rememberMe ? 3600 * 24 * 30 : 0);
+                
+                return true;
             }
         }
+        
+        return false;
     }
 
 }

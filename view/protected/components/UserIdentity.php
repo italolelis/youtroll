@@ -34,7 +34,8 @@ class UserIdentity extends CUserIdentity
 
     private function authenticateUser()
     {
-        // Implementar
+        $api = new PersistenceServer();
+        return $api->connect('', 'POST', array('username' => $this->username, 'password' => $this->password));
     }
 
 }
