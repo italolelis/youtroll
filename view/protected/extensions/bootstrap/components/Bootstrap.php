@@ -28,6 +28,11 @@ class Bootstrap extends CApplicationComponent
     // todo: add the affix plugin in version 2.1.0
 
 	/**
+	 * @var boolean to register the Bootstrap in AJAX requests
+	 * Defaults to true.
+	 */
+	public $ajaxCssImport = true;
+	/**
 	 * @var boolean whether to register the Bootstrap core CSS (bootstrap.min.css).
 	 * Defaults to true.
 	 */
@@ -71,24 +76,26 @@ class Bootstrap extends CApplicationComponent
 	 * Initializes the component.
 	 */
 	public function init()
-	{
+	{	    
 		// Register the bootstrap path alias.
 		if (Yii::getPathOfAlias('bootstrap') === false)
 			Yii::setPathOfAlias('bootstrap', realpath(dirname(__FILE__).'/..'));
+		
+		if(($this->ajaxCssImport && Yii::app()->request->isAjaxRequest) || !Yii::app()->request->isAjaxRequest ) {
+		    // Prevents the extension from registering scripts and publishing assets when ran from the command line.
+		    if (Yii::app() instanceof CConsoleApplication)
+			    return;
 
-		// Prevents the extension from registering scripts and publishing assets when ran from the command line.
-		if (Yii::app() instanceof CConsoleApplication)
-			return;
+		    if ($this->coreCss !== false)
+			    $this->registerCoreCss();
 
-		if ($this->coreCss !== false)
-			$this->registerCoreCss();
+		    if ($this->responsiveCss !== false)
+			    $this->registerResponsiveCss();
 
-		if ($this->responsiveCss !== false)
-			$this->registerResponsiveCss();
-
-		if ($this->yiiCss !== false)
-			$this->registerYiiCss();
-
+		    if ($this->yiiCss !== false)
+			    $this->registerYiiCss();
+		}
+		
 		if ($this->enableJS !== false)
 			$this->registerCoreScripts();
 

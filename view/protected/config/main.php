@@ -44,7 +44,7 @@ return array(
         ),
         
         'bootstrap'=>array(
-            'class'=>'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
+            'class'=>'application.extensions.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
          ),
         
         'user' => array(
