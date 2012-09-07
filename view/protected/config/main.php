@@ -1,3 +1,4 @@
+
 <?php
 
 // Yii::setPathOfAlias('local','path/to/local-folder');
@@ -8,32 +9,29 @@ return array(
     'defaultController' => 'site',
     'sourceLanguage' => 'en_us',
     'preload' => array(
-        'log','bootstrap',
+        'log', 'bootstrap',
     ),
-    
     'import' => array(
         'application.components.Controller',
         'application.models.forms.*',
         'application.models.helpers.*',
     ),
-    
     'modules' => array(
         //*
         'gii' => array(
             'class' => 'system.gii.GiiModule',
             'password' => 'qwerty',
-            'ipFilters' => array('*'),'generatorPaths'=>array(
+            'ipFilters' => array('*'), 'generatorPaths' => array(
                 'bootstrap.gii',
-             ),
+            ),
         ),
+        'admin'
     //*/
     ),
-    
     'components' => array(
         'errorHandler' => array(
             'errorAction' => 'site/error',
         ),
-        
         'urlManager' => array(
             'urlFormat' => 'path',
             'showScriptName' => false,
@@ -42,20 +40,16 @@ return array(
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>'
             ),
         ),
-        
-        'bootstrap'=>array(
-            'class'=>'application.extensions.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
-         ),
-        
+        'bootstrap' => array(
+            'class' => 'application.extensions.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
+        ),
         'user' => array(
             'allowAutoLogin' => true,
         ),
-        
         'widgetFactory' => array(
             'widgets' => array(
             ),
         ),
-        
         'log' => array(
             'class' => 'CLogRouter',
             'routes' => array(
@@ -66,6 +60,5 @@ return array(
             ),
         ),
     ),
-    
     'params' => require(dirname(__FILE__) . '/params.php'),
 );
