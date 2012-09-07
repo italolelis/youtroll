@@ -30,7 +30,8 @@
         <!-- JQUERY -->
         <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/resources/js/jquery-1.7.2.min.js", CClientScript::POS_HEAD); ?>
         <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/resources/js/jquery.easing.1.3.js"); ?>
-
+        <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/resources/js/app/jquery-login.js"); ?>
+        
         <!-- JQUERY_UI -->
         <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/resources/js/jquery.ui.core.js"); ?>
 
@@ -158,18 +159,44 @@
                         
                     </ul>
                     <div id="log">
-                        
-                        
-                        <?=CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/login-icon.png", "logo",array('class'=>'login'))?>
+                        <?=CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/login-icon.png", "Login",
+                        array('class'=>'login','data-toggle'=>'modal','data-target'=>'#myModal',
+                            'rel'=>'tooltip','title'=>"Login"))?>
                     </div>
                 </div>
                 <div class="clear"></div>
-                
-            </div> 
+                <?=$this->renderPartial('webroot.themes.'.Yii::app()->theme->name.'.views.layouts.'.Yii::app()->layout.'.modais.loginForm')?>    
             
         </header>
         <!-- /END menu -->
+        <?php $this->beginWidget('bootstrap.widgets.TbModal', array('id'=>'myModal')); ?>
+ 
+        <div class="modal-header">
+            <a class="close" data-dismiss="modal">&times;</a>
+            <h4>Modal header</h4>
+        </div>
 
+        <div class="modal-body">
+            <p>One fine body...</p>
+        </div>
+
+        
+        <div class="modal-footer">
+            <?php $this->widget('bootstrap.widgets.TbButton', array(
+                'type'=>'primary',
+                'label'=>'Save changes',
+                'url'=>'#',
+                'htmlOptions'=>array('data-dismiss'=>'modal'),
+            )); ?>
+            <?php $this->widget('bootstrap.widgets.TbButton', array(
+                'label'=>'Close',
+                'url'=>'#',
+                'htmlOptions'=>array('data-dismiss'=>'modal'),
+            )); ?>
+        </div>
+ 
+<?php $this->endWidget(); ?>
+        
         <?php echo $content ?>
 
         <!-- BEGIN footer -->

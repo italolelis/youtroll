@@ -1,17 +1,3 @@
-
-<?php
-Yii::app()->user->setFlash('success', '<strong>Well done!</strong> You successfully read this important alert message.');
-$this->widget('bootstrap.widgets.TbAlert', array(
-        'block'=>true, // display a larger alert block?
-        'fade'=>true, // use transitions?
-        'closeText'=>'&times;', // close link text - if set to false, no close link is displayed
-        'alerts'=>array( // configurations per alert type
-            'success'=>array('block'=>true, 'fade'=>true, 'closeText'=>'&times;'), // success, info, warning, error or danger
-        ),
-    ));
-
-
-?>
 <!-- BEGIN TIMELINE -->
 <div class="timelineLight tl">
     <div class="item" data-id="04/06/2012" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit...">

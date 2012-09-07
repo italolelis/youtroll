@@ -9,7 +9,12 @@ return array(
     'defaultController' => 'site',
     'sourceLanguage' => 'en_us',
     'preload' => array(
+<<<<<<< HEAD
         'log', 'bootstrap',
+=======
+        'log',
+        'bootstrap',
+>>>>>>> Login(Sent to finish Fabiano)
     ),
     'import' => array(
         'application.components.Controller',
@@ -21,7 +26,12 @@ return array(
         'gii' => array(
             'class' => 'system.gii.GiiModule',
             'password' => 'qwerty',
+<<<<<<< HEAD
             'ipFilters' => array('*'), 'generatorPaths' => array(
+=======
+            'ipFilters' => array('*'),
+            'generatorPaths'=>array(
+>>>>>>> Login(Sent to finish Fabiano)
                 'bootstrap.gii',
             ),
         ),
@@ -40,9 +50,17 @@ return array(
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>'
             ),
         ),
+<<<<<<< HEAD
         'bootstrap' => array(
             'class' => 'application.extensions.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
         ),
+=======
+        
+        'bootstrap'=>array(
+            'class'=>'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
+         ),
+        
+>>>>>>> Login(Sent to finish Fabiano)
         'user' => array(
             'allowAutoLogin' => true,
         ),

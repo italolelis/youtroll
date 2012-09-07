@@ -657,14 +657,15 @@ a.acc-trigger.active {background:#f6f7f9 url(images/elements/accordion-arrow.png
 
 /***************LOGIN***************/
 
-.login:hover{
-   cursor:pointer;
-}
+.login:hover{cursor:pointer;}
 
-#log{
-   float: right;
-}
+#log{float: right;}
 
-.logo{
-    padding-right: 130px;
+.logo{padding-right: 130px;}
+
+#load-login{
+display: none;
+float: right;
+margin-right: 289px;
+margin-top: 20px;
 }
