@@ -155,13 +155,16 @@
                             </ul>
                         </li>
                         <li><a href="contact.html">CONTACT</a></li>
-                        <?=CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/login-icon.png", "logo",array('class'=>'login'))?>
+                        
                     </ul>
-                    
+                    <div id="log">
+                        <?=CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/login-icon.png", "logo",array('class'=>'login'))?>
+                    </div>
                 </div>
-                
                 <div class="clear"></div>
+                
             </div> 
+            
         </header>
         <!-- /END menu -->
 
