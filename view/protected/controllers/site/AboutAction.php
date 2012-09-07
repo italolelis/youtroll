@@ -1,9 +1,11 @@
 <?php
 
-class AboutAction extends CAction {
+class AboutAction extends CAction
+{
 
-	public function run() {
-		$this->controller->render('about');
-	}
+    public function run()
+    {
+        $this->controller->render('about');
+    }
 
 }

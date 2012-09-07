@@ -1,24 +1,24 @@
 .center {
-	margin-left: auto;
+    margin-left: auto;
     margin-right: auto;
 }
 
 .noMargin {
-	margin: 0px;
+    margin: 0px;
 }
 
 .noPadding {
-	padding: 0px;
+    padding: 0px;
 }
 
 .floatLeft {
-	float: left;
+    float: left;
 }
 
 .floatRight {
-	float: right;
+    float: right;
 }
 
 .displayNone {
-	display: none;
+    display: none;
 }

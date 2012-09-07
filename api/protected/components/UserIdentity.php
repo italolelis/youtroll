@@ -5,32 +5,36 @@
  * It contains the authentication method that checks if the provided
  * data can identity the user.
  */
-class UserIdentity extends CUserIdentity {
+class UserIdentity extends CUserIdentity
+{
 
-	private $_id;
+    private $_id;
 
-	public function getId() {
-		return $this->_id;
-	}
-	
-	/**
-	 * Authenticates a user.
-	 * The example implementation makes sure if the username and password
-	 * are both 'demo'.
-	 * In practical applications, this should be changed to authenticate
-	 * against some persistent user identity storage (e.g. database).
-	 * @return boolean whether authentication succeeds.
-	 */
-	public function authenticate() {
-		if ($this->authenticateUser()) {
-			return true;
-		} else {
-			return false;
-		}
-	}
+    public function getId()
+    {
+        return $this->_id;
+    }
 
-	private function authenticateUser() {
-		// Implementar
-	}
+    /**
+     * Authenticates a user.
+     * The example implementation makes sure if the username and password
+     * are both 'demo'.
+     * In practical applications, this should be changed to authenticate
+     * against some persistent user identity storage (e.g. database).
+     * @return boolean whether authentication succeeds.
+     */
+    public function authenticate()
+    {
+        if ($this->authenticateUser()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private function authenticateUser()
+    {
+        // Implementar
+    }
 
 }

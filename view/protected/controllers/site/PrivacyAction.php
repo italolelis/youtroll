@@ -1,9 +1,11 @@
 <?php
 
-class PrivacyAction extends CAction {
+class PrivacyAction extends CAction
+{
 
-	public function run() {
-		$this->controller->render('about');
-	}
+    public function run()
+    {
+        $this->controller->render('about');
+    }
 
 }

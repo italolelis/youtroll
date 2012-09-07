@@ -1,9 +1,11 @@
 <?php
 
-class HelpAction extends CAction {
+class HelpAction extends CAction
+{
 
-	public function run() {
-		$this->controller->render('about');
-	}
+    public function run()
+    {
+        $this->controller->render('about');
+    }
 
 }
