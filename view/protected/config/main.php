@@ -23,7 +23,8 @@ return array(
             'class' => 'system.gii.GiiModule',
             'password' => 'qwerty',
             'ipFilters' => array('*'),'generatorPaths'=>array(
-		'bootstrap.gii'),
+                'bootstrap.gii',
+             ),
         ),
     //*/
     ),
@@ -31,8 +32,6 @@ return array(
     'components' => array(
         'errorHandler' => array(
             'errorAction' => 'site/error',
-            'bootstrap'=>array(
-        'class'=>'ext.bootstrap.components.Bootstrap',),
         ),
         
         'urlManager' => array(
@@ -43,6 +42,10 @@ return array(
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>'
             ),
         ),
+        
+        'bootstrap'=>array(
+            'class'=>'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
+         ),
         
         'user' => array(
             'allowAutoLogin' => true,

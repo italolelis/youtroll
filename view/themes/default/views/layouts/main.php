@@ -158,6 +158,8 @@
                         
                     </ul>
                     <div id="log">
+                        
+                        
                         <?=CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/login-icon.png", "logo",array('class'=>'login'))?>
                     </div>
                 </div>
