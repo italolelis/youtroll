@@ -4,7 +4,6 @@
 
 return array(
 	'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-	'theme' => 'default',
 	'defaultController' => 'site',
 	'sourceLanguage' => 'en_us',
 	'preload' => array(
