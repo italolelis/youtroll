@@ -10,4 +10,10 @@ class DefaultController extends Controller
         $this->render('index');
     }
 
+    public function actionLogin()
+    {
+        $this->layout = "login";
+        $this->render("login");
+    }
+
 }
