@@ -8,6 +8,7 @@ class Controller extends CController
         // Alterar
 
         Yii::app()->name = Yii::t('app', 'name');
+        Yii::app()->language = 'pt_br'; // Alterar
     }
 
 }
