@@ -8,7 +8,7 @@ return array(
     'defaultController' => 'site',
     'sourceLanguage' => 'en_us',
     'preload' => array(
-        'log',
+        'log','bootstrap',
     ),
     
     'import' => array(
@@ -22,7 +22,8 @@ return array(
         'gii' => array(
             'class' => 'system.gii.GiiModule',
             'password' => 'qwerty',
-            'ipFilters' => array('*'),
+            'ipFilters' => array('*'),'generatorPaths'=>array(
+		'bootstrap.gii'),
         ),
     //*/
     ),
@@ -30,6 +31,8 @@ return array(
     'components' => array(
         'errorHandler' => array(
             'errorAction' => 'site/error',
+            'bootstrap'=>array(
+        'class'=>'ext.bootstrap.components.Bootstrap',),
         ),
         
         'urlManager' => array(
