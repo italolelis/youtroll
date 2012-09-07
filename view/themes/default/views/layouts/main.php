@@ -112,6 +112,7 @@
                 <!-- /END logo -->
 
                 <div class="blockeasing-wrapp">
+                    
                     <h6 class="blockeasing-header">Menu</h6>
                     <ul class="blockeasing">
                         <li class="current"><a href="index.html"><?= Yii::t("app", "HOME") ?></a>
@@ -154,8 +155,11 @@
                             </ul>
                         </li>
                         <li><a href="contact.html">CONTACT</a></li>
+                        <?=CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/login-icon.png", "logo",array('class'=>'login'))?>
                     </ul>
+                    
                 </div>
+                
                 <div class="clear"></div>
             </div> 
         </header>
