@@ -34,5 +34,19 @@ class ApplicationHelper extends CFormModel
             ApplicationHelper::throwException(500);
         }
     }
+    
+    public static function ajaxResponse($response) {
+	if($response) {
+	    if (Yii::app()->request->isAjaxRequest) {
+		if(is_array($response)) {
+		    echo htmlspecialchars(CJSON::encode($response), ENT_NOQUOTES);
+		} else {
+		    echo $response;
+		}
+		
+		Yii::app()->end();
+	    }
+	}
+    }
 
 }
