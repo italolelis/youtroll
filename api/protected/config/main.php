@@ -51,6 +51,12 @@ return array(
 			'allowAutoLogin' => true,
 		),
 
+                'db'=>array(
+                    'connectionString'=>'mysql:host=localhost;dbname=youtroll_db',
+                    'username'=>'root',
+                    'password'=>'',
+                ),
+            
 		'widgetFactory'=>array(
 			'widgets'=>array(
 
