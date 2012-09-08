@@ -28,4 +28,19 @@ class ApiController extends Controller
         ApplicationHelper::throwException(403);
     }
 
+    public function actionError()
+    {
+        $error = Yii::app()->errorHandler->error;
+
+        if ($error) {
+            $errorMessage = ApplicationHelper::getStatusMessage($error['code']);
+
+            echo $errorMessage;
+
+            Yii::app()->end();
+        } else {
+            ApplicationHelper::throwException(403);
+        }
+    }
+
 }

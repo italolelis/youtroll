@@ -1,5 +1,7 @@
 <?php
 
+Yii::import("application.components.PersistenceServer");
+
 class UserController extends Controller
 {
 
@@ -9,14 +11,10 @@ class UserController extends Controller
     {
         $persistent = new PersistenceServer();
         $users = $persistent->connect("user", "GET");
+
         $this->render('index', array(
             'model' => $users
         ));
-    }
-
-    public function actionLogin()
-    {
-        
     }
 
 }

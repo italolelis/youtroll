@@ -7,12 +7,11 @@ class UserController extends Controller
     {
         $users = User::model()->findAll();
         $message = array();
-        
+
         if (!empty($users)) {
             $message = $users;
         }
-        
-        return CJSON::encode($message);
+        ApplicationHelper::ajaxResponse($message);
     }
 
     public function actionCreate()
@@ -44,7 +43,7 @@ class UserController extends Controller
             $message = array();
 
             $user = User::model()->findByPk($id);
-            $user->setAttributes($_POST['User']);
+            $user->setAttributes(ApplicationHelper::getRequest("POST", "User"));
 
             if ($user->save()) {
                 $message = array(

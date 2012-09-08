@@ -1,5 +1,5 @@
 <?php
-
+Yii::import('ext.rest-curl.CURL');
 /**
  * Yii RESTClient Components
  * 
@@ -40,7 +40,7 @@ class RESTClient extends CComponent {
     private $http_pass = null;
     private $response_string;
     private $_curl;
-    private $_headers;
+    private $_headers = array();
 
     /**
      * Logs a message.

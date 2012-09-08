@@ -29,3 +29,97 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/youtroll/]
 ---
+2012/09/08 19:50:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "index" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/api/user
+---
+2012/09/08 19:52:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "index" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/api/user
+---
+2012/09/08 19:53:36 [error] [php] include(User.php): failed to open stream: No such file or directory (C:\xampp\htdocs\youtroll\yii\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(8): spl_autoload_call()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionList()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/user
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (8)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/08 19:55:16 [error] [exception.CHttpException.500] exception 'CHttpException' with message 'Erro Interno do Servidor' in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:32
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php(51): ApplicationHelper::throwException(500)
+#1 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(14): ApplicationHelper::ajaxResponse(Array)
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionList()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('list')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/list')
+#8 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#10 {main}
+REQUEST_URI=/youtroll/api/user
+---
+2012/09/08 19:57:18 [error] [exception.CHttpException.500] exception 'CHttpException' with message 'Erro Interno do Servidor' in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:32
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php(51): ApplicationHelper::throwException(500)
+#1 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(14): ApplicationHelper::ajaxResponse(Array)
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionList()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('list')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/list')
+#8 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#10 {main}
+REQUEST_URI=/youtroll/api/user
+---
+2012/09/08 19:57:34 [error] [exception.CHttpException.500] exception 'CHttpException' with message 'Erro Interno do Servidor' in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:32
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php(51): ApplicationHelper::throwException(500)
+#1 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(14): ApplicationHelper::ajaxResponse(Array)
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionList()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('list')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/list')
+#8 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#10 {main}
+REQUEST_URI=/youtroll/api/user
+---
+2012/09/08 19:57:45 [error] [exception.CHttpException.500] exception 'CHttpException' with message 'Erro Interno do Servidor' in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:32
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php(51): ApplicationHelper::throwException(500)
+#1 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(14): ApplicationHelper::ajaxResponse(Array)
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionList()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('list')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/list')
+#8 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#10 {main}
+REQUEST_URI=/youtroll/api/user
+---
