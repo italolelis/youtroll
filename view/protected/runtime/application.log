@@ -1545,3 +1545,612 @@ REQUEST_URI=/youtroll/view/admin/user
 in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (22)
 in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
 in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 20:47:11 [error] [php] Undefined variable: user (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (22)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 20:48:25 [error] [php] Undefined variable: user (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (23)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 20:55:00 [error] [php] Undefined variable: user (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (22)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 20:55:19 [error] [php] Undefined variable: user (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (22)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:04:22 [error] [php] Undefined variable: user (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (22)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:05:15 [error] [php] Undefined variable: user (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (22)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:06:06 [error] [php] Undefined variable: user (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (22)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:06:35 [error] [php] Undefined variable: user (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (23)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:07:46 [error] [php] Undefined variable: user (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (23)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:09:41 [error] [php] Undefined variable: m (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:23)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (23)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:10:00 [error] [php] Undefined variable: m (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:7)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (7)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:11:29 [error] [php] Undefined variable: m (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:19)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (19)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:11:59 [error] [php] Undefined variable: m (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:19)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (19)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:12:14 [error] [php] Undefined variable: m (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:19)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (19)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:12:47 [error] [php] Undefined variable: m (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:7)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (7)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:13:17 [error] [php] Undefined variable: m (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (22)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:13:40 [error] [php] Undefined variable: m (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:19)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (19)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:15:27 [error] [php] Undefined variable: m (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:20)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (20)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:16:23 [error] [php] Undefined variable: m (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:19)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (19)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:17:33 [error] [php] Undefined variable: m (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:20)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(17): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (20)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (17)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:17:57 [error] [php] Undefined variable: m (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:20)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(18): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (20)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (18)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:21:47 [error] [php] Undefined variable: m (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:19)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(18): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (19)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (18)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:22:30 [error] [php] Undefined variable: m (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:5)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(18): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (5)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (18)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:23:54 [error] [php] Undefined property: stdClass::$usr_name (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(18): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (22)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (18)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:24:17 [error] [php] Undefined property: stdClass::$usr_name (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:9)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(18): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (9)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (18)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:29:53 [error] [php] Undefined property: stdClass::$usr_name (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(18): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (22)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (18)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/08 21:39:06 [error] [php] Missing argument 2 for __(), called in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php on line 28 and defined (C:\xampp\htdocs\youtroll\view\protected\config\main.php:3)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CBaseController.php(96): UserController->renderInternal()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#3 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(18): UserController->render()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/
+in C:\xampp\htdocs\youtroll\view\protected\config\main.php (3)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (28)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (18)
+2012/09/08 21:51:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/lightbox/loading.gif".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('images/lightbox...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/
+---
+2012/09/08 21:51:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/lightbox/close.png".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('images/lightbox...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/
+---
+2012/09/08 22:17:18 [error] [exception.CException] exception 'CException' with message 'UserController não pôde encontrar a visualização "application.modules.admin.vews.user.modals.editModal" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:879
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php(51): CController->renderPartial('application.mod...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#5 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(18): CController->render('index', Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionIndex()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('')
+#11 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/user')
+#12 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#14 {main}
+REQUEST_URI=/youtroll/view/admin/user
+---
+2012/09/08 22:27:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "list" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('list')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('list')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/user/list')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/user
+---
+2012/09/08 22:27:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/images/lightbox/loading.gif".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/images/li...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/admin/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/admin/user
+---
+2012/09/08 22:27:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/images/lightbox/close.png".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/images/li...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/admin/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/admin/user
+---
+2012/09/08 22:27:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "list" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('list')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('list')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/user/list')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/user
+---
+2012/09/08 22:28:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/images/lightbox/loading.gif".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/images/li...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/admin/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/admin/user
+---
+2012/09/08 22:28:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/images/lightbox/close.png".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/images/li...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/admin/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/admin/user
+---
+2012/09/08 22:28:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "list" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('list')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('list')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/user/list')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/user
+---
+2012/09/08 22:28:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/images/lightbox/close.png".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/images/li...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/admin/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/admin/user
+---
+2012/09/08 22:28:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/images/lightbox/loading.gif".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/images/li...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/admin/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/admin/user
+---
+2012/09/08 22:29:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "list" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('list')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('list')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/user/list')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/user
+---
+2012/09/08 22:29:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/images/lightbox/close.png".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/images/li...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/admin/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/admin/user
+---
+2012/09/08 22:29:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/images/lightbox/loading.gif".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/images/li...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/admin/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/admin/user
+---
