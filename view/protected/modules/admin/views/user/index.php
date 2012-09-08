@@ -34,10 +34,10 @@
                             'label' => 'Edit',
                             'size' => 'mini',
                             'type' => 'primary',
-                            'id' => 'edit',
-                            'url' => Yii::app()->createAbsoluteUrl("user/" . $m->usr_id),
+                            'url' => Yii::app()->createAbsoluteUrl("admin/user/" . $m->usr_id),
                             'htmlOptions' => array(
                                 'data-toggle' => 'modal',
+                                'class' => 'edit',
                                 'data-target' => '#editModal',
                             ),
                         ));
@@ -52,8 +52,9 @@
 <?= $this->renderPartial('application.modules.admin.views.user.modals.editModal') ?>
 
 <script>
-    $("edit").on("click", function(){
-        $.get();
-        $(this).html();
+    $(".edit").on("click", function(){
+        $.get($(this).attr("href"), function(){
+            $(this).html();
+        });
     })
 </script>
