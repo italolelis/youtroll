@@ -16,19 +16,15 @@ return array(
         'application.models.helpers.*',
     ),
     'modules' => array(
-        //*
         'gii' => array(
             'class' => 'system.gii.GiiModule',
             'password' => 'qwerty',
             'ipFilters' => array('*'),
-            'generatorPaths'=>array(
+            'generatorPaths' => array(
                 'bootstrap.gii',
             ),
         ),
-        'admin' => array(
-			'preload' => 'bootstrap'
-		)
-    //*/
+        'admin'
     ),
     'components' => array(
         'errorHandler' => array(
@@ -42,9 +38,9 @@ return array(
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>'
             ),
         ),
-        'bootstrap'=>array(
-            'class'=>'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
-         ),
+        'bootstrap' => array(
+            'class' => 'ext.bootstrap.components.Bootstrap', // assuming you extracted bootstrap under extensions
+        ),
         'user' => array(
             'allowAutoLogin' => true,
         ),
