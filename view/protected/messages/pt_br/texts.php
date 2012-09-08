@@ -11,6 +11,11 @@ return array(
     'privacidade' => 'Política de Privacidade',
     'informacoesQueRecolhemos' => 'Informações que recolhemos',
     'comoUtilizamos' => 'Como utilizamos as informações que recolhemos',
+    'help' => 'Saiba mais sobre o You Troll.',
+    'criarConta' => 'Criar e gerenciar conta.',
+    'envio' => 'Envio.',
+    'exibicao' => 'Exibição',
+    'canal' => 'Canais',
     
     
     
@@ -57,6 +62,14 @@ A Google processa informações pessoais nos servidores da empresa em vários pa
 
 EQUIPE YOU TROLL S.A.',
     
+    
+    'textCriarConta' => 'Fazer Login;</br> Gerenciar Conta;</br> Login por redes sociais.</br>',
+    
+    'textEnvio' => 'Enviar Tirinhas;</br> Editar Tirinhas;</br> Erros de envio.</br>',
+    
+    'textExibicao' => 'Exibição de tirinhas;</br> Pesquisa de tirinhas;</br> Organização de tirinhas;</br> Compartilhamento de tirinhas.</br>',
+    
+    'textCanal' => 'Novo design dos canais;</br> Configurações pessoais;</br> Interação;</br>',
 );
 
 ?>

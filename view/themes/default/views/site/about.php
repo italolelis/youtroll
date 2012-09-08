@@ -32,7 +32,7 @@
 
     <div class="column column-1-2">
         <h3 class="padd-top"><?=Yii::t('texts', 'localizacao')?></h3>
-        <p>YOU TROLL LTDA;</br>
+        <p>YOU TROLL S.A.;</br>
             Salas de aula da Faculdade Idez;</br>
             Casa de Ítalo Lelis;</br>
             Casa de João Neto;</br>
