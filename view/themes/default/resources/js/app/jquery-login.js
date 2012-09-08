@@ -11,7 +11,7 @@ $(function(){
 			    url:urlAction,
 			    type:'POST',
 			    cache:false,
-			    dataType:'html',
+			    dataType:'json',
 			    data:$("#verticalForm").serialize(),
 			    beforeSend:function() {
 			    },
