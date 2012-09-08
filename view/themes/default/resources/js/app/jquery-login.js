@@ -1,7 +1,8 @@
 $(function(){
     $('#verticalForm').on('submit',function(){
         
-        var urlAction = 'User/login';
+        var urlAction = $("#verticalForm").attr('action');
+        var redirect = 'view';
         
         $('#load-login').show();
         
@@ -17,6 +18,7 @@ $(function(){
 			    },
 			    complete:function(response) {
 				$('#load-login').hide('slow');
+                                
 			    },
 			    error:function() {
 			

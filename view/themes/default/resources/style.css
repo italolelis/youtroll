@@ -671,3 +671,13 @@ float: right;
 margin-right: 289px;
 margin-top: 20px;
 }
+
+
+.checkbox{
+   margin-top: 25px; 
+}
+
+.erro-login{
+   color: red;
+   font-size: 14px;
+}
