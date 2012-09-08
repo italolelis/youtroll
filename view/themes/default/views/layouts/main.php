@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <?= CHtml::metaTag("UTF-8", "charset") ?>
+        <?=CHtml::metaTag('text/html; charset=UTF-8', null, 'Content-Type')?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CONNECT template</title>
 
