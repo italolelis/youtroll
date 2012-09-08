@@ -1,10 +1,5 @@
 <?php
 
-function __($message, $dominio)
-{
-    return Yii::t($dominio, $message);
-}
-
 class Controller extends CController
 {
 
