@@ -2,21 +2,23 @@
 
 Yii::import('ext.rest-curl.RESTClient');
 
-class PersistenceServer extends CComponent {
-    
+class PersistenceServer extends CComponent
+{
+
     private $_uri;
     private $_verb;
     private $_params;
-    
-    public function connect($uri, $verb, $params = null) {
+
+    public function connect($uri, $verb, $params = null)
+    {
         $this->_uri = $uri;
         $this->_verb = strtoupper($verb);
         $this->_params = $params;
-        
+
         $rest = new RESTClient();
 
         $rest->initialize(array('server' => Yii::app()->params['persistenceServer']));
-        
+
         switch ($this->_verb) {
             case 'DELETE':
                 $response = $rest->delete($this->_uri, $this->_params);
@@ -33,8 +35,8 @@ class PersistenceServer extends CComponent {
             default:
                 return false;
         }
-        
-        return CJSON::decode($response);
+
+        return CJSON::decode($response, false);
     }
 
 }

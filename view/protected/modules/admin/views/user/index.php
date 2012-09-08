@@ -1,17 +1,17 @@
 <h1>
-    <?= Yii::t("admin", "Users"); ?>
+    <?= __("Users", "admin"); ?>
 </h1>
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
             <th>
-                <?= Yii::t("admin", "Id"); ?>
+                <?= __("Id", "admin"); ?>
             </th>
             <th>
-                <?= Yii::t("admin", "Nome"); ?>
+                <?= __("Nome", "admin"); ?>
             </th>
             <th>
-                <?= Yii::t("admin", "Email"); ?>
+                <?= __("E-mail", "admin"); ?>
             </th>
         </tr>
     </thead>
