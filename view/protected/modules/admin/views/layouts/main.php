@@ -4,7 +4,7 @@
 <html lang="en"><!--<![endif]--> 
     <head>
         <meta charset="utf-8">
-        <title>Dashboard - Akira</title>
+        <title><?= __("Painel de controle - Youtroll") ?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link href="<?= Yii::app()->theme->baseUrl . '/resources/admin/css/style.css' ?>" rel="stylesheet">
@@ -15,7 +15,7 @@
             <div class="navbar">
                 <div class="navbar-inner">
                     <div class="container">
-                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="#">Akira</a>
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="#"><?= __("Youtroll") ?></a>
                         <div class="nav-collapse">
                             <ul class="nav">
                                 <li class="active">
@@ -76,7 +76,7 @@
                     <div class="well" style="padding: 8px 0;">
                         <ul class="nav nav-list">
                             <li class="nav-header">
-                                Akira
+                                <?= __("Youtroll") ?>
                             </li>
                             <li class="active">
                                 <a href="index.htm"><i class="icon-white icon-home"></i> Dashboard</a>
