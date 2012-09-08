@@ -7,6 +7,10 @@
     <div class="column column-1-2">
         <h3 class="no-marg-top"><?=Yii::t('texts', 'aceitacao')?></h3>
     </div>
+    
+    <div class="column column-1-2">
+        <h3 class="no-marg-top"><?=Yii::t('texts', 'informacoeQueRecolhemos')?></h3>
+    </div>
 
     <div class="column">
         <p><?=Yii::t('texts', 'textAceitacao')?></p>
