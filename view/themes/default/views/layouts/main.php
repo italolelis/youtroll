@@ -8,9 +8,9 @@
         <header class="header_silverbackground">
             <?=$this->renderPartial('webroot.themes.'.Yii::app()->theme->name.'.views.layouts.'.Yii::app()->layout.'.top')?>
         </header>
-        <div id="content">
-            <?php echo $content ?>
-        </div>
+        
+        <?php echo $content ?>
+        
         <div id="modals">
             <?=$this->renderPartial('webroot.themes.'.Yii::app()->theme->name.'.views.layouts.'.Yii::app()->layout.'.modals.loginForm')?>
         </div>

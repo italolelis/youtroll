@@ -5,7 +5,7 @@ class PrivacyAction extends CAction
 
     public function run()
     {
-        $this->controller->render('about');
+        $this->controller->render('privacy');
     }
 
 }
