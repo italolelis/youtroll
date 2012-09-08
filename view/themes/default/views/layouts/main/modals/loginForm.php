@@ -9,7 +9,7 @@
     <div id="load-login">
         <?= CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/load-login.gif", "load") ?>
     </div>
-    <p><?php
+        <?php
         /** @var BootActiveForm $form */
         $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
             'id' => 'verticalForm', 'enableAjaxValidation' => true, 'enableClientValidation' => true,
@@ -22,12 +22,12 @@
         <?php echo $form->textFieldRow($this->modelLogin, 'username', array('class' => 'span3')); ?>
         <?php echo $form->passwordFieldRow($this->modelLogin, 'password', array('class' => 'span3')); ?>
         <?php echo $form->checkboxRow($this->modelLogin, 'rememberMe'); ?>
-        <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'submit', 'type' => 'primary',
+        <?php
+        $this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'submit', 'type' => 'primary',
             'label' => 'Login', 'loadingText' => 'loading...', 'htmlOptions' => array('id' => 'buttonStateful'),));
         ?>
 
-<?php $this->endWidget(); ?>
-    </p>
+    <?php $this->endWidget(); ?>
 </div>
 
 <div class="modal-footer">
