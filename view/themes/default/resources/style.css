@@ -660,7 +660,6 @@ a.acc-trigger.active {background:#f6f7f9 url(images/elements/accordion-arrow.png
 .login:hover{cursor:pointer;}
 
 #log{float: right;
-margin-top: -75px;
 margin-right: -24px;
 position: relative;}
 
