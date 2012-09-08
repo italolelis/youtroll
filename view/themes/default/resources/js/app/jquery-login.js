@@ -1,25 +1,33 @@
 $(function(){
-    function submitAjaxForm(form, data, hasError) {    
-		    
-               if(!hasError) {
-			$.ajax(
+    $('#verticalForm').on('submit',function(){
+        
+        var urlAction = 'User/login';
+        
+        $('#load-login').show();
+        
+        setTimeout(function() {    
+            $.ajax(
 			{
-			    url:'',
+			    url:urlAction,
 			    type:'POST',
 			    cache:false,
 			    dataType:'html',
-			    data:$(form).serialize(),
+			    data:$("#verticalForm").serialize(),
 			    beforeSend:function() {
-				$('#load-login').show('fast');
 			    },
 			    complete:function(response) {
 				$('#load-login').hide('slow');
 			    },
 			    error:function() {
-				
-			    }
-			});
-		    }
-		}
+			
+                        
+			}
+                        
+		});
+        }, 3000);
+        
+           return false;     
+    })
+    return false;
 })
 
