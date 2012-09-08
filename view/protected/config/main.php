@@ -1,6 +1,9 @@
 <?php
 
-// Yii::setPathOfAlias('local','path/to/local-folder');
+function __($message, $dominio = "app")
+{
+    return Yii::t($dominio, $message);
+}
 
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
@@ -35,6 +38,11 @@ return array(
             'showScriptName' => false,
             'caseSensitive' => true,
             'rules' => array(
+                array('admin/<controller>/list', 'pattern' => 'admin/<controller:\w+>', 'verb' => 'GET'),
+                array('admin/<controller>/view', 'pattern' => 'admin/<controller:\w+>/<id:\d+>', 'verb' => 'GET'),
+                array('admin/<controller>/update', 'pattern' => 'admin/<controller:\w+>/<id:\d+>', 'verb' => 'PUT'),
+                array('admin/<controller>/delete', 'pattern' => 'admin/<controller:\w+>/<id:\d+>', 'verb' => 'DELETE'),
+                array('admin/<controller>/create', 'pattern' => 'admin/<controller:\w+>', 'verb' => 'POST'),
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>'
             ),
         ),
