@@ -1,4 +1,3 @@
-
 <?php
 
 // Yii::setPathOfAlias('local','path/to/local-folder');

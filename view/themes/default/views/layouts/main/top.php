@@ -43,7 +43,7 @@
             CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/login-icon.png", "Login", array(
                 'class' => 'login',
                 'data-toggle' => 'modal',
-                'data-target' => '#myModal',
+                'data-target' => '#loginModal',
                 'rel' => 'tooltip',
                 'title' => "Login",
                     )

@@ -12,7 +12,7 @@
         <?php echo $content ?>
         
         <div id="modals">
-            <?=$this->renderPartial('webroot.themes.'.Yii::app()->theme->name.'.views.layouts.'.Yii::app()->layout.'.modals.loginForm')?>
+            <?=$this->renderPartial('webroot.themes.'.Yii::app()->theme->name.'.views.layouts.'.Yii::app()->layout.'.modals.loginModal')?>
         </div>
         <!-- BEGIN footer -->
         <footer id="footer"> 
