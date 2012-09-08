@@ -5,12 +5,16 @@ return array(
     'name' => 'You troll',
     
     // Páginas Gerais - Visíveis a todos os usuários
-    'HOME' => 'Página Inicial',
+    'home' => 'Página Inicial',
+    'categories' => 'Categorias',
+    'about' => 'Sobre',
     
     // Páginas Abertas - Visíveis apenas para os visitantes
- 
+    'singUp' => 'Cadastre-se',
+    
     // Páginas Restritas - Vísivéis apenas para os usuários autenticados
 
+    
     // Páginas Especiais - Visíveis apenas quando acessadas
     'error' => 'Ops!',
     

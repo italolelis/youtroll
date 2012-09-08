@@ -10,11 +10,10 @@
         </header>
         <div id="content">
             <?php echo $content ?>
-            <div id="modals">
-                <?=$this->renderPartial('webroot.themes.'.Yii::app()->theme->name.'.views.layouts.'.Yii::app()->layout.'.modals.loginForm')?>
-            </div>
         </div>
-
+        <div id="modals">
+            <?=$this->renderPartial('webroot.themes.'.Yii::app()->theme->name.'.views.layouts.'.Yii::app()->layout.'.modals.loginForm')?>
+        </div>
         <!-- BEGIN footer -->
         <footer id="footer"> 
             <?=$this->renderPartial('webroot.themes.'.Yii::app()->theme->name.'.views.layouts.'.Yii::app()->layout.'.footer')?>
