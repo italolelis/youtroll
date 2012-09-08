@@ -26,7 +26,9 @@ return array(
                 'bootstrap.gii',
             ),
         ),
-        'admin'
+        'admin' => array(
+			'preload' => 'bootstrap'
+		)
     //*/
     ),
     'components' => array(
