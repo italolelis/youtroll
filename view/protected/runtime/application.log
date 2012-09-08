@@ -1404,3 +1404,52 @@ Stack trace:
 REQUEST_URI=/youtroll/view/images/lightbox/loading.gif
 HTTP_REFERER=http://localhost/youtroll/view/
 ---
+2012/09/08 19:41:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/252ed7c/css/bootstrap.css".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/252ed7c/...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/assets/252ed7c/css/bootstrap.css
+HTTP_REFERER=http://localhost/youtroll/view/site/about
+---
+2012/09/08 19:41:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/252ed7c/css/bootstrap-yii.css".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/252ed7c/...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/assets/252ed7c/css/bootstrap-yii.css
+HTTP_REFERER=http://localhost/youtroll/view/site/about
+---
+2012/09/08 19:41:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/252ed7c/js/bootstrap.js".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('assets/252ed7c/...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/assets/252ed7c/js/bootstrap.js
+HTTP_REFERER=http://localhost/youtroll/view/site/about
+---
+2012/09/08 19:41:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "images" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/images/lig...')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/site/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/site/about
+---
+2012/09/08 19:41:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "images" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/images/lig...')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/site/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/site/about
+---

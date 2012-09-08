@@ -1,7 +1,7 @@
 <!-- BEGIN middle part -->
 <section id="content">
     <!--<div class="href_path_link"><h6>YOU ARE HERE: <a href="icons.html" >FEATURES</a>>TYPOGRAPHY</h6></div> -->
-    <div class="href_path_about"><h2>SOBRE O YOU TROLL</h2>
+    <div class="href_path_about"><h2><?=Yii::t('app', 'sobre')?></h2>
         <?= CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/end-logo.png") ?>
     </div>
 

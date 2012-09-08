@@ -11,6 +11,7 @@ return array(
     
     // Páginas Abertas - Visíveis apenas para os visitantes
     'singUp' => 'Cadastre-se',
+    'sobre' => 'SOBRE O YOU TROLL',
     
     // Páginas Restritas - Vísivéis apenas para os usuários autenticados
 
