@@ -7,13 +7,24 @@ class UserController extends Controller
 
     public $layout = "main";
 
-    public function actionIndex()
+    public function actionList()
     {
         $persistent = new PersistenceServer();
+
         $users = $persistent->connect("user", "GET");
-        //var_dump($users);exit();
+
         $this->render('index', array(
             'model' => $users
+        ));
+    }
+
+    public function actionView($id)
+    {
+        $persistent = new PersistenceServer();
+        $user = $persistent->connect("user", "GET", array($id));
+
+        $this->render('view', array(
+            'model' => $user
         ));
     }
 
