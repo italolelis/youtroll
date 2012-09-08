@@ -6,7 +6,6 @@ class UserController extends Controller
     public function filters()
     {
         return array(
-            'accessControl',
             'postOnly + login',
         );
     }
