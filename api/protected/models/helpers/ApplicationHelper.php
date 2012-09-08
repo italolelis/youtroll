@@ -47,6 +47,8 @@ class ApplicationHelper extends CFormModel
 		Yii::app()->end();
 	    }
 	}
+	
+	ApplicationHelper::throwException(500);
     }
 
 }
