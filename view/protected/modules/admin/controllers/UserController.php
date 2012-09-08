@@ -22,10 +22,23 @@ class UserController extends Controller
     {
         $persistent = new PersistenceServer();
         $user = $persistent->connect("user", "GET", array($id));
-
         $this->render('view', array(
             'model' => $user
         ));
+    }
+
+    public function actionUpdate($id)
+    {
+        $persistent = new PersistenceServer();
+        $messages = $persistent->connect("user", "POST", array($id));
+        echo CJSON::encode($messages);
+    }
+
+    public function actionDelete($id)
+    {
+        $persistent = new PersistenceServer();
+        $messages = $persistent->connect("user", "DELETE", array($id));
+        echo CJSON::encode($messages);
     }
 
 }
