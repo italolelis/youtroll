@@ -1,2 +1,3 @@
-<?php
-echo $errorMessage;
+<div id="content">
+    <?=$errorMessage?>    
+</div>
