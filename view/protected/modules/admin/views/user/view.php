@@ -13,7 +13,9 @@
                 <br>
          <?php echo $formEditUser->textFieldRow($userEditForm, 'username', array('class' => 'input-xlarge')); ?>       
          <?php echo $formEditUser->textFieldRow($userEditForm, 'record', array('class' => 'input-xlarge','disabled'=>'disabled')); ?>
-         <?php echo $formEditUser->textFieldRow($userEditForm, 'status', array('class' => 'input-xlarge','disabled'=>'disabled')); ?>
+         <?php echo $formEditUser->dropDownListRow($userEditForm, 'status', 
+               array('Something ...', '1', '2', '3', '4', '5')); 
+         ?>       
                 
          <?php echo $formEditUser->textFieldRow($userEditForm, 'email', array('class' => 'input-xlarge')); ?>       
          <?php echo $formEditUser->textFieldRow($userEditForm, 'birthday', array('class' => 'input-xlarge')); ?>       
