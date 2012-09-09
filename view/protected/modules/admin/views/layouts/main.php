@@ -6,7 +6,10 @@
         <meta charset="utf-8">
         <title><?= __("Painel de controle - Youtroll") ?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        
+        <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/resources/admin/js/jquery.maskedinput.js");?>
+        <?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/resources/admin/js/admin.js");?>
+        
         <link href="<?= Yii::app()->theme->baseUrl . '/resources/admin/css/style.css' ?>" rel="stylesheet">
         <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     </head>

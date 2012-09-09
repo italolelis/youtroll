@@ -22,14 +22,23 @@ return array(
     'pt_br' => 'Português do Brasil',
     
     // Formulários - Labels
-    'username' => 'Nome de usuário',
+    'username' => 'Nome do usuário',
     'password' => 'Senha',
     'rememberMe' => 'Continuar conectado',
     'emailUser'=>'Email',
     'login'=>'Login',
     'repeatPassword'=>'Repita sua Senha',
     'emailUser'=>'Email',
-    'birthday'=>'Aniversário',    
+    'birthday'=>'Aniversário',
+    'gender'=>'Gênero',    
+    'bio'=>'Biografia',
+    'site'=>'Site',
+    'locale'=>'Linguagem',
+    'record'=>'Data cadastro',
+    'status'=>'Status',
+    
+    
+    
        
     
     // Formulários - Erros
@@ -39,5 +48,6 @@ return array(
     'passwordInvalid' => 'Senha inválida.',
     'passwordAuthenticate' => 'Dados de acesso inválidos.',
     'emailInvalid'=>'Email inválido',
-    'dateInvalid'=>'Data inválida'
+    'dateInvalid'=>'Data inválida',
+    'urlInvalid'=>'Url inválida',
 );

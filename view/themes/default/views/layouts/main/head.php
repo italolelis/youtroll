@@ -50,6 +50,8 @@
     Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/resources/js/image.js");
     Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/resources/js/lightbox.js");
     Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/resources/js/jquery.capSlide.js");
+    
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/resources/js/jquery.maskedinput.js");
 ?>
 
 <!--[if IE 8]>

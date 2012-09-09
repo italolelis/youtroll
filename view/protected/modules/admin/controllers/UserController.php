@@ -22,13 +22,10 @@ class UserController extends Controller
     {
         $persistent = new PersistenceServer();
         $user = $persistent->connect("user", "GET", array($id));
-        $this->render('view', array(
-            'model' => $user
-        ));
         
         
         $userEditForm = new UserEditForm();
-        $this->controller->render('view',array('userEditForm'=>$userEditForm)); 
+        $this->renderPartial('view',array('userEditForm'=>$userEditForm)); 
         
     }
 
