@@ -2885,3 +2885,264 @@ in C:\xampp\htdocs\youtroll\view\index.php (10)
 2012/09/09 18:39:53 [warning] [application] Failed to set unsafe attribute "rememberMe" of "LoginForm".
 in C:\xampp\htdocs\youtroll\view\protected\controllers\user\LoginAction.php (14)
 in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:35:04 [warning] [application] Failed to set unsafe attribute "0" of "UserEditForm".
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (28)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:35:04 [warning] [application] Failed to set unsafe attribute "1" of "UserEditForm".
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (28)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:35:10 [warning] [application] Failed to set unsafe attribute "0" of "UserEditForm".
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (28)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:35:10 [warning] [application] Failed to set unsafe attribute "1" of "UserEditForm".
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (28)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:35:18 [warning] [application] Failed to set unsafe attribute "0" of "UserEditForm".
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (28)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:35:18 [warning] [application] Failed to set unsafe attribute "1" of "UserEditForm".
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (28)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:35:37 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php:28)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/1
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (28)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:35:44 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php:28)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/1
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (28)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:45:27 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/1
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (30)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:45:47 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/1
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (30)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:46:35 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php:31)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/1
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (31)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:46:57 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php:31)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/1
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (31)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:47:09 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php:31)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/1
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (31)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:49:10 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/2
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (30)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:49:30 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/1
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (30)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:50:19 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/1
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (30)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:50:34 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/2
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (30)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:50:56 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/2
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (30)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 20:57:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/lightbox/loading.gif".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('images/lightbox...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/
+---
+2012/09/09 20:57:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/lightbox/close.png".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('images/lightbox...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/
+---
+2012/09/09 21:03:14 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php:21)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): UserController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): UserController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php(18): UserController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionList()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\user\index.php (21)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (18)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 21:06:48 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php:29)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/2
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (29)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 21:08:41 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php:29)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/1
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (29)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 21:08:48 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php:29)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/2
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (29)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 21:08:59 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php:29)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/user/1
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\UserController.php (29)
+in C:\xampp\htdocs\youtroll\view\index.php (10)

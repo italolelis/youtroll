@@ -66,8 +66,7 @@ class UserController extends Controller
     {
         $message = array();
 
-        $user = User::model()->findByPk($id);
-
+        $user = User::model()->find("usr_id = :id", array(":id" => $id));
         if ($user) {
             $message = $user;
         } else {
@@ -76,7 +75,7 @@ class UserController extends Controller
                 'message' => 'The provided id isn\'t correct'
             );
         }
-        return CJSON::encode($message);
+        echo CJSON::encode($message);
     }
 
     public function actionDelete($id)
@@ -108,9 +107,9 @@ class UserController extends Controller
 
         if ($username && $password) {
             $user = User::model()->find('usr_username = :username', array(':username' => $username));
-            
-            if($user) {
-                if(Bcrypt::check($password, $user->usr_password)) {
+
+            if ($user) {
+                if (Bcrypt::check($password, $user->usr_password)) {
                     $return = true;
                 }
             }

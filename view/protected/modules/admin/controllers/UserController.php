@@ -21,18 +21,21 @@ class UserController extends Controller
     public function actionView($id)
     {
         $persistent = new PersistenceServer();
-        $user = $persistent->connect("user", "GET", array($id));
-        
-        
+        $user = $persistent->connect("user/" . $id, "GET");
         $userEditForm = new UserEditForm();
-        $this->renderPartial('view',array('userEditForm'=>$userEditForm)); 
-        
+        foreach ($userEditForm->attributes as $k => $v) {
+            $prefx = "usr_" . $k;
+
+            $userEditForm->{$k} = $user->{$prefx};
+        }
+
+        $this->renderPartial('view', array('userEditForm' => $userEditForm));
     }
 
     public function actionUpdate($id)
     {
         $persistent = new PersistenceServer();
-        $messages = $persistent->connect("user", "POST", array($id));
+        $messages = $persistent->connect("user/" . $id, "POST");
         echo CJSON::encode($messages);
     }
 

@@ -525,3 +525,68 @@ Stack trace:
 #10 {main}
 REQUEST_URI=/youtroll/api/user/login
 ---
+2012/09/09 21:03:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "list" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('list')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('list')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/list')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/api/user
+---
+2012/09/09 21:03:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "list" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('list')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('list')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/list')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/api/user?0=1
+---
+2012/09/09 21:06:48 [error] [php] Object of class User could not be converted to string (C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:45)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/user/2
+in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php (45)
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (78)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 21:07:04 [error] [php] Object of class User could not be converted to string (C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:45)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/user/1
+in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php (45)
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (78)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 21:07:10 [error] [php] Object of class User could not be converted to string (C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:45)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/user/1
+in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php (45)
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (78)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
