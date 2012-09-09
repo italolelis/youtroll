@@ -1,5 +1,6 @@
 protected/runtime
 assets
+*.log
 *.DS_Store
 *.Trash
 *.vo
