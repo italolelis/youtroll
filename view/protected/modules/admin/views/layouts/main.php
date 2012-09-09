@@ -61,7 +61,7 @@
                             </form>
                             <ul class="nav pull-right">
                                 <li>
-                                    <a href="profile.htm"><?php Yii::app()->user->getname() ?></a>
+                                    <a href="profile.htm"><?php echo Yii::app()->user->getName(); ?></a>
                                 </li>
                                 <li>
                                     <a href="login.htm">Logout</a>

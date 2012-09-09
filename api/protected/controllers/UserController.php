@@ -101,15 +101,22 @@ class UserController extends Controller
 
     public function actionLogin()
     {
+        $return = false;
 
         $username = ApplicationHelper::getRequest('POST', 'username');
         $password = ApplicationHelper::getRequest('POST', 'password');
 
         if ($username && $password) {
-            $user = User::model()->find('usr_username = :username AND usr_password = :password', array(':username' => $username, 'password' => Bcrypt::hash($password)));
+            $user = User::model()->find('usr_username = :username', array(':username' => $username));
+            
+            if($user) {
+                if(Bcrypt::check($password, $user->usr_password)) {
+                    $return = true;
+                }
+            }
         }
 
-        echo CJSON::encode(isset($user));
+        echo CJSON::encode($return);
     }
 
 }

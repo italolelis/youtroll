@@ -15,7 +15,7 @@ class LoginForm extends CFormModel
             array('username', 'required', 'message' => Yii::t('app', 'usernameRequired')),
             array('password', 'required', 'message' => Yii::t('app', 'passwordRequired')),
             array('username', 'length', 'min' => '3', 'max' => '25', 'tooShort' => Yii::t('app', 'usernameInvalid'), 'tooLong' => Yii::t('app', 'usernameInvalid')),
-            array('password', 'length', 'min' => '6', 'max' => '25', 'tooShort' => Yii::t('app', 'passwordInvalid'), 'tooLong' => Yii::t('app', 'passwordInvalid')),
+            array('password', 'length', 'min' => '8', 'max' => '25', 'tooShort' => Yii::t('app', 'passwordInvalid'), 'tooLong' => Yii::t('app', 'passwordInvalid')),
             array('password', 'authenticate', 'message' => Yii::t('app', 'passwordAuthenticate')),
         );
     }
@@ -35,15 +35,11 @@ class LoginForm extends CFormModel
             $identity = new UserIdentity($this->username, $this->password);
 
             if ($identity->authenticate()) {
-                $messages = Yii::app()->user->login($identity, $this->rememberMe ? 3600 * 24 * 30 : 0);
-
-                return true;
+                Yii::app()->user->login($identity, $this->rememberMe ? 3600 * 24 * 30 : 0);
             } else {
                 $this->addError("password", __("passwordAuthenticate"));
             }
         }
-
-        return false;
     }
 
 }

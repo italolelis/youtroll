@@ -35,7 +35,7 @@ class PersistenceServer extends CComponent
             default:
                 return false;
         }
-
+        
         return CJSON::decode($response, false);
     }
 

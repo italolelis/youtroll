@@ -26,6 +26,7 @@ class UserIdentity extends CUserIdentity
     public function authenticate()
     {
         if ($this->authenticateUser()) {
+            $this->id = uniqid();
             return true;
         } else {
             return false;

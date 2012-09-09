@@ -19,9 +19,7 @@ class LoginAction extends CAction
                 ApplicationHelper::ajaxResponse($loginForm->getErrors());
             }
 
-            $return = array(
-                "redirect" => Yii::app()->baseUrl
-            );
+            $return = array("redirect" => Yii::app()->createAbsoluteUrl('site'));
             
             ApplicationHelper::ajaxResponse($return);
         }

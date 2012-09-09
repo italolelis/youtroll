@@ -8,24 +8,28 @@ $(function(){
         
         setTimeout(function() {    
             $.ajax(
-			{
-			    url:urlAction,
-			    type:'POST',
-			    cache:false,
-			    dataType:'json',
-			    data:$("#verticalForm").serialize(),
-			    beforeSend:function() {
-			    },
-			    complete:function(response) {
-				$('#load-login').hide('slow');
-                                
-			    },
-			    error:function() {
-			
+                {
+                    url:urlAction,
+                    type:'POST',
+                    cache:false,
+                    dataType:'json',
+                    data:$("#verticalForm").serialize(),
+                    beforeSend:function() {
+                    },
+                    success:function(response) {
+                        if(typeof response.redirect != 'undefined' ) {
+                            window.location = response.redirect;
+                        }
+                    },
+                    complete:function(response) {
+                        $('#load-login').hide('slow');
+
+                    },
+                    error:function() {
                         
-			}
+                    }
                         
-		});
+                });
         }, 3000);
         
            return false;     
