@@ -25,6 +25,11 @@ class UserController extends Controller
         $this->render('view', array(
             'model' => $user
         ));
+        
+        
+        $userEditForm = new UserEditForm();
+        $this->controller->render('view',array('userEditForm'=>$userEditForm)); 
+        
     }
 
     public function actionUpdate($id)

@@ -29,7 +29,7 @@ return array(
     'login'=>'Login',
     'repeatPassword'=>'Repita sua Senha',
     'emailUser'=>'Email',
-        
+    'birthday'=>'Aniversário',    
        
     
     // Formulários - Erros
@@ -39,4 +39,5 @@ return array(
     'passwordInvalid' => 'Senha inválida.',
     'passwordAuthenticate' => 'Dados de acesso inválidos.',
     'emailInvalid'=>'Email inválido',
+    'dateInvalid'=>'Data inválida'
 );
