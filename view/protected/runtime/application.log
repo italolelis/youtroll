@@ -2165,3 +2165,20 @@ Stack trace:
 REQUEST_URI=/youtroll/view/user/1
 HTTP_REFERER=http://localhost/youtroll/view/admin/user
 ---
+2012/09/09 07:48:22 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\category\index.php:17)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(870): CategoryController->renderFile()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(783): CategoryController->renderPartial()
+#2 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\CategoryController.php(18): CategoryController->render()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): CategoryController->actionList()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CategoryController->runAction()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CategoryController->runActionWithFilters()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CategoryController->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin/category
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\category\index.php (17)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\CategoryController.php (18)
+in C:\xampp\htdocs\youtroll\view\index.php (10)

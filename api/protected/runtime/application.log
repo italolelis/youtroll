@@ -123,3 +123,18 @@ Stack trace:
 #10 {main}
 REQUEST_URI=/youtroll/api/user
 ---
+2012/09/09 07:48:22 [error] [exception.CHttpException.500] exception 'CHttpException' with message 'Erro Interno do Servidor' in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:32
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php(51): ApplicationHelper::throwException(500)
+#1 C:\xampp\htdocs\youtroll\api\protected\controllers\CategoryController.php(14): ApplicationHelper::ajaxResponse(Array)
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): CategoryController->actionList()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('list')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('category/list')
+#8 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#10 {main}
+REQUEST_URI=/youtroll/api/category
+---
