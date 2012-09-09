@@ -41,7 +41,7 @@ return array(
     
        
     
-    // Formulários - Erros
+    // Formulários - Erros-User
     'usernameRequired' => 'Por favor, digite seu nome de usuário.',
     'passwordRequired' => 'Por favor, digite uma senha.',
     'usernameInvalid' => 'Nome de usuário inválido.',
@@ -50,4 +50,10 @@ return array(
     'emailInvalid'=>'Email inválido',
     'dateInvalid'=>'Data inválida',
     'urlInvalid'=>'Url inválida',
+        
+    
+    //Category
+    
+    'categoryRequired'=>'Categoria obrigatória', 
+    
 );
