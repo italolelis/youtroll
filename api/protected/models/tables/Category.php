@@ -10,7 +10,7 @@
  * The followings are the available model relations:
  * @property Publications[] $publications
  */
-class ComicCategorie extends CActiveRecord
+class Category extends CActiveRecord
 {
 
     /**
