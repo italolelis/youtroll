@@ -6,7 +6,7 @@
                 'id' => 'verticalForm', 'enableAjaxValidation' => false, 'enableClientValidation' => true,
                 'action' => 'User/',
                 'clientOptions' => array('validateOnSubmit' => true, 'validateOnChange' => false),
-                'htmlOptions' => array('class' => 'well'),
+                'htmlOptions' => array('class' => 'well', 'class' => 'form-user-edit'),
             ));
          ?>    
          
@@ -29,8 +29,10 @@
          
          <?php echo $formEditUser->dropDownListRow($userEditForm, 'locale', 
                array('Something ...', '1', '2', '3', '4', '5')); 
-         ?>              
-                
+         ?>   
+         <br>
+         <br>
+         <?php $this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'submit', 'type' => 'primary','label' => 'Submit',));?>       
                 
         <?php $this->endWidget(); ?>
 <div/>

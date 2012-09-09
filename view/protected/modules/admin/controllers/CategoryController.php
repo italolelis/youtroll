@@ -25,6 +25,10 @@ class CategoryController extends Controller
         $this->render('view', array(
             'model' => $category
         ));
+        
+        $formCategoria = new CategoryForm();
+        $this->renderPartial('view',array('formCategoria'=>$formCategoria)); 
+        
     }
 
     public function actionUpdate($id)

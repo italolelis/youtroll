@@ -50,10 +50,16 @@ return array(
     'emailInvalid'=>'Email inválido',
     'dateInvalid'=>'Data inválida',
     'urlInvalid'=>'Url inválida',
+    
         
     
     //Category
     
-    'categoryRequired'=>'Categoria obrigatória', 
+    'categoryRequired'=>'Categoria obrigatória',
+    'nameCategory'=>'Nome da categoria',
+    'categoryInvalidLong'=>'Categoria muito longa',
+    'categoryInvalidShort'=>'Categoria muito curta',
+    
+    
     
 );
