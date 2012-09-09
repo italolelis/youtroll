@@ -36,7 +36,7 @@ class ApplicationHelper extends CFormModel
     }
     
     public static function ajaxResponse($response) {
-	if($response) {
+	if($response || $response === false) {
 	    if (Yii::app()->request->isAjaxRequest) {
 		if(is_array($response)) {
 		    echo htmlspecialchars(CJSON::encode($response), ENT_NOQUOTES);

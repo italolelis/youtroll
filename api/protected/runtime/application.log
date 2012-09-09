@@ -138,3 +138,390 @@ Stack trace:
 #10 {main}
 REQUEST_URI=/youtroll/api/category
 ---
+2012/09/09 17:10:18 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (106)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:10:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(106): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:11:59 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (106)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:11:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(106): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:14:24 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (106)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:14:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(106): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:15:04 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (106)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:15:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(106): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:15:29 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (106)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:15:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(106): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:15:56 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (106)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:15:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(106): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:16:45 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (106)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:16:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(106): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:17:02 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (106)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:17:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(106): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:34:36 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (106)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:34:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(106): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:37:02 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (107)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:37:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(107): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:37:09 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (107)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:37:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(107): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:40:21 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (107)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:40:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(107): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:40:30 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (107)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:40:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(107): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:43:18 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (107)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:43:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(107): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:51:47 [error] [php] include(Bcrypt.php): failed to open stream: No such file or directory (C:\xampp\htdocs\youtroll\yii\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(107): spl_autoload_call()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/user/login
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (107)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:57:36 [error] [php] include(Bcrypt.php): failed to open stream: No such file or directory (C:\xampp\htdocs\youtroll\yii\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(107): spl_autoload_call()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/user/login
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (107)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:58:06 [error] [php] include(Bcrypt.php): failed to open stream: No such file or directory (C:\xampp\htdocs\youtroll\yii\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(107): spl_autoload_call()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/user/login
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (107)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 18:08:41 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (109)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 18:08:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(109): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 18:27:08 [error] [exception.CHttpException.500] exception 'CHttpException' with message 'Erro Interno do Servidor' in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:32
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php(51): ApplicationHelper::throwException(500)
+#1 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(112): ApplicationHelper::ajaxResponse(false)
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#8 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#10 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 18:28:00 [error] [exception.CHttpException.500] exception 'CHttpException' with message 'Erro Interno do Servidor' in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:32
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php(51): ApplicationHelper::throwException(500)
+#1 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(112): ApplicationHelper::ajaxResponse(false)
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#8 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#10 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 18:28:33 [error] [exception.CHttpException.500] exception 'CHttpException' with message 'Erro Interno do Servidor' in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:32
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php(51): ApplicationHelper::throwException(500)
+#1 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(112): ApplicationHelper::ajaxResponse(false)
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#8 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#10 {main}
+REQUEST_URI=/youtroll/api/user/login
+---

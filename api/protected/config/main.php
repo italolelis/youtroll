@@ -37,7 +37,7 @@ return array(
                 array('<controller>/update', 'pattern' => '<controller:\w+>/<id:\d+>', 'verb' => 'PUT'),
                 array('<controller>/delete', 'pattern' => '<controller:\w+>/<id:\d+>', 'verb' => 'DELETE'),
                 array('<controller>/create', 'pattern' => '<controller:\w+>', 'verb' => 'POST'),
-            // Para outros controladores
+                // Para outros controladores
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ),
         ),

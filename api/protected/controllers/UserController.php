@@ -1,5 +1,7 @@
 <?php
 
+Yii::import("ext.several.Bcrypt");
+
 class UserController extends Controller
 {
 
@@ -99,17 +101,15 @@ class UserController extends Controller
 
     public function actionLogin()
     {
-        echo false;exit();
+
         $username = ApplicationHelper::getRequest('POST', 'username');
         $password = ApplicationHelper::getRequest('POST', 'password');
 
-        if($username && $password) {
-            $user = User::model()->find('username = :username AND password = :password', array(':username' => $username, 'password' => $password));
-        
-            if (isset($user)) {
-                ApplicationHelper::ajaxResponse(true);
-            }
+        if ($username && $password) {
+            $user = User::model()->find('usr_username = :username AND usr_password = :password', array(':username' => $username, 'password' => Bcrypt::hash($password)));
         }
+
+        echo CJSON::encode(isset($user));
     }
 
 }

@@ -9,20 +9,24 @@ class LoginAction extends CAction
     {
         $postLoginForm = ApplicationHelper::getRequest('POST', 'LoginForm');
 
-	if(!empty($postLoginForm)) {
-	    $loginForm = new LoginForm();
-	    $loginForm->attributes = $postLoginForm;
-            
-	    $loginForm->validate();
+        if (!empty($postLoginForm)) {
+            $loginForm = new LoginForm();
+            $loginForm->attributes = $postLoginForm;
 
-	    if($loginForm->hasErrors()) {
+            $response = $loginForm->validate();
+
+            if ($loginForm->hasErrors()) {
                 ApplicationHelper::ajaxResponse($loginForm->getErrors());
-	    }
+            }
 
-	    ApplicationHelper::ajaxResponse(true);
-	}
+            $return = array(
+                "redirect" => Yii::app()->baseUrl
+            );
+            
+            ApplicationHelper::ajaxResponse($return);
+        }
 
-	ApplicationHelper::throwException(403);
+        ApplicationHelper::throwException(403);
     }
 
 }
