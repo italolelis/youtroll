@@ -22,6 +22,7 @@ class UserController extends Controller
         return array(
             'login' => 'application.controllers.user.LoginAction',
             'logout' => 'application.controllers.user.LogoutAction',
+            'singUp'=>'application.controllers.user.SingUpAction',
         );
     }
 

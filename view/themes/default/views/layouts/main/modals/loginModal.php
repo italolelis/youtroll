@@ -21,7 +21,7 @@
 
         <?php echo $form->textFieldRow($this->modelLogin, 'username', array('class' => 'span3')); ?>
         <?php echo $form->passwordFieldRow($this->modelLogin, 'password', array('class' => 'span3')); ?>
-        <div class="erro-login">erro login</div>
+        <div class="erro-login"></div>
         <?php echo $form->checkboxRow($this->modelLogin, 'rememberMe'); ?>
         <?php
         $this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'submit', 'type' => 'primary',

@@ -25,6 +25,12 @@ return array(
     'username' => 'Nome de usuário',
     'password' => 'Senha',
     'rememberMe' => 'Continuar conectado',
+    'emailUser'=>'Email',
+    'login'=>'Login',
+    'repeatPassword'=>'Repita sua Senha',
+    'emailUser'=>'Email',
+        
+       
     
     // Formulários - Erros
     'usernameRequired' => 'Por favor, digite seu nome de usuário.',
@@ -32,4 +38,5 @@ return array(
     'usernameInvalid' => 'Nome de usuário inválido.',
     'passwordInvalid' => 'Senha inválida.',
     'passwordAuthenticate' => 'Dados de acesso inválidos.',
+    'emailInvalid'=>'Email inválido',
 );

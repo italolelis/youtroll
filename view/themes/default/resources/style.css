@@ -681,3 +681,16 @@ margin-top: 20px;
    color: red;
    font-size: 14px;
 }
+
+/***************End Login***********/
+
+
+
+
+/********Cadastro de usuario********/
+.form-cadastro-usuario #verticalForm{
+    width: 550px;
+    margin-left: 25%;
+    margin-top: 5%;
+    margin-bottom:5%;
+}
