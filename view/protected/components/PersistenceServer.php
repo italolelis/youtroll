@@ -27,7 +27,7 @@ class PersistenceServer extends CComponent
                 $response = $rest->get($this->_uri, $this->_params);
                 break;
             case 'POST':
-                $response = $rest->post($this->_uri, $this->_param);
+                $response = $rest->post($this->_uri, $this->_params);
                 break;
             case 'PUT':
                 $response = $rest->put($this->_uri, $this->_params);
@@ -35,7 +35,7 @@ class PersistenceServer extends CComponent
             default:
                 return false;
         }
-
+        
         return CJSON::decode($response, false);
     }
 

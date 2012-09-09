@@ -13,7 +13,7 @@
         /** @var BootActiveForm $form */
         $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
             'id' => 'verticalForm', 'enableAjaxValidation' => true, 'enableClientValidation' => true,
-            'action' => 'User/login',
+            'action' => 'user/login',
             'clientOptions' => array('validateOnSubmit' => true, 'validateOnChange' => false, 'afterValidate' => 'js:submiAjaxForm'),
             'htmlOptions' => array('class' => 'well'),
                 ));
@@ -21,7 +21,10 @@
 
         <?php echo $form->textFieldRow($this->modelLogin, 'username', array('class' => 'span3')); ?>
         <?php echo $form->passwordFieldRow($this->modelLogin, 'password', array('class' => 'span3')); ?>
+<<<<<<< HEAD
         <div class="erro-login"></div>
+=======
+>>>>>>> Alterações no Rest Client
         <?php echo $form->checkboxRow($this->modelLogin, 'rememberMe'); ?>
         <?php
         $this->widget('bootstrap.widgets.TbButton', array('buttonType' => 'submit', 'type' => 'primary',

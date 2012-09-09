@@ -38,7 +38,7 @@ return array(
                 array('<controller>/delete', 'pattern' => '<controller:\w+>/<id:\d+>', 'verb' => 'DELETE'),
                 array('<controller>/create', 'pattern' => '<controller:\w+>', 'verb' => 'POST'),
             // Para outros controladores
-//				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ),
         ),
         'user' => array(

@@ -1,5 +1,7 @@
 <?php
+
 Yii::import('ext.rest-curl.CURL');
+
 /**
  * Yii RESTClient Components
  * 

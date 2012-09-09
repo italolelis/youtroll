@@ -1,5 +1,7 @@
 <?php
 
+Yii::import('application.components.PersistenceServer');
+
 class LoginAction extends CAction
 {
 
@@ -10,11 +12,11 @@ class LoginAction extends CAction
 	if(!empty($postLoginForm)) {
 	    $loginForm = new LoginForm();
 	    $loginForm->attributes = $postLoginForm;
-
+            
 	    $loginForm->validate();
 
 	    if($loginForm->hasErrors()) {
-//		ApplicationHelper::throwException(400, Yii::t('app', 'Desculpe, não foi possível enviar sua mensagem. Verifique se os campos foram preenchidos corretamente e tente novamente.'));
+                ApplicationHelper::ajaxResponse($loginForm->getErrors());
 	    }
 
 	    ApplicationHelper::ajaxResponse(true);

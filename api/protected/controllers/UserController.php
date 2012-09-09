@@ -99,16 +99,17 @@ class UserController extends Controller
 
     public function actionLogin()
     {
+        echo false;exit();
         $username = ApplicationHelper::getRequest('POST', 'username');
         $password = ApplicationHelper::getRequest('POST', 'password');
 
-        $user = User::find('username = :username AND password = :password', array(':username' => $username, 'password' => $password));
-
-        if (isset($user)) {
-            ApplicationHelper::ajaxResponse(true);
+        if($username && $password) {
+            $user = User::model()->find('username = :username AND password = :password', array(':username' => $username, 'password' => $password));
+        
+            if (isset($user)) {
+                ApplicationHelper::ajaxResponse(true);
+            }
         }
-
-        ApplicationHelper::ajaxResponse(false);
     }
 
 }
