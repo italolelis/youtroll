@@ -2182,3 +2182,357 @@ REQUEST_URI=/youtroll/view/admin/category
 in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\category\index.php (17)
 in C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\CategoryController.php (18)
 in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 16:10:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/lightbox/close.png".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('images/lightbox...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/
+---
+2012/09/09 16:10:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/lightbox/loading.gif".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('images/lightbox...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/
+---
+2012/09/09 16:10:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/settings.htm".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/settings....')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/admin/settings.htm
+HTTP_REFERER=http://localhost/youtroll/view/admin/category
+---
+2012/09/09 16:10:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/images/lightbox/close.png".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/images/li...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/admin/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/admin/settings.htm
+---
+2012/09/09 16:10:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/images/lightbox/loading.gif".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/images/li...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/admin/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/admin/settings.htm
+---
+2012/09/09 16:20:30 [error] [exception.CException] exception 'CException' with message 'O alias "zii.widgets.TbMenu" é inválido. Assegure-se de que ele aponta para um arquivo PHP existente.' in C:\xampp\htdocs\youtroll\yii\framework\YiiBase.php:318
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWidgetFactory.php(147): YiiBase::import('zii.widgets.TbM...', true)
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(DefaultController), 'zii.widgets.TbM...', Array)
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.TbM...', Array)
+#3 C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\layouts\main.php(93): CBaseController->widget('zii.widgets.TbM...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(785): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\DefaultController.php(10): CController->render('index')
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('')
+#13 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin')
+#14 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#16 {main}
+REQUEST_URI=/youtroll/view/admin
+---
+2012/09/09 16:24:51 [error] [php] Undefined offset: 0 (C:\xampp\htdocs\youtroll\yii\framework\zii\widgets\CMenu.php:303)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\zii\widgets\CMenu.php(151): TbMenu->normalizeItems()
+#1 C:\xampp\htdocs\youtroll\view\protected\extensions\bootstrap\widgets\TbMenu.php(46): TbMenu->init()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CBaseController.php(148): TbMenu->init()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CBaseController.php(173): DefaultController->createWidget()
+#4 C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\layouts\main.php(108): DefaultController->widget()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CBaseController.php(127): require()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CBaseController.php(96): DefaultController->renderInternal()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(785): DefaultController->renderFile()
+#8 C:\xampp\htdocs\youtroll\view\protected\modules\admin\controllers\DefaultController.php(10): DefaultController->render()
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): DefaultController->actionIndex()
+#10 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): DefaultController->runAction()
+#12 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): DefaultController->runActionWithFilters()
+#13 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): DefaultController->run()
+#14 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/admin
+in C:\xampp\htdocs\youtroll\view\protected\extensions\bootstrap\widgets\TbBaseMenu.php (193)
+in C:\xampp\htdocs\youtroll\view\protected\extensions\bootstrap\widgets\TbMenu.php (46)
+in C:\xampp\htdocs\youtroll\view\protected\modules\admin\views\layouts\main.php (108)
+2012/09/09 16:41:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/user".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/admin/use...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/admin/admin/user
+HTTP_REFERER=http://localhost/youtroll/view/admin/
+---
+2012/09/09 16:41:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/lightbox/close.png".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/admin/ima...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/admin/admin/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/admin/admin/user
+---
+2012/09/09 16:41:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/images/lightbox/loading.gif".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/admin/ima...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/admin/admin/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/admin/admin/user
+---
+2012/09/09 16:42:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "user" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('user')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('user')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/default/u...')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/default/user
+HTTP_REFERER=http://localhost/youtroll/view/admin/
+---
+2012/09/09 16:42:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "images" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/default/i...')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/default/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/admin/default/user
+---
+2012/09/09 16:42:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "images" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/default/i...')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/default/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/admin/default/user
+---
+2012/09/09 16:42:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "index" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('index')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/user/inde...')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/user/index
+HTTP_REFERER=http://localhost/youtroll/view/admin/
+---
+2012/09/09 16:42:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "images" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/user/imag...')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/user/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/admin/user/index
+---
+2012/09/09 16:42:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "images" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/user/imag...')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/user/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/admin/user/index
+---
+2012/09/09 16:42:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "index" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('index')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/user/inde...')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/user/index
+HTTP_REFERER=http://localhost/youtroll/view/admin/
+---
+2012/09/09 16:42:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "images" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/user/imag...')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/user/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/admin/user/index
+---
+2012/09/09 16:42:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "images" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/user/imag...')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/user/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/admin/user/index
+---
+2012/09/09 16:43:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "default" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('default')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('default')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/category/...')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/category/default
+HTTP_REFERER=http://localhost/youtroll/view/admin/category
+---
+2012/09/09 16:43:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "images" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/category/...')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/category/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/admin/category/default
+---
+2012/09/09 16:43:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "images" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/category/...')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/category/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/admin/category/default
+---
+2012/09/09 16:43:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "default" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('default')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('default')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/category/...')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/category/default
+HTTP_REFERER=http://localhost/youtroll/view/admin/category
+---
+2012/09/09 16:43:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "images" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/category/...')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/category/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/admin/category/default
+---
+2012/09/09 16:43:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "images" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('admin/category/...')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/view/admin/category/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/admin/category/default
+---
+2012/09/09 16:43:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "default".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('default')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/default
+HTTP_REFERER=http://localhost/youtroll/view/admin/category
+---
+2012/09/09 16:43:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/lightbox/loading.gif".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('images/lightbox...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/default
+---
+2012/09/09 16:43:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/lightbox/close.png".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('images/lightbox...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/default
+---
+2012/09/09 16:57:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/lightbox/loading.gif".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('images/lightbox...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/
+---
+2012/09/09 16:57:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/lightbox/close.png".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('images/lightbox...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/
+---
+2012/09/09 16:58:09 [warning] [application] Failed to set unsafe attribute "rememberMe" of "LoginForm".
+in C:\xampp\htdocs\youtroll\view\protected\controllers\user\LoginAction.php (12)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/09 16:58:09 [error] [php] include(PersistenceServer.php): failed to open stream: No such file or directory (C:\xampp\htdocs\youtroll\yii\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\view\protected\components\UserIdentity.php(37): spl_autoload_call()
+#1 C:\xampp\htdocs\youtroll\view\protected\components\UserIdentity.php(28): UserIdentity->authenticateUser()
+#2 C:\xampp\htdocs\youtroll\view\protected\models\forms\LoginForm.php(37): UserIdentity->authenticate()
+#3 C:\xampp\htdocs\youtroll\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate()
+#4 C:\xampp\htdocs\youtroll\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute()
+#5 C:\xampp\htdocs\youtroll\yii\framework\base\CModel.php(158): CInlineValidator->validate()
+#6 C:\xampp\htdocs\youtroll\view\protected\controllers\user\LoginAction.php(14): LoginForm->validate()
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CAction.php(75): LoginAction->run()
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): LoginAction->runWithParams()
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#10 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(1117): CFilterChain->run()
+#11 C:\xampp\htdocs\youtroll\yii\framework\web\filters\CInlineFilter.php(59): UserController->filterPostOnly()
+#12 C:\xampp\htdocs\youtroll\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#13 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(292): CFilterChain->run()
+#14 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#15 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#16 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#17 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\youtroll\view\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/view/User/login
+in C:\xampp\htdocs\youtroll\view\protected\components\UserIdentity.php (37)
+in C:\xampp\htdocs\youtroll\view\protected\components\UserIdentity.php (28)
+in C:\xampp\htdocs\youtroll\view\protected\models\forms\LoginForm.php (37)

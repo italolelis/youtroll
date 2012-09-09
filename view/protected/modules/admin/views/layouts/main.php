@@ -57,11 +57,11 @@
                                 </li>
                             </ul>
                             <form class="navbar-search pull-left" action="">
-                                <input type="text" class="search-query span2" placeholder="Search" />
+                                <input type="text" class="search-query span2" placeholder="<?= __("Search...") ?>" />
                             </form>
                             <ul class="nav pull-right">
                                 <li>
-                                    <a href="profile.htm">@username</a>
+                                    <a href="profile.htm"><?php Yii::app()->user->getname() ?></a>
                                 </li>
                                 <li>
                                     <a href="login.htm">Logout</a>
@@ -78,47 +78,34 @@
                             <li class="nav-header">
                                 <?= __("Youtroll") ?>
                             </li>
-                            <li class="active">
-                                <a href="index.htm"><i class="icon-white icon-home"></i> Dashboard</a>
-                            </li>
-                            <li>
-                                <a href="projects.htm"><i class="icon-folder-open"></i> Projects</a>
-                            </li>
-                            <li>
-                                <a href="tasks.htm"><i class="icon-check"></i> Tasks</a>
-                            </li>
-                            <li>
-                                <a href="messages.htm"><i class="icon-envelope"></i> Messages</a>
-                            </li>
-                            <li>
-                                <a href="files.htm"><i class="icon-file"></i> Files</a>
-                            </li>
-                            <li>
-                                <a href="activity.htm"><i class="icon-list-alt"></i> Activity</a>
-                            </li>
-                            <li class="nav-header">
-                                Your Account
-                            </li>
-                            <li>
-                                <a href="profile.htm"><i class="icon-user"></i> Profile</a>
-                            </li>
-                            <li>
-                                <a href="settings.htm"><i class="icon-cog"></i> Settings</a>
-                            </li>
-                            <li class="divider">
-                            </li>
-                            <li>
-                                <a href="help.htm"><i class="icon-info-sign"></i> Help</a>
-                            </li>
-                            <li class="nav-header">
-                                Bonus Templates
-                            </li>
-                            <li>
-                                <a href="gallery.htm"><i class="icon-picture"></i> Gallery</a>
-                            </li>
-                            <li>
-                                <a href="blank.htm"><i class="icon-stop"></i> Blank Slate</a>
-                            </li>
+
+                            <?php
+                            $this->widget('bootstrap.widgets.TbMenu', array(
+                                'id' => 'menu',
+                                'type' => 'pills',
+                                'activeCssClass' => 'active',
+                                'items' => array(
+                                    array(
+                                        'label' => __('Dashboard'),
+                                        'url' => array('/admin'),
+                                        'icon' => "home",
+                                        'active' => ($this->route == "admin/default/index")
+                                    ),
+                                    array(
+                                        'label' => __('Users'),
+                                        'url' => array('user/'),
+                                        'icon' => "user",
+                                        'active' => ($this->route == "admin/user/list")
+                                    ),
+                                    array(
+                                        'label' => __('Categories'),
+                                        'url' => array('category/'),
+                                        'icon' => "tags",
+                                        'active' => ($this->route == "admin/category/list")
+                                    )
+                                ),
+                            ));
+                            ?>
                         </ul>
                     </div>
                 </div>

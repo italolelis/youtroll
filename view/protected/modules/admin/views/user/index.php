@@ -53,8 +53,8 @@
 
 <script>
     $(".edit").on("click", function(){
-        $.get($(this).attr("href"), function(){
-            $(this).html();
+        $.get($(this).attr("href"), function(data){
+            $(this).html(data);
         });
     })
 </script>
