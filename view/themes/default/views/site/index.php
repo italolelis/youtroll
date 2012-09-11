@@ -1,9 +1,16 @@
 <!-- BEGIN TIMELINE -->
 <div class="timelineLight tl">
+    
     <div class="item" data-id="04/06/2012" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit...">
-        <a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/thumbnails/1a.jpg" rel="lightbox[timeline]">
-            <?= CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/1.jpg", "logo") ?>
-        </a>
+        <?=CHtml::link(
+                    CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/1.jpg", "logo"),
+                    Yii::app()->theme->baseUrl . "/resources/images/thumbnails/1a.jpg" , 
+                    array(
+                        'class'=>"image_rollover_bottom con_borderImage",
+                        'data-description'=>"ZOOM IN",
+                        'rel'=>"lightbox[timeline]",
+                    )
+        )?>
         <h2>JUNE, 4</h2>
         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc...</span>
         <div class="read_more" data-id="04/06/2012">Read more</div>
@@ -23,9 +30,15 @@
     </div>
 
     <div class="item" data-id="12/06/2012" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit...">
-        <a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/thumbnails/2a.jpg" rel="lightbox[timeline]">
-            <?= CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/2.jpg", "logo") ?>
-        </a>
+        <?=CHtml::link(
+                    CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/2.jpg", "logo"),
+                    Yii::app()->theme->baseUrl . "/resources/images/thumbnails/2a.jpg" , 
+                    array(
+                        'class'=>"image_rollover_bottom con_borderImage",
+                        'data-description'=>"ZOOM IN",
+                        'rel'=>"lightbox[timeline]",
+                    )
+        )?>
         <h2>JUNE, 12</h2>
         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc...</span>
         <div class="read_more" data-id="12/06/2012">Read more</div>
@@ -45,9 +58,15 @@
     </div>
 
     <div class="item" data-id="21/06/2012" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit...">
-        <a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/thumbnails/3a.jpg" rel="lightbox[timeline]">
-            <?= CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/3.jpg", "logo") ?>
-        </a>
+        <?=CHtml::link(
+                    CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/3.jpg", "logo"),
+                    Yii::app()->theme->baseUrl . "/resources/images/thumbnails/3a.jpg" , 
+                    array(
+                        'class'=>"image_rollover_bottom con_borderImage",
+                        'data-description'=>"ZOOM IN",
+                        'rel'=>"lightbox[timeline]",
+                    )
+        )?>
         <h2>JUNE, 21</h2>
         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc...</span>
         <div class="read_more" data-id="21/06/2012">Read more</div>
@@ -68,9 +87,15 @@
 
 
     <div class="item" data-id="27/06/2012" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit...">
-        <a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/thumbnails/4a.jpg" rel="lightbox[timeline]">
-            <?= CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/4.jpg", "logo") ?>
-        </a>
+        <?=CHtml::link(
+                    CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/4.jpg", "logo"),
+                    Yii::app()->theme->baseUrl . "/resources/images/thumbnails/4a.jpg" , 
+                    array(
+                        'class'=>"image_rollover_bottom con_borderImage",
+                        'data-description'=>"ZOOM IN",
+                        'rel'=>"lightbox[timeline]",
+                    )
+        )?>
         <h2>JUNE, 27</h2>
         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc...</span>
         <div class="read_more" data-id="27/06/2012">Read more</div>
@@ -91,9 +116,15 @@
 
 
     <div class="item" data-id="03/07/2012" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit...">
-        <a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/thumbnails/5a.jpg" rel="lightbox[timeline]">
-            <?= CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/5.jpg", "logo") ?>
-        </a>
+        <?=CHtml::link(
+                    CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/5.jpg", "logo"),
+                    Yii::app()->theme->baseUrl . "/resources/images/thumbnails/5a.jpg" , 
+                    array(
+                        'class'=>"image_rollover_bottom con_borderImage",
+                        'data-description'=>"ZOOM IN",
+                        'rel'=>"lightbox[timeline]",
+                    )
+        )?>
         <h2>JULY, 3</h2>
         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc...</span>
         <div class="read_more" data-id="03/07/2012">Read more</div>
@@ -115,9 +146,15 @@
 
 
     <div class="item" data-id="13/07/2012" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit...">
-        <a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/thumbnails/6a.jpg" rel="lightbox[timeline]">
-            <?= CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/6.jpg", "logo") ?>
-        </a>
+        <?=CHtml::link(
+                CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/6.jpg", "logo"),
+                Yii::app()->theme->baseUrl .'/resources/images/thumbnails/6a.jpg',
+                array(
+                    'class'=>"image_rollover_bottom con_borderImage",
+                    'data-description'=>"ZOOM IN",
+                    'rel'=>"lightbox[timeline]"
+                )
+            )?>
         <h2>JULY, 13</h2>
         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc...</span>
         <div class="read_more" data-id="13/07/2012">Read more</div>
@@ -137,9 +174,15 @@
     </div>
 
     <div class="item" data-id="17/07/2012" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit...">
-        <a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/thumbnails/7a.jpg" rel="lightbox[timeline]">
-            <?= CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/7.jpg", "logo") ?>
-        </a>
+        <?=CHtml::link(
+                    CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/7.jpg", "logo"),
+                    Yii::app()->theme->baseUrl . "/resources/images/thumbnails/7a.jpg" , 
+                    array(
+                        'class'=>"image_rollover_bottom con_borderImage",
+                        'data-description'=>"ZOOM IN",
+                        'rel'=>"lightbox[timeline]",
+                    )
+        )?>
         <h2>JULY, 17</h2>
         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc...</span>
         <div class="read_more" data-id="17/07/2012">Read more</div>
@@ -159,9 +202,15 @@
     </div>
 
     <div class="item" data-id="25/07/2012" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit...">
-        <a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/thumbnails/8a.jpg" rel="lightbox[timeline]">
-            <?= CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/8.jpg", "logo") ?>
-        </a>
+        <?=CHtml::link(
+                    CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/8.jpg", "logo"),
+                    Yii::app()->theme->baseUrl . "/resources/images/thumbnails/8a.jpg" , 
+                    array(
+                        'class'=>"image_rollover_bottom con_borderImage",
+                        'data-description'=>"ZOOM IN",
+                        'rel'=>"lightbox[timeline]",
+                    )
+        )?>
         <h2>JULY, 25</h2>
         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc...</span>
         <div class="read_more" data-id="25/07/2012">Read more</div>
@@ -181,9 +230,15 @@
     </div>
 
     <div class="item" data-id="06/08/2012" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit...">
-        <a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/thumbnails/9a.jpg" rel="lightbox[timeline]">
-            <?= CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/9.jpg", "logo") ?>
-        </a>
+        <?=CHtml::link(
+                    CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/9.jpg", "logo"),
+                    Yii::app()->theme->baseUrl . "/resources/images/thumbnails/9a.jpg" , 
+                    array(
+                        'class'=>"image_rollover_bottom con_borderImage",
+                        'data-description'=>"ZOOM IN",
+                        'rel'=>"lightbox[timeline]",
+                    )
+        )?>
         <h2>AUGUST, 6</h2>
         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc...</span>
         <div class="read_more" data-id="06/08/2012">Read more</div>
@@ -203,9 +258,15 @@
     </div>
 
     <div class="item" data-id="15/08/2012" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit...">
-        <a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/thumbnails/10a.jpg" rel="lightbox[timeline]">
-            <?= CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/10.jpg", "logo") ?>
-        </a>
+        <?=CHtml::link(
+                    CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/10.jpg", "logo"),
+                    Yii::app()->theme->baseUrl . "/resources/images/thumbnails/10a.jpg" , 
+                    array(
+                        'class'=>"image_rollover_bottom con_borderImage",
+                        'data-description'=>"ZOOM IN",
+                        'rel'=>"lightbox[timeline]",
+                    )
+        )?>
         <h2>AUGUST, 15</h2>
         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc...</span>
         <div class="read_more" data-id="15/08/2012">Read more</div>
@@ -225,9 +286,15 @@
     </div>
 
     <div class="item" data-id="20/08/2012" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit...">
-        <a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/thumbnails/11a.jpg" rel="lightbox[timeline]">
-            <?= CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/11.jpg", "logo") ?>
-        </a>
+        <?=CHtml::link(
+                    CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/11.jpg", "logo"),
+                    Yii::app()->theme->baseUrl . "/resources/images/thumbnails/11a.jpg" , 
+                    array(
+                        'class'=>"image_rollover_bottom con_borderImage",
+                        'data-description'=>"ZOOM IN",
+                        'rel'=>"lightbox[timeline]",
+                    )
+        )?>
         <h2>AUGUST, 20</h2>
         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc...</span>
         <div class="read_more" data-id="20/08/2012">Read more</div>
@@ -247,9 +314,15 @@
     </div>
 
     <div class="item" data-id="26/08/2012" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit...">
-        <a class="image_rollover_bottom con_borderImage" data-description="ZOOM IN" href="images/thumbnails/12a.jpg" rel="lightbox[timeline]">
-            <?= CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/12.jpg", "logo") ?>
-        </a>
+        <?=CHtml::link(
+                    CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/thumbnails/12.jpg", "logo"),
+                    Yii::app()->theme->baseUrl . "/resources/images/thumbnails/12a.jpg" , 
+                    array(
+                        'class'=>"image_rollover_bottom con_borderImage",
+                        'data-description'=>"ZOOM IN",
+                        'rel'=>"lightbox[timeline]",
+                    )
+        )?>
         <h2>AUGUST, 26</h2>
         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc...</span>
         <div class="read_more" data-id="26/08/2012">Read more</div>
