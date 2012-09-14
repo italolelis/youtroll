@@ -1,5 +1,7 @@
-protected/runtime
-assets
+api/protected/runtime
+view/protected/runtime
+api/assets
+view/assets
 *.log
 *.DS_Store
 *.Trash
