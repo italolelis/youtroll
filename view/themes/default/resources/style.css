@@ -593,9 +593,9 @@ ul.ourHolderGallery li.item a {
 .border_right{ border-right:1px  #FFF dashed;}
 
 
-#contactform {display:block; padding:20px 0 10px; }
-#contactform div {float:left; }
-#contactform input {background:url('images/background-gray.png') repeat; color:#fff; padding:8px; border:0; font-size:14px; width:608px;  margin-bottom:5px;}
+#contactform, .defaultForm  {display:block; padding:20px 0 10px; }
+#contactform div, .defaultFormDiv { margin-top: 15px; }
+#contactform input, .defaultFormInput {background:url('images/background-gray.png') repeat; color:#fff; padding:8px; border:0; font-size:14px; width:100%;  margin-bottom:5px;}
 #contactform textarea {height:138px; padding:8px; border:0; font-size:14px; width:608px; margin:0 0 5px 0; background:url('images/background-gray.png') repeat; resize:none; color:#fff;}
 .contact_text{width:288px; float:left;  margin-left:24px; padding-left:23px; border-left:1px dashed #000; margin-bottom:20px; }
 

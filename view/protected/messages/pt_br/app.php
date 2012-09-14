@@ -37,10 +37,6 @@ return array(
     'record'=>'Data cadastro',
     'status'=>'Status',
     
-    
-    
-       
-    
     // Formulários - Erros-User
     'usernameRequired' => 'Por favor, digite seu nome de usuário.',
     'passwordRequired' => 'Por favor, digite uma senha.',
@@ -51,15 +47,13 @@ return array(
     'dateInvalid'=>'Data inválida',
     'urlInvalid'=>'Url inválida',
     
-        
-    
     //Category
-    
     'categoryRequired'=>'Categoria obrigatória',
     'nameCategory'=>'Nome da categoria',
     'categoryInvalidLong'=>'Categoria muito longa',
     'categoryInvalidShort'=>'Categoria muito curta',
     
-    
+    // Formulários
+    'singUpForm' => 'Formulário de Cadastro',
     
 );
