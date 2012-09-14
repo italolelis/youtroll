@@ -12,7 +12,8 @@ class SingUpAction extends CAction
             $singUpForm->attributes = $postSingUpForm;
             
             if($singUpForm->validate()) {
-                
+                $api = new PersistenceServer();
+                return $api->connect('user/singUp', 'POST', array('username' => $this->username, 'password' => $this->password));
             }
 
         }

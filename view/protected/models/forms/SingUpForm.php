@@ -2,16 +2,16 @@
 
 class SingUpForm extends CFormModel
 {
-    public $login;
+    public $username;
     public $password;
     public $email;
     
     public function rules()
     {
         return array(
-            array('login, password, email', 'required', 'message' => __('required')),
+            array('username, password, email', 'required', 'message' => __('required')),
             array('email', 'email', 'message' => __('emailInvalid')),
-            array('login', 'length', 'min' => '3', 'max' => '25', 'tooShort' => __('tooShort'), 'tooLong' =>__(' tooLong')),
+            array('username', 'length', 'min' => '3', 'max' => '25', 'tooShort' => __('tooShort'), 'tooLong' =>__(' tooLong')),
             array('password', 'length', 'min' => '8', 'max' => '25', 'tooShort' => __('tooShort'), 'tooLong' =>__('tooLong')),
             array('email', 'length', 'min' => '5', 'max' => '50', 'tooShort' => __('tooShort'), 'tooLong' =>__('tooLong')),
         );
@@ -20,8 +20,8 @@ class SingUpForm extends CFormModel
     public function attributeLabels()
     {
         return array(
-            'email' => __('emailUser'),
-            'login' => __('login'),
+            'email' => __('email'),
+            'username' => __('username'),
             'password' => __('password'),
         );
     }
