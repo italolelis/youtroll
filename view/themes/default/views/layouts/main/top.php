@@ -23,7 +23,7 @@
                     'visible' => Yii::app()->user->isGuest),
                 array(
                     'label' => Yii::t('app', 'categories'),
-                    'url' => array('user/singUp'),
+                    'url' => array('user/categories'),
                     'items' => array(
                         array(
                             'label' => Yii::t('app', 'Categorie 1'),
