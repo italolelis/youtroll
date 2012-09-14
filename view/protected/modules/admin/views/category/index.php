@@ -43,9 +43,10 @@
             <?php endif; ?>
         </tbody>
     </table>
-    <a class="toggle-link" href="<?= Yii::app()->createAbsoluteUrl("admin/category/create") ?>"><i class="icon-plus"></i> <?= __("New Category", "admin") ?></a>
+    <a id="add" class="toggle-link" href="<?= Yii::app()->createAbsoluteUrl("admin/category/create") ?>"><i class="icon-plus"></i> <?= __("New Category", "admin") ?></a>
 </div>
 
+<?= $this->renderPartial('application.modules.admin.views.category.modals.addModal') ?>
 <?= $this->renderPartial('application.modules.admin.views.category.modals.editModal') ?>
 
 <script>
@@ -56,4 +57,14 @@
             loadConfig();
         });    
     });
+    
+    $("#add").on("click", function(){
+        $.get($(this).attr("href"), function(data){
+            $("#content-modal-add-category").html(data);
+        }).complete(function(){
+            loadConfig();
+        });    
+        return false;
+    });
+    
 </script>

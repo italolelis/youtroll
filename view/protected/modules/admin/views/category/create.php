@@ -3,12 +3,12 @@
     <?php
     /** @var BootActiveForm $form */
     $formEditCategory = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-        'id' => 'editCategory', 'enableAjaxValidation' => false, 'enableClientValidation' => true,
-        'action' => 'category/' . $model->cmc_ctg_id,
+        'id' => 'addCategory', 'enableAjaxValidation' => false, 'enableClientValidation' => true,
+        'action' => 'category',
         'clientOptions' => array('validateOnSubmit' => true, 'validateOnChange' => false),
         'htmlOptions' => array('class' => 'well'),
             ));
-    ?>    
+    ?> 
 
     <br>
     <?php echo $formEditCategory->textFieldRow($categoryForm, 'description', array('class' => 'input-xlarge', 'name' => 'categoryForm[cmc_ctg_description]')); ?>       
@@ -17,4 +17,3 @@
 
     <?php $this->endWidget(); ?>
 </div>
-
