@@ -40,7 +40,7 @@ return array(
             'rules' => array(
                 array('admin/<controller>/list', 'pattern' => 'admin/<controller:\w+>', 'verb' => 'GET'),
                 array('admin/<controller>/view', 'pattern' => 'admin/<controller:\w+>/<id:\d+>', 'verb' => 'GET'),
-                array('admin/<controller>/update', 'pattern' => 'admin/<controller:\w+>/<id:\d+>', 'verb' => 'PUT'),
+                array('admin/<controller>/update', 'pattern' => 'admin/<controller:\w+>/<id:\d+>', 'verb' => 'POST'),
                 array('admin/<controller>/delete', 'pattern' => 'admin/<controller:\w+>/<id:\d+>', 'verb' => 'DELETE'),
                 array('admin/<controller>/create', 'pattern' => 'admin/<controller:\w+>', 'verb' => 'POST'),
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>'

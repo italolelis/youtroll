@@ -17,7 +17,7 @@
             </tr>
         </thead>
         <tbody>
-            
+
             <?php foreach ($model as $m): ?>
                 <tr>
                     <td>
@@ -55,12 +55,9 @@
 <script>
     $(".edit").on("click", function(){
         $.get($(this).attr("href"), function(data){
-            //$(this).html(data);
             $("#content-modal-edit-user").html(data);
         }).complete(function(){
-                $("#UserEditForm_birthday").mask("99/99/9999");
-        });
-        
-        
-    })
+            loadConfig();
+        });    
+    });
 </script>

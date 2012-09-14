@@ -45,7 +45,7 @@ class UserController extends Controller
             $message = array();
 
             $user = User::model()->findByPk($id);
-            $user->setAttributes(ApplicationHelper::getRequest("POST", "User"));
+            $user->setAttributes($_POST);
 
             if ($user->save()) {
                 $message = array(
@@ -58,7 +58,7 @@ class UserController extends Controller
                     'message' => 'An unexpected error ocurred'
                 );
             }
-            return CJSON::encode($message);
+            echo CJSON::encode($message);
         }
     }
 
@@ -94,7 +94,7 @@ class UserController extends Controller
                     'message' => 'An unexpected error ocurred'
                 );
             }
-            return CJSON::encode($message);
+            echo CJSON::encode($message);
         }
     }
 

@@ -21,20 +21,24 @@ class CategoryController extends Controller
     public function actionView($id)
     {
         $persistent = new PersistenceServer();
-        $category = $persistent->connect("category", "GET", array($id));
-        $this->render('view', array(
+        $category = $persistent->connect("category/" . $id, "GET");
+        $categoryForm = new CategoryForm();
+
+        foreach ($categoryForm->attributes as $k => $v) {
+            $prefx = "cmc_ctg_" . $k;
+            $categoryForm->{$k} = $category->{$prefx};
+        }
+
+        $this->renderPartial('view', array(
+            'categoryForm' => $categoryForm,
             'model' => $category
         ));
-        
-        $formCategoria = new CategoryForm();
-        $this->renderPartial('view',array('formCategoria'=>$formCategoria)); 
-        
     }
 
     public function actionUpdate($id)
     {
         $persistent = new PersistenceServer();
-        $messages = $persistent->connect("category", "POST", array($id));
+        $messages = $persistent->connect("category/" . $id, "POST", $_POST['categoryForm']);
         echo CJSON::encode($messages);
     }
 

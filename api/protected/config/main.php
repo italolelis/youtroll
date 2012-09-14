@@ -34,7 +34,7 @@ return array(
             'rules' => array(
                 array('<controller>/list', 'pattern' => '<controller:\w+>', 'verb' => 'GET'),
                 array('<controller>/view', 'pattern' => '<controller:\w+>/<id:\d+>', 'verb' => 'GET'),
-                array('<controller>/update', 'pattern' => '<controller:\w+>/<id:\d+>', 'verb' => 'PUT'),
+                array('<controller>/update', 'pattern' => '<controller:\w+>/<id:\d+>', 'verb' => 'POST'),
                 array('<controller>/delete', 'pattern' => '<controller:\w+>/<id:\d+>', 'verb' => 'DELETE'),
                 array('<controller>/create', 'pattern' => '<controller:\w+>', 'verb' => 'POST'),
                 // Para outros controladores

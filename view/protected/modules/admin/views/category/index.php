@@ -46,12 +46,14 @@
     <a class="toggle-link" href="<?= Yii::app()->createAbsoluteUrl("admin/category/create") ?>"><i class="icon-plus"></i> <?= __("New Category", "admin") ?></a>
 </div>
 
-<?= $this->renderPartial('application.modules.admin.views.user.modals.editModal') ?>
+<?= $this->renderPartial('application.modules.admin.views.category.modals.editModal') ?>
 
 <script>
     $(".edit").on("click", function(){
-        $.get($(this).attr("href"), function(){
-            $(this).html();
-        });
-    })
+        $.get($(this).attr("href"), function(data){
+            $("#content-modal-edit-category").html(data);
+        }).complete(function(){
+            loadConfig();
+        });    
+    });
 </script>

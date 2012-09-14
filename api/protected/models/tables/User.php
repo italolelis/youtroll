@@ -14,10 +14,7 @@
  * @property string $usr_site
  * @property string $usr_locale
  * @property string $usr_record
- * @property integer $usr_active
- * @property integer $usr_excluded
- * @property integer $usr_blocked
- * @property integer $usr_recover_password
+ * @property integer $usr_status
  * @property string $usr_profile_path
  * @property string $usr_fk_user_type
  *
@@ -58,7 +55,7 @@ class User extends CActiveRecord
         // will receive user inputs.
         return array(
             array('usr_username, usr_email, usr_password, usr_record', 'required'),
-            array('usr_active, usr_excluded, usr_blocked, usr_recover_password', 'numerical', 'integerOnly' => true),
+            array('usr_status', 'numerical', 'integerOnly' => true),
             array('usr_username', 'length', 'max' => 25),
             array('usr_email', 'length', 'max' => 50),
             array('usr_password, usr_profile_path', 'length', 'max' => 128),
@@ -69,7 +66,7 @@ class User extends CActiveRecord
             array('usr_birthday', 'safe'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('usr_id, usr_username, usr_email, usr_password, usr_birthday, usr_gender, usr_bio, usr_site, usr_locale, usr_record, usr_active, usr_excluded, usr_blocked, usr_recover_password, usr_profile_path, usr_fk_user_type', 'safe', 'on' => 'search'),
+            array('usr_id, usr_username, usr_email, usr_password, usr_birthday, usr_gender, usr_bio, usr_site, usr_locale, usr_record, usr_status, usr_profile_path, usr_fk_user_type', 'safe', 'on' => 'search'),
         );
     }
 
@@ -105,10 +102,7 @@ class User extends CActiveRecord
             'usr_site' => 'Usr Site',
             'usr_locale' => 'Usr Locale',
             'usr_record' => 'Usr Record',
-            'usr_active' => 'Usr Active',
-            'usr_excluded' => 'Usr Excluded',
-            'usr_blocked' => 'Usr Blocked',
-            'usr_recover_password' => 'Usr Recover Password',
+            'usr_status' => 'Usr Status',
             'usr_profile_path' => 'Usr Profile Path',
             'usr_fk_user_type' => 'Usr Fk User Type',
         );
@@ -135,10 +129,7 @@ class User extends CActiveRecord
         $criteria->compare('usr_site', $this->usr_site, true);
         $criteria->compare('usr_locale', $this->usr_locale, true);
         $criteria->compare('usr_record', $this->usr_record, true);
-        $criteria->compare('usr_active', $this->usr_active);
-        $criteria->compare('usr_excluded', $this->usr_excluded);
-        $criteria->compare('usr_blocked', $this->usr_blocked);
-        $criteria->compare('usr_recover_password', $this->usr_recover_password);
+        $criteria->compare('usr_status', $this->usr_status);
         $criteria->compare('usr_profile_path', $this->usr_profile_path, true);
         $criteria->compare('usr_fk_user_type', $this->usr_fk_user_type, true);
 

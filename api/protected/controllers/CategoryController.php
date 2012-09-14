@@ -33,7 +33,7 @@ class CategoryController extends Controller
                     'message' => 'An unexpected error ocurred'
                 );
             }
-            return CJSON::encode($message);
+            echo CJSON::encode($message);
         }
     }
 
@@ -42,10 +42,10 @@ class CategoryController extends Controller
         if (Yii::app()->request->isPostRequest) {
             $message = array();
 
-            $category = Category::model()->findByPk($id);
-            $category->setAttributes(ApplicationHelper::getRequest("POST", "Category"));
+            $cartegory = Category::model()->findByPk($id);
+            $cartegory->setAttributes($_POST);
 
-            if ($category->save()) {
+            if ($cartegory->save()) {
                 $message = array(
                     'status' => 'success',
                     'message' => 'Category updated'
@@ -56,7 +56,7 @@ class CategoryController extends Controller
                     'message' => 'An unexpected error ocurred'
                 );
             }
-            return CJSON::encode($message);
+            echo CJSON::encode($message);
         }
     }
 
@@ -64,7 +64,7 @@ class CategoryController extends Controller
     {
         $message = array();
 
-        $category = Category::model()->findByPk($id);
+        $category = Category::model()->find("cmc_ctg_id = :id", array(":id" => $id));
 
         if ($category) {
             $message = $category;
@@ -74,7 +74,7 @@ class CategoryController extends Controller
                 'message' => 'The provided id isn\'t correct'
             );
         }
-        return CJSON::encode($message);
+        echo CJSON::encode($message);
     }
 
     public function actionDelete($id)
@@ -93,7 +93,7 @@ class CategoryController extends Controller
                     'message' => 'An unexpected error ocurred'
                 );
             }
-            return CJSON::encode($message);
+            echo CJSON::encode($message);
         }
     }
 

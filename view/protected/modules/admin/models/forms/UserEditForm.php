@@ -14,16 +14,15 @@ class UserEditForm extends CFormModel
     public $locale;
     public $record;
     public $status;
-    
+
     public function rules()
     {
         return array(
             array('username', 'required', 'message' => Yii::t('app', 'usernameRequired')),
             array('email', 'required', 'message' => Yii::t('app', 'emailRequired')),
             array('email', 'email', 'message' => Yii::t('app', 'emailInvalid')),
-            array('birthday', 'date', 'format'=>'dd-MM-yyyy', 'allowEmpty'=>false,'message' => Yii::t('app', 'dateInvalid')),
+            array('birthday', 'date', 'format' => 'dd-MM-yyyy', 'allowEmpty' => false, 'message' => Yii::t('app', 'dateInvalid')),
             array('site', 'url', 'message' => Yii::t('app', 'urlInvalid')),
-            
         );
     }
 
@@ -39,7 +38,6 @@ class UserEditForm extends CFormModel
             'site' => Yii::t('app', 'site'),
             'locale' => Yii::t('app', 'locale'),
             'status' => Yii::t('app', 'status'),
-            
         );
     }
 

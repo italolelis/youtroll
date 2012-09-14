@@ -9,8 +9,8 @@ class Gender
     public static function getGenders()
     {
         return array(
-            self::MALE => self::MALE,
-            self::FEMALE => self::FEMALE,
+            self::MALE => "MALE",
+            self::FEMALE => "FEMALE",
         );
     }
 

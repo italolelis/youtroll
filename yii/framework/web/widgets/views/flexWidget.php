@@ -36,10 +36,10 @@ if ( hasProductInstall && !hasRequestedVersion ) {
 		"width", "<?php echo $this->width; ?>",
 		"height", "<?php echo $this->height; ?>",
 		"align", "<?php echo $this->align; ?>",
-		"id", "<?php echo $this->name; ?>",
+		"id", "<?php echo $this->description; ?>",
 		"quality", "<?php echo $this->quality; ?>",
 		"bgcolor", "<?php echo $this->bgColor; ?>",
-		"name", "<?php echo $this->name; ?>",
+		"name", "<?php echo $this->description; ?>",
 		"allowScriptAccess","<?php echo $this->allowScriptAccess ?>",
 		"allowFullScreen","<?php echo $this->allowFullScreen ?>",
 		"type", "application/x-shockwave-flash",
@@ -49,14 +49,14 @@ if ( hasProductInstall && !hasRequestedVersion ) {
 	// if we've detected an acceptable version
 	// embed the Flash Content SWF when all tests are passed
 	AC_FL_RunContent(
-		"src", "<?php echo $this->baseUrl ?>/<?php echo $this->name ?>",
+		"src", "<?php echo $this->baseUrl ?>/<?php echo $this->description ?>",
 		"width", "<?php echo $this->width ?>",
 		"height", "<?php echo $this->height ?>",
 		"align", "<?php echo $this->align ?>",
-		"id", "<?php echo $this->name ?>",
+		"id", "<?php echo $this->description ?>",
 		"quality", "<?php echo $this->quality ?>",
 		"bgcolor", "<?php echo $this->bgColor ?>",
-		"name", "<?php echo $this->name ?>",
+		"name", "<?php echo $this->description ?>",
 		"flashvars","<?php echo $this->flashVarsAsString; ?>",
 		"allowScriptAccess","<?php echo $this->allowScriptAccess ?>",
 		"allowFullScreen","<?php echo $this->allowFullScreen ?>",
@@ -71,22 +71,22 @@ if ( hasProductInstall && !hasRequestedVersion ) {
 </script>
 <noscript>
 	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
-		id="<?php echo $this->name ?>"
+		id="<?php echo $this->description ?>"
 		width="<?php echo $this->width ?>"
 		height="<?php echo $this->height ?>"
 		codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
-			<param name="movie" value="<?php echo $this->baseUrl ?>/<?php echo $this->name ?>.swf" />
+			<param name="movie" value="<?php echo $this->baseUrl ?>/<?php echo $this->description ?>.swf" />
 			<param name="quality" value="<?php echo $this->quality ?>" />
 			<param name="bgcolor" value="<?php echo $this->bgColor ?>" />
 			<param name="flashVars" value="<?php echo $this->flashVarsAsString ?>" />
 			<param name="allowScriptAccess" value="<?php echo $this->allowScriptAccess ?>" />
 			<param name="allowFullScreen" value="<?php echo $this->allowFullScreen ?>" />
-			<embed src="<?php echo $this->baseUrl ?>/<?php echo $this->name ?>.swf"
+			<embed src="<?php echo $this->baseUrl ?>/<?php echo $this->description ?>.swf"
 				quality="<?php echo $this->quality ?>"
 				bgcolor="<?php echo $this->bgColor ?>"
 				width="<?php echo $this->width ?>"
 				height="<?php echo $this->height ?>"
-				name="<?php echo $this->name ?>"
+				name="<?php echo $this->description ?>"
 				align="<?php echo $this->align ?>"
 				play="true"
 				loop="false"
