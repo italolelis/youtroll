@@ -38,6 +38,9 @@ return array(
     'status'=>'Status',
     
     // Formulários - Erros-User
+    'tooShort' => 'Este campo, deve ter no mínimo {min} caracteres.',
+    'tooLong' => 'Este campo pode ter no máximo {max} caracteres.',
+    'required' => 'Este campo é obrigatório.',
     'usernameRequired' => 'Por favor, digite seu nome de usuário.',
     'passwordRequired' => 'Por favor, digite uma senha.',
     'usernameInvalid' => 'Nome de usuário inválido.',

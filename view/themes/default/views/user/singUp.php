@@ -14,8 +14,8 @@
         <div class="defaultFormDiv" style="width: 25%">
             <div>
                 <?php echo $formSingUp->textFieldRow($singUpForm, 'login', array('class' => 'defaultFormInput', 'style' => 'color: #fff')); ?>
-                <?php echo $formSingUp->textFieldRow($singUpForm, 'email', array('class' => 'defaultFormInput', 'style' => 'color: #fff')); ?>
                 <?php echo $formSingUp->passwordFieldRow($singUpForm, 'password', array('class' => 'defaultFormInput', 'style' => 'color: #fff')); ?>
+                <?php echo $formSingUp->textFieldRow($singUpForm, 'email', array('class' => 'defaultFormInput', 'style' => 'color: #fff')); ?>
             </div>
             <div>
                 <?php

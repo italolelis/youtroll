@@ -1,23 +1,19 @@
 <?php
 
-Yii::import('application.components.UserIdentity');
-
 class SingUpForm extends CFormModel
 {
-
-    public $email;
-    public $password;
     public $login;
-    public $repeatPassword;
+    public $password;
+    public $email;
     
     public function rules()
     {
         return array(
-            array('email', 'required', 'message' => __('emailInvalid')),
+            array('login, password, email', 'required', 'message' => __('required')),
             array('email', 'email', 'message' => __('emailInvalid')),
-            array('login', 'required', 'message'=> __('loginRequired')),
-            array('password', 'length', 'min' => '3', 'max' => '25', 'tooShort' => __('passwordInvalid'), 'tooLong' =>__(' passwordInvalid')),
-            array('password', 'compare', 'compareAttribute'=>'repeatPassword','message' =>__('loginRequired')),
+            array('login', 'length', 'min' => '3', 'max' => '25', 'tooShort' => __('tooShort'), 'tooLong' =>__(' tooLong')),
+            array('password', 'length', 'min' => '8', 'max' => '25', 'tooShort' => __('tooShort'), 'tooLong' =>__('tooLong')),
+            array('email', 'length', 'min' => '5', 'max' => '50', 'tooShort' => __('tooShort'), 'tooLong' =>__('tooLong')),
         );
     }
 
@@ -27,7 +23,6 @@ class SingUpForm extends CFormModel
             'email' => __('emailUser'),
             'login' => __('login'),
             'password' => __('password'),
-            'repeatPassword' => __('repeatPassword'),
         );
     }
 
