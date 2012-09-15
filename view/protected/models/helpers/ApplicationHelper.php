@@ -24,15 +24,18 @@ class ApplicationHelper extends CFormModel
         }
     }
 
-    public static function throwException($status)
-    {
-        $message = ApplicationHelper::getStatusMessage($status);
-
-        if ($message) {
-            throw new CHttpException($status, $message);
-        } else {
-            ApplicationHelper::throwException(500);
+    public static function throwException($status, $message = null, $errorCode = 0) {
+        if(is_null($message)) {
+	    $message = ApplicationHelper::getStatusMessage($status);
+	} else {
+	    $errorCode = -1;
+	}
+	
+        if($message) {
+            throw new CHttpException($status, $message, $errorCode);
         }
+	
+	ApplicationHelper::throwException(500);
     }
     
     public static function ajaxResponse($response) {

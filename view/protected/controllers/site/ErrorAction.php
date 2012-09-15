@@ -8,7 +8,7 @@ class ErrorAction extends CAction
         $error = Yii::app()->errorHandler->error;
 
         if ($error) {
-            $errorMessage = ApplicationHelper::getStatusMessage($error['code']);
+            $errorMessage = $error['errorCode'] === -1 ? $error['message'] : ApplicationHelper::getStatusMessage($error['code']);
 
             if (Yii::app()->request->isAjaxRequest) {
                 echo $errorMessage;
