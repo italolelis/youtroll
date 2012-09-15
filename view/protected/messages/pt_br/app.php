@@ -13,7 +13,8 @@ return array(
     'singUp' => 'Cadastre-se',
         
     // Páginas Restritas - Vísivéis apenas para os usuários autenticados
-
+    'sendImage' => 'Enviar Imagem',
+    'createImage' => 'Criar Tirinha',
     
     // Páginas Especiais - Visíveis apenas quando acessadas
     'error' => 'Ops!',

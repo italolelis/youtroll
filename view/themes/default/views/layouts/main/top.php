@@ -22,6 +22,14 @@
                     'url' => array('user/singUp'),
                     'visible' => Yii::app()->user->isGuest),
                 array(
+                    'label' => Yii::t('app', 'createImage'),
+                    'url' => array('user/createImage'),
+                    'visible' => !Yii::app()->user->isGuest),
+                array(
+                    'label' => Yii::t('app', 'sendImage'),
+                    'url' => array('user/sendImage'),
+                    'visible' => !Yii::app()->user->isGuest),
+                array(
                     'label' => Yii::t('app', 'categories'),
                     'url' => array('user/categories'),
                     'items' => array(
