@@ -3589,3 +3589,48 @@ Stack trace:
 REQUEST_URI=/youtroll/view/view/themes/default/resources/images/lightbox/loading.gif
 HTTP_REFERER=http://localhost/youtroll/view/user/singUp
 ---
+2012/09/15 20:11:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view/themes/default/resources/images/lightbox/loading.gif".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('view/themes/def...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/view/themes/default/resources/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/user/singUp
+---
+2012/09/15 20:11:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view/themes/default/resources/images/lightbox/close.png".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('view/themes/def...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/view/themes/default/resources/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/user/singUp
+---
+2012/09/15 20:11:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view/themes/default/resources/images/lightbox/loading.gif".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('view/themes/def...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/view/themes/default/resources/images/lightbox/loading.gif
+HTTP_REFERER=http://localhost/youtroll/view/user/singUp
+---
+2012/09/15 20:11:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view/themes/default/resources/images/lightbox/close.png".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('view/themes/def...')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\view\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/view/view/themes/default/resources/images/lightbox/close.png
+HTTP_REFERER=http://localhost/youtroll/view/user/singUp
+---
+2012/09/15 20:12:39 [warning] [application] Failed to set unsafe attribute "rememberMe" of "LoginForm".
+in C:\xampp\htdocs\youtroll\view\protected\controllers\user\LoginAction.php (14)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/15 20:38:29 [warning] [application] Failed to set unsafe attribute "rememberMe" of "LoginForm".
+in C:\xampp\htdocs\youtroll\view\protected\controllers\user\LoginAction.php (14)
+in C:\xampp\htdocs\youtroll\view\index.php (10)
+2012/09/15 20:38:49 [warning] [application] Failed to set unsafe attribute "rememberMe" of "LoginForm".
+in C:\xampp\htdocs\youtroll\view\protected\controllers\user\LoginAction.php (14)
+in C:\xampp\htdocs\youtroll\view\index.php (10)

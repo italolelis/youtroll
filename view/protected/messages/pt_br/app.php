@@ -8,6 +8,7 @@ return array(
     'home' => 'Página Inicial',
     'categories' => 'Categorias',
     'about' => 'Sobre',
+    'logout' => 'Sair',
     
     // Páginas Abertas - Visíveis apenas para os visitantes
     'singUp' => 'Cadastre-se',
