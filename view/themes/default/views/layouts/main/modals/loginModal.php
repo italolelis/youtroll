@@ -10,10 +10,9 @@
         <?= CHtml::image(Yii::app()->theme->baseUrl . "/resources/images/load-login.gif", "load") ?>
     </div>
         <?php
-        /** @var BootActiveForm $form */
         $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
             'id' => 'verticalForm', 'enableAjaxValidation' => true, 'enableClientValidation' => true,
-            'action' => 'user/login',
+            'action' => array('user/login'),
             'clientOptions' => array('validateOnSubmit' => true, 'validateOnChange' => false, 'afterValidate' => 'js:submiAjaxForm'),
             'htmlOptions' => array('class' => 'well'),
                 ));
