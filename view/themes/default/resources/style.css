@@ -619,16 +619,16 @@ ul.ourHolderGallery li.item a {
 .tabs-container {border:1px solid #cbcbcb; padding:20px; background:#fff; margin-top:-1px;}
 
 /* alert */
-.alert-error, .alert-success, .alert-info, .alert-notice{position:relative; padding:12px 12px 12px 60px; background:#fff; border:1px solid #cbcbcb; margin-bottom:10px;}
-.alert-icon {position:absolute; height:100%; width:50px; top:0; left:0;}
-.alert-error {color:#ce2127; border:1px solid #ce2127;}
-.alert-error .alert-icon {background:#ce2127 url(images/elements/alert-error.png) no-repeat center center;}
-.alert-success {color:#1f823f;  border:1px solid #1f823f;}
-.alert-success .alert-icon {background:#1f823f url(images/elements/alert-success.png) no-repeat center center;}
-.alert-info {color:#3853a4;  border:1px solid #3853a4;}
-.alert-info .alert-icon {background:#3853a4 url(images/elements/alert-info.png) no-repeat center center;}
-.alert-notice {color:#aa9834;  border:1px solid #aa9834;}
-.alert-notice .alert-icon {background:#aa9834 url(images/elements/alert-notice.png) no-repeat center center;}
+/*.alert-error, .alert-success, .alert-info, .alert-notice{position:relative; padding:12px 12px 12px 60px; background:#fff; border:1px solid #cbcbcb; margin-bottom:10px;}*/
+/*.alert-icon {position:absolute; height:100%; width:50px; top:0; left:0;}*/
+/*.alert-error {color:#ce2127; border:1px solid #ce2127;}*/
+/*.alert-error .alert-icon {background:#ce2127 url(images/elements/alert-error.png) no-repeat center center;}*/
+/*.alert-success {color:#1f823f;  border:1px solid #1f823f;}*/
+/*.alert-success .alert-icon {background:#1f823f url(images/elements/alert-success.png) no-repeat center center;}*/
+/*.alert-info {color:#3853a4;  border:1px solid #3853a4;}*/
+/*.alert-info .alert-icon {background:#3853a4 url(images/elements/alert-info.png) no-repeat center center;}*/
+/*.alert-notice {color:#aa9834;  border:1px solid #aa9834;}*/
+/*.alert-notice .alert-icon {background:#aa9834 url(images/elements/alert-notice.png) no-repeat center center;}*/
 
 /* blockquote */
 blockquote {margin:0; padding:20px 20px 20px 60px; font-style:italic; font-size:16px; background: #fff url(images/elements/quote.png) no-repeat 10px 10px; font-family:times new roman, sans-serif; border:1px solid #cbcbcb;}

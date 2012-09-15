@@ -26,7 +26,7 @@ class UserController extends Controller
                 ApplicationHelper::ajaxResponse($user->getErrors());
             }
             
-            ApplicationHelper::ajaxResponse(true);
+            ApplicationHelper::ajaxResponse('true');
         }
     }
 

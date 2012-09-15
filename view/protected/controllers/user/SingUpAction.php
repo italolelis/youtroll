@@ -4,6 +4,7 @@ Yii::import('application.components.PersistenceServer');
 
 class SingUpAction extends CAction
 {
+    private $_prefix = 'usr_';
 
     public function run()
     {
@@ -21,6 +22,22 @@ class SingUpAction extends CAction
                     'usr_password' => $singUpForm->password,
                     'usr_email' => $singUpForm->email,
                 ));
+                
+                if($return === true) {
+                    Yii::app()->user->setFlash('success', __('singUpFinish', 'texts'));
+                    
+                    $this->controller->redirect(Yii::app()->baseUrl);
+                }
+                
+                foreach ($singUpForm->attributes as $k => $v) {
+                    $param = $this->_prefix.$k;
+
+                    if($return->$param !== null) {
+                        foreach ($return->$param as $errorMessage) {
+                            $singUpForm->addError($k, $errorMessage);
+                        }
+                    }
+                }
             }
 
         }

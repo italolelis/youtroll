@@ -1,3 +1,18 @@
+<br />
+<?php 
+$this->widget('bootstrap.widgets.TbAlert', array(
+    'block' => true,
+    'fade' => true,
+    'closeText' => '&times;',
+    'alerts' => array(
+        'success' => array(
+            'block' => true,
+            'fade' => true,
+            'closeText' => '&times;'),
+    ),
+));
+?>
+
 <!-- BEGIN TIMELINE -->
 <div class="timelineLight tl">
     

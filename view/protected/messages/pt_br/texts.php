@@ -70,6 +70,8 @@ EQUIPE YOU TROLL S.A.',
     'textExibicao' => 'Exibição de tirinhas;</br> Pesquisa de tirinhas;</br> Organização de tirinhas;</br> Compartilhamento de tirinhas.</br>',
     
     'textCanal' => 'Novo design dos canais;</br> Configurações pessoais;</br> Interação;</br>',
+    
+    'singUpFinish' => 'Parabéns! O seu cadastro foi finalizado com sucesso!'
 );
 
 ?>

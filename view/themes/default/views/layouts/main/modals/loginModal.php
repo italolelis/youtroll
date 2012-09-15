@@ -15,7 +15,7 @@
             'action' => array('user/login'),
             'clientOptions' => array('validateOnSubmit' => true, 'validateOnChange' => false, 'afterValidate' => 'js:submiAjaxForm'),
             'htmlOptions' => array('class' => 'well'),
-                ));
+        ));
         ?>
 
         <?php echo $form->textFieldRow($this->modelLogin, 'username', array('class' => 'span3')); ?>
