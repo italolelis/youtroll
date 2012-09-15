@@ -1,6 +1,9 @@
 <?php
 
-// Yii::setPathOfAlias('local','path/to/local-folder');
+function __($message, $dominio = "app")
+{
+    return Yii::t($dominio, $message);
+}
 
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
