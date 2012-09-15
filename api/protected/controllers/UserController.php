@@ -17,25 +17,16 @@ class UserController extends Controller
     }
 
     public function actionCreate()
-    {
+    {   
         if (Yii::app()->request->isPostRequest) {
-            $message = array();
-
             $user = new User();
-            $user->setAttributes($_POST['User']);
-
-            if ($user->save()) {
-                $message = array(
-                    'status' => 'success',
-                    'message' => 'User created'
-                );
-            } else {
-                $message = array(
-                    'status' => 'error',
-                    'message' => 'An unexpected error ocurred'
-                );
+            $user->setAttributes($_POST);
+            
+            if (!$user->save()) {
+                ApplicationHelper::ajaxResponse($user->getErrors());
             }
-            return CJSON::encode($message);
+            
+            ApplicationHelper::ajaxResponse(true);
         }
     }
 

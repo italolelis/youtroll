@@ -1,5 +1,7 @@
 <?php
 
+Yii::import('ext.several.Bcrypt');
+
 /**
  * This is the model class for table "tb_users".
  *
@@ -54,8 +56,8 @@ class User extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('usr_username, usr_email, usr_password, usr_record', 'required'),
             array('usr_status', 'numerical', 'integerOnly' => true),
+            array('usr_username, usr_email', 'unique'),
             array('usr_username', 'length', 'max' => 25),
             array('usr_email', 'length', 'max' => 50),
             array('usr_password, usr_profile_path', 'length', 'max' => 128),
@@ -86,7 +88,13 @@ class User extends CActiveRecord
         );
     }
 
-    /**
+    public function beforeValidate()
+    {
+        $this->usr_password = Bcrypt::hash($this->usr_password);
+        return true;
+    }
+
+        /**
      * @return array customized attribute labels (name=>label)
      */
     public function attributeLabels()
@@ -107,7 +115,7 @@ class User extends CActiveRecord
             'usr_fk_user_type' => 'Usr Fk User Type',
         );
     }
-
+    
     /**
      * Retrieves a list of models based on the current search/filter conditions.
      * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.

@@ -1,5 +1,7 @@
 <?php
 
+Yii::import('application.components.PersistenceServer');
+
 class SingUpAction extends CAction
 {
 
@@ -13,7 +15,12 @@ class SingUpAction extends CAction
             
             if($singUpForm->validate()) {
                 $api = new PersistenceServer();
-                return $api->connect('user/singUp', 'POST', array('username' => $this->username, 'password' => $this->password));
+                
+                $return = $api->connect('user', 'POST', array(
+                    'usr_username' => $singUpForm->username,
+                    'usr_password' => $singUpForm->password,
+                    'usr_email' => $singUpForm->email,
+                ));
             }
 
         }

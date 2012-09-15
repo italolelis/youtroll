@@ -26,4 +26,6 @@ return array(
     'usernameInvalid' => 'Nome de usuário inválido.',
     'passwordInvalid' => 'Senha inválida.',
     'passwordAuthenticate' => 'Dados de acesso inválidos.',
+    
+    'propretyNotExists' => 'A propriedade {proprety} não existe.'
 );
