@@ -23,6 +23,7 @@ class UserController extends Controller
             'login' => 'application.controllers.user.LoginAction',
             'logout' => 'application.controllers.user.LogoutAction',
             'singUp'=>'application.controllers.user.SingUpAction',
+            'sendImage'=>'application.controllers.user.SendImageAction',
         );
     }
 

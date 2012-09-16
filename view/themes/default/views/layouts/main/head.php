@@ -19,7 +19,7 @@
     Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . "/resources/css/hover.css");
     Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . "/resources/css/columns.css");
     Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . "/resources/css/hover_image.css");
-    Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . "/resources/css/lightbox.css");
+//    Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . "/resources/css/lightbox.css");
     Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . "/resources/css/buttons.css");
     Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . "/resources/css/widgets.css");
     Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . "/resources/css/light.css");
@@ -27,7 +27,11 @@
     Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . "/resources/css/responsive.css");
     
     //Jquery
-    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/resources/js/jquery-1.7.2.min.js", CClientScript::POS_HEAD);
+    
+    
+    //Comentado por causa de conflito com upload file Rodolfo
+    //Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/resources/js/jquery-1.7.2.min.js", CClientScript::POS_HEAD);
+    
     Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/resources/js/jquery.easing.1.3.js");
     Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/resources/js/app/jquery-login.js");
     
