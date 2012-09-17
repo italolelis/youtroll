@@ -2,11 +2,11 @@
 
 <div class="modal-header">
     <a class="close" data-dismiss="modal">&times;</a>
-    <h4>Edit user</h4>
+    <h4>Add Categoria</h4>
 </div>
 
 <div class="modal-body">
-    <div id="content-modal-add-user"></div>
+    <div id="content-modal-add-category"></div>
 </div>
 
 <div class="modal-footer">

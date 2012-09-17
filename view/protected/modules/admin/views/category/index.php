@@ -43,7 +43,7 @@
             <?php endif; ?>
         </tbody>
     </table>
-    <a id="add" class="toggle-link" href="<?= Yii::app()->createAbsoluteUrl("admin/category/create") ?>"><i class="icon-plus"></i> <?= __("New Category", "admin") ?></a>
+    <a id="add" data-toggle="modal" data-target="#addModal" class="toggle-link" href="<?= Yii::app()->createAbsoluteUrl("admin/category/add") ?>"><i class="icon-plus"></i> <?= __("New Category", "admin") ?></a>
 </div>
 
 <?= $this->renderPartial('application.modules.admin.views.category.modals.addModal') ?>
@@ -55,7 +55,7 @@
             $("#content-modal-edit-category").html(data);
         }).complete(function(){
             loadConfig();
-        });    
+        });
     });
     
     $("#add").on("click", function(){
@@ -63,8 +63,7 @@
             $("#content-modal-add-category").html(data);
         }).complete(function(){
             loadConfig();
-        });    
-        return false;
+        });
     });
     
 </script>

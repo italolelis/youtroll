@@ -23,12 +23,15 @@ class CategoryController extends Controller
         if (Yii::app()->request->isPostRequest) {
             $persistent = new PersistenceServer();
             $category = $persistent->connect("category", "POST", $_POST['categoryForm']);
-        } else {
-            $categoryForm = new CategoryForm();
-            $this->renderPartial('create', array(
-                'categoryForm' => $categoryForm
-            ));
         }
+    }
+
+    public function actionAdd()
+    {
+        $categoryForm = new CategoryForm();
+        $this->renderPartial('create', array(
+            'categoryForm' => $categoryForm
+        ));
     }
 
     public function actionView($id)
