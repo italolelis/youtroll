@@ -2,7 +2,7 @@ api/protected/runtime
 view/protected/runtime
 api/assets
 view/assets
-*.log
+application.log
 *.DS_Store
 *.Trash
 *.vo
