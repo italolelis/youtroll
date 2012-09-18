@@ -1,3 +1,16 @@
+<!-- SLIDER_TIMELINE -->
+<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/resources/js/jquery.timeline.min.js"); ?>
+<script type="text/javascript">
+
+    $(window).load(function() {
+        // dark
+        $('.timelineLight').timeline({
+            openTriggerClass : '.read_more',
+            startItem : '15/08/2012'
+        });
+    });
+</script>
+
 <br />
 <?php 
 $this->widget('bootstrap.widgets.TbAlert', array(

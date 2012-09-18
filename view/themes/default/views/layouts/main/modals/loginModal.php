@@ -13,7 +13,7 @@
         $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
             'id' => 'verticalForm', 'enableAjaxValidation' => true, 'enableClientValidation' => true,
             'action' => array('user/login'),
-            'clientOptions' => array('validateOnSubmit' => true, 'validateOnChange' => false, 'afterValidate' => 'js:submiAjaxForm'),
+            'clientOptions' => array('validateOnSubmit' => true, 'validateOnChange' => false),
             'htmlOptions' => array('class' => 'well'),
         ));
         ?>

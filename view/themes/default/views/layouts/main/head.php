@@ -63,16 +63,7 @@
 <script type="text/javascript" src="js/ie.html5.js"></script>
 <![endif]-->
 
-<!-- SLIDER -->
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/resources/js/jquery.cycle.js"); ?>
 
-<script type="text/javascript">
-    $(window).load(function() {
-        $("#scroller .items").cycle({ 
-            fx: 'scrollUp' 	
-        });
-    });
-</script>
 
 <!-- SLIDER_NIVO 
 <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
@@ -84,19 +75,6 @@
     });
 </script>
 -->
-
-<!-- SLIDER_TIMELINE -->
-<?php Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/resources/js/jquery.timeline.min.js"); ?>
-<script type="text/javascript">
-
-    $(window).load(function() {
-        // dark
-        $('.timelineLight').timeline({
-            openTriggerClass : '.read_more',
-            startItem : '15/08/2012'
-        });
-    });
-</script>
 
 <!-- SLIDER_PIECEMAKER
 <script type="text/javascript" src="js/swfobject.js"></script>

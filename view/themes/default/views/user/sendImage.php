@@ -7,7 +7,7 @@
     <br/>    
         
     <!-- The file upload form used as target for the file upload widget -->
-    <form id="fileupload" action="<?php echo Yii::app()->theme->baseUrl ;?>/resources/uploadFile/server/php/" method="POST" enctype="multipart/form-data">
+    <form id="fileupload" action="<?php echo Yii::app()->theme->baseUrl ?>/plugins/upload/server/php/" method="POST" enctype="multipart/form-data">
         <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
         <div class="row fileupload-buttonbar">
             <div class="span7">
@@ -139,23 +139,30 @@
 
 <?php 
     
-    
-    Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl ."/resources/uploadFile/css/style.css");
+    Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl ."/plugins/upload/css/style.css");
     Yii::app()->clientScript->registerCssFile("http://blueimp.github.com/cdn/css/bootstrap-responsive.min.css");
     Yii::app()->clientScript->registerCssFile("http://blueimp.github.com/Bootstrap-Image-Gallery/css/bootstrap-image-gallery.min.css");
-    Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl ."/resources/uploadFile/css/jquery.fileupload-ui.css");
-
-    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/resources/uploadFile/js/vendor/jquery.ui.widget.js");
+    Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl ."/plugins/upload/css/jquery.fileupload-ui.css");
+    
+    
+    
+    Yii::app()->clientScript->registerScriptFile("//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js");
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl ."/plugins/jquery-tooltip/jquery.tooltip.js");
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . "/plugins/upload/js/vendor/jquery.ui.widget.js");
     Yii::app()->clientScript->registerScriptFile("http://blueimp.github.com/JavaScript-Templates/tmpl.min.js");
     Yii::app()->clientScript->registerScriptFile("http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js");
     Yii::app()->clientScript->registerScriptFile("http://blueimp.github.com/JavaScript-Canvas-to-Blob/canvas-to-blob.min.js");
     Yii::app()->clientScript->registerScriptFile("http://blueimp.github.com/Bootstrap-Image-Gallery/js/bootstrap-image-gallery.min.js");
-    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl ."/resources/uploadFile/js/jquery.iframe-transport.js");
-    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl ."/resources/uploadFile/js/jquery.fileupload.js");
-    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl ."/resources/uploadFile/js/jquery.fileupload-fp.js");
-    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl ."/resources/uploadFile/js/jquery.fileupload-ui.js");
-    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl ."/resources/uploadFile/js/locale.js");
-    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl ."/resources/uploadFile/js/main.js");
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl ."/plugins/upload/js/jquery.iframe-transport.js");
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl ."/plugins/upload/js/jquery.fileupload.js");
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl ."/plugins/upload/js/jquery.fileupload-fp.js");
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl ."/plugins/upload/js/jquery.fileupload-ui.js");
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl ."/plugins/upload/js/locale.js");
+    Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl ."/plugins/upload/js/main.js");
+
+
+
+    
     
 ?>
 
