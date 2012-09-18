@@ -39,8 +39,8 @@ class Category extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('cmc_ctg_id, cmc_ctg_description', 'required'),
-            array('cmc_ctg_id', 'length', 'max' => 1),
+            array('cmc_ctg_description', 'required'),
+            array('cmc_ctg_id', 'numerical', 'integerOnly' => true),
             array('cmc_ctg_description', 'length', 'max' => 50),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.

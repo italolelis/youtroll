@@ -20,7 +20,7 @@ class CategoryController extends Controller
             $message = array();
 
             $category = new Category();
-            $category->setAttributes($_POST['Category']);
+            $category->setAttributes($_POST);
 
             if ($category->save()) {
                 $message = array(
@@ -33,6 +33,7 @@ class CategoryController extends Controller
                     'message' => 'An unexpected error ocurred'
                 );
             }
+
             echo CJSON::encode($message);
         }
     }

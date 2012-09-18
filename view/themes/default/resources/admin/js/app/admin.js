@@ -5,18 +5,24 @@ function loadConfig(){
     $("#UserEditForm_birthday").mask("99/99/9999");
 }
 
-$('#editUser').live('submit',function(){
+$('#editUser').live('submit', function(){
     var urlAction = $(this).attr('action');
     Ajax.post(urlAction, null, $(this).serialize());
     return false;
 });
     
-$('#editCategory').live('submit',function(){
+$('#editCategory').live('submit', function(){
     var urlAction = $(this).attr('action');
     Ajax.post(urlAction, null, $(this).serialize());
     return false;     
 });
-    
+
+$('#addCategory').live('submit', function(){
+    var urlAction = $(this).attr('action');
+    Ajax.post(urlAction, null, $(this).serialize());
+    return false;     
+});
+
 Ajax = {
     create: function(url, success, type, data){
         
