@@ -1,0 +1,1043 @@
+2012/08/24 00:40:07 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "getRequest".' in C:\xampp\htdocs\libs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\projetos\sites\youtroll\protected\controllers\site\IndexAction.php(8): CComponent->__call('getRequest', Array)
+#1 C:\xampp\htdocs\projetos\sites\youtroll\protected\controllers\site\IndexAction.php(8): SiteController->getRequest('POST', 'LoginForm')
+#2 C:\xampp\htdocs\libs\yii\framework\web\actions\CAction.php(75): IndexAction->run()
+#3 C:\xampp\htdocs\libs\yii\framework\web\CController.php(309): CAction->runWithParams(Array)
+#4 C:\xampp\htdocs\libs\yii\framework\web\CController.php(287): CController->runAction(Object(IndexAction))
+#5 C:\xampp\htdocs\libs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(IndexAction), Array)
+#6 C:\xampp\htdocs\libs\yii\framework\web\CWebApplication.php(276): CController->run('')
+#7 C:\xampp\htdocs\libs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('')
+#8 C:\xampp\htdocs\libs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\projetos\sites\youtroll\index.php(10): CApplication->run()
+#10 {main}
+REQUEST_URI=/projetos/sites/youtroll/
+---
+2012/08/24 00:41:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sites/index".' in C:\xampp\htdocs\libs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\libs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('sites/index')
+#1 C:\xampp\htdocs\libs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\projetos\sites\youtroll\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/projetos/sites/youtroll/sites/index
+---
+2012/09/01 00:17:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "]".' in C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController(']')
+#1 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\youtroll\index.php(10): CApplication->run()
+#3 {main}
+REQUEST_URI=/youtroll/]
+---
+2012/09/08 19:50:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "index" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/api/user
+---
+2012/09/08 19:52:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "index" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/api/user
+---
+2012/09/08 19:53:36 [error] [php] include(User.php): failed to open stream: No such file or directory (C:\xampp\htdocs\youtroll\yii\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(8): spl_autoload_call()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionList()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/user
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (8)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/08 19:55:16 [error] [exception.CHttpException.500] exception 'CHttpException' with message 'Erro Interno do Servidor' in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:32
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php(51): ApplicationHelper::throwException(500)
+#1 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(14): ApplicationHelper::ajaxResponse(Array)
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionList()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('list')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/list')
+#8 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#10 {main}
+REQUEST_URI=/youtroll/api/user
+---
+2012/09/08 19:57:18 [error] [exception.CHttpException.500] exception 'CHttpException' with message 'Erro Interno do Servidor' in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:32
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php(51): ApplicationHelper::throwException(500)
+#1 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(14): ApplicationHelper::ajaxResponse(Array)
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionList()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('list')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/list')
+#8 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#10 {main}
+REQUEST_URI=/youtroll/api/user
+---
+2012/09/08 19:57:34 [error] [exception.CHttpException.500] exception 'CHttpException' with message 'Erro Interno do Servidor' in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:32
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php(51): ApplicationHelper::throwException(500)
+#1 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(14): ApplicationHelper::ajaxResponse(Array)
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionList()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('list')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/list')
+#8 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#10 {main}
+REQUEST_URI=/youtroll/api/user
+---
+2012/09/08 19:57:45 [error] [exception.CHttpException.500] exception 'CHttpException' with message 'Erro Interno do Servidor' in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:32
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php(51): ApplicationHelper::throwException(500)
+#1 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(14): ApplicationHelper::ajaxResponse(Array)
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionList()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('list')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/list')
+#8 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#10 {main}
+REQUEST_URI=/youtroll/api/user
+---
+2012/09/09 07:48:22 [error] [exception.CHttpException.500] exception 'CHttpException' with message 'Erro Interno do Servidor' in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:32
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php(51): ApplicationHelper::throwException(500)
+#1 C:\xampp\htdocs\youtroll\api\protected\controllers\CategoryController.php(14): ApplicationHelper::ajaxResponse(Array)
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): CategoryController->actionList()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('list')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('category/list')
+#8 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#10 {main}
+REQUEST_URI=/youtroll/api/category
+---
+2012/09/09 17:10:18 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (106)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:10:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(106): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:11:59 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (106)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:11:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(106): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:14:24 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (106)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:14:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(106): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:15:04 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (106)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:15:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(106): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:15:29 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (106)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:15:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(106): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:15:56 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (106)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:15:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(106): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:16:45 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (106)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:16:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(106): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:17:02 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (106)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:17:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(106): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:34:36 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (106)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:34:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(106): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:37:02 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (107)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:37:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(107): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:37:09 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (107)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:37:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(107): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:40:21 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (107)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:40:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(107): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:40:30 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (107)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:40:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(107): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:43:18 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (107)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:43:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(107): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 17:51:47 [error] [php] include(Bcrypt.php): failed to open stream: No such file or directory (C:\xampp\htdocs\youtroll\yii\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(107): spl_autoload_call()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/user/login
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (107)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:57:36 [error] [php] include(Bcrypt.php): failed to open stream: No such file or directory (C:\xampp\htdocs\youtroll\yii\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(107): spl_autoload_call()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/user/login
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (107)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 17:58:06 [error] [php] include(Bcrypt.php): failed to open stream: No such file or directory (C:\xampp\htdocs\youtroll\yii\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(107): spl_autoload_call()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/user/login
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (107)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 18:08:41 [error] [system.db.CDbCommand] Falha ao executar CDbCommand::fetch(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. A declaração SQL executada foi: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1.
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (109)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 18:08:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falhou ao executar o comando SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tb_users` `t` WHERE username = :username AND password = :password LIMIT 1' in C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(109): CActiveRecord->find('username = :use...', Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#10 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#12 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 18:27:08 [error] [exception.CHttpException.500] exception 'CHttpException' with message 'Erro Interno do Servidor' in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:32
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php(51): ApplicationHelper::throwException(500)
+#1 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(112): ApplicationHelper::ajaxResponse(false)
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#8 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#10 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 18:28:00 [error] [exception.CHttpException.500] exception 'CHttpException' with message 'Erro Interno do Servidor' in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:32
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php(51): ApplicationHelper::throwException(500)
+#1 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(112): ApplicationHelper::ajaxResponse(false)
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#8 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#10 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 18:28:33 [error] [exception.CHttpException.500] exception 'CHttpException' with message 'Erro Interno do Servidor' in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:32
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php(51): ApplicationHelper::throwException(500)
+#1 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(112): ApplicationHelper::ajaxResponse(false)
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#8 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#10 {main}
+REQUEST_URI=/youtroll/api/user/login
+---
+2012/09/09 21:03:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "list" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('list')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('list')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/list')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/api/user
+---
+2012/09/09 21:03:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "list" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('list')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('list')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/list')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/api/user?0=1
+---
+2012/09/09 21:06:48 [error] [php] Object of class User could not be converted to string (C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:45)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/user/2
+in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php (45)
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (78)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 21:07:04 [error] [php] Object of class User could not be converted to string (C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:45)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/user/1
+in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php (45)
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (78)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/09 21:07:10 [error] [php] Object of class User could not be converted to string (C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:45)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/user/1
+in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php (45)
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (78)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:23:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'O sistema não foi capaz de encontrar a ação "1" solicitada.' in C:\xampp\htdocs\youtroll\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(271): CController->missingAction('1')
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('1')
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/1')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#5 {main}
+REQUEST_URI=/youtroll/api/user/1
+---
+2012/09/10 20:23:49 [error] [exception.CException] exception 'CException' with message 'A propriedade "User.usr_active" não está definida.' in C:\xampp\htdocs\youtroll\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('usr_active')
+#1 C:\xampp\htdocs\youtroll\yii\framework\validators\CNumberValidator.php(79): CActiveRecord->__get('usr_active')
+#2 C:\xampp\htdocs\youtroll\yii\framework\validators\CValidator.php(197): CNumberValidator->validateAttribute(Object(User), 'usr_active')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CModel.php(158): CValidator->validate(Object(User), NULL)
+#4 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(786): CModel->validate(NULL)
+#5 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(50): CActiveRecord->save()
+#6 [internal function]: UserController->actionUpdate('1')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/update')
+#14 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#16 {main}
+REQUEST_URI=/youtroll/api/user/1
+---
+2012/09/10 20:23:59 [error] [exception.CException] exception 'CException' with message 'A propriedade "User.usr_active" não está definida.' in C:\xampp\htdocs\youtroll\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('usr_active')
+#1 C:\xampp\htdocs\youtroll\yii\framework\validators\CNumberValidator.php(79): CActiveRecord->__get('usr_active')
+#2 C:\xampp\htdocs\youtroll\yii\framework\validators\CValidator.php(197): CNumberValidator->validateAttribute(Object(User), 'usr_active')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CModel.php(158): CValidator->validate(Object(User), NULL)
+#4 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(786): CModel->validate(NULL)
+#5 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(50): CActiveRecord->save()
+#6 [internal function]: UserController->actionUpdate('1')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/update')
+#14 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#16 {main}
+REQUEST_URI=/youtroll/api/user/1
+---
+2012/09/10 20:25:09 [error] [exception.CException] exception 'CException' with message 'A propriedade "User.usr_active" não está definida.' in C:\xampp\htdocs\youtroll\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('usr_active')
+#1 C:\xampp\htdocs\youtroll\yii\framework\validators\CNumberValidator.php(79): CActiveRecord->__get('usr_active')
+#2 C:\xampp\htdocs\youtroll\yii\framework\validators\CValidator.php(197): CNumberValidator->validateAttribute(Object(User), 'usr_active')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CModel.php(158): CValidator->validate(Object(User), NULL)
+#4 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(786): CModel->validate(NULL)
+#5 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(50): CActiveRecord->save()
+#6 [internal function]: UserController->actionUpdate('1')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/update')
+#14 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#16 {main}
+REQUEST_URI=/youtroll/api/user/1
+---
+2012/09/10 20:26:17 [error] [exception.CException] exception 'CException' with message 'A propriedade "User.usr_active" não está definida.' in C:\xampp\htdocs\youtroll\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('usr_active')
+#1 C:\xampp\htdocs\youtroll\yii\framework\validators\CNumberValidator.php(79): CActiveRecord->__get('usr_active')
+#2 C:\xampp\htdocs\youtroll\yii\framework\validators\CValidator.php(197): CNumberValidator->validateAttribute(Object(User), 'usr_active')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CModel.php(158): CValidator->validate(Object(User), NULL)
+#4 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(786): CModel->validate(NULL)
+#5 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(50): CActiveRecord->save()
+#6 [internal function]: UserController->actionUpdate('1')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/update')
+#14 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#16 {main}
+REQUEST_URI=/youtroll/api/user/1
+---
+2012/09/10 20:31:33 [error] [exception.CException] exception 'CException' with message 'A propriedade "User.usr_active" não está definida.' in C:\xampp\htdocs\youtroll\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('usr_active')
+#1 C:\xampp\htdocs\youtroll\yii\framework\validators\CNumberValidator.php(79): CActiveRecord->__get('usr_active')
+#2 C:\xampp\htdocs\youtroll\yii\framework\validators\CValidator.php(197): CNumberValidator->validateAttribute(Object(User), 'usr_active')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CModel.php(158): CValidator->validate(Object(User), NULL)
+#4 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(786): CModel->validate(NULL)
+#5 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(50): CActiveRecord->save()
+#6 [internal function]: UserController->actionUpdate('1')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/update')
+#14 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#16 {main}
+REQUEST_URI=/youtroll/api/user/1
+---
+2012/09/10 20:32:27 [error] [exception.CException] exception 'CException' with message 'A propriedade "User.usr_active" não está definida.' in C:\xampp\htdocs\youtroll\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('usr_active')
+#1 C:\xampp\htdocs\youtroll\yii\framework\validators\CNumberValidator.php(79): CActiveRecord->__get('usr_active')
+#2 C:\xampp\htdocs\youtroll\yii\framework\validators\CValidator.php(197): CNumberValidator->validateAttribute(Object(User), 'usr_active')
+#3 C:\xampp\htdocs\youtroll\yii\framework\base\CModel.php(158): CValidator->validate(Object(User), NULL)
+#4 C:\xampp\htdocs\youtroll\yii\framework\db\ar\CActiveRecord.php(786): CModel->validate(NULL)
+#5 C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php(50): CActiveRecord->save()
+#6 [internal function]: UserController->actionUpdate('1')
+#7 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#9 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/update')
+#14 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\youtroll\api\index.php(10): CApplication->run()
+#16 {main}
+REQUEST_URI=/youtroll/api/user/1
+---
+2012/09/10 20:38:13 [error] [php] Missing argument 2 for ApplicationHelper::getRequest(), called in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php on line 48 and defined (C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:11)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/user/1
+in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php (11)
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:40:26 [error] [php] Missing argument 2 for ApplicationHelper::getRequest(), called in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php on line 48 and defined (C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:11)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/user/1
+in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php (11)
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:40:47 [error] [php] Missing argument 2 for ApplicationHelper::getRequest(), called in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php on line 48 and defined (C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:11)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/user/1
+in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php (11)
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:41:09 [error] [php] Missing argument 2 for ApplicationHelper::getRequest(), called in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php on line 48 and defined (C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php:11)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): UserController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): UserController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/user/1
+in C:\xampp\htdocs\youtroll\api\protected\models\helpers\ApplicationHelper.php (11)
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:41:49 [warning] [application] Failed to set unsafe attribute "username" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:41:49 [warning] [application] Failed to set unsafe attribute "status" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:41:49 [warning] [application] Failed to set unsafe attribute "email" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:41:49 [warning] [application] Failed to set unsafe attribute "birthday" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:41:49 [warning] [application] Failed to set unsafe attribute "gender" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:41:49 [warning] [application] Failed to set unsafe attribute "bio" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:41:49 [warning] [application] Failed to set unsafe attribute "site" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:41:49 [warning] [application] Failed to set unsafe attribute "locale" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:41:56 [warning] [application] Failed to set unsafe attribute "username" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:41:56 [warning] [application] Failed to set unsafe attribute "status" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:41:56 [warning] [application] Failed to set unsafe attribute "email" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:41:56 [warning] [application] Failed to set unsafe attribute "birthday" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:41:56 [warning] [application] Failed to set unsafe attribute "gender" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:41:56 [warning] [application] Failed to set unsafe attribute "bio" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:41:56 [warning] [application] Failed to set unsafe attribute "site" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:41:56 [warning] [application] Failed to set unsafe attribute "locale" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:42:02 [warning] [application] Failed to set unsafe attribute "username" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:42:02 [warning] [application] Failed to set unsafe attribute "status" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:42:02 [warning] [application] Failed to set unsafe attribute "email" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:42:02 [warning] [application] Failed to set unsafe attribute "birthday" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:42:02 [warning] [application] Failed to set unsafe attribute "gender" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:42:02 [warning] [application] Failed to set unsafe attribute "bio" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:42:02 [warning] [application] Failed to set unsafe attribute "site" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:42:02 [warning] [application] Failed to set unsafe attribute "locale" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:42:28 [warning] [application] Failed to set unsafe attribute "username" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:42:28 [warning] [application] Failed to set unsafe attribute "status" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:42:28 [warning] [application] Failed to set unsafe attribute "email" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:42:28 [warning] [application] Failed to set unsafe attribute "birthday" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:42:28 [warning] [application] Failed to set unsafe attribute "gender" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:42:28 [warning] [application] Failed to set unsafe attribute "bio" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:42:28 [warning] [application] Failed to set unsafe attribute "site" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 20:42:28 [warning] [application] Failed to set unsafe attribute "locale" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:55:04 [warning] [application] Failed to set unsafe attribute "username" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:55:04 [warning] [application] Failed to set unsafe attribute "status" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:55:04 [warning] [application] Failed to set unsafe attribute "email" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:55:04 [warning] [application] Failed to set unsafe attribute "birthday" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:55:04 [warning] [application] Failed to set unsafe attribute "gender" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:55:04 [warning] [application] Failed to set unsafe attribute "bio" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:55:04 [warning] [application] Failed to set unsafe attribute "site" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:55:04 [warning] [application] Failed to set unsafe attribute "locale" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:58:38 [warning] [application] Failed to set unsafe attribute "username" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:58:38 [warning] [application] Failed to set unsafe attribute "status" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:58:38 [warning] [application] Failed to set unsafe attribute "email" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:58:38 [warning] [application] Failed to set unsafe attribute "birthday" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:58:38 [warning] [application] Failed to set unsafe attribute "gender" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:58:38 [warning] [application] Failed to set unsafe attribute "bio" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:58:38 [warning] [application] Failed to set unsafe attribute "site" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:58:38 [warning] [application] Failed to set unsafe attribute "locale" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:58:49 [warning] [application] Failed to set unsafe attribute "username" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:58:49 [warning] [application] Failed to set unsafe attribute "status" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:58:49 [warning] [application] Failed to set unsafe attribute "email" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:58:49 [warning] [application] Failed to set unsafe attribute "birthday" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:58:49 [warning] [application] Failed to set unsafe attribute "gender" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:58:49 [warning] [application] Failed to set unsafe attribute "bio" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:58:49 [warning] [application] Failed to set unsafe attribute "site" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/10 23:58:49 [warning] [application] Failed to set unsafe attribute "locale" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/11 00:02:46 [warning] [application] Failed to set unsafe attribute "locale" of "User".
+in C:\xampp\htdocs\youtroll\api\protected\controllers\UserController.php (48)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/19 00:18:05 [error] [php] include(Category.php): failed to open stream: No such file or directory (C:\xampp\htdocs\youtroll\yii\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\controllers\CategoryController.php(22): spl_autoload_call()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): CategoryController->actionCreate()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CategoryController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CategoryController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CategoryController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/category
+in C:\xampp\htdocs\youtroll\api\protected\controllers\CategoryController.php (22)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/19 00:18:16 [error] [php] include(Category.php): failed to open stream: No such file or directory (C:\xampp\htdocs\youtroll\yii\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\controllers\CategoryController.php(22): spl_autoload_call()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): CategoryController->actionCreate()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CategoryController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CategoryController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CategoryController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/category
+in C:\xampp\htdocs\youtroll\api\protected\controllers\CategoryController.php (22)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/19 00:18:23 [error] [php] include(Category.php): failed to open stream: No such file or directory (C:\xampp\htdocs\youtroll\yii\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\controllers\CategoryController.php(8): spl_autoload_call()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): CategoryController->actionList()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CategoryController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CategoryController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CategoryController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/category
+in C:\xampp\htdocs\youtroll\api\protected\controllers\CategoryController.php (8)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/19 00:18:29 [error] [php] include(Category.php): failed to open stream: No such file or directory (C:\xampp\htdocs\youtroll\yii\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\controllers\CategoryController.php(8): spl_autoload_call()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): CategoryController->actionList()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CategoryController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CategoryController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CategoryController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/category
+in C:\xampp\htdocs\youtroll\api\protected\controllers\CategoryController.php (8)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/19 00:18:41 [error] [php] include(Category.php): failed to open stream: No such file or directory (C:\xampp\htdocs\youtroll\yii\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\controllers\CategoryController.php(8): spl_autoload_call()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): CategoryController->actionList()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CategoryController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CategoryController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CategoryController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/category
+in C:\xampp\htdocs\youtroll\api\protected\controllers\CategoryController.php (8)
+in C:\xampp\htdocs\youtroll\api\index.php (10)
+2012/09/19 00:21:32 [error] [php] include(Category.php): failed to open stream: No such file or directory (C:\xampp\htdocs\youtroll\yii\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\xampp\htdocs\youtroll\api\protected\controllers\CategoryController.php(8): spl_autoload_call()
+#1 C:\xampp\htdocs\youtroll\yii\framework\web\actions\CInlineAction.php(50): CategoryController->actionList()
+#2 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(287): CategoryController->runAction()
+#4 C:\xampp\htdocs\youtroll\yii\framework\web\CController.php(266): CategoryController->runActionWithFilters()
+#5 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(276): CategoryController->run()
+#6 C:\xampp\htdocs\youtroll\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\xampp\htdocs\youtroll\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\youtroll\api\index.php(10): CWebApplication->run()
+REQUEST_URI=/youtroll/api/category
+in C:\xampp\htdocs\youtroll\api\protected\controllers\CategoryController.php (8)
+in C:\xampp\htdocs\youtroll\api\index.php (10)

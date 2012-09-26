@@ -84,7 +84,7 @@ class Tag extends CActiveRecord
 		if($total>0)
 		{
 			foreach($models as $model)
-				$tags[$model->name]=8+(int)(16*$model->frequency/($total+10));
+				$tags[$model->description]=8+(int)(16*$model->frequency/($total+10));
 			ksort($tags);
 		}
 		return $tags;
@@ -108,7 +108,7 @@ class Tag extends CActiveRecord
 		));
 		$names=array();
 		foreach($tags as $tag)
-			$names[]=$tag->name;
+			$names[]=$tag->description;
 		return $names;
 	}
 

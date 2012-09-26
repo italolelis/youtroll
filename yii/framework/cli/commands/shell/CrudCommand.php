@@ -237,58 +237,58 @@ EOD;
 
 	public function generateInputLabel($modelClass,$column)
 	{
-		return "CHtml::activeLabelEx(\$model,'{$column->name}')";
+		return "CHtml::activeLabelEx(\$model,'{$column->description}')";
 	}
 
 	public function generateInputField($modelClass,$column)
 	{
 		if($column->type==='boolean')
-			return "CHtml::activeCheckBox(\$model,'{$column->name}')";
+			return "CHtml::activeCheckBox(\$model,'{$column->description}')";
 		else if(stripos($column->dbType,'text')!==false)
-			return "CHtml::activeTextArea(\$model,'{$column->name}',array('rows'=>6, 'cols'=>50))";
+			return "CHtml::activeTextArea(\$model,'{$column->description}',array('rows'=>6, 'cols'=>50))";
 		else
 		{
-			if(preg_match('/^(password|pass|passwd|passcode)$/i',$column->name))
+			if(preg_match('/^(password|pass|passwd|passcode)$/i',$column->description))
 				$inputField='activePasswordField';
 			else
 				$inputField='activeTextField';
 
 			if($column->type!=='string' || $column->size===null)
-				return "CHtml::{$inputField}(\$model,'{$column->name}')";
+				return "CHtml::{$inputField}(\$model,'{$column->description}')";
 			else
 			{
 				if(($size=$maxLength=$column->size)>60)
 					$size=60;
-				return "CHtml::{$inputField}(\$model,'{$column->name}',array('size'=>$size,'maxlength'=>$maxLength))";
+				return "CHtml::{$inputField}(\$model,'{$column->description}',array('size'=>$size,'maxlength'=>$maxLength))";
 			}
 		}
 	}
 
 	public function generateActiveLabel($modelClass,$column)
 	{
-		return "\$form->labelEx(\$model,'{$column->name}')";
+		return "\$form->labelEx(\$model,'{$column->description}')";
 	}
 
 	public function generateActiveField($modelClass,$column)
 	{
 		if($column->type==='boolean')
-			return "\$form->checkBox(\$model,'{$column->name}')";
+			return "\$form->checkBox(\$model,'{$column->description}')";
 		else if(stripos($column->dbType,'text')!==false)
-			return "\$form->textArea(\$model,'{$column->name}',array('rows'=>6, 'cols'=>50))";
+			return "\$form->textArea(\$model,'{$column->description}',array('rows'=>6, 'cols'=>50))";
 		else
 		{
-			if(preg_match('/^(password|pass|passwd|passcode)$/i',$column->name))
+			if(preg_match('/^(password|pass|passwd|passcode)$/i',$column->description))
 				$inputField='passwordField';
 			else
 				$inputField='textField';
 
 			if($column->type!=='string' || $column->size===null)
-				return "\$form->{$inputField}(\$model,'{$column->name}')";
+				return "\$form->{$inputField}(\$model,'{$column->description}')";
 			else
 			{
 				if(($size=$maxLength=$column->size)>60)
 					$size=60;
-				return "\$form->{$inputField}(\$model,'{$column->name}',array('size'=>$size,'maxlength'=>$maxLength))";
+				return "\$form->{$inputField}(\$model,'{$column->description}',array('size'=>$size,'maxlength'=>$maxLength))";
 			}
 		}
 	}
@@ -297,18 +297,18 @@ EOD;
 	{
 		foreach($columns as $column)
 		{
-			if(!strcasecmp($column->name,'name'))
-				return $column->name;
+			if(!strcasecmp($column->description,'name'))
+				return $column->description;
 		}
 		foreach($columns as $column)
 		{
-			if(!strcasecmp($column->name,'title'))
-				return $column->name;
+			if(!strcasecmp($column->description,'title'))
+				return $column->description;
 		}
 		foreach($columns as $column)
 		{
 			if($column->isPrimaryKey)
-				return $column->name;
+				return $column->description;
 		}
 		return 'id';
 	}
