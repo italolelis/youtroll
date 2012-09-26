@@ -1,3 +1,10 @@
+api/protected/runtime
+view/protected/runtime
+api/assets
+view/assets
+application.log
+*.DS_Store
+*.Trash
 *.vo
 *.glob
 *.v.d

@@ -61,7 +61,7 @@ foreach($columns as $column)
 {
 	if(++$count==7)
 		echo "\t\t/*\n";
-	echo "\t\t'".$column->name."',\n";
+	echo "\t\t'".$column->description."',\n";
 }
 if($count>=7)
 	echo "\t\t*/\n";

@@ -1,4 +1,0 @@
-youtroll
-========
-
-Projeto Youtroll

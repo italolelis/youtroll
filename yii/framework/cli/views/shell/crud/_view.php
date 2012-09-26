@@ -19,8 +19,8 @@ foreach($columns as $column)
 		continue;
 	if(++$count==7)
 		echo "\t<?php /*\n";
-	echo "\t<b><?php echo CHtml::encode(\$data->getAttributeLabel('{$column->name}')); ?>:</b>\n";
-	echo "\t<?php echo CHtml::encode(\$data->{$column->name}); ?>\n\t<br />\n\n";
+	echo "\t<b><?php echo CHtml::encode(\$data->getAttributeLabel('{$column->description}')); ?>:</b>\n";
+	echo "\t<?php echo CHtml::encode(\$data->{$column->description}); ?>\n\t<br />\n\n";
 }
 if($count>=7)
 	echo "\t*/ ?>\n";

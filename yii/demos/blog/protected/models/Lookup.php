@@ -71,6 +71,6 @@ class Lookup extends CActiveRecord
 			'order'=>'position',
 		));
 		foreach($models as $model)
-			self::$_items[$type][$model->code]=$model->name;
+			self::$_items[$type][$model->code]=$model->description;
 	}
 }

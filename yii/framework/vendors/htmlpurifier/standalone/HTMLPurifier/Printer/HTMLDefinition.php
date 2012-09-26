@@ -34,7 +34,7 @@ class HTMLPurifier_Printer_HTMLDefinition extends HTMLPurifier_Printer
         $ret = '';
         $ret .= $this->start('table');
         $ret .= $this->element('caption', 'Doctype');
-        $ret .= $this->row('Name', $doctype->name);
+        $ret .= $this->row('Name', $doctype->description);
         $ret .= $this->row('XML', $doctype->xml ? 'Yes' : 'No');
         $ret .= $this->row('Default Modules', implode($doctype->modules, ', '));
         $ret .= $this->row('Default Tidy Modules', implode($doctype->tidyModules, ', '));
