@@ -17,8 +17,8 @@ class SignUpAction extends CAction
                     
                     if($response === true) {
                         HApp::ajaxResponse(array(
-                            'return' => true,
-                            'clickMenu' => 'loginNav',
+                            'action' => 'openMenuOption',
+                            'menuOption' => 'login',
                             'message' => array('type' => 'success', 'text' => HApp::t('signUpDone')),
                         ));
                     }

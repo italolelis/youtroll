@@ -15,8 +15,6 @@ class ErrorAction extends CAction
 	    }
 
 	    Yii::app()->user->setState('errorMessage', $errorMessage);
-
-//            echo $error['message'];exit();
             
 	    $this->controller->redirect(Yii::app()->baseUrl);
 	}

@@ -13,7 +13,7 @@ class LoginAction extends CAction
                 $model->attributes = $postModel;
                 
                 if($model->validate()) {
-                    HApp::ajaxResponse(array('return' => true));
+                    HApp::ajaxResponse(array('action' => 'reload'));
                 }
                 
                 HModel::generatePerformAjaxValidation(get_class($model), $model->getAttributeListErrors(), HApp::t('invalidAccess'));

@@ -66,16 +66,20 @@ class HView
                 clearErrorsMesages();
             }",
             'success' => "function(response) {
-                if(response.return) {
-                    if(response.clickMenu !== undefined) {
-                        $('#' + response.clickMenu).children('a').click();
-                    } else if(response.view !== undefined) {
-                        $('#view').html(response.view);
-                    } else {
-                        location.reload();
+                if(response.action !== undefined) {
+                    switch(response.action) {
+                        case 'openMenuOption':
+                            $('#' + response.menuOption + 'Nav').children('a').click();
+                            break;
+                        case 'renderView':
+                            $('#view').html(response.view);
+                            break;
+                        case 'reload':
+                            location.reload();
+                            break;
                     }
                     
-                    if((response.message.type !== undefined) && (response.message.text !== undefined)) {
+                    if(response.message !== undefined) {
                         setAlertMessage(response.message.text, response.message.type, 'messages', true);
                     }
                 } else {
