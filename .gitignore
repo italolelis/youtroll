@@ -1,7 +1,7 @@
-api/protected/runtime
-view/protected/runtime
-api/assets
-view/assets
+rest/protected/runtime
+project/protected/runtime
+rest/assets
+project/assets
 application.log
 *.DS_Store
 *.Trash

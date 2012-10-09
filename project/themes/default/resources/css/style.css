@@ -1,0 +1,21 @@
+div#body {
+    background-image: url("../img/background.png");
+}
+
+.loader {
+    background-image: url("../img/loader.gif");
+    background-repeat: no-repeat;
+    
+    display: inline-block;
+    
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    
+    vertical-align: text-top;
+}
+
+span.required,
+div.errorMessage {
+    color: #db002f;
+}

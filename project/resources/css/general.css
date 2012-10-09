@@ -1,0 +1,64 @@
+textarea {
+    resize: none;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.displayNone {
+    display: none;
+}
+
+.displayInline {
+    display: inline;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+.alignJustify {
+    text-align: justify;
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+.alignLeft {
+    text-align: left;
+}
+
+.marginTop {
+    margin-top: 25px;
+}
+
+.marginLeft {
+    margin-left: 5px;
+}
+
+.marginRight {
+    margin-right: 5px;
+}
+
+.noUnderline:hover {
+    text-decoration: none;
+}
+
+.help-block {
+    font-size: 12px;
+}
+
+.aThird {
+    width: 33%;
+}
+
+.clickableCursor {
+    cursor: pointer;
+}
