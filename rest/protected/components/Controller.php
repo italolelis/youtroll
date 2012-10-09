@@ -9,8 +9,8 @@ class Controller extends CController
     public function init()
     {
         $this->headers = HConvert::arrayToObject(apache_request_headers());
-//        var_dump($this->headers->Authorization);exit();
-        if(isset($this->headers->Authorization)) {
+
+        if(isSet($this->headers->Authorization)) {
             $this->headers->Authorization = explode(':', base64_decode(substr($this->headers->Authorization, 6)));
         }
         
