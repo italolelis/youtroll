@@ -35,6 +35,12 @@ foreach ($this->categories as $categorie) {
                 'url' => array('user/controlPanel'),
                 'items' => array(
                     array(
+                        'label' => HApp::t('myChannel'),
+                        'url' => array('user/channel'),
+                        'itemOptions' => array('id' => 'channelNav'),
+                        'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('channel', 'user')),
+                    ),
+                    array(
                         'label' => HApp::t('createImage'),
                         'url' => array('user/createImage'),
                         'itemOptions' => array('id' => 'createImageNav'),
