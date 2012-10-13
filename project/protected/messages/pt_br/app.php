@@ -19,6 +19,8 @@ return array(
     'categories' => 'Categorias',
     
     // Páginas Restritas - Vísivéis apenas para os usuários autenticados
+    'channel' => 'Canal',
+    'myChannel' => 'Meu Canal',
     'controlPanel' => 'Painel de Controle',
     'createImage' => 'Criar Imagem',
     'sendImage' => 'Enviar Imagem',
@@ -29,6 +31,7 @@ return array(
     
     // Títulos
     'aboutTitle' => 'Sobre o YouTroll',
+    'controlPanelTitle' => 'Painel de Controle do Usuário',
     
     // Linguagens
     'pt_br' => 'Português do Brasil',
