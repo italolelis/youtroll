@@ -1,14 +1,12 @@
 <?php
 
-class LoginAction extends CAction
+class ControlPanelAction extends CAction
 {
 
     public function run()
     {
         if (Yii::app()->request->isAjaxRequest) {
-            $model = new LoginForm();
-            
-            $this->controller->renderPartial('login', array('model' => $model), false, true);
+            $this->controller->renderPartial('controlPanel');
             Yii::app()->end();
         }
         
