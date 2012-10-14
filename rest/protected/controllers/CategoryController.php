@@ -9,7 +9,7 @@ class CategoryController extends Controller
     {
         parent::init();
         
-        $this->model = new Categorie();
+        $this->model = new Category();
     }
     
     public function filters()

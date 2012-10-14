@@ -10,7 +10,7 @@
  * The followings are the available model relations:
  * @property Publication[] $publications
  */
-class Categorie extends Table
+class Category extends Table
 {
 
     protected $attributesPrefix = 'ctg_';
