@@ -19,3 +19,7 @@ span.required,
 div.errorMessage {
     color: #db002f;
 }
+
+.tab-content {
+    background-color: #ffffff;
+}
