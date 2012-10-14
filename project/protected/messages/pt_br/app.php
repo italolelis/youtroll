@@ -38,7 +38,13 @@ return array(
     
     // Textos Curtos
     'top' => 'Voltar ao Topo',
+    'myImages' => 'Meus Envios',
+    'comments' => 'Comentários',
     'loading' => 'Carregando...',
+    'inscriptions' => 'Inscrições',  
+    'mySessions' => 'Minhas Sessões',
+    'accountStats' => 'Estatísticas da Conta',
+    'settings' => 'Configurações',
     
     // Enums
     'male' => 'Masculino',
