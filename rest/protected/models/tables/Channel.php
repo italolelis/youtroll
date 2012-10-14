@@ -10,12 +10,11 @@
  * @property string $chnl_record
  *
  * The followings are the available model relations:
- * @property ChannelComment[] $channelComments
- * @property ChannelSection[] $channelSections
  * @property User $owner
  * @property User[] $users
+ * @property Publication[] $publications
  */
-class Channel extends CActiveRecord
+class Channels extends CActiveRecord
 {
 
     /**
@@ -44,9 +43,10 @@ class Channel extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('chnl_fk_owner, chnl_name, chnl_record', 'required'),
+            array('chnl_fk_owner, chnl_name', 'required'),
             array('chnl_fk_owner', 'length', 'max' => 20),
             array('chnl_name', 'length', 'max' => 50),
+            array('chnl_record', 'safe'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
             array('chnl_id, chnl_fk_owner, chnl_name, chnl_record', 'safe', 'on' => 'search'),
@@ -61,10 +61,9 @@ class Channel extends CActiveRecord
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'channelComments' => array(self::HAS_MANY, 'ChannelComment', 'chnl_cmnt_fk_channel'),
-            'channelSections' => array(self::HAS_MANY, 'ChannelSection', 'chnl_sct_fk_channel'),
             'owner' => array(self::BELONGS_TO, 'User', 'chnl_fk_owner'),
-            'users' => array(self::MANY_MANY, 'User', 'tb_inscriptions(insc_fk_channel, insc_fk_user)'),
+            'followers' => array(self::MANY_MANY, 'User', 'tb_inscriptions(insc_fk_channel, insc_fk_user)'),
+            'publications' => array(self::HAS_MANY, 'Publication', 'pbct_fk_channel'),
         );
     }
 

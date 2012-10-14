@@ -57,7 +57,7 @@ class Category extends Table
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'publications' => array(self::HAS_MANY, 'Publication', 'pbct_fk_categorie'),
+            'publications' => array(self::HAS_MANY, 'Publication', 'pbct_fk_category'),
         );
     }
 

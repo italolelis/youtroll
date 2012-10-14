@@ -22,10 +22,11 @@ Yii::import('ext.several.BCrypt');
  * @property string $usr_profile_path
  *
  * The followings are the available model relations:
- * @property ChannelComment[] $channelComments
+ * @property PublicationComment[] $commentedPublications
  * @property Channel[] $channels
  * @property Channel[] $channelInscriptions
  * @property Publication[] $publications
+ * @property Publication[] $publicationsViewed
  */
 class User extends Table
 {
@@ -84,10 +85,11 @@ class User extends Table
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'channelComments' => array(self::HAS_MANY, 'ChannelComment', 'chnl_cmnt_fk_sender'),
+            'commentedPublications' => array(self::HAS_MANY, 'PublicationComment', 'pbct_cmnt_fk_sender'),
             'channels' => array(self::HAS_MANY, 'Channel', 'chnl_fk_owner'),
-            'hannelInscriptions' => array(self::MANY_MANY, 'Channel', 'tb_inscriptions(insc_fk_user, insc_fk_channel)'),
+            'channelInscriptions' => array(self::MANY_MANY, 'Channel', 'tb_inscriptions(insc_fk_user, insc_fk_channel)'),
             'publications' => array(self::HAS_MANY, 'Publication', 'pbct_fk_owner'),
+            'publicationsViewed' => array(self::MANY_MANY, 'Publication', 'tb_publications_viewed(pbct_vwd_fk_user, pbct_vwd_fk_publication)'),
         );
     }
 

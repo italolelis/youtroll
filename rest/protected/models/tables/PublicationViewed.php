@@ -1,21 +1,25 @@
 <?php
 
 /**
- * This is the model class for table "tb_publications_tags".
+ * This is the model class for table "tb_publications_viewed".
  *
- * The followings are the available columns in table 'tb_publications_tags':
- * @property string $pbct_tag_fk_publication
- * @property integer $pbct_tag_fk_tag
+ * The followings are the available columns in table 'tb_publications_viewed':
+ * @property string $pbct_vwd_fk_user
+ * @property string $pbct_vwd_fk_publication
+ * @property integer $pbct_vwd_like
+ * @property integer $pbct_vwd_unlike
+ * @property string $pbct_vwd_record
  * 
+ * The followings are the available model relations:
  * @property Publication $publication
- * @property Tag $tag
+ * @property User $visitor
  */
-class PublicationsTags extends CActiveRecord
+class PublicationViewed extends CActiveRecord
 {
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
-     * @return PublicationsTags the static model class
+     * @return PublicationsViewed the static model class
      */
     public static function model($className=__CLASS__)
     {
@@ -27,7 +31,7 @@ class PublicationsTags extends CActiveRecord
      */
     public function tableName()
     {
-        return 'tb_publications_tags';
+        return 'tb_publications_viewed';
     }
 
     /**
@@ -38,12 +42,13 @@ class PublicationsTags extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('pbct_tag_fk_publication, pbct_tag_fk_tag', 'required'),
-            array('pbct_tag_fk_tag', 'numerical', 'integerOnly'=>true),
-            array('pbct_tag_fk_publication', 'length', 'max'=>20),
+            array('pbct_vwd_fk_user, pbct_vwd_fk_publication', 'required'),
+            array('pbct_vwd_like, pbct_vwd_unlike', 'numerical', 'integerOnly'=>true),
+            array('pbct_vwd_fk_user, pbct_vwd_fk_publication', 'length', 'max'=>20),
+            array('pbct_vwd_record', 'safe'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('pbct_tag_fk_publication, pbct_tag_fk_tag', 'safe', 'on'=>'search'),
+            array('pbct_vwd_fk_user, pbct_vwd_fk_publication, pbct_vwd_like, pbct_vwd_unlike, pbct_vwd_record', 'safe', 'on'=>'search'),
         );
     }
 
@@ -56,7 +61,7 @@ class PublicationsTags extends CActiveRecord
         // class name for the relations automatically generated below.
         return array(
             'publication' => array(self::BELONGS_TO, 'Publication', 'pbct_tag_fk_publication'),
-            'tag' => array(self::BELONGS_TO, 'Tag', 'pbct_tag_fk_tag'),
+            'visitor' => array(self::BELONGS_TO, 'User', 'pbct_vwd_fk_user'),
         );
     }
 
@@ -66,8 +71,11 @@ class PublicationsTags extends CActiveRecord
     public function attributeLabels()
     {
         return array(
-            'pbct_tag_fk_publication' => 'Pbct Tag Fk Publication',
-            'pbct_tag_fk_tag' => 'Pbct Tag Fk Tag',
+            'pbct_vwd_fk_user' => 'Pbct Vwd Fk User',
+            'pbct_vwd_fk_publication' => 'Pbct Vwd Fk Publication',
+            'pbct_vwd_like' => 'Pbct Vwd Like',
+            'pbct_vwd_unlike' => 'Pbct Vwd Unlike',
+            'pbct_vwd_record' => 'Pbct Vwd Record',
         );
     }
 
@@ -82,8 +90,11 @@ class PublicationsTags extends CActiveRecord
 
         $criteria=new CDbCriteria;
 
-        $criteria->compare('pbct_tag_fk_publication',$this->pbct_tag_fk_publication,true);
-        $criteria->compare('pbct_tag_fk_tag',$this->pbct_tag_fk_tag);
+        $criteria->compare('pbct_vwd_fk_user',$this->pbct_vwd_fk_user,true);
+        $criteria->compare('pbct_vwd_fk_publication',$this->pbct_vwd_fk_publication,true);
+        $criteria->compare('pbct_vwd_like',$this->pbct_vwd_like);
+        $criteria->compare('pbct_vwd_unlike',$this->pbct_vwd_unlike);
+        $criteria->compare('pbct_vwd_record',$this->pbct_vwd_record,true);
 
         return new CActiveDataProvider($this, array(
             'criteria'=>$criteria,

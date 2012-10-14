@@ -4,30 +4,35 @@
  * This is the model class for table "tb_publications".
  *
  * The followings are the available columns in table 'tb_publications':
- * @property string $pbct_image_id
- * @property string $pbct_channel_section_id
+ * @property string $pbct_id
  * @property string $pbct_title
  * @property string $pbct_description
  * @property string $pbct_record
  * @property string $pbct_image_path
+ * @property integer $pbct_like
+ * @property integer $pbct_unlike
+ * @property integer $pbct_hits
+ * @property integer $pbct_fake_hits
  * @property string $pbct_fk_owner
- * @property integer $pbct_fk_categorie
+ * @property integer $pbct_fk_category
+ * @property string $pbct_fk_channel
  *
  * The followings are the available model relations:
+ * @property Category $category
+ * @property Channel $channel
  * @property User $owner
- * @property Categorie $categorie
- * @property ChannelSection $channelSection
+ * @property PublicationComment[] $publicationComments
  * @property Tag[] $tags
+ * @property User[] $visitors
  */
-class Publication extends CActiveRecord
+class Publications extends CActiveRecord
 {
-
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
      * @return Publications the static model class
      */
-    public static function model($className = __CLASS__)
+    public static function model($className=__CLASS__)
     {
         return parent::model($className);
     }
@@ -48,15 +53,16 @@ class Publication extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('pbct_image_id, pbct_channel_section_id, pbct_title, pbct_description, pbct_record, pbct_image_path, pbct_fk_owner, pbct_fk_categorie', 'required'),
-            array('pbct_fk_categorie', 'numerical', 'integerOnly' => true),
-            array('pbct_image_id, pbct_channel_section_id, pbct_fk_owner', 'length', 'max' => 20),
-            array('pbct_title', 'length', 'max' => 100),
-            array('pbct_description', 'length', 'max' => 256),
-            array('pbct_image_path', 'length', 'max' => 128),
+            array('pbct_title, pbct_description, pbct_image_path, pbct_like, pbct_unlike, pbct_hits, pbct_fake_hits, pbct_fk_owner, pbct_fk_category, pbct_fk_channel', 'required'),
+            array('pbct_like, pbct_unlike, pbct_hits, pbct_fake_hits, pbct_fk_category', 'numerical', 'integerOnly'=>true),
+            array('pbct_title', 'length', 'max'=>100),
+            array('pbct_description', 'length', 'max'=>256),
+            array('pbct_image_path', 'length', 'max'=>128),
+            array('pbct_fk_owner, pbct_fk_channel', 'length', 'max'=>20),
+            array('pbct_record', 'safe'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('pbct_image_id, pbct_channel_section_id, pbct_title, pbct_description, pbct_record, pbct_image_path, pbct_fk_owner, pbct_fk_categorie', 'safe', 'on' => 'search'),
+            array('pbct_id, pbct_title, pbct_description, pbct_record, pbct_image_path, pbct_like, pbct_unlike, pbct_hits, pbct_fake_hits, pbct_fk_owner, pbct_fk_category, pbct_fk_channel', 'safe', 'on'=>'search'),
         );
     }
 
@@ -68,10 +74,12 @@ class Publication extends CActiveRecord
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'owner' => array(self::BELONGS_TO, 'Users', 'pbct_fk_owner'),
-            'categorie' => array(self::BELONGS_TO, 'Categories', 'pbct_fk_categorie'),
-            'channelSection' => array(self::BELONGS_TO, 'ChannelSections', 'pbct_channel_section_id'),
-            'tags' => array(self::MANY_MANY, 'Tag', 'tb_publication_tags(pbct_tag_fk_image, pbct_tag_fk_channel_section)'),
+            'category' => array(self::BELONGS_TO, 'Category', 'pbct_fk_category'),
+            'channel' => array(self::BELONGS_TO, 'Channel', 'pbct_fk_channel'),
+            'owner' => array(self::BELONGS_TO, 'User', 'pbct_fk_owner'),
+            'publicationComments' => array(self::HAS_MANY, 'PublicationComment', 'pbct_cmnt_fk_publication'),
+            'tags' => array(self::MANY_MANY, 'Tag', 'tb_publications_tags(pbct_tag_fk_publication, pbct_tag_fk_tag)'),
+            'visitors' => array(self::MANY_MANY, 'User', 'tb_publications_viewed(pbct_vwd_fk_publication, pbct_vwd_fk_user)'),
         );
     }
 
@@ -81,14 +89,18 @@ class Publication extends CActiveRecord
     public function attributeLabels()
     {
         return array(
-            'pbct_image_id' => 'Pbct Image',
-            'pbct_channel_section_id' => 'Pbct Channel Section',
+            'pbct_id' => 'Pbct',
             'pbct_title' => 'Pbct Title',
             'pbct_description' => 'Pbct Description',
             'pbct_record' => 'Pbct Record',
             'pbct_image_path' => 'Pbct Image Path',
+            'pbct_like' => 'Pbct Like',
+            'pbct_unlike' => 'Pbct Unlike',
+            'pbct_hits' => 'Pbct Hits',
+            'pbct_fake_hits' => 'Pbct Fake Hits',
             'pbct_fk_owner' => 'Pbct Fk Owner',
-            'pbct_fk_categorie' => 'Pbct Fk Categorie',
+            'pbct_fk_category' => 'Pbct Fk Category',
+            'pbct_fk_channel' => 'Pbct Fk Channel',
         );
     }
 
@@ -101,20 +113,23 @@ class Publication extends CActiveRecord
         // Warning: Please modify the following code to remove attributes that
         // should not be searched.
 
-        $criteria = new CDbCriteria;
+        $criteria=new CDbCriteria;
 
-        $criteria->compare('pbct_image_id', $this->pbct_image_id, true);
-        $criteria->compare('pbct_channel_section_id', $this->pbct_channel_section_id, true);
-        $criteria->compare('pbct_title', $this->pbct_title, true);
-        $criteria->compare('pbct_description', $this->pbct_description, true);
-        $criteria->compare('pbct_record', $this->pbct_record, true);
-        $criteria->compare('pbct_image_path', $this->pbct_image_path, true);
-        $criteria->compare('pbct_fk_owner', $this->pbct_fk_owner, true);
-        $criteria->compare('pbct_fk_categorie', $this->pbct_fk_categorie);
+        $criteria->compare('pbct_id',$this->pbct_id,true);
+        $criteria->compare('pbct_title',$this->pbct_title,true);
+        $criteria->compare('pbct_description',$this->pbct_description,true);
+        $criteria->compare('pbct_record',$this->pbct_record,true);
+        $criteria->compare('pbct_image_path',$this->pbct_image_path,true);
+        $criteria->compare('pbct_like',$this->pbct_like);
+        $criteria->compare('pbct_unlike',$this->pbct_unlike);
+        $criteria->compare('pbct_hits',$this->pbct_hits);
+        $criteria->compare('pbct_fake_hits',$this->pbct_fake_hits);
+        $criteria->compare('pbct_fk_owner',$this->pbct_fk_owner,true);
+        $criteria->compare('pbct_fk_category',$this->pbct_fk_category);
+        $criteria->compare('pbct_fk_channel',$this->pbct_fk_channel,true);
 
         return new CActiveDataProvider($this, array(
-                    'criteria' => $criteria,
-                ));
+            'criteria'=>$criteria,
+        ));
     }
-
 }
