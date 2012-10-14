@@ -7,6 +7,7 @@
  * @property string $pbct_tag_fk_publication
  * @property integer $pbct_tag_fk_tag
  * 
+ * The followings are the available model relations:
  * @property Publication $publication
  * @property Tag $tag
  */
