@@ -8,7 +8,7 @@
 <?= CHtml::scriptFile(Yii::app()->theme->baseUrl . '/resources/js/themeJIsotope.js') ?>
 <?= CHtml::scriptFile(Yii::app()->theme->baseUrl . '/resources/js/themeJCarousel.js') ?>
 <?= CHtml::scriptFile(Yii::app()->theme->baseUrl . '/resources/js/themeJSmartStartSlider.js') ?>
-
+<?= CHtml::scriptFile(Yii::app()->theme->baseUrl . '/resources/js/themeJEasing.js') ?>
 <?= CHtml::scriptFile(Yii::app()->theme->baseUrl . '/resources/js/themeRespond.js') ?>
 -->
 
