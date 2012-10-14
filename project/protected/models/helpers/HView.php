@@ -30,7 +30,9 @@ class HView
 		if($('#{$view}Nav').hasClass('current')) { return false; }
 		
 		$('#menu').children('li.current').removeClass('current');
+		$('#menu').children('li').children('ul').children('li').removeClass('current');
 		$('#{$view}Nav').addClass('current');
+		$('#{$view}Nav').parent().parent().addClass('current');
                 $('#messages').empty();
 
 		showLoading('" . HApp::t('loading') . "');

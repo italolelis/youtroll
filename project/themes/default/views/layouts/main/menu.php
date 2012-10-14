@@ -1,6 +1,9 @@
 <?php
 foreach ($this->categories as $categorie) {
-    $categories[] = array('label' => HApp::t($categorie->name, 'categories'), 'url' => array("categorie/$categorie->id"));
+    $categories[] = array(
+        'label' => HApp::t($categorie->name, 'categories'),
+        'url' => '#',//array("categorie/$categorie->id"),
+    );
 }
 ?>
 
