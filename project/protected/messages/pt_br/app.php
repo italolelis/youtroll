@@ -57,6 +57,7 @@ return array(
     // Formulários - Botões
     'signUpButton' => 'Cadastrar',
     'loginButton' => 'Acessar Conta',
+    'sendImageButton' => 'Publicar Imagem',
     
     // Formulários - Labels
     'email' => 'E-mail',

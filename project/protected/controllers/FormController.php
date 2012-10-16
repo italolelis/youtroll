@@ -8,7 +8,7 @@ class FormController extends Controller
     public function filters()
     {
 	return array(
-	    'postOnly + login, signUp',
+	    'postOnly + login, signUp, sendImage',
 	);
     }
 
@@ -17,6 +17,7 @@ class FormController extends Controller
 	return array(
 	    // Ações da Aplicação
 	    'login' => 'application.controllers.form.LoginAction',
+	    'sendImage' => 'application.controllers.form.SendImageAction',
 	    'signUp' => 'application.controllers.form.SignUpAction',
 	);
     }

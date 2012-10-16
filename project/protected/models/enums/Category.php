@@ -12,11 +12,11 @@ class Category
     public static function getCategories()
     {
         return array(
-            self::ADULT => $this->getName('adult'),
-            self::ANIMATION => $this->getName('animation'),
-            self::ASSEMBLY => $this->getName('assembly'),
-            self::MEME => $this->getName('meme'),
-            self::STRIP => $this->getName('strip'),
+            self::ADULT => Category::getName('adult'),
+            self::ANIMATION => Category::getName('animation'),
+            self::ASSEMBLY => Category::getName('assembly'),
+            self::MEME => Category::getName('meme'),
+            self::STRIP => Category::getName('strip'),
         );
     }
 

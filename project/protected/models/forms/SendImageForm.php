@@ -39,7 +39,7 @@ class SendImageForm extends CFormModel
     {
 	return array(
 	    'title' => HApp::t('title'),
-	    'decription' => HApp::t('description'),
+	    'description' => HApp::t('description'),
 	    'image' => HApp::t('image'),
 	    'category' => HApp::t('category'),
 	    'tags' => HApp::t('tags'),

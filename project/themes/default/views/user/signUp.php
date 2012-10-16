@@ -1,4 +1,4 @@
-<h1 class="page-title"><?= HApp::t('singUpForm') ?></h1>
+<h1 class="page-title"><?= HApp::t('signUpForm') ?></h1>
 <?php
 $form = $this->beginWidget('CActiveForm', array(
         'id' => 'signUpForm',

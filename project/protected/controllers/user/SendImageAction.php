@@ -6,7 +6,9 @@ class SendImageAction extends CAction
     public function run()
     {
         if (Yii::app()->request->isAjaxRequest) {
-            $this->controller->renderPartial('sendImage', null, false, true);
+            $model = new SendImageForm();
+            
+            $this->controller->renderPartial('sendImage', array('model' => $model), false, true);
             Yii::app()->end();
         }
         
