@@ -1,26 +1,28 @@
 <?php
 
-class Gender
+class Category
 {
 
-    CONST MALE = 1;
-    CONST FEMALE = 2;
+    CONST ADULT = 1;
+    CONST ANIMATION = 2;
+    CONST ASSEMBLY = 3;
+    CONST MEME = 4;
+    CONST STRIP = 5;
 
-    public static function getGenders()
+    public static function getCategories()
     {
         return array(
-            self::MALE => 'MALE',
-            self::FEMALE => 'FEMALE',
+            self::ADULT => $this->getName('adult'),
+            self::ANIMATION => $this->getName('animation'),
+            self::ASSEMBLY => $this->getName('assembly'),
+            self::MEME => $this->getName('meme'),
+            self::STRIP => $this->getName('strip'),
         );
     }
 
-    public static function parse($type)
+    public static function getName($key)
     {
-        if (self::MALE === $type) {
-            return HApp::t('male');
-        } elseif (self::FEMALE === $type) {
-            return HApp::t('female');
-        }
+        return HApp::t($key, 'categories');
     }
 
 }
