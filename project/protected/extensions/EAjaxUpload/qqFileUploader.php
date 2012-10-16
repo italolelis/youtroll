@@ -118,7 +118,7 @@ class qqFileUploader {
 	    }
 	}
 	
-	if($numberFiles > 1) {
+	if($numberFiles >= 1) {
 	    return array('error' => Yii::t('app', 'Você pode enviar no máximo 1 arquivo.'));
 	}
 	

@@ -357,7 +357,7 @@ label {
     margin: 0 0 5px;
 }
 
-input, textarea, select {
+input[type="text"], input[type="password"], textarea {
     -webkit-appearance: none; /* Fix for Mobile Safari */
     background-color: #f8f8f8;
     border: 1px solid #e8e8e8;
@@ -373,7 +373,7 @@ input, textarea, select {
     border-radius: 0;
 }
 
-input, select {
+input[type="text"], input[type="password"], select {
     height: 30px;
     width: 200px;
 }
@@ -2284,9 +2284,9 @@ input[type="text"], input[type="password"] { width: 198px; }
 .textarea-block, .textarea-block { clear: both; }
 
 textarea {
-    height: 150px;
+    height: 100px;
     max-width: 100%;
-    width: 678px;
+    width: 400px;
 }
 
 input[type="submit"],

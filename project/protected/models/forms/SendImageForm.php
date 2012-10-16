@@ -23,7 +23,7 @@ class SendImageForm extends CFormModel
     public function rules()
     {
 	return array(
-	    array('title, category', 'required', 'message' => Yii::t('app', 'Este campo é obrigatório.')),
+	    array('title, description, category, tags', 'required', 'message' => Yii::t('app', 'Este campo é obrigatório.')),
 	    array('title', 'length', 'min' => 3, 'max' => 100, 'tooShort' => Yii::t('app', 'Este campo deve ter no mínimo {min} caracteres.'), 'tooLong' => Yii::t('app', 'Este campo deve ter no máximo {max} caracteres.')),
 	    array('description', 'length', 'max' => 256, 'tooShort' => Yii::t('app', 'Este campo deve ter no mínimo {min} caracteres.'), 'tooLong' => Yii::t('app', 'Este campo deve ter no máximo {max} caracteres.')),
 	    array('category', 'in', 'range' => array_keys(Category::getCategories()), 'allowEmpty' => false, 'message' => Yii::t('app', 'A opção selecionada não existe.')),
