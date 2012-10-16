@@ -3,19 +3,19 @@
 class CategoryForm extends CFormModel
 {
 
-    public $description;
+    public $name;
 
     public function rules()
     {
         return array(
-            array('description', 'required', 'message' => HApp::t('categoryRequired')),
+            array('name', 'required', 'message' => HApp::t('categoryRequired')),
         );
     }
 
     public function attributeLabels()
     {
         return array(
-            'description' => HApp::t('nameCategory'),
+            'name' => HApp::t('nameCategory'),
         );
     }
 

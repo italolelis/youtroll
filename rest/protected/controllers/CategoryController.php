@@ -75,8 +75,7 @@ class CategoryController extends Controller
     public function actionView($id)
     {
         $message = array();
-
-        $category = Category::model()->find("cmc_ctg_id = :id", array(":id" => $id));
+        $category = Category::model()->find("ctg_id = :id", array(":id" => $id));
 
         if ($category) {
             $message = $category;

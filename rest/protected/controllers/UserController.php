@@ -2,41 +2,35 @@
 
 Yii::import('application.components.Controller');
 
-class UserController extends Controller
-{
+class UserController extends Controller {
 
-    public function init()
-    {
+    public function init() {
         parent::init();
 
         $this->model = new User();
     }
 
-    public function filters()
-    {
+    public function filters() {
         return array(
             'postOnly + login',
         );
     }
 
-    public function actions()
-    {
-	return array(
-	    // Ações da Aplicação
-	    'login' => 'application.controllers.user.LoginAction',
-	);
+    public function actions() {
+        return array(
+            // Ações da Aplicação
+            'login' => 'application.controllers.user.LoginAction',
+        );
     }
-    
-    public function actionList()
-    {
+
+    public function actionList() {
         HApp::ajaxResponse($this->model->findAll(), $this->model->getAttributesPrefix());
     }
-    
-    public function actionInsert()
-    {
+
+    public function actionInsert() {
         if (Yii::app()->request->isPostRequest) {
             $this->model->setAttributesWithoutPrefix($_POST);
-            
+
             if (!$this->model->save()) {
                 HApp::ajaxResponse($this->model->getErrors(), $this->model->getAttributesPrefix());
             }
@@ -44,21 +38,18 @@ class UserController extends Controller
             HApp::ajaxResponse('true');
         }
     }
-    
-    public function actionView($id)
-    {
+
+    public function actionView($id) {
         $this->model = User::model()->find("usr_id = :id", array(":id" => $id));
-        
-        if(!$this->model) {
+
+        if (!$this->model) {
             HApp::ajaxResponse(array('status' => 'error', 'message' => HApp::t('idUnknown')));
         }
-        
+
         HApp::ajaxResponse($this->model->attributes, $this->model->getAttributesPrefix());
     }
-    
-    // @TODO - O código abaixo não foi editado
-    public function actionUpdate($id)
-    {
+
+    public function actionUpdate($id) {
         if (Yii::app()->request->isPostRequest) {
             $message = array();
 
@@ -79,9 +70,8 @@ class UserController extends Controller
             echo CJSON::encode($message);
         }
     }
-    
-    public function actionDelete($id)
-    {
+
+    public function actionDelete($id) {
         if (Yii::app()->request->isDeleteRequest) {
             $user = User::model()->findByPk($id);
             $message = array();

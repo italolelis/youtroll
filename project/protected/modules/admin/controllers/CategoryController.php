@@ -5,7 +5,7 @@ Yii::import("application.components.PersistenceServer");
 
 class CategoryController extends Controller
 {
-    
+
     public function actionList()
     {
         $this->render('index', array('model' => PersistenceServer::connect('category', 'GET')));
@@ -28,12 +28,10 @@ class CategoryController extends Controller
 
     public function actionView($id)
     {
-        $persistent = new PersistenceServer();
-        $category = $persistent->connect("category/" . $id, "GET");
+        $category = PersistenceServer::connect("category/$id", 'GET');
         $categoryForm = new CategoryForm();
-
         foreach ($categoryForm->attributes as $k => $v) {
-            $prefx = "cmc_ctg_" . $k;
+            $prefx = "ctg_" . $k;
             $categoryForm->{$k} = $category->{$prefx};
         }
 

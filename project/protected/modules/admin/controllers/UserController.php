@@ -12,29 +12,25 @@ class UserController extends Controller
     }
 
     public function actionView($id)
-    {   
+    {
         $response = PersistenceServer::connect("user/$id", 'GET', null, null, null, true);
-                
+
         $userEditForm = new UserEditForm();
         $userEditForm->attributes = $response;
-        
-        $this->renderPartial('view', array('userEditForm' => $userEditForm));
+
+        $this->renderPartial('view', array('userEditForm' => $userEditForm, 'id' => $id));
     }
-// @TODO - O código abaixo não foi editado
+
     public function actionUpdate($id)
     {
-        $response = PersistenceServer::connect("user", 'POST', array('id' => $id), null, null);
-        
-        $persistent = new PersistenceServer();
-        $messages = $persistent->connect("user/" . $id, "POST", $_POST['UserEditForm']);
-        echo CJSON::encode($messages);
+        $response = PersistenceServer::connect("user/$id", 'POST', $_POST['UserEditForm']);
+        echo CJSON::encode($response);
     }
 
     public function actionDelete($id)
     {
-        $persistent = new PersistenceServer();
-        $messages = $persistent->connect("user", "DELETE", array($id));
-        echo CJSON::encode($messages);
+        $response = PersistenceServer::connect("user/$id", 'POST', array($id));
+        echo CJSON::encode($response);
     }
 
 }
