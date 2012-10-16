@@ -63,6 +63,11 @@ return array(
     'password' => 'Senha',
     'username' => 'Nome de Usuário',
     'rememberMe' => 'Continuar Conectado',
+    'title' => 'Título',
+    'description' => 'Descrição',
+    'image' => 'Imagem',
+    'category' => 'Categoria',
+    'tags' => 'Tags',
     
     // Formulários - Respostas
     'signUpDone' => 'Cadastro finalizado com sucesso!',
