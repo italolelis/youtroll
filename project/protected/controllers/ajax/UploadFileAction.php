@@ -14,7 +14,7 @@ class UploadFileAction extends CAction
 
     private function _init()
     {
-	$this->_ajaxUploadPath = Yii::app()->basePath . '/../uploads/ajax/' . Yii::app()->session->sessionID . '/';
+	$this->_ajaxUploadPath = Yii::app()->basePath . '/../resources/ajaxUploads/' . Yii::app()->session->sessionID . '/';
 
 	if (!is_dir($this->_ajaxUploadPath)) {
 	    mkdir($this->_ajaxUploadPath);
