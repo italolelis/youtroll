@@ -35,7 +35,9 @@ $form = $this->beginWidget('CActiveForm', array(
 		    'typeError' => Yii::t('app', 'O tipo do arquivo <strong>{file}</strong> não é suportado. Os tipos permitidos são: {extensions}.'),
 		    'emptyError' => Yii::t('app', 'O arquivo <strong>{file}</strong> está vazio. Por favor, selecione outro arquivo ou tente novamente.'),
 		),
-		'onComplete' => 'js:function(id, fileName, responseJSON) { 
+		'onComplete' => 'js:function(id, fileName, responseJSON) {
+                    $(".qq-upload-button").hide();
+                    
 		    if(responseJSON["success"] === true) {
 			$(".qq-upload-status").last().append("<a href=\'#\' class=\'qq-upload-remove\'>' . Yii::t('app', 'Remover') . '</a>");
 
@@ -49,11 +51,10 @@ $form = $this->beginWidget('CActiveForm', array(
 				cache:false,
 				dataType:"html",
 				data:{fileName:fileName},
-				success:function(response) {
-				    // setAlertMessage(response, "success", "qq-upload-message");
-
+				success:function(response) {                                    
 				    statusItem.fadeOut(1500, function() {
 					$(this).remove();
+                                        $(".qq-upload-button").fadeIn();
 				    });
 				},
 				error:function(error, b, c, d, e) {

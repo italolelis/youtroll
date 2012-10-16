@@ -105,9 +105,9 @@ class qqFileUploader {
      * Returns array('success'=>true) or array('error'=>'error message')
      */
     function handleUpload($uploadDirectory, $replaceOldFile = FALSE){
-        if (!is_writable($uploadDirectory)){
-            return array('error' => Yii::t('app', 'O diretório não possuí permissão de escrita.'));
-        }
+//        if (!is_writable($uploadDirectory)){
+//            return array('error' => Yii::t('app', 'O diretório não possuí permissão de escrita.'));
+//        }
 	
 	$openPath = opendir($uploadDirectory);
 	$numberFiles = 0;

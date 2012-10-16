@@ -1,6 +1,6 @@
 <?php
 
-class LoginAction extends CAction
+class SendImageAction extends CAction
 {
 
     public function run()
