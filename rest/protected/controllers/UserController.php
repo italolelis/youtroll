@@ -30,11 +30,16 @@ class UserController extends Controller {
     public function actionInsert() {
         if (Yii::app()->request->isPostRequest) {
             $this->model->setAttributesWithoutPrefix($_POST);
-
+            
             if (!$this->model->save()) {
                 HApp::ajaxResponse($this->model->getErrors(), $this->model->getAttributesPrefix());
             }
 
+            $channel = new Channel();
+            $channel->setAttributeWithoutPrefix($this->model->getAttributeWithoutPrefix('id'), 'fk_owner');
+            $channel->setAttributeWithoutPrefix($this->model->getAttributeWithoutPrefix('username'), 'name');
+            $channel->save();
+            
             HApp::ajaxResponse('true');
         }
     }
@@ -89,5 +94,4 @@ class UserController extends Controller {
             echo CJSON::encode($message);
         }
     }
-
 }

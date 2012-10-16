@@ -14,8 +14,10 @@
  * @property User[] $users
  * @property Publication[] $publications
  */
-class Channels extends CActiveRecord
+class Channel extends Table
 {
+    
+    protected $attributesPrefix = 'chnl_';
 
     /**
      * Returns the static model of the specified AR class.
