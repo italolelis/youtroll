@@ -1,7 +1,7 @@
 <?php
-foreach ($this->categories as $categorie) {
+foreach ($this->categories as $category) {
     $categories[] = array(
-        'label' => HApp::t($categorie->name, 'categories'),
+        'label' => Category::getName($category->name),
         'url' => '#',//array("categorie/$categorie->id"),
     );
 }
