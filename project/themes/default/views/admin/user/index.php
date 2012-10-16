@@ -32,7 +32,7 @@
                     <td class="button-column">
                         <?php
                         $this->widget('bootstrap.widgets.TbButton', array(
-                            'label' => 'Edit',
+                            'label' => 'Editar',
                             'size' => 'mini',
                             'type' => 'primary',
                             'url' => Yii::app()->createAbsoluteUrl("admin/user/" . $m->id),
@@ -45,7 +45,7 @@
                         ?>
                     </td>
                 </tr>
-            <?php endforeach; ?>
+<?php endforeach; ?>
         </tbody>
     </table>
 </div>

@@ -60,14 +60,14 @@
                                 </li>
                             </ul>
                             <form class="navbar-search pull-left" action="">
-                                <input type="text" class="search-query span2" placeholder="<?= HApp::t("Search...") ?>" />
+                                <input type="text" class="search-query span2" placeholder="<?= HApp::t("Pesquisar...") ?>" />
                             </form>
                             <ul class="nav pull-right">
                                 <li>
                                     <a href="profile.htm"><?php echo Yii::app()->user->getName(); ?></a>
                                 </li>
                                 <li>
-                                    <a href="login.htm">Logout</a>
+                                    <a href="login.htm">Sair</a>
                                 </li>
                             </ul>
                         </div>
@@ -81,15 +81,14 @@
                             <li class="nav-header">
                                 <?= HApp::t("Youtroll") ?>
                             </li>
-
                             <?php
                             $this->widget('bootstrap.widgets.TbMenu', array(
                                 'id' => 'menu',
-                                'type' => 'pills',
+                                'type' => 'list',
                                 'activeCssClass' => 'active',
                                 'items' => array(
                                     array(
-                                        'label' => HApp::t('Dashboard'),
+                                        'label' => HApp::t('Painel'),
                                         'url' => array('/admin'),
                                         'icon' => "home",
                                         'active' => ($this->route == "admin/default/index")
@@ -105,6 +104,12 @@
                                         'url' => array('category/'),
                                         'icon' => "tags",
                                         'active' => ($this->route == "admin/category/list")
+                                    ),
+                                    array(
+                                        'label' => HApp::t('Tirinhas'),
+                                        'url' => array('comics/'),
+                                        'icon' => "tags",
+                                        'active' => ($this->route == "admin/comics/list")
                                     )
                                 ),
                             ));
