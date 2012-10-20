@@ -1,6 +1,6 @@
 function clearErrorsMesages() {
     $('#messages').empty();
-    $("[class*='errorMessage']").remove();
+    $("[class*='errorMessage']").empty();
 }
 
 function setAlertMessage(text, type, idDiv, fadeOutOff) {
