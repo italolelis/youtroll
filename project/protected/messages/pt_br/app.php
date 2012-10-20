@@ -37,14 +37,15 @@ return array(
     'pt_br' => 'Português do Brasil',
     
     // Textos Curtos
+    'remove' => 'Remover',
     'top' => 'Voltar ao Topo',
     'myImages' => 'Meus Envios',
     'comments' => 'Comentários',
     'loading' => 'Carregando...',
+    'settings' => 'Configurações',
     'inscriptions' => 'Inscrições',  
     'mySessions' => 'Minhas Sessões',
     'accountStats' => 'Estatísticas da Conta',
-    'settings' => 'Configurações',
     
     // Enums
     'male' => 'Masculino',
@@ -75,13 +76,25 @@ return array(
     
     // Formulários - Erros
     'emailInvalid' => 'E-mail inválido.',
-    'invalidCharacters' => 'Caracteres inválidos.',
+    'imageUnselected' => 'Selecione uma imagem.',
     'passwordStrength' => 'Força da senha baixa.',
+    'invalidCharacters' => 'Caracteres inválidos.',
     'requiredField' => 'Este campo é obrigatório.',
     'invalidAccess' => 'Dados de acesso inválidos.',
+    'invalidOption' => 'A opção selecionada não existe.',
     'lenght' => 'Este campo, deve ter {lenght} caracteres.',
-    'tooShort' => 'Este campo, deve ter no mínimo {min} caracteres.',
+    'tooLarge' => 'O arquivo deve ter no máximo: {maxSizeFile}.',
     'tooLong' => 'Este campo, deve ter no máximo {max} caracteres.',
+    'tooShort' => 'Este campo, deve ter no mínimo {min} caracteres.',
+    'tooMany' => 'Você pode enviar no máximo {maxFiles} arquivo(s).',
+    'wrongType' => 'O tipo do arquivo enviado não é suportado. Os tipos permitidos são: {types}.',
+    
+    // Extensão EAjaxUpload
+    'eauSizeError' => 'O arquivo <strong>{file}</strong> deve ter no máximo: {sizeLimit}.',
+    'eauMinSizeError' => 'O arquivo <strong>{file}</strong> deve ter no mínimo: {minSizeLimit}.',
+    'eauOnLeave' => 'O envio do(s) arquivo(s) já foi(ram) iniciado(s), se você sair agora, tudo será cancelado.',
+    'eauTypeError' => 'O tipo do arquivo <strong>{file}</strong> não é suportado. Os tipos permitidos são: {extensions}.',
+    'eauEmptyError' => 'O arquivo <strong>{file}</strong> está vazio. Por favor, selecione outro arquivo ou tente novamente.',
     
     // Erros HTTP
     200 => 'OK!',
