@@ -31,7 +31,7 @@ class qqUploadedFileXhr {
         if (isset($_SERVER["CONTENT_LENGTH"])){
             return (int)$_SERVER["CONTENT_LENGTH"];
         } else {
-            throw new Exception(Yii::t('app', 'O tamanho do arquivo é superior ao máximo suportado.'));
+            throw new Exception(Yii::t('app', 'eauTooLarge'));
         }
     }
 }
@@ -106,7 +106,7 @@ class qqFileUploader {
      */
     function handleUpload($uploadDirectory, $replaceOldFile = FALSE){
 //        if (!is_writable($uploadDirectory)){
-//            return array('error' => Yii::t('app', 'O diretório não possuí permissão de escrita.'));
+//            return array('error' => Yii::t('app', 'eauNotWritable'));
 //        }
 	
 	$openPath = opendir($uploadDirectory);
@@ -119,21 +119,21 @@ class qqFileUploader {
 	}
 	
 	if($numberFiles >= 1) {
-	    return array('error' => Yii::t('app', 'Você pode enviar no máximo 1 arquivo.'));
+	    return array('error' => Yii::t('app', 'eauMaxFiles'));
 	}
 	
         if (!$this->file){
-            return array('error' => Yii::t('app', 'Nenhum arquivo foi enviado.'));
+            return array('error' => Yii::t('app', 'eauAnyUploadedFile'));
         }
 
         $size = $this->file->getSize();
 
         if ($size == 0) {
-            return array('error' => Yii::t('app', 'O arquivo está vazio.'));
+            return array('error' => Yii::t('app', 'eauEmptyFile'));
         }
 
         if ($size > $this->sizeLimit) {
-            return array('error' => Yii::t('app', 'O arquivo enviado é muito grande.'));
+            return array('error' => Yii::t('app', 'eauSizeLimit'));
         }
 
         $pathinfo = pathinfo($this->file->getName());
@@ -143,7 +143,7 @@ class qqFileUploader {
 
         if($this->allowedExtensions && !in_array(strtolower($ext), $this->allowedExtensions)){
             $these = implode(', ', $this->allowedExtensions);
-            return array('error' => Yii::t('app', 'O tipo do arquivo é inválido. Os tipos permitidos são: ') . $these . '.');
+            return array('error' => Yii::t('app', 'eauTypeError', array('{extensions}' => $these)));
         }
 
         if(!$replaceOldFile){
@@ -156,8 +156,7 @@ class qqFileUploader {
         if ($this->file->save($uploadDirectory . $filename . '.' . $ext)){
             return array('success'=>true,'filename'=>$filename.'.'.$ext);
         } else {
-            return array('error'=> Yii::t('app', 'Não foi possível salvar o arquivo enviado.') .
-                Yii::t('app', 'O envio foi cancelado ou algum erro ocorreu no servidor'));
+            return array('error'=> Yii::t('app', 'eauUnsavedFile'));
         }
 
     }

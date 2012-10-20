@@ -90,8 +90,16 @@ return array(
     'wrongType' => 'O tipo do arquivo enviado não é suportado. Os tipos permitidos são: {types}.',
     
     // Extensão EAjaxUpload
+    'eauEmptyFile' => 'O arquivo está vazio.',
+    'eauSizeLimit' => 'O arquivo enviado é muito grande.',
+    'eauAnyUploadedFile' => 'Nenhum arquivo foi enviado.',
+    'eauMaxFiles' => 'Você pode enviar no máximo 1 arquivo.',
+    'eauNotWritable' => 'O diretório não possuí permissão de escrita.',
+    'eauTooLarge' => 'O tamanho do arquivo é superior ao máximo suportado.',
     'eauSizeError' => 'O arquivo <strong>{file}</strong> deve ter no máximo: {sizeLimit}.',
+    'eauTypeError' => 'O tipo do arquivo é inválido. Os tipos permitidos são: {extensions}.',
     'eauMinSizeError' => 'O arquivo <strong>{file}</strong> deve ter no mínimo: {minSizeLimit}.',
+    'eauUnsavedFile' => 'O envio foi cancelado, ou ocorreu algum erro desconhecido no servidor.',
     'eauOnLeave' => 'O envio do(s) arquivo(s) já foi(ram) iniciado(s), se você sair agora, tudo será cancelado.',
     'eauTypeError' => 'O tipo do arquivo <strong>{file}</strong> não é suportado. Os tipos permitidos são: {extensions}.',
     'eauEmptyError' => 'O arquivo <strong>{file}</strong> está vazio. Por favor, selecione outro arquivo ou tente novamente.',

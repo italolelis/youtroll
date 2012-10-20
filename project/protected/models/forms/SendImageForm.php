@@ -6,6 +6,7 @@ class SendImageForm extends CFormModel
     public $title;
     public $description;
     public $image;
+    public $image_path;
     public $category;
     public $tags;
     
@@ -23,14 +24,14 @@ class SendImageForm extends CFormModel
     public function rules()
     {
 	return array(
-	    array('title, description, category, tags', 'required', 'message' => Yii::t('app', 'Este campo é obrigatório.')),
-	    array('title', 'length', 'min' => 3, 'max' => 100, 'tooShort' => Yii::t('app', 'Este campo deve ter no mínimo {min} caracteres.'), 'tooLong' => Yii::t('app', 'Este campo deve ter no máximo {max} caracteres.')),
-	    array('description', 'length', 'max' => 256, 'tooShort' => Yii::t('app', 'Este campo deve ter no mínimo {min} caracteres.'), 'tooLong' => Yii::t('app', 'Este campo deve ter no máximo {max} caracteres.')),
-	    array('category', 'in', 'range' => array_keys(Category::getCategories()), 'allowEmpty' => false, 'message' => Yii::t('app', 'A opção selecionada não existe.')),
+	    array('title, description, category, tags, image_path', 'required', 'message' => HApp::t('requiredField')),
+	    array('title', 'length', 'min' => 3, 'max' => 100, 'tooShort' => HApp::t('tooShort'), 'tooLong' => HApp::t('tooLong')),
+	    array('description', 'length', 'max' => 256, 'tooShort' => HApp::t('tooShort'), 'tooLong' => HApp::t('tooLong')),
+	    array('category', 'in', 'range' => array_keys(Category::getCategories()), 'allowEmpty' => false, 'message' => HApp::t('invalidOption')),
 	    array('image', 'file', 'minSize' => $this->minSizeAnnex, 'allowEmpty' => true,
-		'types' => $this->annexExtensions, 'wrongType' => Yii::t('app', 'O tipo do arquivo enviado não é suportado. Os tipos permitidos são: {types}.'),
-		'maxFiles' => $this->maxAttachments, 'tooMany' => Yii::t('app', 'Você pode enviar no máximo {maxFiles} arquivo(s).'),
-		'maxSize' => $this->maxSizeAnnex, 'tooLarge' => Yii::t('app', 'O arquivo deve ter no máximo: {maxSizeFile}.', array('{maxSizeFile}' => HConvert::byte($this->maxSizeAnnex))),
+		'types' => $this->annexExtensions, 'wrongType' => HApp::t('wrongType'),
+		'maxFiles' => $this->maxAttachments, 'tooMany' => HApp::t('tooMany'),
+		'maxSize' => $this->maxSizeAnnex, 'tooLarge' => Yii::t('app', 'tooLarge', array('{maxSizeFile}' => HConvert::byte($this->maxSizeAnnex))),
 	    ),
 	);
     }
@@ -41,9 +42,15 @@ class SendImageForm extends CFormModel
 	    'title' => HApp::t('title'),
 	    'description' => HApp::t('description'),
 	    'image' => HApp::t('image'),
+	    'image_path' => HApp::t('image'),
 	    'category' => HApp::t('category'),
 	    'tags' => HApp::t('tags'),
 	);
+    }
+    
+    public function getAttributeListErrors()
+    {
+	return 'image_path';
     }
 
 }

@@ -18,7 +18,7 @@ $form = $this->beginWidget('CActiveForm', array(
 </div>
 <div class="input-block">
 <?php if (!(preg_match('/MSIE/i', Yii::app()->request->userAgent) && !preg_match('/Opera/i', Yii::app()->request->userAgent))): ?>
-    <?= $form->labelEx($model, 'image') ?>
+    <?= $form->labelEx($model, 'image_path') ?>
     <div class="ajaxUpload">
 	<?php
 	$this->widget('ext.EAjaxUpload.EAjaxUpload', array(
@@ -29,17 +29,18 @@ $form = $this->beginWidget('CActiveForm', array(
 		'sizeLimit' => $model->maxSizeAnnex,
 		'minSizeLimit' => $model->minSizeAnnex,
 		'messages' => array(
-		    'sizeError' => Yii::t('app', 'O arquivo <strong>{file}</strong> deve ter no máximo: {sizeLimit}.'),
-		    'minSizeError' => Yii::t('app', 'O arquivo <strong>{file}</strong> deve ter no mínimo: {minSizeLimit}.'),
-		    'onLeave' => Yii::t('app', 'O envio do(s) arquivo(s) já foi(ram) iniciado(s), se você sair agora, tudo será cancelado.'),
-		    'typeError' => Yii::t('app', 'O tipo do arquivo <strong>{file}</strong> não é suportado. Os tipos permitidos são: {extensions}.'),
-		    'emptyError' => Yii::t('app', 'O arquivo <strong>{file}</strong> está vazio. Por favor, selecione outro arquivo ou tente novamente.'),
+		    'sizeError' => HApp::t('eauSizeError'),
+		    'minSizeError' => HApp::t('eauMinSizeError'),
+		    'onLeave' => HApp::t('eauOnLeave'),
+		    'typeError' => HApp::t('eauTypeError'),
+		    'emptyError' => HApp::t('eauEmptyError'),
 		),
 		'onComplete' => 'js:function(id, fileName, responseJSON) {
+                    clearErrorsMesages();
                     $(".qq-upload-button").hide();
                     
 		    if(responseJSON["success"] === true) {
-			$(".qq-upload-status").last().append("<a href=\'#\' class=\'qq-upload-remove\'>' . Yii::t('app', 'Remover') . '</a>");
+			$(".qq-upload-status").last().append("<a href=\'#\' class=\'qq-upload-remove\'>' . HApp::t('remove') . '</a>");
 
 			$(".qq-upload-remove").last().bind("click", function() {
 			    statusItem = $(this).parent();
@@ -77,6 +78,8 @@ $form = $this->beginWidget('CActiveForm', array(
 	));
 	?>
     </div>
+    <?= $form->hiddenField($model, 'image_path') ?>
+    <?= $form->error($model, 'image_path') ?>
 <?php endif; ?>
 </div>
 <div class="input-block">
