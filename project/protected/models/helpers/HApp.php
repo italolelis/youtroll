@@ -80,6 +80,7 @@ class HApp
 	    } else {
 		echo $response;
             }
+            
 	    Yii::app()->end();
 	}
 
