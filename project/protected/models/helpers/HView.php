@@ -76,6 +76,9 @@ class HView
                         case 'renderView':
                             $('#view').html(response.view);
                             break;
+                        case 'redirect':
+                            location = response.link;
+                            break;
                         case 'reload':
                             location.reload();
                             break;

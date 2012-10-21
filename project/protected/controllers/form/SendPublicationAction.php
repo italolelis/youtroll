@@ -45,12 +45,11 @@ class SendPublicationAction extends CAction
                 if($model->validate()) {
                     $response = PersistenceServer::connect('publication', 'POST', $model->attributes);
                     
-                    if($response === true) {
+                    if(is_int($response)) {
                         if(rename($this->_ajaxUploadPath . $this->_imagePath, $this->_userPath . $this->_imagePath)) {
                             HApp::ajaxResponse(array(
-//                            'action' => 'openMenuOption',
-//                            'menuOption' => 'login',
-//                            'message' => array('type' => 'success', 'text' => HApp::t('signUpDone')),
+                                'action' => 'redirect',
+                                'link' => Yii::app()->createAbsoluteUrl('site/index', array('see' => HSecurity::urlEncode($response))),
                             ));
                         }
                         

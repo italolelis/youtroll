@@ -22,7 +22,7 @@ class PublicationController extends Controller {
                 HApp::ajaxResponse($this->model->getErrors(), $this->model->getAttributesPrefix());
             }
             
-            HApp::ajaxResponse('true');
+            HApp::ajaxResponse($this->model->getAttributeWithoutPrefix('id'));
         }
     }
 }
