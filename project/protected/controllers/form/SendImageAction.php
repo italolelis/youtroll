@@ -42,16 +42,17 @@ class SendImageAction extends CAction
                 
                 if($model->validate()) {
                     $response = PersistenceServer::connect('publication', 'POST', $model->attributes);
-//                    
-//                    if($response === true) {
-//                        HApp::ajaxResponse(array(
+                    
+                    if($response === true) {
+                        HApp::ajaxResponse(array(
 //                            'action' => 'openMenuOption',
 //                            'menuOption' => 'login',
 //                            'message' => array('type' => 'success', 'text' => HApp::t('signUpDone')),
-//                        ));
-//                    }
+                        ));
+                    }
                     
                     $model->addErrors($response);
+                    
                     HModel::generatePerformAjaxErrors($model);
                 }
                 

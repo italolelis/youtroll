@@ -14,12 +14,7 @@ class PublicationController extends Controller {
         if (Yii::app()->request->isPostRequest) {
             $user = User::model()->findByPk($this->headers->Authorization[0]);
             
-            var_dump($user->channel->attributes);
-            exit();
             $this->model->setAttributesWithoutPrefix($_POST);
-            foreach ($user->publications as $key => $value) {
-                var_dump($value);
-            }exit();
             $this->model->setAttributeWithoutPrefix($user->getAttributeWithoutPrefix('id'), 'owner');
             $this->model->setAttributeWithoutPrefix($user->channel->getAttributeWithoutPrefix('id'), 'channel');
             
