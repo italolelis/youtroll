@@ -5,6 +5,7 @@ class SendPublicationAction extends CAction
     
     private $_ajaxUploadPath;
     private $_imagePath;
+    private $_userPath;
 
     function __construct()
     {
@@ -14,6 +15,7 @@ class SendPublicationAction extends CAction
     private function _init()
     {
 	$this->_ajaxUploadPath = Yii::app()->basePath . '/../resources/ajaxUploads/' . Yii::app()->session->sessionID . '/';
+        $this->_userPath = Yii::app()->basePath . '/../resources/img/user/' . Yii::app()->user->getName() . '/';
         
         if (!is_dir($this->_ajaxUploadPath) || (is_dir($this->_ajaxUploadPath) && scandir($this->_ajaxUploadPath) < 2)) {
             $model = new SendPublicationForm();
@@ -44,11 +46,17 @@ class SendPublicationAction extends CAction
                     $response = PersistenceServer::connect('publication', 'POST', $model->attributes);
                     
                     if($response === true) {
-                        HApp::ajaxResponse(array(
+                        if(rename($this->_ajaxUploadPath . $this->_imagePath, $this->_userPath . $this->_imagePath)) {
+                            HApp::ajaxResponse(array(
 //                            'action' => 'openMenuOption',
 //                            'menuOption' => 'login',
 //                            'message' => array('type' => 'success', 'text' => HApp::t('signUpDone')),
-                        ));
+                            ));
+                        }
+                        
+                        // @todo Excluir aquivo do BD
+                        
+                        HApp::throwException(500);
                     }
                     
                     $model->addErrors($response);
