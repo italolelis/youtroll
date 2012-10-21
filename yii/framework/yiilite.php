@@ -2665,16 +2665,16 @@ class CCookieCollection extends CMap
 		if($this->_request->enableCookieValidation)
 			$value=Yii::app()->getSecurityManager()->hashData(serialize($value));
 		if(version_compare(PHP_VERSION,'5.2.0','>='))
-			setcookie($cookie->description,$value,$cookie->expire,$cookie->path,$cookie->domain,$cookie->secure,$cookie->httpOnly);
+			setcookie($cookie->name,$value,$cookie->expire,$cookie->path,$cookie->domain,$cookie->secure,$cookie->httpOnly);
 		else
-			setcookie($cookie->description,$value,$cookie->expire,$cookie->path,$cookie->domain,$cookie->secure);
+			setcookie($cookie->name,$value,$cookie->expire,$cookie->path,$cookie->domain,$cookie->secure);
 	}
 	protected function removeCookie($cookie)
 	{
 		if(version_compare(PHP_VERSION,'5.2.0','>='))
-			setcookie($cookie->description,null,0,$cookie->path,$cookie->domain,$cookie->secure,$cookie->httpOnly);
+			setcookie($cookie->name,null,0,$cookie->path,$cookie->domain,$cookie->secure,$cookie->httpOnly);
 		else
-			setcookie($cookie->description,null,0,$cookie->path,$cookie->domain,$cookie->secure);
+			setcookie($cookie->name,null,0,$cookie->path,$cookie->domain,$cookie->secure);
 	}
 }
 class CUrlManager extends CApplicationComponent
@@ -3585,9 +3585,9 @@ class CController extends CBaseController
 		{
 			$name=ucfirst(basename($this->getId()));
 			if($this->getAction()!==null && strcasecmp($this->getAction()->getId(),$this->defaultAction))
-				return $this->_pageTitle=Yii::app()->description.' - '.ucfirst($this->getAction()->getId()).' '.$name;
+				return $this->_pageTitle=Yii::app()->name.' - '.ucfirst($this->getAction()->getId()).' '.$name;
 			else
-				return $this->_pageTitle=Yii::app()->description.' - '.$name;
+				return $this->_pageTitle=Yii::app()->name.' - '.$name;
 		}
 	}
 	public function setPageTitle($value)
@@ -3945,7 +3945,7 @@ class CWebUser extends CApplicationComponent implements IWebUser
 					if($this->autoRenewCookie)
 					{
 						$cookie->expire=time()+$duration;
-						$request->getCookies()->add($cookie->description,$cookie);
+						$request->getCookies()->add($cookie->name,$cookie);
 					}
 					$this->afterLogin(true);
 				}
@@ -3963,7 +3963,7 @@ class CWebUser extends CApplicationComponent implements IWebUser
 			if(is_array($data) && isset($data[0],$data[1],$data[2],$data[3]))
 			{
 				$cookie->expire=time()+$data[2];
-				$cookies->add($cookie->description,$cookie);
+				$cookies->add($cookie->name,$cookie);
 			}
 		}
 	}
@@ -8309,7 +8309,7 @@ class CSqliteSchema extends CDbSchema
 			try
 			{
 				// it's possible sqlite_sequence does not exist
-				$this->getDbConnection()->createCommand("UPDATE sqlite_sequence SET seq='$value' WHERE name='{$table->description}'")->execute();
+				$this->getDbConnection()->createCommand("UPDATE sqlite_sequence SET seq='$value' WHERE name='{$table->name}'")->execute();
 			}
 			catch(Exception $e)
 			{

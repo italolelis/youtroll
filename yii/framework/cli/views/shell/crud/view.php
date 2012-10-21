@@ -33,7 +33,7 @@ $this->menu=array(
 	'attributes'=>array(
 <?php
 foreach($columns as $column)
-	echo "\t\t'".$column->description."',\n";
+	echo "\t\t'".$column->name."',\n";
 ?>
 	),
 )); ?>

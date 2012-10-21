@@ -17,7 +17,7 @@
  *
  * The followings are the available columns in table '<?php echo $tableName; ?>':
 <?php foreach($columns as $column): ?>
- * @property <?php echo $column->type.' $'.$column->description."\n"; ?>
+ * @property <?php echo $column->type.' $'.$column->name."\n"; ?>
 <?php endforeach; ?>
 <?php if(!empty($relations)): ?>
  *

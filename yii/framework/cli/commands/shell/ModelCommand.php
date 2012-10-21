@@ -132,7 +132,7 @@ EOD;
 		$this->_classes=array();
 		foreach($this->_schema->getTables() as $table)
 		{
-			$tableName=$table->description;
+			$tableName=$table->name;
 
 			if ($this->isRelationTable($table))
 			{
@@ -395,24 +395,24 @@ EOD;
 			$safe=array();
 			foreach($table->columns as $column)
 			{
-				$label=ucwords(trim(strtolower(str_replace(array('-','_'),' ',preg_replace('/(?<![A-Z])[A-Z]/', ' \0', $column->description)))));
+				$label=ucwords(trim(strtolower(str_replace(array('-','_'),' ',preg_replace('/(?<![A-Z])[A-Z]/', ' \0', $column->name)))));
 				$label=preg_replace('/\s+/',' ',$label);
 				if(strcasecmp(substr($label,-3),' id')===0)
 					$label=substr($label,0,-3);
-				$labels[$column->description]=$label;
+				$labels[$column->name]=$label;
 				if($column->isPrimaryKey && $table->sequenceName!==null)
 					continue;
 				$r=!$column->allowNull && $column->defaultValue===null;
 				if($r)
-					$required[]=$column->description;
+					$required[]=$column->name;
 				if($column->type==='integer')
-					$integers[]=$column->description;
+					$integers[]=$column->name;
 				else if($column->type==='double')
-					$numerical[]=$column->description;
+					$numerical[]=$column->name;
 				else if($column->type==='string' && $column->size>0)
-					$length[$column->size][]=$column->description;
+					$length[$column->size][]=$column->name;
 				else if(!$column->isPrimaryKey && !$r)
-					$safe[]=$column->description;
+					$safe[]=$column->name;
 			}
 			if($required!==array())
 				$rules[]="array('".implode(', ',$required)."', 'required')";

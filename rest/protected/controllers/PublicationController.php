@@ -13,9 +13,9 @@ class PublicationController extends Controller {
     public function actionInsert() {
         if (Yii::app()->request->isPostRequest) {
             $user = User::model()->findByPk($this->headers->Authorization[0]);
-            foreach ($user->channel as $key => $value) {
-                var_dump($value);
-            }exit();
+            
+            var_dump($user->channel->attributes);
+            exit();
             $this->model->setAttributesWithoutPrefix($_POST);
             foreach ($user->publications as $key => $value) {
                 var_dump($value);

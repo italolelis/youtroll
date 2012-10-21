@@ -170,58 +170,58 @@ class CrudCode extends CCodeModel
 
 	public function generateInputLabel($modelClass,$column)
 	{
-		return "CHtml::activeLabelEx(\$model,'{$column->description}')";
+		return "CHtml::activeLabelEx(\$model,'{$column->name}')";
 	}
 
 	public function generateInputField($modelClass,$column)
 	{
 		if($column->type==='boolean')
-			return "CHtml::activeCheckBox(\$model,'{$column->description}')";
+			return "CHtml::activeCheckBox(\$model,'{$column->name}')";
 		else if(stripos($column->dbType,'text')!==false)
-			return "CHtml::activeTextArea(\$model,'{$column->description}',array('rows'=>6, 'cols'=>50))";
+			return "CHtml::activeTextArea(\$model,'{$column->name}',array('rows'=>6, 'cols'=>50))";
 		else
 		{
-			if(preg_match('/^(password|pass|passwd|passcode)$/i',$column->description))
+			if(preg_match('/^(password|pass|passwd|passcode)$/i',$column->name))
 				$inputField='activePasswordField';
 			else
 				$inputField='activeTextField';
 
 			if($column->type!=='string' || $column->size===null)
-				return "CHtml::{$inputField}(\$model,'{$column->description}')";
+				return "CHtml::{$inputField}(\$model,'{$column->name}')";
 			else
 			{
 				if(($size=$maxLength=$column->size)>60)
 					$size=60;
-				return "CHtml::{$inputField}(\$model,'{$column->description}',array('size'=>$size,'maxlength'=>$maxLength))";
+				return "CHtml::{$inputField}(\$model,'{$column->name}',array('size'=>$size,'maxlength'=>$maxLength))";
 			}
 		}
 	}
 
 	public function generateActiveLabel($modelClass,$column)
 	{
-		return "\$form->labelEx(\$model,'{$column->description}')";
+		return "\$form->labelEx(\$model,'{$column->name}')";
 	}
 
 	public function generateActiveField($modelClass,$column)
 	{
 		if($column->type==='boolean')
-			return "\$form->checkBox(\$model,'{$column->description}')";
+			return "\$form->checkBox(\$model,'{$column->name}')";
 		else if(stripos($column->dbType,'text')!==false)
-			return "\$form->textArea(\$model,'{$column->description}',array('rows'=>6, 'cols'=>50))";
+			return "\$form->textArea(\$model,'{$column->name}',array('rows'=>6, 'cols'=>50))";
 		else
 		{
-			if(preg_match('/^(password|pass|passwd|passcode)$/i',$column->description))
+			if(preg_match('/^(password|pass|passwd|passcode)$/i',$column->name))
 				$inputField='passwordField';
 			else
 				$inputField='textField';
 
 			if($column->type!=='string' || $column->size===null)
-				return "\$form->{$inputField}(\$model,'{$column->description}')";
+				return "\$form->{$inputField}(\$model,'{$column->name}')";
 			else
 			{
 				if(($size=$maxLength=$column->size)>60)
 					$size=60;
-				return "\$form->{$inputField}(\$model,'{$column->description}',array('size'=>$size,'maxlength'=>$maxLength))";
+				return "\$form->{$inputField}(\$model,'{$column->name}',array('size'=>$size,'maxlength'=>$maxLength))";
 			}
 		}
 	}
@@ -230,18 +230,18 @@ class CrudCode extends CCodeModel
 	{
 		foreach($columns as $column)
 		{
-			if(!strcasecmp($column->description,'name'))
-				return $column->description;
+			if(!strcasecmp($column->name,'name'))
+				return $column->name;
 		}
 		foreach($columns as $column)
 		{
-			if(!strcasecmp($column->description,'title'))
-				return $column->description;
+			if(!strcasecmp($column->name,'title'))
+				return $column->name;
 		}
 		foreach($columns as $column)
 		{
 			if($column->isPrimaryKey)
-				return $column->description;
+				return $column->name;
 		}
 		return 'id';
 	}

@@ -2658,7 +2658,7 @@ class HTMLPurifier_DefinitionCacheFactory
             $class = "HTMLPurifier_DefinitionCache_Decorator_$decorator";
             $decorator = new $class;
         }
-        $this->decorators[$decorator->description] = $decorator;
+        $this->decorators[$decorator->name] = $decorator;
     }
 
 }
@@ -5170,14 +5170,14 @@ class HTMLPurifier_HTMLModuleManager
             }
             $module = new $module();
         }
-        if (empty($module->description)) {
+        if (empty($module->name)) {
             trigger_error('Module instance of ' . get_class($module) . ' must have name');
             return;
         }
-        if (!$overload && isset($this->registeredModules[$module->description])) {
-            trigger_error('Overloading ' . $module->description . ' without explicit overload parameter', E_USER_WARNING);
+        if (!$overload && isset($this->registeredModules[$module->name])) {
+            trigger_error('Overloading ' . $module->name . ' without explicit overload parameter', E_USER_WARNING);
         }
-        $this->registeredModules[$module->description] = $module;
+        $this->registeredModules[$module->name] = $module;
     }
 
     /**
@@ -5186,7 +5186,7 @@ class HTMLPurifier_HTMLModuleManager
      */
     public function addModule($module) {
         $this->registerModule($module);
-        if (is_object($module)) $module = $module->description;
+        if (is_object($module)) $module = $module->name;
         $this->userModules[] = $module;
     }
 
@@ -5260,7 +5260,7 @@ class HTMLPurifier_HTMLModuleManager
                     $class = "HTMLPurifier_Injector_$injector";
                     $injector = new $class;
                 }
-                $n[$injector->description] = $injector;
+                $n[$injector->name] = $injector;
             }
             $module->info_injector = $n;
         }
@@ -5271,7 +5271,7 @@ class HTMLPurifier_HTMLModuleManager
                 if (!isset($this->elementLookup[$name])) {
                     $this->elementLookup[$name] = array();
                 }
-                $this->elementLookup[$name][] = $module->description;
+                $this->elementLookup[$name][] = $module->name;
             }
         }
 
@@ -5604,7 +5604,7 @@ abstract class HTMLPurifier_Injector
         if (!empty($this->currentNesting)) {
             $parent_token = array_pop($this->currentNesting);
             $this->currentNesting[] = $parent_token;
-            $parent = $this->htmlDefinition->info[$parent_token->description];
+            $parent = $this->htmlDefinition->info[$parent_token->name];
         } else {
             $parent = $this->htmlDefinition->info_parent_def;
         }
@@ -5614,7 +5614,7 @@ abstract class HTMLPurifier_Injector
         // check for exclusion
         for ($i = count($this->currentNesting) - 2; $i >= 0; $i--) {
             $node = $this->currentNesting[$i];
-            $def  = $this->htmlDefinition->info[$node->description];
+            $def  = $this->htmlDefinition->info[$node->name];
             if (isset($def->excludes[$name])) return false;
         }
         return true;
@@ -7383,16 +7383,16 @@ class HTMLPurifier_URIDefinition extends HTMLPurifier_Definition
     }
 
     public function registerFilter($filter) {
-        $this->registeredFilters[$filter->description] = $filter;
+        $this->registeredFilters[$filter->name] = $filter;
     }
 
     public function addFilter($filter, $config) {
         $r = $filter->prepare($config);
         if ($r === false) return; // null is ok, for backwards compat
         if ($filter->post) {
-            $this->postFilters[$filter->description] = $filter;
+            $this->postFilters[$filter->name] = $filter;
         } else {
-            $this->filters[$filter->description] = $filter;
+            $this->filters[$filter->name] = $filter;
         }
     }
 
@@ -8532,7 +8532,7 @@ class HTMLPurifier_AttrDef_Switch
 
     public function validate($string, $config, $context) {
         $token = $context->get('CurrentToken', true);
-        if (!$token || $token->description !== $this->tag) {
+        if (!$token || $token->name !== $this->tag) {
             return $this->withoutTag->validate($string, $config, $context);
         } else {
             return $this->withTag->validate($string, $config, $context);
@@ -9135,7 +9135,7 @@ class HTMLPurifier_AttrDef_CSS_DenyElementDecorator extends HTMLPurifier_AttrDef
      */
     public function validate($string, $config, $context) {
         $token = $context->get('CurrentToken', true);
-        if ($token && $token->description == $this->element) return false;
+        if ($token && $token->name == $this->element) return false;
         return $this->def->validate($string, $config, $context);
     }
 }
@@ -10030,7 +10030,7 @@ class HTMLPurifier_AttrDef_HTML_Class extends HTMLPurifier_AttrDef_HTML_Nmtokens
 {
     protected function split($string, $config, $context) {
         // really, this twiddle should be lazy loaded
-        $name = $config->getDefinition('HTML')->doctype->description;
+        $name = $config->getDefinition('HTML')->doctype->name;
         if ($name == "XHTML 1.1" || $name == "XHTML 2.0") {
             return parent::split($string, $config, $context);
         } else {
@@ -11896,7 +11896,7 @@ class HTMLPurifier_ChildDef_Table extends HTMLPurifier_ChildDef
                 if ($is_child) {
                     // okay, let's stash the tokens away
                     // first token tells us the type of the collection
-                    switch ($collection[$tag_index]->description) {
+                    switch ($collection[$tag_index]->name) {
                         case 'tbody':
                             $tbody_mode = true;
                         case 'tr':
@@ -11917,7 +11917,7 @@ class HTMLPurifier_ChildDef_Table extends HTMLPurifier_ChildDef
                             // turned into <tbody>? Very tricky, indeed.
 
                             // access the appropriate variable, $thead or $tfoot
-                            $var = $collection[$tag_index]->description;
+                            $var = $collection[$tag_index]->name;
                             if ($$var === false) {
                                 $$var = $collection;
                             } else {
@@ -11930,8 +11930,8 @@ class HTMLPurifier_ChildDef_Table extends HTMLPurifier_ChildDef
                                 // We don't do this, because Firefox
                                 // doesn't float an extra tfoot to the
                                 // bottom like it does for the first one.
-                                $collection[$tag_index]->description = 'tbody';
-                                $collection[count($collection)-1]->description = 'tbody';
+                                $collection[$tag_index]->name = 'tbody';
+                                $collection[count($collection)-1]->name = 'tbody';
                                 $content[] = $collection;
                             }
                             break;
@@ -14084,7 +14084,7 @@ class HTMLPurifier_Injector_AutoParagraph extends HTMLPurifier_Injector
         // Is the current parent a <p> tag?
         } elseif (
             !empty($this->currentNesting) &&
-            $this->currentNesting[count($this->currentNesting)-1]->description == 'p'
+            $this->currentNesting[count($this->currentNesting)-1]->name == 'p'
         ) {
             // State 3.1: ...<p>PAR1
             //                  ----
@@ -14302,7 +14302,7 @@ class HTMLPurifier_Injector_AutoParagraph extends HTMLPurifier_Injector
      * paragraph tags)
      */
     private function _isInline($token) {
-        return isset($this->htmlDefinition->info['p']->child->elements[$token->description]);
+        return isset($this->htmlDefinition->info['p']->child->elements[$token->name]);
     }
 
     /**
@@ -14551,7 +14551,7 @@ class HTMLPurifier_Injector_RemoveSpansWithoutAttributes extends HTMLPurifier_In
     }
 
     public function handleElement(&$token) {
-        if ($token->description !== 'span' || !$token instanceof HTMLPurifier_Token_Start) {
+        if ($token->name !== 'span' || !$token instanceof HTMLPurifier_Token_Start) {
             return;
         }
 
@@ -14618,7 +14618,7 @@ class HTMLPurifier_Injector_SafeObject extends HTMLPurifier_Injector
     }
 
     public function handleElement(&$token) {
-        if ($token->description == 'object') {
+        if ($token->name == 'object') {
             $this->objectStack[] = $token;
             $this->paramStack[] = array();
             $new = array($token);
@@ -14628,7 +14628,7 @@ class HTMLPurifier_Injector_SafeObject extends HTMLPurifier_Injector
             $token = $new;
         } elseif ($token->name == 'param') {
             $nest = count($this->currentNesting) - 1;
-            if ($nest >= 0 && $this->currentNesting[$nest]->description === 'object') {
+            if ($nest >= 0 && $this->currentNesting[$nest]->name === 'object') {
                 $i = count($this->objectStack) - 1;
                 if (!isset($token->attr['name'])) {
                     $token = false;
@@ -14668,7 +14668,7 @@ class HTMLPurifier_Injector_SafeObject extends HTMLPurifier_Injector
         // This is the WRONG way of handling the object and param stacks;
         // we should be inserting them directly on the relevant object tokens
         // so that the global stack handling handles it.
-        if ($token->description == 'object') {
+        if ($token->name == 'object') {
             array_pop($this->objectStack);
             array_pop($this->paramStack);
         }
@@ -14871,7 +14871,7 @@ class HTMLPurifier_Lexer_DOMLex extends HTMLPurifier_Lexer
         if ($node_map->length === 0) return array();
         $array = array();
         foreach ($node_map as $attr) {
-            $array[$attr->description] = $attr->value;
+            $array[$attr->name] = $attr->value;
         }
         return $array;
     }
@@ -15898,7 +15898,7 @@ class HTMLPurifier_Strategy_MakeWellFormed extends HTMLPurifier_Strategy
             $error = $injector->prepare($config, $context);
             if (!$error) continue;
             array_splice($this->injectors, $ix, 1); // rm the injector
-            trigger_error("Cannot enable {$injector->description} injector because $error is not allowed", E_USER_WARNING);
+            trigger_error("Cannot enable {$injector->name} injector because $error is not allowed", E_USER_WARNING);
         }
 
         // -- end INJECTOR --
@@ -15956,7 +15956,7 @@ class HTMLPurifier_Strategy_MakeWellFormed extends HTMLPurifier_Strategy
                 }
 
                 // append, don't splice, since this is the end
-                $tokens[] = new HTMLPurifier_Token_End($top_nesting->description);
+                $tokens[] = new HTMLPurifier_Token_End($top_nesting->name);
 
                 // punt!
                 $reprocess = true;
@@ -16028,8 +16028,8 @@ class HTMLPurifier_Strategy_MakeWellFormed extends HTMLPurifier_Strategy
                     $parent = array_pop($this->stack);
                     $this->stack[] = $parent;
 
-                    if (isset($definition->info[$parent->description])) {
-                        $elements = $definition->info[$parent->description]->child->getAllowedElements($config);
+                    if (isset($definition->info[$parent->name])) {
+                        $elements = $definition->info[$parent->name]->child->getAllowedElements($config);
                         $autoclose = !isset($elements[$token->name]);
                     } else {
                         $autoclose = false;
@@ -16042,7 +16042,7 @@ class HTMLPurifier_Strategy_MakeWellFormed extends HTMLPurifier_Strategy
                         $wrapname = $definition->info[$token->name]->wrap;
                         $wrapdef = $definition->info[$wrapname];
                         $elements = $wrapdef->child->getAllowedElements($config);
-                        $parent_elements = $definition->info[$parent->description]->child->getAllowedElements($config);
+                        $parent_elements = $definition->info[$parent->name]->child->getAllowedElements($config);
                         if (isset($elements[$token->name]) && isset($parent_elements[$wrapname])) {
                             $newtoken = new HTMLPurifier_Token_Start($wrapname);
                             $this->insertBefore($newtoken);
@@ -16052,7 +16052,7 @@ class HTMLPurifier_Strategy_MakeWellFormed extends HTMLPurifier_Strategy
                     }
 
                     $carryover = false;
-                    if ($autoclose && $definition->info[$parent->description]->formatting) {
+                    if ($autoclose && $definition->info[$parent->name]->formatting) {
                         $carryover = true;
                     }
 
@@ -16062,7 +16062,7 @@ class HTMLPurifier_Strategy_MakeWellFormed extends HTMLPurifier_Strategy
                         $autoclose_ok = isset($global_parent_allowed_elements[$token->name]);
                         if (!$autoclose_ok) {
                             foreach ($this->stack as $ancestor) {
-                                $elements = $definition->info[$ancestor->description]->child->getAllowedElements($config);
+                                $elements = $definition->info[$ancestor->name]->child->getAllowedElements($config);
                                 if (isset($elements[$token->name])) {
                                     $autoclose_ok = true;
                                     break;
@@ -16080,7 +16080,7 @@ class HTMLPurifier_Strategy_MakeWellFormed extends HTMLPurifier_Strategy
                         }
                         if ($autoclose_ok) {
                             // errors need to be updated
-                            $new_token = new HTMLPurifier_Token_End($parent->description);
+                            $new_token = new HTMLPurifier_Token_End($parent->name);
                             $new_token->start = $parent;
                             if ($carryover) {
                                 $element = clone $parent;
@@ -16156,7 +16156,7 @@ class HTMLPurifier_Strategy_MakeWellFormed extends HTMLPurifier_Strategy
             // we modify the input stream accordingly and then punt, so that
             // the tokens get processed again.
             $current_parent = array_pop($this->stack);
-            if ($current_parent->description == $token->name) {
+            if ($current_parent->name == $token->name) {
                 $token->start = $current_parent;
                 foreach ($this->injectors as $i => $injector) {
                     if (isset($token->skip[$i])) continue;
@@ -16181,7 +16181,7 @@ class HTMLPurifier_Strategy_MakeWellFormed extends HTMLPurifier_Strategy
             // -2 because -1 is the last element, but we already checked that
             $skipped_tags = false;
             for ($j = $size - 2; $j >= 0; $j--) {
-                if ($this->stack[$j]->description == $token->name) {
+                if ($this->stack[$j]->name == $token->name) {
                     $skipped_tags = array_slice($this->stack, $j);
                     break;
                 }
@@ -16218,7 +16218,7 @@ class HTMLPurifier_Strategy_MakeWellFormed extends HTMLPurifier_Strategy
             $replace = array($token);
             for ($j = 1; $j < $c; $j++) {
                 // ...as well as from the insertions
-                $new_token = new HTMLPurifier_Token_End($skipped_tags[$j]->description);
+                $new_token = new HTMLPurifier_Token_End($skipped_tags[$j]->name);
                 $new_token->start = $skipped_tags[$j];
                 array_unshift($replace, $new_token);
                 if (isset($definition->info[$new_token->name]) && $definition->info[$new_token->name]->formatting) {
@@ -16669,7 +16669,7 @@ class HTMLPurifier_TagTransform_Simple extends HTMLPurifier_TagTransform
 
     public function transform($tag, $config, $context) {
         $new_tag = clone $tag;
-        $new_tag->description = $this->transform_to;
+        $new_tag->name = $this->transform_to;
         if (!is_null($this->style) &&
             ($new_tag instanceof HTMLPurifier_Token_Start || $new_tag instanceof HTMLPurifier_Token_Empty)
         ) {
@@ -17074,7 +17074,7 @@ class HTMLPurifier_URIFilter_Munge extends HTMLPurifier_URIFilter
         $this->replace['%s'] = $string;
         $this->replace['%r'] = $context->get('EmbeddedURI', true);
         $token = $context->get('CurrentToken', true);
-        $this->replace['%n'] = $token ? $token->description : null;
+        $this->replace['%n'] = $token ? $token->name : null;
         $this->replace['%m'] = $context->get('CurrentAttr', true);
         $this->replace['%p'] = $context->get('CurrentCSSProperty', true);
         // not always available
@@ -17111,7 +17111,7 @@ class HTMLPurifier_URIFilter_SafeIframe extends HTMLPurifier_URIFilter
         // check if the filter should actually trigger
         if (!$context->get('EmbeddedURI', true)) return true;
         $token = $context->get('CurrentToken', true);
-        if (!($token && $token->description == 'iframe')) return true;
+        if (!($token && $token->name == 'iframe')) return true;
         // check if we actually have some whitelists enabled
         if ($this->regexp === null) return false;
         // actually check the whitelists

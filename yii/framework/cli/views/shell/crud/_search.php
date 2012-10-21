@@ -21,7 +21,7 @@
 		continue;
 ?>
 	<div class="row">
-		<?php echo "<?php echo \$form->label(\$model,'{$column->description}'); ?>\n"; ?>
+		<?php echo "<?php echo \$form->label(\$model,'{$column->name}'); ?>\n"; ?>
 		<?php echo "<?php echo ".$this->generateActiveField($modelClass,$column)."; ?>\n"; ?>
 	</div>
 

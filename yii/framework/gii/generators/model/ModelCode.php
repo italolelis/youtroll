@@ -159,8 +159,8 @@ class ModelCode extends CCodeModel
 	{
 		foreach($table->columns as $column)
 		{
-			if(!preg_match('/^[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$/',$column->description))
-				return $table->description.'.'.$column->description;
+			if(!preg_match('/^[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$/',$column->name))
+				return $table->name.'.'.$column->name;
 		}
 	}
 
@@ -189,13 +189,13 @@ class ModelCode extends CCodeModel
 		$labels=array();
 		foreach($table->columns as $column)
 		{
-			$label=ucwords(trim(strtolower(str_replace(array('-','_'),' ',preg_replace('/(?<![A-Z])[A-Z]/', ' \0', $column->description)))));
+			$label=ucwords(trim(strtolower(str_replace(array('-','_'),' ',preg_replace('/(?<![A-Z])[A-Z]/', ' \0', $column->name)))));
 			$label=preg_replace('/\s+/',' ',$label);
 			if(strcasecmp(substr($label,-3),' id')===0)
 				$label=substr($label,0,-3);
 			if($label==='Id')
 				$label='ID';
-			$labels[$column->description]=$label;
+			$labels[$column->name]=$label;
 		}
 		return $labels;
 	}
@@ -214,15 +214,15 @@ class ModelCode extends CCodeModel
 				continue;
 			$r=!$column->allowNull && $column->defaultValue===null;
 			if($r)
-				$required[]=$column->description;
+				$required[]=$column->name;
 			if($column->type==='integer')
-				$integers[]=$column->description;
+				$integers[]=$column->name;
 			else if($column->type==='double')
-				$numerical[]=$column->description;
+				$numerical[]=$column->name;
 			else if($column->type==='string' && $column->size>0)
-				$length[$column->size][]=$column->description;
+				$length[$column->size][]=$column->name;
 			else if(!$column->isPrimaryKey && !$r)
-				$safe[]=$column->description;
+				$safe[]=$column->name;
 		}
 		if($required!==array())
 			$rules[]="array('".implode(', ',$required)."', 'required')";

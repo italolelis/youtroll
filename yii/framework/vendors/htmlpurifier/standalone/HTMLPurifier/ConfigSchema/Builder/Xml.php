@@ -33,7 +33,7 @@ class HTMLPurifier_ConfigSchema_Builder_Xml extends XMLWriter
         $this->setIndent(true);
         $this->startDocument('1.0', 'UTF-8');
         $this->startElement('configdoc');
-        $this->writeElement('title', $interchange->description);
+        $this->writeElement('title', $interchange->name);
 
         foreach ($interchange->directives as $directive) {
             $this->buildDirective($directive);

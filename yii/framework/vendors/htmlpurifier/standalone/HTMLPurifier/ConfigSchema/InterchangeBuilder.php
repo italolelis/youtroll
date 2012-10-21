@@ -22,7 +22,7 @@ class HTMLPurifier_ConfigSchema_InterchangeBuilder
         if (!$dir) $dir = HTMLPURIFIER_PREFIX . '/HTMLPurifier/ConfigSchema/schema';
         if (file_exists($dir . '/info.ini')) {
             $info = parse_ini_file($dir . '/info.ini');
-            $interchange->description = $info['name'];
+            $interchange->name = $info['name'];
         }
 
         $files = array();

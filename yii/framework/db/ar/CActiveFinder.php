@@ -393,7 +393,7 @@ class CJoinElement
 			$this->_parent=$parent;
 			$this->model=CActiveRecord::model($relation->className);
 			$this->_builder=$this->model->getCommandBuilder();
-			$this->tableAlias=$relation->alias===null?$relation->description:$relation->alias;
+			$this->tableAlias=$relation->alias===null?$relation->name:$relation->alias;
 			$this->rawTableAlias=$this->_builder->getSchema()->quoteTableName($this->tableAlias);
 			$this->_table=$this->model->getTableSchema();
 		}
@@ -533,7 +533,7 @@ class CJoinElement
 		if(empty($child->records))
 			return;
 		if($child->relation instanceof CHasOneRelation || $child->relation instanceof CBelongsToRelation)
-			$baseRecord->addRelatedRecord($child->relation->description,reset($child->records),false);
+			$baseRecord->addRelatedRecord($child->relation->name,reset($child->records),false);
 		else // has_many and many_many
 		{
 			foreach($child->records as $record)
@@ -542,7 +542,7 @@ class CJoinElement
 					$index=$record->{$child->relation->index};
 				else
 					$index=true;
-				$baseRecord->addRelatedRecord($child->relation->description,$record,$index);
+				$baseRecord->addRelatedRecord($child->relation->name,$record,$index);
 			}
 		}
 	}
@@ -864,7 +864,7 @@ class CJoinElement
 			foreach($this->children as $child)
 			{
 				if(!empty($child->relation->select))
-					$record->addRelatedRecord($child->relation->description,null,$child->relation instanceof CHasManyRelation);
+					$record->addRelatedRecord($child->relation->name,null,$child->relation instanceof CHasManyRelation);
 			}
 			$this->records[$pk]=$record;
 		}
@@ -876,7 +876,7 @@ class CJoinElement
 				continue;
 			$childRecord=$child->populateRecord($query,$row);
 			if($child->relation instanceof CHasOneRelation || $child->relation instanceof CBelongsToRelation)
-				$record->addRelatedRecord($child->relation->description,$childRecord,false);
+				$record->addRelatedRecord($child->relation->name,$childRecord,false);
 			else // has_many and many_many
 			{
 				// need to double check to avoid adding duplicated related objects
@@ -884,14 +884,14 @@ class CJoinElement
 					$fpk=serialize($childRecord->getPrimaryKey());
 				else
 					$fpk=0;
-				if(!isset($this->_related[$pk][$child->relation->description][$fpk]))
+				if(!isset($this->_related[$pk][$child->relation->name][$fpk]))
 				{
 					if($childRecord instanceof CActiveRecord && $child->relation->index!==null)
 						$index=$childRecord->{$child->relation->index};
 					else
 						$index=true;
-					$record->addRelatedRecord($child->relation->description,$childRecord,$index);
-					$this->_related[$pk][$child->relation->description][$fpk]=true;
+					$record->addRelatedRecord($child->relation->name,$childRecord,$index);
+					$this->_related[$pk][$child->relation->name][$fpk]=true;
 				}
 			}
 		}
@@ -1101,7 +1101,7 @@ class CJoinElement
 
 			if(!isset($fke->_table->columns[$fk]))
 				throw new CDbException(Yii::t('yii','The relation "{relation}" in active record class "{class}" is specified with an invalid foreign key "{key}". There is no such column in the table "{table}".',
-					array('{class}'=>get_class($parent->model), '{relation}'=>$this->relation->name, '{key}'=>$fk, '{table}'=>$fke->_table->description)));
+					array('{class}'=>get_class($parent->model), '{relation}'=>$this->relation->name, '{key}'=>$fk, '{table}'=>$fke->_table->name)));
 
 			if(is_int($i))
 			{

@@ -58,7 +58,7 @@ foreach($this->tableSchema->columns as $column)
 {
 	if(++$count==7)
 		echo "\t\t/*\n";
-	echo "\t\t'".$column->description."',\n";
+	echo "\t\t'".$column->name."',\n";
 }
 if($count>=7)
 	echo "\t\t*/\n";
