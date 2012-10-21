@@ -1,7 +1,7 @@
 <?php
-foreach ($this->categories as $category) {
+foreach (Category::getCategories() as $category) {
     $categories[] = array(
-        'label' => Category::getName($category->name),
+        'label' => Category::getName($category),
         'url' => '#',//array("categorie/$categorie->id"),
     );
 }
