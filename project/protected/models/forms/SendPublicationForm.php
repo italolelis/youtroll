@@ -1,6 +1,6 @@
 <?php
 
-class SendImageForm extends CFormModel
+class SendPublicationForm extends CFormModel
 {
 
     public $title;

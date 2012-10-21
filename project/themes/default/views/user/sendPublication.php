@@ -1,7 +1,7 @@
-<h1 class="page-title"><?= HApp::t('sendImage') ?></h1>
+<h1 class="page-title"><?= HApp::t('sendPublication') ?></h1>
 <?php
 $form = $this->beginWidget('CActiveForm', array(
-        'id' => 'sendImageForm',
+        'id' => 'sendPublicatioinForm',
         'enableAjaxValidation' => false,
         'enableClientValidation' => false,
         'clientOptions' => array(
@@ -100,10 +100,10 @@ $form = $this->beginWidget('CActiveForm', array(
 
 <div>
     <?php
-    echo CHtml::ajaxButton(HApp::t('sendImageButton'), array('form/sendImage'),
+    echo CHtml::ajaxButton(HApp::t('sendPublicationButton'), array('form/sendPublication'),
             HView::getAjaxSubmitButtonConfig(),
             array(
-                'id' => 'sendImageButton',
+                'id' => 'sendPublicationButton',
                 'class' => 'button',
                 'live' => false,
             )

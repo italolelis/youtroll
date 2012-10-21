@@ -22,8 +22,8 @@ return array(
     'channel' => 'Canal',
     'myChannel' => 'Meu Canal',
     'controlPanel' => 'Painel de Controle',
-    'createImage' => 'Criar Imagem',
-    'sendImage' => 'Enviar Imagem',
+    'createPublication' => 'Criar Imagem',
+    'sendPublication' => 'Enviar Imagem',
     'logout' => 'Sair',
     
     // Páginas Especiais - Visíveis apenas quando acessadas
@@ -58,7 +58,7 @@ return array(
     // Formulários - Botões
     'signUpButton' => 'Cadastrar',
     'loginButton' => 'Acessar Conta',
-    'sendImageButton' => 'Publicar Imagem',
+    'sendPublicationButton' => 'Publicar Imagem',
     
     // Formulários - Labels
     'email' => 'E-mail',

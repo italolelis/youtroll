@@ -1,6 +1,6 @@
 <?php
 
-class SendImageAction extends CAction
+class SendPublicationAction extends CAction
 {
     
     private $_ajaxUploadPath;
@@ -16,7 +16,7 @@ class SendImageAction extends CAction
 	$this->_ajaxUploadPath = Yii::app()->basePath . '/../resources/ajaxUploads/' . Yii::app()->session->sessionID . '/';
         
         if (!is_dir($this->_ajaxUploadPath) || (is_dir($this->_ajaxUploadPath) && scandir($this->_ajaxUploadPath) < 2)) {
-            $model = new SendImageForm();
+            $model = new SendPublicationForm();
             
             HModel::generatePerformAjaxValidation(get_class($model), $model->getAttributeListErrors(), HApp::t('imageUnselected'));
         }
@@ -33,8 +33,8 @@ class SendImageAction extends CAction
     public function run()
     {
 	if (Yii::app()->request->isAjaxRequest && Yii::app()->request->isPostRequest) {
-            $model = new SendImageForm();
-            $postModel = HApp::getRequest('POST', 'SendImageForm');
+            $model = new SendPublicationForm();
+            $postModel = HApp::getRequest('POST', 'SendPublicationForm');
 
             if (!empty($postModel)) {
                 $model->attributes = $postModel;

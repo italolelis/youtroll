@@ -1,14 +1,14 @@
 <?php
 
-class SendImageAction extends CAction
+class SendPublicationAction extends CAction
 {
 
     public function run()
     {
         if (Yii::app()->request->isAjaxRequest) {
-            $model = new SendImageForm();
+            $model = new SendPublicationForm();
             
-            $this->controller->renderPartial('sendImage', array('model' => $model), false, true);
+            $this->controller->renderPartial('sendPublication', array('model' => $model), false, true);
             Yii::app()->end();
         }
         
