@@ -15,7 +15,7 @@ class SendImageAction extends CAction
     {
 	$this->_ajaxUploadPath = Yii::app()->basePath . '/../resources/ajaxUploads/' . Yii::app()->session->sessionID . '/';
         
-        if (!is_dir($this->_ajaxUploadPath) || (is_dir($this->_ajaxUploadPath) && scandir($this->_ajaxUploadPath) > 2)) {
+        if (!is_dir($this->_ajaxUploadPath) || (is_dir($this->_ajaxUploadPath) && scandir($this->_ajaxUploadPath) < 2)) {
             $model = new SendImageForm();
             
             HModel::generatePerformAjaxValidation(get_class($model), $model->getAttributeListErrors(), HApp::t('imageUnselected'));
@@ -41,8 +41,7 @@ class SendImageAction extends CAction
                 $model->image_path = $this->_imagePath;
                 
                 if($model->validate()) {
-                    var_dump('validou');exit();
-                    $response = PersistenceServer::connect('publication', 'POST', $postModel);
+                    $response = PersistenceServer::connect('publication', 'POST', $model->attributes);
 //                    
 //                    if($response === true) {
 //                        HApp::ajaxResponse(array(
