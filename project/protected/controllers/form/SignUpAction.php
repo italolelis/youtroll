@@ -24,6 +24,7 @@ class SignUpAction extends CAction
                     }
                     
                     $model->addErrors($response);
+                    
                     HModel::generatePerformAjaxErrors($model);
                 }
                 
