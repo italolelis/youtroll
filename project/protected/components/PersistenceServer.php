@@ -9,12 +9,17 @@ class PersistenceServer extends CComponent
     {
         $config['server'] = Yii::app()->params['persistenceServer'];
 
-        if (!is_null($username) && !is_null($password)) {
+        if(Yii::app()->user->isGuest) {
+            if (!is_null($username) && !is_null($password)) {
+                $config['http_auth'] = 'Basic';
+                $config['http_user'] = $username;
+                $config['http_pass'] = $password;
+            }
+        } else {
             $config['http_auth'] = 'Basic';
-            $config['http_user'] = $username;
-            $config['http_pass'] = $password;
+            $config['http_user'] = Yii::app()->user->getId();
         }
-
+        
         $rest = new RESTClient();
 
         $rest->initialize($config);

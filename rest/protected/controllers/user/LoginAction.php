@@ -14,7 +14,7 @@ class LoginAction extends CAction
             
             if ($user) {
                 if (BCrypt::check($this->controller->headers->Authorization[1], $user->usr_password)) {
-                    $return = 'true';
+                    $return = $user->getAttributeWithoutPrefix('id');
                 }
             }
 

@@ -14,10 +14,10 @@ class UserIdentity extends CUserIdentity
 
     public function authenticate()
     {
-	$authenticate = (boolean) PersistenceServer::connect('login', 'POST', null, $this->username, $this->password);
+	$authenticate = PersistenceServer::connect('login', 'POST', null, $this->username, $this->password);
         
-        if($authenticate) {
-            $this->_id = uniqid();
+        if(is_int($authenticate)) {
+            $this->_id = $authenticate;
         }
         
         return $authenticate;
