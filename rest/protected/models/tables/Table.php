@@ -10,19 +10,20 @@ class Table extends CActiveRecord
         return $this->attributesPrefix ? : '';
     }
     
-    public function setAttributesWithoutPrefix($attributes)
-    {   
-        array_walk($attributes, array($this, 'setAttributeWithoutPrefix'));
-    }
-
     public function getAttributeWithoutPrefix($name)
     {   
         return $this->getAttribute($this->getAttributesPrefix() . $name);
     }
     
+    public function setAttributesWithoutPrefix($attributes)
+    {   
+        array_walk($attributes, array($this, 'setAttributeWithoutPrefix'));
+    }
+    
     public function setAttributeWithoutPrefix($value, $name)
     {
         $this->setAttribute($this->getAttributesPrefix() . $name, $value);
+        $this->setAttribute($this->getAttributesPrefix() . 'fk_' . $name, $value);
     }
 
 }
