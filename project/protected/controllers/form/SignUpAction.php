@@ -13,7 +13,7 @@ class SignUpAction extends CAction
                 $model->attributes = $postModel;
                 
                 if($model->validate()) {
-                    $response = PersistenceServer::connect('user', 'POST', $postModel);
+                    $response = PersistenceServer::connect('user', 'POST', $model->attributes);
                     
                     if($response === true) {
                         HApp::ajaxResponse(array(
