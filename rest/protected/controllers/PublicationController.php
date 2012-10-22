@@ -42,4 +42,14 @@ class PublicationController extends Controller {
             HApp::ajaxResponse($this->model->getAttributeWithoutPrefix('id'));
         }
     }
+    
+    public function actionView($id) {
+        $this->model = $this->model->findByPk($id);
+        
+        if (!$this->model) {
+            HApp::ajaxResponse(array('status' => 'error', 'message' => HApp::t('idUnknown')));
+        }
+
+        HApp::ajaxResponse(array('status' => 'true', 'model' => $this->model->attributes), $this->model->getAttributesPrefix());
+    }
 }
