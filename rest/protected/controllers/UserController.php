@@ -43,7 +43,7 @@ class UserController extends Controller {
             HApp::ajaxResponse('true');
         }
     }
-
+    // TODO
     public function actionView($id) {
         $this->model = User::model()->find("usr_id = :id", array(":id" => $id));
 
@@ -53,7 +53,7 @@ class UserController extends Controller {
 
         HApp::ajaxResponse($this->model->attributes, $this->model->getAttributesPrefix());
     }
-    // TODO
+    
     public function actionUpdate($id) {
         if (Yii::app()->request->isPostRequest) {
             $message = array();
