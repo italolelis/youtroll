@@ -10,7 +10,7 @@ class ErrorAction extends CAction
 	if (!empty($error)) {
 	    $errorMessage = $error['errorCode'] === -1 ? $error['message'] : HApp::getMessageStatus($error['code']);
             
-	    if ($this->controller->headers['application'] === 'youtroll') {
+	    if ($this->controller->headers->application === 'youtroll') {
 		HApp::ajaxResponse($errorMessage);
 	    }
             
