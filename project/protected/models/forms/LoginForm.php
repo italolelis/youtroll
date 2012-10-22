@@ -14,10 +14,10 @@ class LoginForm extends CFormModel
 	return array(
 	    array('username, password', 'required', 'message' => HApp::t('requiredField')),
 	    array('username', 'match', 'pattern' => '/^[A-Za-z0-9_]+$/u', 'message' => HApp::t('invalidCharacters')),
-	    array('password', 'match', 'pattern' => '/^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])(?=\S*[\W])\S*$/', 'message' => HApp::t('passwordStrength')),
+            array('password', 'match', 'pattern' => '/^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])(?=\S*[\W])\S*$/', 'message' => HApp::t('passwordStrength')),
 	    array('username', 'length', 'min' => 3, 'max' => 25, 'tooShort' => HApp::t('tooShort'), 'tooLong' => HApp::t('tooLong')),
 	    array('password', 'length', 'min' => 8, 'max' => 25, 'tooShort' => HApp::t('tooShort'), 'tooLong' => HApp::t('tooLong')),
-	    array('password', 'authenticate', 'message' => HApp::t('invalidAccess')),
+            array('password', 'authenticate', 'message' => HApp::t('invalidAccess')),
 	);
     }
 

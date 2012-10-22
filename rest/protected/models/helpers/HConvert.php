@@ -27,4 +27,12 @@ class HConvert
         return CJSON::decode(CJSON::encode($array), false);
     }
     
+    /**
+     * Esta função converte um array para um objeto.
+     */
+    public static function stringToArrayTags($string)
+    {
+        return array_map('trim', explode(',', $string));
+    }
+    
 }

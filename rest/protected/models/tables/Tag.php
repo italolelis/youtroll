@@ -10,8 +10,10 @@
  * The followings are the available model relations:
  * @property PublicationTag[] $publicationTag
  */
-class Tag extends CActiveRecord
+class Tag extends Table
 {
+    
+    protected $attributesPrefix = 'tag_';
 
     /**
      * Returns the static model of the specified AR class.
@@ -88,6 +90,16 @@ class Tag extends CActiveRecord
         return new CActiveDataProvider($this, array(
                     'criteria' => $criteria,
                 ));
+    }
+    
+    public function getTagByName($name)
+    {
+        $this->getDbCriteria()->mergeWith(array(
+            'condition' => 'tag_name = :tag_name',
+            'params' => array(':tag_name' => $name),
+        ));
+        
+        return $this;
     }
 
 }

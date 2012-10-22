@@ -11,8 +11,11 @@
  * @property Publication $publication
  * @property Tag $tag
  */
-class PublicationsTags extends CActiveRecord
+class PublicationTags extends Table
 {
+    
+    protected $attributesPrefix = 'pbct_tag_';
+    
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.

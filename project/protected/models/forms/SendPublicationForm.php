@@ -25,6 +25,7 @@ class SendPublicationForm extends CFormModel
     {
 	return array(
 	    array('title, description, category, tags, image_path', 'required', 'message' => HApp::t('requiredField')),
+            array('tags', 'match', 'pattern' => '/^[ ,]*(?:[a-zA-Z0-9]+(?:[ ,]+[a-zA-Z0-9]+){0,5})?[ ,]*$/', 'message' => HApp::t('invalidTags')),
 	    array('title', 'length', 'min' => 3, 'max' => 100, 'tooShort' => HApp::t('tooShort'), 'tooLong' => HApp::t('tooLong')),
 	    array('description', 'length', 'max' => 256, 'tooShort' => HApp::t('tooShort'), 'tooLong' => HApp::t('tooLong')),
 	    array('category', 'in', 'range' => array_keys(Category::getCategories()), 'allowEmpty' => false, 'message' => HApp::t('invalidOption')),

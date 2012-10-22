@@ -22,6 +22,23 @@ class PublicationController extends Controller {
                 HApp::ajaxResponse($this->model->getErrors(), $this->model->getAttributesPrefix());
             }
             
+            $tags = HConvert::stringToArrayTags(HApp::getRequest('POST', 'tags'));
+            
+            foreach ($tags as $tagName) {
+                $tag = Tag::model()->getTagByName($tagName)->find();
+                
+                if(empty($tag)) {
+                    $tag = new Tag();
+                    $tag->setAttributeWithoutPrefix($tagName, 'name');
+                    $tag->save();
+                }
+                
+                $publicationTags = new PublicationTags();
+                $publicationTags->setAttributeWithoutPrefix($this->model->getAttributeWithoutPrefix('id'), 'publication');
+                $publicationTags->setAttributeWithoutPrefix($tag->getAttributeWithoutPrefix('id'), 'tag');
+                $publicationTags->save();
+            }
+            
             HApp::ajaxResponse($this->model->getAttributeWithoutPrefix('id'));
         }
     }
