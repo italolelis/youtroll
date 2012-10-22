@@ -8,7 +8,7 @@ class HSecurity
      */
     public static function urlEncode($value)
     {
-        return strtr(base64_encode($value), '+/=', '-%_');
+        return strrev(strtr(base64_encode($value), '+/=', '-%_'));
     }
 
     /**
@@ -16,7 +16,7 @@ class HSecurity
      */
     public static function urlDecode($value)
     {
-        return strtr(base64_encode($value), '+/=', '-%_');
+        return strtr(base64_decode(strrev($value)), '+/=', '-%_');
     }
 
 }

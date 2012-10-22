@@ -49,7 +49,7 @@ class SendPublicationAction extends CAction
                         if(rename($this->_ajaxUploadPath . $this->_imagePath, $this->_userPath . $this->_imagePath)) {
                             HApp::ajaxResponse(array(
                                 'action' => 'redirect',
-                                'link' => Yii::app()->createAbsoluteUrl('site/index', array('see' => HSecurity::urlEncode($response))),
+                                'link' => Yii::app()->createAbsoluteUrl('', array('see' => HSecurity::urlEncode($response))),
                             ));
                         }
                         

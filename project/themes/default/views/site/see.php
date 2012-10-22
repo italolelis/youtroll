@@ -1,0 +1,1 @@
+<h2 class="slogan"><?= $publication->title ?></h2>
