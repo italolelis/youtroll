@@ -9,6 +9,10 @@ class Category
     CONST MEME = 4;
     CONST STRIP = 5;
 
+    public static function getName($keyName) {
+        return HApp::t($keyName, 'categories');
+    }
+    
     public static function getCategories()
     {
         return array(
@@ -20,9 +24,11 @@ class Category
         );
     }
 
-    public static function getName($key)
+    public static function getNameByID($key)
     {
-        return HApp::t($key, 'categories');
+        $categories = Category::getCategories();
+        
+        return $categories[$key] ?: '';
     }
 
 }
