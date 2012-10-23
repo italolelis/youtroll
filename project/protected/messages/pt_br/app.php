@@ -37,6 +37,7 @@ return array(
     'pt_br' => 'Português do Brasil',
     
     // Textos Curtos
+    'subscribe' => 'Inscrever-se',
     'remove' => 'Remover',
     'top' => 'Voltar ao Topo',
     'myImages' => 'Meus Envios',
@@ -45,7 +46,10 @@ return array(
     'settings' => 'Configurações',
     'inscriptions' => 'Inscrições',  
     'mySessions' => 'Minhas Sessões',
+    'defaultLicense' => 'Licença Padrão',
     'accountStats' => 'Estatísticas da Conta',
+    'appDefaultLicense' => 'Licença Padrão do YouTroll',
+    'publicationDate' => 'Publicado em {date} por {username}.',
     
     // Enums
     'male' => 'Masculino',
