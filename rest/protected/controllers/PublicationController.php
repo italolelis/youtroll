@@ -47,7 +47,7 @@ class PublicationController extends Controller {
         $this->model = $this->model->findByPk($id);
         
         if (!$this->model) {
-            HApp::ajaxResponse(array('status' => 'error', 'message' => HApp::t('idUnknown')));
+            HApp::ajaxResponse(array('status' => 'false', 'message' => HApp::t('idUnknown')));
         }
 
         HApp::ajaxResponse(array('status' => 'true', 'model' => $this->model->attributes), $this->model->getAttributesPrefix());
