@@ -24,11 +24,15 @@ class IndexAction extends CAction
         if(!empty($see)) {
             $idPublication = HSecurity::urlDecode($see);
             
-            $response = PersistenceServer::connect("publication/$idPublication", 'GET');
+            $publication = PersistenceServer::connect("publication/$idPublication", 'GET');
             
-            if($response->status) {
-                $this->controller->render('see', array('publication' => $response->model));
-                Yii::app()->end();
+            if($publication->status) {
+                $owner = PersistenceServer::connect("user/{$publication->model->owner}", 'GET');
+                
+                if($owner->status) {
+                    $this->controller->render('see', array('publication' => $publication->model, 'owner' => $owner->model));
+                    Yii::app()->end();
+                }
             }
             
             HApp::throwException(404);
