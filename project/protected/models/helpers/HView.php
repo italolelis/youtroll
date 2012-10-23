@@ -27,7 +27,7 @@ class HView
             'async' => false,
 	    'cache' => false,
 	    'beforeSend' => "function() {
-		if($('#{$view}Nav').hasClass('current')) { return false; }
+//		if($('#{$view}Nav').hasClass('current')) { return false; }
 		
 		$('#menu').children('li.current').removeClass('current');
 		$('#menu').children('li').children('ul').children('li').removeClass('current');
