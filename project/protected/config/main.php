@@ -56,7 +56,7 @@ return array(
                 
                 '' => array('site/index'),
                 'admin' => array('admin/panel'),
-                'see/<id:\w+>' => array('site/index/see/<id>'),
+                'view/<id:\w+>' => array('site/index/view/<id>'),
 		'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
 	    ),
 	),

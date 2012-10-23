@@ -19,7 +19,7 @@ class IndexAction extends CAction
 	    Yii::app()->user->setState('errorMessage', null);
 	}
         
-        $see = HApp::getRequest('GET', 'see');
+        $see = HApp::getRequest('GET', 'view');
         
         if(!empty($see)) {
             $idPublication = HSecurity::urlDecode($see);
@@ -30,7 +30,7 @@ class IndexAction extends CAction
                 $owner = PersistenceServer::connect("user/{$publication->model->owner}", 'GET');
                 
                 if($owner->status) {
-                    $this->controller->render('see', array('publication' => $publication->model, 'owner' => $owner->model));
+                    $this->controller->render('view', array('publication' => $publication->model, 'owner' => $owner->model));
                     Yii::app()->end();
                 }
             }
