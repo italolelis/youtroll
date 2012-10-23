@@ -23,3 +23,8 @@ div.errorMessage {
 .tab-content {
     background-color: #ffffff;
 }
+
+.usernameStyle {
+    background: #eaeaea;
+    color: #777;
+}
