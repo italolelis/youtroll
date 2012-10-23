@@ -3,7 +3,7 @@
     <head>
 	<?= $this->renderPartial('webroot.themes.' . Yii::app()->theme->name . '.views.layouts.' . Yii::app()->layout . '.head') ?>
     </head>
-    <body>
+    <body cz-shortcut-listen="true">
         <div id="container">
 	    <div id="body" class="center">
 		<header id="header" class="container clearfix">
