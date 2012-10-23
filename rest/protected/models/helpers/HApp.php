@@ -51,7 +51,7 @@ class HApp
 		$return = Yii::app()->request->isAjaxRequest ? $response : utf8_decode($response);
 	    }
 
-            echo $replace ? str_replace($replace, '', $return) : $response;
+            echo $replace ? str_replace('fk_', '', str_replace($replace, '', $return)) : $response;
             
 	    Yii::app()->end();
 	}
