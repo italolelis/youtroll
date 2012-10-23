@@ -616,21 +616,16 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
 
 .ie7 .page-header { margin-top: 0; }
 
-.slogan, .page-title, .page-description, .page-subdescription, .project-title {
+.page-title, .page-description, .page-subdescription, .project-title {
     font-weight: 300;
     letter-spacing: -0.1px;
     margin-bottom: 0;
 }
 
 .page-title, .page-description, .page-subdescription, .project-title {
-    font-size: 28px;
+    font-size: 24px;
     margin-top: -10px;
     padding: 0 0 35px;
-}
-
-.slogan {
-    font-size: 24px;
-    margin-bottom: 40px;
 }
 
 .page-title { margin-top: 0; }
