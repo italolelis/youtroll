@@ -424,7 +424,7 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
 .container {
     margin: 0 auto;
     position: relative;
-    width: 940px;
+    width: 950px;
 }
 
 /* -------------------------------------------------- */
@@ -433,7 +433,8 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
 
 .one-half, .one-third, .two-third, .one-fourth, .three-fourth {
     float: left;
-    margin-right: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .one-half.last, .one-third.last, .two-third.last, .one-fourth.last, .three-fourth.last { margin-right: 0px; }
