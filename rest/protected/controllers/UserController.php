@@ -43,17 +43,18 @@ class UserController extends Controller {
             HApp::ajaxResponse('true');
         }
     }
-    // TODO
+    
     public function actionView($id) {
-        $this->model = User::model()->find("usr_id = :id", array(":id" => $id));
-
+        $this->model = $this->model->findByPk($id);
+        
         if (!$this->model) {
-            HApp::ajaxResponse(array('status' => 'error', 'message' => HApp::t('idUnknown')));
+            HApp::ajaxResponse(array('status' => 'false', 'message' => HApp::t('idUnknown')));
         }
 
-        HApp::ajaxResponse($this->model->attributes, $this->model->getAttributesPrefix());
+        HApp::ajaxResponse(array('status' => 'true', 'model' => $this->model->attributes), $this->model->getAttributesPrefix());
     }
     
+    // TODO
     public function actionUpdate($id) {
         if (Yii::app()->request->isPostRequest) {
             $message = array();
