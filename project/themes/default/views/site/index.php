@@ -1,1 +1,1 @@
-<h2 class="slogan align-center"><?= HApp::t('slogan') ?></h2>
+<h2 class="page-title align-center"><?= HApp::t('slogan') ?></h2>
