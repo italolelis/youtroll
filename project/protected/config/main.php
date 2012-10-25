@@ -33,7 +33,7 @@ return array(
         'bootstrap' => array(
             'class' => 'ext.bootstrap.components.Bootstrap',
         ),
-
+        
         'user' => array(
             'allowAutoLogin' => true,
         ),
@@ -66,6 +66,10 @@ return array(
 	    'excludePattern' => '/\.tpl/i', //js regexp, files with matching paths won't be filtered is set to other than 'null'
 //	    'includePattern' => '/\.php/' //js regexp, only files with matching paths will be filtered if set to other than 'null'
 	),
+        
+        'file' => array(
+            'class' => 'ext.several.CFile',
+        ),
         
         'mail' => array(
 	    'class' => 'application.extensions.yii-mail.YiiMail',
