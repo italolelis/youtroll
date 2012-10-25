@@ -36,10 +36,9 @@ $form = $this->beginWidget('CActiveForm', array(
 		    'emptyError' => HApp::t('eauEmptyError'),
 		),
 		'onComplete' => 'js:function(id, fileName, responseJSON) {
-                    clearErrorsMesages();
-                    $(".qq-upload-button").hide();
-                    
 		    if(responseJSON["success"] === true) {
+                        clearErrorsMesages();
+                        
 			$(".qq-upload-status").last().append("<a href=\'#\' class=\'qq-upload-remove\'>' . HApp::t('remove') . '</a>");
 
 			$(".qq-upload-remove").last().bind("click", function() {
@@ -53,12 +52,14 @@ $form = $this->beginWidget('CActiveForm', array(
 				dataType:"html",
 				data:{fileName:fileName},
 				success:function(response) {                                    
+                                    $(".qq-upload-button").hide();
+                                    
 				    statusItem.fadeOut(1500, function() {
 					$(this).remove();
                                         $(".qq-upload-button").fadeIn();
 				    });
 				},
-				error:function(error, b, c, d, e) {
+				error:function(error, b, c, d, e) {                                    
 				    setAlertMessage(error.responseText, "warning", "qq-upload-message");
 
 				    if(error.status === 404) {
@@ -72,6 +73,8 @@ $form = $this->beginWidget('CActiveForm', array(
 		    }
 		}',
 		'showMessage' => 'js:function(message) {
+                    clearErrorsMesages();
+                    
 		    setAlertMessage(message, "warning", "qq-upload-message");
 		}',
 	    ),
