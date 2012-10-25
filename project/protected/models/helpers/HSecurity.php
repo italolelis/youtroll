@@ -4,6 +4,14 @@ class HSecurity
 {
 
     /**
+     * Esta função gera um ID para uma Imagem.
+     */
+    public static function generateImageHash()
+    {
+        return md5(uniqid());
+    }
+    
+    /**
      * Esta função transforma um ID em uma string para ser inserida na URL do site.
      */
     public static function urlEncode($value)
