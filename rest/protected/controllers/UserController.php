@@ -37,7 +37,7 @@ class UserController extends Controller {
 
             $channel = new Channel();
             $channel->setAttributeWithoutPrefix($this->model->getAttributeWithoutPrefix('id'), 'fk_owner');
-            $channel->setAttributeWithoutPrefix($this->model->getAttributeWithoutPrefix('username'), 'name');
+            $channel->setAttributeWithoutPrefix($this->model->getAttributeWithoutPrefix('email'), 'name');
             $channel->save();
             
             HApp::ajaxResponse('true');

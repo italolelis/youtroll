@@ -8,7 +8,6 @@ Yii::import('ext.several.BCrypt');
  * The followings are the available columns in table 'tb_users':
  * @property string $usr_id
  * @property string $usr_name
- * @property string $usr_username
  * @property string $usr_email
  * @property string $usr_password
  * @property string $usr_birthday
@@ -59,11 +58,10 @@ class User extends Table
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('usr_username, usr_email, usr_password', 'required'),
+            array('usr_email', 'required'),
             array('usr_status', 'numerical', 'integerOnly' => true),
             array('usr_name', 'length', 'min' => 3, 'max' => 100),
-            array('usr_username, usr_email', 'unique'),
-            array('usr_username', 'length', 'min' => 3, 'max' => 25),
+            array('usr_email', 'unique'),
             array('usr_email', 'length', 'min' => 5, 'max' => 50),
             array('usr_password, usr_profile_path', 'length', 'max' => 128),
             array('usr_gender, usr_type', 'length', 'is' => 1),
@@ -73,7 +71,7 @@ class User extends Table
             array('usr_birthday', 'safe'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('usr_id, usr_name, usr_username, usr_email, usr_password, usr_birthday, usr_gender, usr_bio, usr_site, usr_locale, usr_type, usr_record, usr_status, usr_profile_path', 'safe', 'on' => 'search'),
+            array('usr_id, usr_name, usr_email, usr_password, usr_birthday, usr_gender, usr_bio, usr_site, usr_locale, usr_type, usr_record, usr_status, usr_profile_path', 'safe', 'on' => 'search'),
         );
     }
 
@@ -101,7 +99,6 @@ class User extends Table
         return array(
             'usr_id' => 'Usr',
             'usr_name' => 'Usr Name',
-            'usr_username' => 'Usr Username',
             'usr_email' => 'Usr Email',
             'usr_password' => 'Usr Password',
             'usr_birthday' => 'Usr Birthday',
@@ -135,7 +132,6 @@ class User extends Table
 
         $criteria->compare('usr_id', $this->usr_id, true);
         $criteria->compare('usr_name', $this->usr_name, true);
-        $criteria->compare('usr_username', $this->usr_username, true);
         $criteria->compare('usr_email', $this->usr_email, true);
         $criteria->compare('usr_password', $this->usr_password, true);
         $criteria->compare('usr_birthday', $this->usr_birthday, true);
@@ -153,11 +149,11 @@ class User extends Table
                 ));
     }
 
-    public function getUserByUsername($username)
+    public function getUserByEmail($email)
     {
         $this->getDbCriteria()->mergeWith(array(
-            'condition' => 'LOWER(usr_username) = LOWER(:usr_username)',
-            'params' => array(':usr_username' => $username),
+            'condition' => 'LOWER(usr_email) = LOWER(:usr_email)',
+            'params' => array(':usr_email' => $email),
         ));
         
         return $this;

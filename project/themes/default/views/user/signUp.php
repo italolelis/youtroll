@@ -12,11 +12,6 @@ $form = $this->beginWidget('CActiveForm', array(
     ));
 ?>
 <div class="input-block">
-    <?= $form->labelEx($model, 'username') ?>
-    <?= $form->textField($model, 'username') ?>
-    <?= $form->error($model, 'username') ?>
-</div>
-<div class="input-block">
     <?= $form->labelEx($model, 'email') ?>
     <?= $form->textField($model, 'email') ?>
     <?= $form->error($model, 'email') ?>

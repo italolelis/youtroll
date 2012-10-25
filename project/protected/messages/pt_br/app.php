@@ -49,7 +49,7 @@ return array(
     'defaultLicense' => 'Licença Padrão',
     'accountStats' => 'Estatísticas da Conta',
     'appDefaultLicense' => 'Licença Padrão do YouTroll',
-    'publicationDate' => 'Publicado em {date} por {username}.',
+    'publicationDate' => 'Publicado dia {date}.',
     
     // Enums
     'male' => 'Masculino',

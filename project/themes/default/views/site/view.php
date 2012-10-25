@@ -1,17 +1,17 @@
 <h2 class="page-title"><?= $publication->title ?></h2>
 <div id="publication" class="two-third">
     <div id="imageHeader">
-        <?= CHtml::button($owner->username, array('class' => 'button large usernameStyle')) ?>
+        <?= CHtml::button($owner->email, array('class' => 'button large usernameStyle')) ?>
         <?= CHtml::button(HApp::t('subscribe'), array('class' => 'button large')) ?>
     </div>
     <div id="image" class="marginTop">
-        <?= CHtml::image(Yii::app()->baseUrl . "/resources/img/user/$owner->username/$publication->image_path", $publication->title) ?>
+        <?= CHtml::image(Yii::app()->baseUrl . "/resources/img/user/$owner->email/$publication->image_path", $publication->title) ?>
     </div>
     <div id="imageButtons">
         
     </div>
     <div id="imageDate">
-        <?= Yii::t('app', 'publicationDate', array('{date}' => $publication->record, '{username}' => $owner->username)); ?>
+        <?= Yii::t('app', 'publicationDate', array('{date}' => $publication->record, '{email}' => $owner->email)); ?>
     </div>
     <div id="imageDescription" class="infobox">
         <div><?= $publication->description ?></div>

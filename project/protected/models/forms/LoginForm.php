@@ -5,17 +5,17 @@ Yii::import('application.components.UserIdentity');
 class LoginForm extends CFormModel
 {
 
-    public $username;
+    public $email;
     public $password;
     public $rememberMe = false;
 
     public function rules()
     {
 	return array(
-	    array('username, password', 'required', 'message' => HApp::t('requiredField')),
-	    array('username', 'match', 'pattern' => '/^[A-Za-z0-9_]+$/u', 'message' => HApp::t('invalidCharacters')),
+	    array('email, password', 'required', 'message' => HApp::t('requiredField')),
+	    array('email', 'email', 'message' => HApp::t('emailInvalid')),
             array('password', 'match', 'pattern' => '/^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])(?=\S*[\W])\S*$/', 'message' => HApp::t('passwordStrength')),
-	    array('username', 'length', 'min' => 3, 'max' => 25, 'tooShort' => HApp::t('tooShort'), 'tooLong' => HApp::t('tooLong')),
+	    array('email', 'length', 'min' => 5, 'max' => 50, 'tooShort' => HApp::t('tooShort'), 'tooLong' =>HApp::t('tooLong')),
 	    array('password', 'length', 'min' => 8, 'max' => 25, 'tooShort' => HApp::t('tooShort'), 'tooLong' => HApp::t('tooLong')),
             array('password', 'authenticate', 'message' => HApp::t('invalidAccess')),
 	);
@@ -24,7 +24,7 @@ class LoginForm extends CFormModel
     public function attributeLabels()
     {
 	return array(
-	    'username' => HApp::t('username'),
+	    'email' => HApp::t('email'),
 	    'password' => HApp::t('password'),
 	    'rememberMe' => HApp::t('rememberMe'),
 	);
@@ -38,7 +38,7 @@ class LoginForm extends CFormModel
     public function authenticate($attribute, $params)
     {
 	if (!$this->hasErrors()) {
-	    $identity = new UserIdentity($this->username, $this->password);
+	    $identity = new UserIdentity($this->email, $this->password);
 
 	    if ($identity->authenticate()) {
 		Yii::app()->user->login($identity, $this->rememberMe ? 2592000 : 0); // 2592000 = 30 Dias
