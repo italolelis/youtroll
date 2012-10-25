@@ -24,7 +24,12 @@ div.errorMessage {
     background-color: #ffffff;
 }
 
-.usernameStyle {
+.channelStyle {
+    background: #3a3a3a;
+    color: #fff;
+}
+
+.buttonStyle {
     background: #eaeaea;
     color: #777;
 }
