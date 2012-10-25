@@ -39,11 +39,13 @@ $form = $this->beginWidget('CActiveForm', array(
 		    if(responseJSON["success"] === true) {
                         clearErrorsMesages();
                         
+                        $(".qq-upload-button").hide();
+                        
 			$(".qq-upload-status").last().append("<a href=\'#\' class=\'qq-upload-remove\'>' . HApp::t('remove') . '</a>");
 
 			$(".qq-upload-remove").last().bind("click", function() {
 			    statusItem = $(this).parent();
-
+                            
 			    $.ajax(
 			    {
 				url:"' . Yii::app()->createAbsoluteUrl('ajax/deleteFile') . '",
@@ -52,8 +54,6 @@ $form = $this->beginWidget('CActiveForm', array(
 				dataType:"html",
 				data:{fileName:fileName},
 				success:function(response) {                                    
-                                    $(".qq-upload-button").hide();
-                                    
 				    statusItem.fadeOut(1500, function() {
 					$(this).remove();
                                         $(".qq-upload-button").fadeIn();
