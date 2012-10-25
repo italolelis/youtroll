@@ -30,7 +30,7 @@ class IndexAction extends CAction
                 $owner = PersistenceServer::connect("user/{$publication->model->owner}", 'GET');
                 
                 if($owner->status) {
-                    $this->controller->render('view', array('publication' => $publication->model, 'owner' => $owner->model));
+                    $this->controller->render('publication', array('publication' => $publication->model, 'owner' => $owner->model));
                     Yii::app()->end();
                 }
             }
