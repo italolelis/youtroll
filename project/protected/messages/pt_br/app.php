@@ -37,7 +37,10 @@ return array(
     'pt_br' => 'Português do Brasil',
     
     // Textos Curtos
+    'like' => 'Gostei',
     'remove' => 'Remover',
+    'unlike' => 'Não Gostei',
+    'share' => 'Compartilhar',
     'top' => 'Voltar ao Topo',
     'myImages' => 'Meus Envios',
     'comments' => 'Comentários',
