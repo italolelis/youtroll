@@ -3,8 +3,7 @@
 class SendPublicationAction extends CAction
 {
     
-    private $_ajaxUploadPath;
-    private $_imagePath;
+    private $_publicationFile;
     private $_userPath;
 
     function __construct()
@@ -14,22 +13,29 @@ class SendPublicationAction extends CAction
 
     private function _init()
     {
-	$this->_ajaxUploadPath = Yii::app()->basePath . '/../resources/ajaxUploads/' . Yii::app()->session->sessionID . '/';
         $this->_userPath = Yii::app()->basePath . '/../resources/img/user/' . Yii::app()->user->getName() . '/';
+     
+        $ajaxUploadPath = Yii::app()->basePath . '/../resources/ajaxUploads/' . Yii::app()->session->sessionID . '/';
         
-        if (!is_dir($this->_ajaxUploadPath) || (is_dir($this->_ajaxUploadPath) && scandir($this->_ajaxUploadPath) < 2)) {
+        if (!is_dir($ajaxUploadPath) || (is_dir($ajaxUploadPath) && scandir($ajaxUploadPath) < 2)) {
             $model = new SendPublicationForm();
             
             HModel::generatePerformAjaxValidation(get_class($model), $model->getAttributeListErrors(), HApp::t('imageUnselected'));
         }
         
-        $openPath = opendir($this->_ajaxUploadPath);
+        $openPath = opendir($ajaxUploadPath);
 
         while ($fileName = readdir($openPath)) {
-            if (is_file($this->_ajaxUploadPath . $fileName)) {
-                $this->_imagePath = $fileName;
+            $imagePath = $ajaxUploadPath . $fileName;
+            
+            if (is_file($imagePath)) {
+                $this->_publicationFile = Yii::app()->file->set($imagePath);
             }
         }
+        
+        if (!is_dir($this->_userPath)) {
+	    mkdir($this->_userPath);
+	}
     }
 
     public function run()
@@ -40,13 +46,14 @@ class SendPublicationAction extends CAction
 
             if (!empty($postModel)) {
                 $model->attributes = $postModel;
-                $model->image_path = $this->_imagePath;
+                
+                $model->image_path = HSecurity::generateImageHash() . $this->_publicationFile->getExtension();
                 
                 if($model->validate()) {
                     $response = PersistenceServer::connect('publication', 'POST', $model->attributes);
                     
                     if(is_int($response)) {
-                        if(rename($this->_ajaxUploadPath . $this->_imagePath, $this->_userPath . $this->_imagePath)) {
+                        if(rename($this->_publicationFile->getRealPath(), $this->_userPath . $model->image_path)) {
                             HApp::ajaxResponse(array(
                                 'action' => 'redirect',
                                 'link' => Yii::app()->createAbsoluteUrl('', array('view' => HSecurity::urlEncode($response))),
