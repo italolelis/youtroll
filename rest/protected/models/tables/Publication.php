@@ -106,6 +106,13 @@ class Publication extends Table
         );
     }
 
+    public function afterFind()
+    {
+        parent::afterFind();
+        
+        $this->setAttributeWithoutPrefix(date(HApp::t('dateFormat'), strtotime($this->getAttributeWithoutPrefix('record'))), 'record');
+    }
+    
     /**
      * Retrieves a list of models based on the current search/filter conditions.
      * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.

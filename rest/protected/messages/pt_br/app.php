@@ -31,6 +31,9 @@ return array(
     // Mensagens de Retorno
     'idUnknown' => 'A identificação fornecida não existe.',
     
+    // Formatos
+    'dateFormat' => 'd/m/Y à\s H:i:s',
+    
     // Erros HTTP
     200 => 'OK!',
     400 => 'Solicitação mal Feita.',

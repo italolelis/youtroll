@@ -11,7 +11,7 @@
         
     </div>
     <div id="imageDate">
-        <?= Yii::t('app', 'publicationDate', array('{date}' => $publication->record, '{email}' => $owner->email)); ?>
+        <?= Yii::t('app', $owner->name ? 'publicationDateWithName' : 'publicationDate', array('{date}' => $publication->record, '{name}' => $owner->name)); ?>
     </div>
     <div id="imageDescription" class="infobox">
         <div><?= $publication->description ?></div>
