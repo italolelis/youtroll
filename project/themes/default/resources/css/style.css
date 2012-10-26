@@ -31,5 +31,37 @@ div.errorMessage {
 
 .buttonStyle {
     background: #eaeaea;
+    
     color: #777;
+}
+
+  .likeButton
+, .likeButton:hover {
+    background-position-x: 16px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+.likeButton {
+    background-image: url("../img/like.png");
+    
+    padding-left: 40px;
+}
+
+.likeButton:hover {
+    background-image: url("../img/like-light.png");
+}
+
+  .unlikeButton
+, .unlikeButton:hover {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.unlikeButton {
+    background-image: url("../img/unlike.png");
+}
+
+.unlikeButton:hover {
+    background-image: url("../img/unlike-light.png");
 }
