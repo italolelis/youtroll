@@ -8,14 +8,14 @@
         <?= CHtml::image(Yii::app()->baseUrl . "/resources/img/user/$owner->email/$publication->image_path", $publication->title) ?>
     </div>
     <div id="imageButtonsStats">
-        <div id="imageButtons">
+        <div id="imageButtons" class="displayInline">
             <?= CHtml::button(HApp::t('like'), array('class' => 'button medium buttonStyle likeButton')) ?>
             <?= CHtml::button('', array('class' => 'button medium buttonStyle unlikeButton')) ?>
             <?= CHtml::button(HApp::t('share'), array('class' => 'button medium buttonStyle marginLeft')) ?>
             <?= CHtml::button('', array('class' => 'button medium buttonStyle signalButton')) ?>
         </div>
-        <div id="imageStats">
-            
+        <div id="imageStats" class="floatRight">
+            < StatsHere >
         </div>
     </div>
     <div id="imageDate" class="marginTop">
@@ -26,8 +26,8 @@
         <div class="marginTop">
             <strong><?= HApp::t('category') ?>:</strong>
             <p><?= Category::getNameByID($publication->category) ?>:</p>
-            <strong><?= HApp::t('defaultLicense') ?>:</strong>
-            <p><?= HApp::t('appDefaultLicense') ?></p>
+            <strong><?= HApp::t('license') ?>:</strong>
+            <p><?= HApp::t('defaultLicense') ?></p>
         </div>
     </div>
 </div>

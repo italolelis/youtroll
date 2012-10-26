@@ -45,14 +45,14 @@ return array(
     'myImages' => 'Meus Envios',
     'comments' => 'Comentários',
     'loading' => 'Carregando...',
+    'license' => 'Licença',
     'subscribe' => 'Inscrever-se',
     'settings' => 'Configurações',
     'inscriptions' => 'Inscrições',  
     'mySessions' => 'Minhas Sessões',
-    'defaultLicense' => 'Licença Padrão',
     'accountStats' => 'Estatísticas da Conta',
     'publicationDate' => 'Publicado dia {date}.',
-    'appDefaultLicense' => 'Licença Padrão do YouTroll',
+    'defaultLicense' => 'Licença Padrão do YouTroll.',
     'publicationDateWithName' => 'Publicado dia {date} por {name}.',
     
     // Enums
