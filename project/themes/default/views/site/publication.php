@@ -7,11 +7,16 @@
     <div id="image" class="marginTop">
         <?= CHtml::image(Yii::app()->baseUrl . "/resources/img/user/$owner->email/$publication->image_path", $publication->title) ?>
     </div>
-    <div id="imageButtons">
-        <?= CHtml::button(HApp::t('like'), array('class' => 'button medium buttonStyle likeButton')) ?>
-        <?= CHtml::button('', array('class' => 'button medium buttonStyle unlikeButton')) ?>
-        <span>|</span>
-        <?= CHtml::button(HApp::t('share'), array('class' => 'button medium buttonStyle')) ?>
+    <div id="imageButtonsStats">
+        <div id="imageButtons">
+            <?= CHtml::button(HApp::t('like'), array('class' => 'button medium buttonStyle likeButton')) ?>
+            <?= CHtml::button('', array('class' => 'button medium buttonStyle unlikeButton')) ?>
+            <?= CHtml::button(HApp::t('share'), array('class' => 'button medium buttonStyle marginLeft')) ?>
+            <?= CHtml::button('', array('class' => 'button medium buttonStyle signalButton')) ?>
+        </div>
+        <div id="imageStats">
+            
+        </div>
     </div>
     <div id="imageDate" class="marginTop">
         <?= Yii::t('app', $owner->name ? 'publicationDateWithName' : 'publicationDate', array('{date}' => $publication->record, '{name}' => $owner->name)); ?>

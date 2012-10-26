@@ -26,42 +26,60 @@ div.errorMessage {
 
 .channelStyle {
     background: #3a3a3a;
-    color: #fff;
+    color: #ffffff;
 }
 
 .buttonStyle {
     background: #eaeaea;
     
-    color: #777;
+    color: #777777;
 }
 
   .likeButton
-, .likeButton:hover {
-    background-position-x: 16px;
-    background-position-y: center;
-    background-repeat: no-repeat;
-}
-
-.likeButton {
-    background-image: url("../img/like.png");
-    
-    padding-left: 40px;
-}
-
-.likeButton:hover {
-    background-image: url("../img/like-light.png");
-}
-
-  .unlikeButton
-, .unlikeButton:hover {
+, .likeButton:hover 
+, .unlikeButton
+, .unlikeButton:hover
+, .signalButton
+, .signalButton:hover {
     background-position: center;
     background-repeat: no-repeat;
 }
 
+  .likeButton
+, .unlikeButton {
+    float: left;
+}
+
+  .likeButton
+, .likeButton:hover {
+    background-position-y: center;
+    background-position-x: 10px;
+    
+    border-right: 1px solid #777777;
+}
+
+.likeButton {
+    background-image: url("../img/icon-like.png");
+    
+    padding-left: 32px;
+}
+
+.likeButton:hover {
+    background-image: url("../img/icon-like-white.png");
+}
+
 .unlikeButton {
-    background-image: url("../img/unlike.png");
+    background-image: url("../img/icon-unlike.png");
 }
 
 .unlikeButton:hover {
-    background-image: url("../img/unlike-light.png");
+    background-image: url("../img/icon-unlike-white.png");
+}
+
+.signalButton {
+    background-image: url("../img/icon-signal.png");
+}
+
+.signalButton:hover {
+    background-image: url("../img/icon-signal-white.png");
 }
