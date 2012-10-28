@@ -48,6 +48,8 @@ class PublicationController extends Controller {
         
         $this->model->setAttributeWithoutPrefix($this->model->getAttributeWithoutPrefix('hits') + 1, 'hits');
         $this->model->update();
+        
+        $this->model->setAttributeWithoutPrefix(date(HApp::t('dateFormat'), strtotime($this->model->getAttributeWithoutPrefix('record'))), 'record');
                 
         if (!$this->model) {
             HApp::ajaxResponse(array('status' => 'false', 'message' => HApp::t('idUnknown')));

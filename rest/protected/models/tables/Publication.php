@@ -105,13 +105,6 @@ class Publication extends Table
             'pbct_fk_channel' => 'Pbct Fk Channel',
         );
     }
-
-    public function afterFind()
-    {
-        parent::afterFind();
-        
-        $this->setAttributeWithoutPrefix(date(HApp::t('dateFormat'), strtotime($this->getAttributeWithoutPrefix('record'))), 'record');
-    }
     
     /**
      * Retrieves a list of models based on the current search/filter conditions.
