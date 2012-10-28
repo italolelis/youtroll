@@ -38,6 +38,7 @@ return array(
                 
 		array('<controller>/list', 'pattern' => '<controller:\w+>', 'verb' => 'GET'),
 		array('<controller>/view', 'pattern' => '<controller:\w+>/<id:[\w-]+>', 'verb' => 'GET'),
+                array('<controller>/update', 'pattern' => '<controller:\w+>', 'verb' => 'PUT'),
 		array('<controller>/update', 'pattern' => '<controller:\w+>/<id:[\w-]+>', 'verb' => 'POST'),
 		array('<controller>/delete', 'pattern' => '<controller:\w+>/<id:[\w-]+>', 'verb' => 'DELETE'),
 		array('<controller>/insert', 'pattern' => '<controller:\w+>', 'verb' => 'POST'),
