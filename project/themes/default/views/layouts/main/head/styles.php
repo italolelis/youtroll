@@ -8,3 +8,5 @@
 
 <?= CHtml::cssFile(Yii::app()->baseUrl . '/resources/css/general.css') ?>
 <?= CHtml::cssFile(Yii::app()->theme->baseUrl . '/resources/css/style.css') ?>
+
+<?= CHtml::cssFile(Yii::app()->theme->baseUrl . '/resources/css/bootstrap.css') ?>
