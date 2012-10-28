@@ -45,16 +45,16 @@ class PublicationController extends Controller {
     
     public function actionView($id) {
         $this->model = $this->model->findByPk($id);
-        
-        $this->model->setAttributeWithoutPrefix($this->model->getAttributeWithoutPrefix('hits') + 1, 'hits');
-        $this->model->update();
-        
-        $this->model->setAttributeWithoutPrefix(date(HApp::t('dateFormat'), strtotime($this->model->getAttributeWithoutPrefix('record'))), 'record');
                 
         if (!$this->model) {
             HApp::ajaxResponse(array('status' => 'false', 'message' => HApp::t('idUnknown')));
         }
 
+        $this->model->setAttributeWithoutPrefix($this->model->getAttributeWithoutPrefix('hits') + 1, 'hits');
+        $this->model->update();
+        
+        $this->model->setAttributeWithoutPrefix(date(HApp::t('dateFormat'), strtotime($this->model->getAttributeWithoutPrefix('record'))), 'record');
+        
         HApp::ajaxResponse(array('status' => 'true', 'model' => $this->model->attributes), $this->model->getAttributesPrefix());
     }
 }
