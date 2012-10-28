@@ -83,3 +83,7 @@ div.errorMessage {
 .signalButton:hover {
     background-image: url("../img/icon-signal-white.png");
 }
+
+#likes-unlikes {
+    width: 250px;
+}

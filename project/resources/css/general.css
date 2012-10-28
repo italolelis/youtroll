@@ -35,6 +35,10 @@ textarea {
     text-align: left;
 }
 
+.alignRight {
+    text-align: right;
+}
+
 .marginTop {
     margin-top: 12px;
 }
