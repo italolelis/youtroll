@@ -54,6 +54,7 @@ return array(
     'publicationDate' => 'Publicado dia {date}.',
     'defaultLicense' => 'Licença Padrão do YouTroll.',
     'publicationDateWithName' => 'Publicado dia {date} por {name}.',
+    'publicationStats' => "{likes} pessoas gostaram e {unlikes} não gostaram.",
     
     // Enums
     'male' => 'Masculino',

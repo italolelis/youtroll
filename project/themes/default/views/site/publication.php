@@ -15,13 +15,26 @@
             <?= CHtml::button('', array('class' => 'button medium buttonStyle signalButton')) ?>
         </div>
         <div id="imageStats" class="floatRight">
-            < StatsHere >
+            <h3 class="alignRight"><?= $publication->hits + $publication->fake_hits ?></h3>
+            <?php
+            $likes = ($publication->like * 100) / (($publication->like + $publication->unlike) ?: 1);
+            
+            $this->widget('zii.widgets.jui.CJuiProgressBar', array(
+                'value' => $likes,
+                'cssFile' => '',
+                'htmlOptions' => array(
+                    'id' => 'likes-unlikes',
+                    'class' => 'progress progress-success' . ($likes ? ' progress-populated' : ''),
+                ),
+            ));
+            ?>
+            <p class="alignRight"><?= Yii::t('app', 'publicationStats', array('{likes}' => $publication->like, '{unlikes}' => $publication->unlike)) ?></p>
         </div>
     </div>
     <div id="imageDate" class="marginTop">
         <?= Yii::t('app', $owner->name ? 'publicationDateWithName' : 'publicationDate', array('{date}' => $publication->record, '{name}' => $owner->name)); ?>
     </div>
-    <div id="imageDescription" class="infobox">
+    <div id="imageDescription" class="infobox marginTop">
         <div><?= $publication->description ?></div>
         <div class="marginTop">
             <strong><?= HApp::t('category') ?>:</strong>
@@ -32,5 +45,5 @@
     </div>
 </div>
 <div class="one-third">
-    empty
+    Tirinhas Relacionadas Aqui
 </div>
