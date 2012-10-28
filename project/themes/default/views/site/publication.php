@@ -34,7 +34,7 @@
     <div id="imageDate" class="marginTop">
         <?= Yii::t('app', $owner->name ? 'publicationDateWithName' : 'publicationDate', array('{date}' => $publication->record, '{name}' => $owner->name)); ?>
     </div>
-    <div id="imageDescription" class="infobox marginTop">
+    <div id="imageDescription" class="infobox">
         <div><?= $publication->description ?></div>
         <div class="marginTop">
             <strong><?= HApp::t('category') ?>:</strong>
