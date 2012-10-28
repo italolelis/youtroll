@@ -15,8 +15,8 @@ class PublicationController extends Controller {
             $user = User::model()->findByPk($this->headers->Authorization[0]);
             
             $this->model->setAttributesWithoutPrefix($_POST);
-            $this->model->setOutPrefix($user->getAttributeWithoutPrefix('id'), 'owner');
-            $this->model->setOutPrefix($user->channel->getAttributeWithoutPrefix('id'), 'channel');
+            $this->model->setOutPrefix($user->getOutPrefix('id'), 'owner');
+            $this->model->setOutPrefix($user->channel->getOutPrefix('id'), 'channel');
             
             if (!$this->model->save()) {
                 HApp::ajaxResponse($this->model->getErrors(), $this->model->getAttributesPrefix());
@@ -34,12 +34,12 @@ class PublicationController extends Controller {
                 }
                 
                 $publicationTags = new PublicationTags();
-                $publicationTags->setOutPrefix($this->model->getAttributeWithoutPrefix('id'), 'publication');
-                $publicationTags->setOutPrefix($tag->getAttributeWithoutPrefix('id'), 'tag');
+                $publicationTags->setOutPrefix($this->model->getOutPrefix('id'), 'publication');
+                $publicationTags->setOutPrefix($tag->getOutPrefix('id'), 'tag');
                 $publicationTags->save();
             }
             
-            HApp::ajaxResponse($this->model->getAttributeWithoutPrefix('id'));
+            HApp::ajaxResponse($this->model->getOutPrefix('id'));
         }
     }
     
@@ -50,10 +50,10 @@ class PublicationController extends Controller {
             HApp::ajaxResponse(array('status' => 'false', 'message' => HApp::t('idUnknown')));
         }
 
-        $this->model->setOutPrefix($this->model->getAttributeWithoutPrefix('hits') + 1, 'hits');
+        $this->model->setOutPrefix($this->model->getOutPrefix('hits') + 1, 'hits');
         $this->model->update();
         
-        $this->model->setOutPrefix(date(HApp::t('dateFormat'), strtotime($this->model->getAttributeWithoutPrefix('record'))), 'record');
+        $this->model->setOutPrefix(date(HApp::t('dateFormat'), strtotime($this->model->getOutPrefix('record'))), 'record');
         
         HApp::ajaxResponse(array('status' => 'true', 'model' => $this->model->attributes), $this->model->getAttributesPrefix());
     }

@@ -10,7 +10,7 @@ class Table extends CActiveRecord
         return $this->attributesPrefix ? : '';
     }
     
-    public function getAttributeWithoutPrefix($name)
+    public function getOutPrefix($name)
     {   
         return $this->getAttribute($this->getAttributesPrefix() . $name);
     }

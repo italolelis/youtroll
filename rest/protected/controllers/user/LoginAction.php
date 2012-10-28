@@ -13,8 +13,8 @@ class LoginAction extends CAction
             $user = $this->controller->model->getUserByEmail($this->controller->headers->Authorization[0])->find();
             
             if ($user) {
-                if (BCrypt::check($this->controller->headers->Authorization[1], $user->getAttributeWithoutPrefix('password'))) {
-                    $return = $user->getAttributeWithoutPrefix('id');
+                if (BCrypt::check($this->controller->headers->Authorization[1], $user->getOutPrefix('password'))) {
+                    $return = $user->getOutPrefix('id');
                 }
             }
 
