@@ -10,9 +10,20 @@ class AssessAction extends CAction
             
             if (!empty($review)) {
                 $idPublication = HSecurity::urlDecode(HApp::getRequest('POST', 'publication'));
+                $review = $review === 'true' ? true : false;
                 
                 $response = PersistenceServer::connect('publication', 'PUT', array('id' => $idPublication, 'like' => $review));
-                var_dump($response);exit();
+                
+                if($response->status) {
+                    HApp::ajaxResponse(array(
+                        'action' => is_null($response->model->like) ? 'removeClass' : 'addClass',
+                        'activeButton' => $review ? 'likeButton' : 'unlikeButton',
+                        'inactiveButton' => !$review ? 'likeButton' : 'unlikeButton',
+                        'class' => 'active',
+                    ));
+                }
+                
+                HApp::throwException(500);
             }
             
             HApp::throwException(403);
