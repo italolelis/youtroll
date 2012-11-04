@@ -9,9 +9,11 @@
  * @property string $rvw_usr_fk_user
  * @property integer $rvw_usr_like
  */
-class ReviewUser extends CActiveRecord
+class ReviewUser extends Table
 {
 
+    protected $attributesPrefix = 'rvw_usr_';
+    
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
@@ -90,6 +92,16 @@ class ReviewUser extends CActiveRecord
         return new CActiveDataProvider($this, array(
                     'criteria' => $criteria,
                 ));
+    }
+    
+    public function getReviewUser($idUser, $idPublication)
+    {
+        $this->getDbCriteria()->mergeWith(array(
+            'condition' => 'rvw_usr_fk_publication = :rvw_usr_fk_publication AND rvw_usr_fk_user = :rvw_usr_fk_user',
+            'params' => array(':rvw_usr_fk_publication' => $idPublication, ':rvw_usr_fk_user' => $idUser),
+        ));
+        
+        return $this;
     }
 
 }
