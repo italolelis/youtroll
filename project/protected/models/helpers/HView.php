@@ -57,11 +57,12 @@ class HView
     /**
      * Esta função retorna um array para configurar o AJAX dos Botões de Formulário
      */
-    public static function getAjaxSubmitButtonConfig()
+    public static function getAjaxSubmitButtonConfig($params = array())
     {
         return array(
             'type' => 'POST',
             'dataType' => 'json',
+            'data' => $params,
             'async' => false,
             'cache' => false,
             'beforeSend' => "function() {
@@ -78,6 +79,13 @@ class HView
                             break;
                         case 'redirect':
                             location = response.link;
+                            break;
+                        case 'addClass':
+                            $('#' + response.activeButton).addClass(response.class);
+                            $('#' + response.inactiveButton).removeClass(response.class);
+                            break;
+                        case 'removeClass':
+                            $('#' + response.activeButton).removeClass(response.class);
                             break;
                         case 'reload':
                             location.reload();
