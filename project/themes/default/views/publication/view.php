@@ -10,40 +10,24 @@
     <div id="imageButtonsStats">
         <div id="imageButtons" class="displayInline">
             <?php
-            echo CHtml::button(HApp::t('like'), array('class' => 'button medium buttonStyle likeButton',
-                    'ajax' => array(
-                        'url' => array('publication/assess'),
-                        'type' => 'POST',
-                        'dataType' => 'html',
-                        'data' => array('publication' => HSecurity::urlEncode($publication->id), 'like' => true),
-                        'async' => false,
-                        'cache' => false,
-                        'beforeSend' => "function() {
-                            
-                        }",
-                        'success' => "function(response) {
-                            
-                        }",
-                    ),
-                ));
+            echo CHtml::ajaxButton(HApp::t('like'), array('publication/assess'),
+                    HView::getAjaxSubmitButtonConfig(array('publication' => HSecurity::urlEncode($publication->id), 'like' => true)),
+                    array(
+                        'id' => 'likeButton',
+                        'class' => 'button medium buttonStyle likeButton',
+                        'live' => false,
+                    )
+                );
             ?>
             <?php
-            echo CHtml::button('', array('class' => 'button medium buttonStyle unlikeButton',
-                    'ajax' => array(
-                        'url' => array('publication/assess'),
-                        'type' => 'POST',
-                        'dataType' => 'html',
-                        'data' => array('publication' => HSecurity::urlEncode($publication->id), 'like' => false),
-                        'async' => false,
-                        'cache' => false,
-                        'beforeSend' => "function() {
-                            
-                        }",
-                        'success' => "function(response) {
-                            
-                        }",
-                    ),
-                ));
+            echo CHtml::ajaxButton(HApp::t(''), array('publication/assess'),
+                    HView::getAjaxSubmitButtonConfig(array('publication' => HSecurity::urlEncode($publication->id), 'like' => false)),
+                    array(
+                        'id' => 'unlikeButton',
+                        'class' => 'button medium buttonStyle unlikeButton',
+                        'live' => false,
+                    )
+                );
             ?>
             <?= CHtml::button(HApp::t('share'), array('class' => 'button medium buttonStyle marginLeft')) ?>
             <?= CHtml::button('', array('class' => 'button medium buttonStyle signalButton')) ?>
