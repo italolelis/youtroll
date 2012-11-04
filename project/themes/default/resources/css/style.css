@@ -68,11 +68,23 @@ div.errorMessage {
     background-image: url("../img/icon-like-white.png");
 }
 
+.likeButton.active {
+    background-color: #5eb95e;
+    background-image: url("../img/icon-like-white.png");
+    
+    color: #ffffff;
+}
+
 .unlikeButton {
     background-image: url("../img/icon-unlike.png");
 }
 
 .unlikeButton:hover {
+    background-image: url("../img/icon-unlike-white.png");
+}
+
+.unlikeButton.active {
+    background-color: #db002f;
     background-image: url("../img/icon-unlike-white.png");
 }
 
