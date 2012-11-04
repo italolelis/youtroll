@@ -57,4 +57,14 @@ class PublicationController extends Controller {
         
         HApp::ajaxResponse(array('status' => 'true', 'model' => $this->model->attributes), $this->model->getAttributesPrefix());
     }
+    
+    public function actionUpdate() {
+        $this->model = $this->model->findByPk(HApp::getRequest('PUT', 'id'));
+        
+        if (!$this->model) {
+            HApp::ajaxResponse(array('status' => 'false', 'message' => HApp::t('idUnknown')));
+        }
+        
+        var_dump(HApp::getRequest('PUT', 'like'));
+    }
 }
