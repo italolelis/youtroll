@@ -11,8 +11,8 @@ class AssessAction extends CAction
             if (!empty($review)) {
                 $idPublication = HSecurity::urlDecode(HApp::getRequest('POST', 'publication'));
                 
-                $publication = PersistenceServer::connect('publication', 'PUT', array('id' => $idPublication, 'like' => $review));
-                exit();
+                $response = PersistenceServer::connect('publication', 'PUT', array('id' => $idPublication, 'like' => $review));
+                var_dump($response);exit();
             }
             
             HApp::throwException(403);
