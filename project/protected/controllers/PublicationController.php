@@ -17,6 +17,7 @@ class PublicationController extends Controller
 	return array(
 	    // Ações da Aplicação
             'assess' => 'application.controllers.publication.AssessAction',
+            'send' => 'application.controllers.publication.SendAction',
 	);
     }
 
