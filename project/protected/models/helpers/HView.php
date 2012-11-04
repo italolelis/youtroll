@@ -57,12 +57,11 @@ class HView
     /**
      * Esta função retorna um array para configurar o AJAX dos Botões de Formulário
      */
-    public static function getAjaxSubmitButtonConfig($params = array())
+    public static function getAjaxSubmitButtonConfig($params = null)
     {
-        return array(
+        $return = array(
             'type' => 'POST',
             'dataType' => 'json',
-            'data' => $params,
             'async' => false,
             'cache' => false,
             'beforeSend' => "function() {
@@ -103,5 +102,11 @@ class HView
                 setAlertMessage(error.responseText, 'error', 'messages');
             }",
         );
+        
+        if(is_array($params)) {
+            $return = array_merge(array('data' => $params), $return);
+        }
+        
+        return $return;
     }
 }
