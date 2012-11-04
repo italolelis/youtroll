@@ -81,7 +81,7 @@ class Publication extends Table
             'owner' => array(self::BELONGS_TO, 'User', 'pbct_fk_owner'),
             'publicationComments' => array(self::HAS_MANY, 'PublicationComment', 'pbct_cmnt_fk_publication'),
             'tags' => array(self::MANY_MANY, 'Tag', 'tb_publications_tags(pbct_tag_fk_publication, pbct_tag_fk_tag)'),
-            'visitors' => array(self::MANY_MANY, 'User', 'tb_publications_viewed(pbct_vwd_fk_publication, pbct_vwd_fk_user)'),
+            'reviewers' => array(self::MANY_MANY, 'User', 'tb_reviews_users(rvw_usr_fk_publication, rvw_usr_fk_user)'),
         );
     }
 

@@ -87,7 +87,7 @@ class User extends Table
             'commentedPublications' => array(self::HAS_MANY, 'PublicationComment', 'pbct_cmnt_fk_sender'),
             'channelInscriptions' => array(self::MANY_MANY, 'Channel', 'tb_inscriptions(insc_fk_user, insc_fk_channel)'),
             'publications' => array(self::HAS_MANY, 'Publication', 'pbct_fk_owner'),
-            'publicationsViewed' => array(self::MANY_MANY, 'Publication', 'tb_publications_viewed(pbct_vwd_fk_user, pbct_vwd_fk_publication)'),
+            'revisions' => array(self::MANY_MANY, 'Publication', 'tb_reviews_users(rvw_usr_fk_user, rvw_usr_fk_publication)'),
         );
     }
 
