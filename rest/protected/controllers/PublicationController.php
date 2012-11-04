@@ -47,7 +47,7 @@ class PublicationController extends Controller {
         $this->model = $this->model->findByPk($id);
                 
         if (!$this->model) {
-            HApp::ajaxResponse(array('status' => 'false', 'message' => HApp::t('idUnknown')));
+            HApp::ajaxResponse(array('status' => false, 'message' => HApp::t('idUnknown')));
         }
 
         $this->model->setOutPrefix($this->model->getOutPrefix('hits') + 1, 'hits');
@@ -55,21 +55,19 @@ class PublicationController extends Controller {
         
         $this->model->setOutPrefix(date(HApp::t('dateFormat'), strtotime($this->model->getOutPrefix('record'))), 'record');
         
-        HApp::ajaxResponse(array('status' => 'true', 'model' => $this->model->attributes), $this->model->getAttributesPrefix());
+        HApp::ajaxResponse(array('status' => true, 'model' => $this->model->attributes), $this->model->getAttributesPrefix());
     }
     
     public function actionUpdate() {
         $this->model = $this->model->findByPk(HApp::getRequest('PUT', 'id'));
         
         if (!$this->model) {
-            HApp::ajaxResponse(array('status' => 'false', 'message' => HApp::t('idUnknown')));
+            HApp::ajaxResponse(array('status' => false, 'message' => HApp::t('idUnknown')));
         }
         
         $like = HApp::getRequest('PUT', 'like');
         
-        if($like) {
-            $like = $like === 'true' ? '1' : '0';
-            
+        if(!is_null($like)) {
             $reviewUser = ReviewUser::model()->getReviewUser($this->headers->Authorization[0], $this->model->getOutPrefix('id'))->find();
             
             if($reviewUser) {
@@ -85,9 +83,9 @@ class PublicationController extends Controller {
             
             $reviewUser->setOutPrefix(is_null($reviewUser->getOutPrefix('like')) ? null : (boolean) $reviewUser->getOutPrefix('like'), 'like');
             
-            HApp::ajaxResponse(array('status' => 'true', 'model' => $reviewUser->attributes), $reviewUser->getAttributesPrefix());
+            HApp::ajaxResponse(array('status' => true, 'model' => $reviewUser->attributes), $reviewUser->getAttributesPrefix());
         }
         
-        HApp::ajaxResponse(array('status' => 'true'));
+        HApp::ajaxResponse(array('status' => true));
     }
 }
