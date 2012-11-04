@@ -65,6 +65,29 @@ class PublicationController extends Controller {
             HApp::ajaxResponse(array('status' => 'false', 'message' => HApp::t('idUnknown')));
         }
         
-        var_dump(HApp::getRequest('PUT', 'like'));
+        $like = HApp::getRequest('PUT', 'like');
+        
+        if($like) {
+            $like = $like === 'true' ? '1' : '0';
+            
+            $reviewUser = ReviewUser::model()->getReviewUser($this->headers->Authorization[0], $this->model->getOutPrefix('id'))->find();
+            
+            if($reviewUser) {
+                $reviewUser->setOutPrefix($like === $reviewUser->getOutPrefix('like') ? null : $like, 'like');
+                $reviewUser->update();
+            } else {
+                $reviewUser = new ReviewUser();
+                $reviewUser->setOutPrefix($this->headers->Authorization[0], 'user');
+                $reviewUser->setOutPrefix($this->model->getOutPrefix('id'), 'publication');
+                $reviewUser->setOutPrefix($like, 'like');
+                $reviewUser->save();
+            }
+            
+            $reviewUser->setOutPrefix(is_null($reviewUser->getOutPrefix('like')) ? null : (boolean) $reviewUser->getOutPrefix('like'), 'like');
+            
+            HApp::ajaxResponse(array('status' => 'true', 'model' => $reviewUser->attributes), $reviewUser->getAttributesPrefix());
+        }
+        
+        HApp::ajaxResponse(array('status' => 'true'));
     }
 }
