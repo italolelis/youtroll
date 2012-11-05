@@ -1,12 +1,30 @@
 <h2 class="page-title"><?= $publication->title ?></h2>
+
 <div id="publication" class="two-third">
     <div id="imageHeader">
         <?= CHtml::button($owner->email, array('class' => 'button large channelStyle')) ?>
         <?= CHtml::button(HApp::t('subscribe'), array('class' => 'button large')) ?>
     </div>
+    
     <div id="image" class="marginTop">
         <?= CHtml::image(Yii::app()->baseUrl . "/resources/img/user/$owner->email/$publication->image_path", $publication->title) ?>
     </div>
+    
+    <div id="guestUser" class="infobox displayNone">
+        <span>
+            <?php
+            echo Yii::t('app', 'guest', array(
+                    '{login}' => CHtml::link(HApp::t('accessAccount'), array('user/login'), array(
+                        'ajax' => HView::getAjaxMenuArrayConfig('login', 'user')
+                    )),
+                    '{signUp}' => CHtml::link(HApp::t('signUp'), array('user/singUp'), array(
+                        'ajax' => HView::getAjaxMenuArrayConfig('signUp', 'user')
+                    )),
+                ));
+            ?>
+        </span>
+    </div>
+    
     <div id="imageButtonsStats">
         <div id="imageButtons" class="displayInline">
             <?php
@@ -49,9 +67,11 @@
             <p class="alignRight"><?= Yii::t('app', 'publicationStats', array('{likes}' => $stats->likes, '{unlikes}' => $stats->unlikes)) ?></p>
         </div>
     </div>
+    
     <div id="imageDate" class="marginTop">
         <?= Yii::t('app', $owner->name ? 'publicationDateWithName' : 'publicationDate', array('{date}' => $publication->record, '{name}' => $owner->name)); ?>
     </div>
+    
     <div id="imageDescription" class="infobox">
         <div><?= $publication->description ?></div>
         <div class="marginTop">
@@ -62,6 +82,7 @@
         </div>
     </div>
 </div>
+
 <div class="one-third">
     Tirinhas Relacionadas Aqui
 </div>

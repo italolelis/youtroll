@@ -79,6 +79,9 @@ class HView
                         case 'redirect':
                             location = response.link;
                             break;
+                        case 'showDiv':
+                            $('#' + response.div).fadeIn('slow');
+                            break;
                         case 'addClass':
                             $('#' + response.activeButton).addClass(response.class);
                             $('#' + response.inactiveButton).removeClass(response.class);
