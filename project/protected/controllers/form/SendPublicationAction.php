@@ -53,6 +53,8 @@ class SendPublicationAction extends CAction
                     $response = PersistenceServer::connect('publication', 'POST', $model->attributes);
                     
                     if(is_int($response)) {
+                        $this->_publicationFile->resize(620);
+                        
                         if(rename($this->_publicationFile->getRealPath(), $this->_userPath . $model->image_path)) {
                             HApp::ajaxResponse(array(
                                 'action' => 'redirect',
