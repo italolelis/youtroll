@@ -7,7 +7,7 @@
     </div>
     
     <div id="image" class="marginTop">
-        <?= CHtml::image(Yii::app()->baseUrl . "/resources/img/user/$owner->email/$publication->image_path", $publication->title) ?>
+        <?= CHtml::image(Yii::app()->baseUrl . "/resources/img/user/$publication->owner/$publication->image_path", $publication->title) ?>
     </div>
     
     <div id="guestUser" class="infobox displayNone">

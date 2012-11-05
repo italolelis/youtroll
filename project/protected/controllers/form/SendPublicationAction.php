@@ -13,7 +13,7 @@ class SendPublicationAction extends CAction
 
     private function _init()
     {
-        $this->_userPath = Yii::app()->basePath . '/../resources/img/user/' . Yii::app()->user->getName() . '/';
+        $this->_userPath = Yii::app()->basePath . '/../resources/img/user/' . Yii::app()->user->getId() . '/';
      
         $ajaxUploadPath = Yii::app()->basePath . '/../resources/ajaxUploads/' . Yii::app()->session->sessionID . '/';
         
