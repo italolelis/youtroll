@@ -14,7 +14,7 @@
                     HView::getAjaxSubmitButtonConfig(array('publication' => HSecurity::urlEncode($publication->id), 'like' => true)),
                     array(
                         'id' => 'likeButton',
-                        'class' => 'button medium buttonStyle likeButton',
+                        'class' => 'button medium buttonStyle likeButton' . (is_null($review->like) ? '' : ($review->like ? ' active' : '')),
                         'live' => false,
                     )
                 );
@@ -24,7 +24,7 @@
                     HView::getAjaxSubmitButtonConfig(array('publication' => HSecurity::urlEncode($publication->id), 'like' => false)),
                     array(
                         'id' => 'unlikeButton',
-                        'class' => 'button medium buttonStyle unlikeButton',
+                        'class' => 'button medium buttonStyle unlikeButton' . (is_null($review->like) ? '' : (!$review->like ? ' active' : '')),
                         'live' => false,
                     )
                 );
@@ -35,18 +35,18 @@
         <div id="imageStats" class="floatRight">
             <h3 class="alignRight"><?= $publication->hits + $publication->fake_hits ?></h3>
             <?php
-            $likes = ($publication->like * 100) / (($publication->like + $publication->unlike) ?: 1);
+            $reviews = $stats->likes + $stats->unlikes;
             
             $this->widget('zii.widgets.jui.CJuiProgressBar', array(
-                'value' => $likes,
+                'value' => ($stats->likes * 100) / ($reviews ?: 1),
                 'cssFile' => '',
                 'htmlOptions' => array(
                     'id' => 'likes-unlikes',
-                    'class' => 'progress progress-success' . ($likes ? ' progress-populated' : ''),
+                    'class' => 'progress progress-success' . ($reviews ? ' progress-populated' : ''),
                 ),
             ));
             ?>
-            <p class="alignRight"><?= Yii::t('app', 'publicationStats', array('{likes}' => $publication->like, '{unlikes}' => $publication->unlike)) ?></p>
+            <p class="alignRight"><?= Yii::t('app', 'publicationStats', array('{likes}' => $stats->likes, '{unlikes}' => $stats->unlikes)) ?></p>
         </div>
     </div>
     <div id="imageDate" class="marginTop">

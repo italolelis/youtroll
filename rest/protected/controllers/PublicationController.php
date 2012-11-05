@@ -54,8 +54,12 @@ class PublicationController extends Controller {
         $this->model->update();
         
         $this->model->setOutPrefix(date(HApp::t('dateFormat'), strtotime($this->model->getOutPrefix('record'))), 'record');
+        $this->model->setOutPrefix(date(HApp::t('dateFormat'), strtotime($this->model->getOutPrefix('record'))), 'record');
         
-        HApp::ajaxResponse(array('status' => true, 'model' => $this->model->attributes), $this->model->getAttributesPrefix());
+        $likes = (int) $this->model->likes;
+        $unlikes = (int) $this->model->unlikes;
+        
+        HApp::ajaxResponse(array('status' => true, 'model' => $this->model->attributes, 'stats' => array('likes' => $likes, 'unlikes' => $unlikes)), $this->model->getAttributesPrefix());
     }
     
     public function actionUpdate() {

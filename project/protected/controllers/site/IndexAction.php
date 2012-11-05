@@ -19,18 +19,24 @@ class IndexAction extends CAction
 	    Yii::app()->user->setState('errorMessage', null);
 	}
         
-        $see = HApp::getRequest('GET', 'view');
+        $view = HApp::getRequest('GET', 'view');
         
-        if(!empty($see)) {
-            $idPublication = HSecurity::urlDecode($see);
+        if(!empty($view)) {
+            $idPublication = HSecurity::urlDecode($view);
             
             $publication = PersistenceServer::connect("publication/$idPublication", 'GET');
             
             if($publication->status) {
                 $owner = PersistenceServer::connect("user/{$publication->model->owner}", 'GET');
+                $reviewUser = PersistenceServer::connect("reviewUser/{$publication->model->id}", 'GET');
                 
                 if($owner->status) {
-                    $this->controller->render('//publication/view', array('publication' => $publication->model, 'owner' => $owner->model));
+                    $this->controller->render('//publication/view', array(
+                        'publication' => $publication->model,
+                        'stats' => $publication->stats,
+                        'owner' => $owner->model,
+                        'review' => $reviewUser->model,
+                    ));
                     Yii::app()->end();
                 }
             }
