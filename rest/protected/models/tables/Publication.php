@@ -54,7 +54,7 @@ class Publication extends Table
         // will receive user inputs.
         return array(
             array('pbct_title, pbct_description, pbct_image_path, pbct_hits, pbct_fake_hits, pbct_fk_owner, pbct_fk_category, pbct_fk_channel', 'required'),
-            array('pbct_like, pbct_unlike, pbct_hits, pbct_fake_hits, pbct_fk_category', 'numerical', 'integerOnly'=>true),
+            array('pbct_hits, pbct_fake_hits, pbct_fk_category', 'numerical', 'integerOnly'=>true),
             array('pbct_title', 'length', 'max'=>100),
             array('pbct_description', 'length', 'max'=>256),
             array('pbct_image_path', 'length', 'max'=>128),
@@ -74,6 +74,8 @@ class Publication extends Table
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
+            'likes' => array(self::STAT, 'ReviewUser', 'rvw_usr_fk_publication', 'condition' => 'rvw_usr_like IS TRUE'),
+            'unlikes' => array(self::STAT, 'ReviewUser', 'rvw_usr_fk_publication', 'condition' => 'rvw_usr_like IS FALSE'),
             'category' => array(self::BELONGS_TO, 'Category', 'pbct_fk_category'),
             'channel' => array(self::BELONGS_TO, 'Channel', 'pbct_fk_channel'),
             'owner' => array(self::BELONGS_TO, 'User', 'pbct_fk_owner'),
