@@ -9,8 +9,6 @@
  * @property string $pbct_description
  * @property string $pbct_record
  * @property string $pbct_image_path
- * @property integer $pbct_like
- * @property integer $pbct_unlike
  * @property integer $pbct_hits
  * @property integer $pbct_fake_hits
  * @property string $pbct_fk_owner
@@ -23,7 +21,7 @@
  * @property User $owner
  * @property PublicationComment[] $publicationComments
  * @property Tag[] $tags
- * @property User[] $visitors
+ * @property User[] $reviewers
  */
 class Publication extends Table
 {
@@ -55,7 +53,7 @@ class Publication extends Table
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('pbct_title, pbct_description, pbct_image_path, pbct_like, pbct_unlike, pbct_hits, pbct_fake_hits, pbct_fk_owner, pbct_fk_category, pbct_fk_channel', 'required'),
+            array('pbct_title, pbct_description, pbct_image_path, pbct_hits, pbct_fake_hits, pbct_fk_owner, pbct_fk_category, pbct_fk_channel', 'required'),
             array('pbct_like, pbct_unlike, pbct_hits, pbct_fake_hits, pbct_fk_category', 'numerical', 'integerOnly'=>true),
             array('pbct_title', 'length', 'max'=>100),
             array('pbct_description', 'length', 'max'=>256),
@@ -64,7 +62,7 @@ class Publication extends Table
             array('pbct_record', 'safe'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('pbct_id, pbct_title, pbct_description, pbct_record, pbct_image_path, pbct_like, pbct_unlike, pbct_hits, pbct_fake_hits, pbct_fk_owner, pbct_fk_category, pbct_fk_channel', 'safe', 'on'=>'search'),
+            array('pbct_id, pbct_title, pbct_description, pbct_record, pbct_image_path, pbct_hits, pbct_fake_hits, pbct_fk_owner, pbct_fk_category, pbct_fk_channel', 'safe', 'on'=>'search'),
         );
     }
 
@@ -96,8 +94,6 @@ class Publication extends Table
             'pbct_description' => 'Pbct Description',
             'pbct_record' => 'Pbct Record',
             'pbct_image_path' => 'Pbct Image Path',
-            'pbct_like' => 'Pbct Like',
-            'pbct_unlike' => 'Pbct Unlike',
             'pbct_hits' => 'Pbct Hits',
             'pbct_fake_hits' => 'Pbct Fake Hits',
             'pbct_fk_owner' => 'Pbct Fk Owner',
@@ -122,8 +118,6 @@ class Publication extends Table
         $criteria->compare('pbct_description',$this->pbct_description,true);
         $criteria->compare('pbct_record',$this->pbct_record,true);
         $criteria->compare('pbct_image_path',$this->pbct_image_path,true);
-        $criteria->compare('pbct_like',$this->pbct_like);
-        $criteria->compare('pbct_unlike',$this->pbct_unlike);
         $criteria->compare('pbct_hits',$this->pbct_hits);
         $criteria->compare('pbct_fake_hits',$this->pbct_fake_hits);
         $criteria->compare('pbct_fk_owner',$this->pbct_fk_owner,true);

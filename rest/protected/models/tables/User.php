@@ -25,7 +25,7 @@ Yii::import('ext.several.BCrypt');
  * @property PublicationComment[] $commentedPublications
  * @property Channel[] $channelInscriptions
  * @property Publication[] $publications
- * @property Publication[] $publicationsViewed
+ * @property Publication[] $revisions
  */
 class User extends Table
 {
