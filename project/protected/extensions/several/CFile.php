@@ -116,8 +116,55 @@ class CFile extends CApplicationComponent
      * @var CUploadedFile object instance
      */
     private $_uploadedInstance=null;
+    /**
+     * @var width file resource
+     */
+    private $_width;
+    /**
+     * @var height file resource
+     */
+    private $_height;
 
+    public function resize($maxWidth = null, $maxHeight = null) {
+        if((!is_null($maxWidth) && $this->_width > $maxWidth) || (!is_null($maxHeight) && $this->_height > $maxHeight)) {
+            if($this->_width > $maxWidth) {
+                $newWidth = $maxWidth;
+                $newHeight = round(($newWidth / $this->_width) * $this->_height);
+            } else if($this->_height > $maxHeight) {
+                $newHeight = $maxHeight;
+                $newWidth = round(($newHeight / $this->_height) * $this->_width);
+            }
+            
+            switch ($this->_extension) {
+                case 'jpg':
+                    $sourceImage = imageCreateTrueColor($newWidth, $newHeight);
+                    $newImage = imageCreateFromJpeg($this->_realpath);
+                    imageCopyResampled($sourceImage, $newImage, 0, 0, 0, 0, $newWidth, $newHeight, $this->_width, $this->_height);
+                    imageJpeg($sourceImage, $this->_realpath);
+                    break;
+                case 'png':
+                    $sourceImage = imageCreateTrueColor($newWidth, $newHeight);
+                    $newImage = imageCreateFromPng($this->_realpath);
+                    imageCopyResampled($sourceImage, $newImage, 0, 0, 0, 0, $newWidth, $newHeight, $this->_width, $this->_height);
+                    imagePng($sourceImage, $this->_realpath);
+                    break;
+                case 'gif':
+                    $sourceImage = imageCreateTrueColor($newWidth, $newHeight);
+                    $newImage = ImageCreateFromGif($this->_realpath);
+                    imageCopyResampled($sourceImage, $newImage, 0, 0, 0, 0, $newWidth, $newHeight, $this->_width, $this->_height);
+                    imageGif($sourceImage, $this->_realpath);
+                    break;
+                default:
+                    return false;
+            }
 
+            imagedestroy($sourceImage);
+            imagedestroy($newImage);
+        }
+        
+        return true;
+    }
+    
     /**
      * Returns the instance of CFile for the specified file.
      *
@@ -232,7 +279,9 @@ class CFile extends CApplicationComponent
             $this->_isUploaded = true;
 
         $pathinfo = pathinfo($this->_isUploaded?$this->_uploadedInstance->getName():$this->_realpath);
-
+        
+        list($this->_width, $this->_height) = getimagesize($this->_realpath); // Line added
+        
         $this->_dirname = $pathinfo['dirname'];
         $this->_basename = $pathinfo['basename'];
 
