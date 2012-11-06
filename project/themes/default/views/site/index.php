@@ -5,11 +5,9 @@
 <div class="jcarousel-container jcarousel-container-horizontal jcarousel-container-div">
     <div class="jcarousel-clip jcarousel-clip-horizontal jcarousel-clip-div">
         <ul class="projects-carousel clearfix jcarousel-list jcarousel-list-horizontal jcarousel-list-ul">
-            <?php
-            $totalPublications = 0
-            ?>
+            <?php $totalPublications = 0; ?>
 
-            <?php foreach ($recentPublications as $publication): ?>
+            <?php foreach($recentPublications as $publication): ?>
                 <?php ++$totalPublications ?>
 
                 <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-<?= $totalPublications ?> jcarousel-item-<?= $totalPublications ?>-horizontal jcarousel-item-li" jcarouselindex="<?= $totalPublications ?>">
@@ -19,7 +17,7 @@
                         <span class="categories"><?= Category::getNameByID($publication->category) ?></span>
                     </a>
                 </li>
-            <?php endforeach ?>
+            <?php endforeach; ?>
         </ul>
     </div>
     <div class="jcarousel-prev jcarousel-prev-horizontal jcarousel-prev-disabled jcarousel-prev-disabled-horizontal" style="display: block;" disabled="disabled"></div>
