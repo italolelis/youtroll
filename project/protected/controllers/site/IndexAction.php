@@ -9,16 +9,6 @@ class IndexAction extends CAction
 	    HApp::throwException(404);
 	}
         
-        if (Yii::app()->request->isAjaxRequest) {
-	    $this->controller->renderPartial('index', null, false, true);
-	    Yii::app()->end();
-	}
-        
-	if (Yii::app()->user->hasState('errorMessage')) {
-	    Yii::app()->user->setFlash('error', Yii::app()->user->getState('errorMessage'));
-	    Yii::app()->user->setState('errorMessage', null);
-	}
-        
         $view = HApp::getRequest('GET', 'view');
         
         if(!empty($view)) {
@@ -43,8 +33,20 @@ class IndexAction extends CAction
             
             HApp::throwException(404);
         }
+
+        $recentPublications = PersistenceServer::connect('publication', 'GET', array('order' => 'recent', 'limit' => Yii::app()->params['maxPublications']));
         
-        $this->controller->render('index');
+        if (Yii::app()->request->isAjaxRequest) {
+	    $this->controller->renderPartial('index', array('recentPublications' => $recentPublications), false, true);
+	    Yii::app()->end();
+	}
+        
+	if (Yii::app()->user->hasState('errorMessage')) {
+	    Yii::app()->user->setFlash('error', Yii::app()->user->getState('errorMessage'));
+	    Yii::app()->user->setState('errorMessage', null);
+	}
+        
+        $this->controller->render('index', array('recentPublications' => $recentPublications));
     }
 
 }
