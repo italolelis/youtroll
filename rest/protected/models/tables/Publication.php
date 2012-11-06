@@ -130,4 +130,13 @@ class Publication extends Table
             'criteria'=>$criteria,
         ));
     }
+    
+    public function orderByRecent()
+    {
+        $this->getDbCriteria()->mergeWith(array(
+            'order' => 'pbct_record DESC',
+        ));
+        
+        return $this;
+    }
 }

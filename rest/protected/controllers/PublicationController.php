@@ -10,6 +10,19 @@ class PublicationController extends Controller {
         $this->model = new Publication();
     }
 
+    public function actionList() {
+        $limit = HApp::getRequest('GET', 'limit');
+        
+        switch (HApp::getRequest('GET', 'order')) {
+            case 'recent':
+                HApp::ajaxResponse($this->model->with('category')->orderByRecent()->limit($limit)->findAll(), $this->model->getAttributesPrefix());
+                break;
+            default:
+                HApp::ajaxResponse($this->model->limit($limit)->findAll(), $this->model->getAttributesPrefix());
+                break;
+        }
+    }
+    
     public function actionInsert() {
         if (Yii::app()->request->isPostRequest) {
             $user = User::model()->findByPk($this->headers->Authorization[0]);
