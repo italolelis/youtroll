@@ -47,7 +47,7 @@ class SendPublicationAction extends CAction
             if (!empty($postModel)) {
                 $model->attributes = $postModel;
                 
-                $model->image_path = HSecurity::generateImageHash() . $this->_publicationFile->getExtension();
+                $model->image_path = HSecurity::generateImageHash() . '.' . $this->_publicationFile->getExtension();
                 
                 if($model->validate()) {
                     $response = PersistenceServer::connect('publication', 'POST', $model->attributes);
@@ -55,7 +55,9 @@ class SendPublicationAction extends CAction
                     if(is_int($response)) {
                         $this->_publicationFile->resize(620);
                         
-                        if(rename($this->_publicationFile->getRealPath(), $this->_userPath . $model->image_path)) {
+                        if($this->_publicationFile->rename($this->_userPath . $model->image_path)) {
+                            $this->_publicationFile->resize(220, null, true);
+                                    
                             HApp::ajaxResponse(array(
                                 'action' => 'redirect',
                                 'link' => Yii::app()->createAbsoluteUrl('', array('view' => HSecurity::urlEncode($response))),

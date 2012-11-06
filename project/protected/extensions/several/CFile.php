@@ -125,34 +125,41 @@ class CFile extends CApplicationComponent
      */
     private $_height;
 
-    public function resize($maxWidth = null, $maxHeight = null) {
-        if((!is_null($maxWidth) && $this->_width > $maxWidth) || (!is_null($maxHeight) && $this->_height > $maxHeight)) {
-            if($this->_width > $maxWidth) {
+    public function resize($maxWidth = null, $maxHeight = null, $thumb = false) {
+        if(($thumb) || (!is_null($maxWidth) && $this->_width > $maxWidth) || (!is_null($maxHeight) && $this->_height > $maxHeight)) {
+            if($thumb) {
                 $newWidth = $maxWidth;
-                $newHeight = round(($newWidth / $this->_width) * $this->_height);
-            } else if($this->_height > $maxHeight) {
-                $newHeight = $maxHeight;
-                $newWidth = round(($newHeight / $this->_height) * $this->_width);
+                $newHeight = floor($this->_height * ($maxWidth / $this->_width));
+            } else {
+                if($this->_width > $maxWidth) {
+                    $newWidth = $maxWidth;
+                    $newHeight = round(($newWidth / $this->_width) * $this->_height);
+                } else if($this->_height > $maxHeight) {
+                    $newHeight = $maxHeight;
+                    $newWidth = round(($newHeight / $this->_height) * $this->_width);
+                }
             }
+            
+            $imagePath = $thumb ? "{$this->_dirname}/{$this->_filename}_thumb.{$this->_extension}" : $this->_realpath;
             
             switch ($this->_extension) {
                 case 'jpg':
                     $sourceImage = imageCreateTrueColor($newWidth, $newHeight);
                     $newImage = imageCreateFromJpeg($this->_realpath);
                     imageCopyResampled($sourceImage, $newImage, 0, 0, 0, 0, $newWidth, $newHeight, $this->_width, $this->_height);
-                    imageJpeg($sourceImage, $this->_realpath);
+                    imageJpeg($sourceImage, $imagePath);
                     break;
                 case 'png':
                     $sourceImage = imageCreateTrueColor($newWidth, $newHeight);
                     $newImage = imageCreateFromPng($this->_realpath);
                     imageCopyResampled($sourceImage, $newImage, 0, 0, 0, 0, $newWidth, $newHeight, $this->_width, $this->_height);
-                    imagePng($sourceImage, $this->_realpath);
+                    imagePng($sourceImage, $imagePath);
                     break;
                 case 'gif':
                     $sourceImage = imageCreateTrueColor($newWidth, $newHeight);
                     $newImage = ImageCreateFromGif($this->_realpath);
                     imageCopyResampled($sourceImage, $newImage, 0, 0, 0, 0, $newWidth, $newHeight, $this->_width, $this->_height);
-                    imageGif($sourceImage, $this->_realpath);
+                    imageGif($sourceImage, $imagePath);
                     break;
                 default:
                     return false;
