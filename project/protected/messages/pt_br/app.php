@@ -50,13 +50,14 @@ return array(
     'settings' => 'Configurações',
     'inscriptions' => 'Inscrições',  
     'mySessions' => 'Minhas Sessões',
-    'guest' => '<strong>{login}</strong> ou <strong>{signUp}</strong> agora!',
+    'accessAccount' => 'Acesse sua Conta',
     'accountStats' => 'Estatísticas da Conta',
     'publicationDate' => 'Publicado dia {date}.',
+    'recentPublications' => 'Publicações Recentes',
     'defaultLicense' => 'Licença Padrão do YouTroll.',
     'publicationDateWithName' => 'Publicado dia {date} por {name}.',
+    'guest' => '<strong>{login}</strong> ou <strong>{signUp}</strong> agora!',
     'publicationStats' => "{likes} pessoas gostaram e {unlikes} não gostaram.",
-    'accessAccount' => 'Acesse sua Conta',
     
     // Enums
     'male' => 'Masculino',
