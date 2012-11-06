@@ -3674,3 +3674,27 @@ x:-o-prefocus, .not-ie #footer:before { display: none; } /* Fix for Opera */
     .social-links li:nth-child(8n) { margin-right: 15px; }
 
 }
+
+.jcarousel-container-div {
+    position: relative;
+    display: block;
+}
+
+.jcarousel-clip-div {
+    position: relative;
+}
+
+.jcarousel-list-ul {
+    overflow: hidden;
+    position: relative;
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
+    left: 0px;
+    width: 2020px;
+}
+
+.jcarousel-item-li {
+    float: left;
+    list-style: none;
+}
