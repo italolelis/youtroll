@@ -46,13 +46,13 @@ foreach (Category::getCategories() as $category) {
                     array(
                         'label' => HApp::t('createPublication'),
                         'url' => array('publication/create'),
-                        'itemOptions' => array('id' => 'createPublicationNav'),
+                        'itemOptions' => array('id' => 'createNav'),
                         'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('create', 'publication')),
                     ),
                     array(
                         'label' => HApp::t('sendPublication'),
                         'url' => array('publication/send'),
-                        'itemOptions' => array('id' => 'sendPublicationNav'),
+                        'itemOptions' => array('id' => 'sendNav'),
                         'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('send', 'publication')),
                     ),
                 ),
