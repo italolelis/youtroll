@@ -128,8 +128,13 @@ class CFile extends CApplicationComponent
     public function resize($maxWidth = null, $maxHeight = null, $thumb = false) {
         if(($thumb) || (!is_null($maxWidth) && $this->_width > $maxWidth) || (!is_null($maxHeight) && $this->_height > $maxHeight)) {
             if($thumb) {
-                $newWidth = $maxWidth;
-                $newHeight = floor($this->_height * ($maxWidth / $this->_width));
+                if($this->_width > $this->_height) {
+                    $newWidth = $maxWidth;
+                    $newHeight = floor($this->_height * ($maxWidth / $this->_width));
+                } else {
+                    $newHeight = $maxHeight;
+                    $newWidth = floor($this->_width * ($maxHeight / $this->_height));
+                }
             } else {
                 if($this->_width > $maxWidth) {
                     $newWidth = $maxWidth;
