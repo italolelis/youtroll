@@ -40,8 +40,8 @@ class HView
 	    'success' => "function(response) {
                 setTimeout(function() {
 		    removeLoading(function() {
-                    window.history.pushState('Object', 'Title', '".Yii::app()->createAbsoluteUrl("$controller/$view")."');
 			$('#view').html(response).fadeIn(125);
+                        window.history.pushState('Object', 'Title', '".Yii::app()->createAbsoluteUrl("$controller/$view")."');
 		    });
 		}, 250);
 	    }",
