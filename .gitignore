@@ -1,4 +1,5 @@
 rest/protected/runtime
+project/resources/img/user/*
 project/protected/runtime
 rest/assets
 project/assets
