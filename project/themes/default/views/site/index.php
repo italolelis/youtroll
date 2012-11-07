@@ -1,7 +1,5 @@
 <h2 class="page-title align-center"><?= HApp::t('slogan') ?></h2>
 
-<h6 class="section-title"><?= HApp::t('recentPublications') ?></h6>
-
 <?php
 $this->widget('ext.JCarousel.JCarousel', array(
     'dataProvider' => new CArrayDataProvider($recentPublications),
@@ -10,6 +8,7 @@ $this->widget('ext.JCarousel.JCarousel', array(
     'imageUrl' => 'Yii::app()->baseUrl . "/resources/img/user/{$data->owner}/{$data->image_path}"',
     'target' => '#',
     
+    'summaryText' => '<h6 class="section-title">'.HApp::t("recentPublications").'</h6>',
     'titleText' => '$data->title',
     'altText' => '$data->title',
     'categories' => 'Category::getNameByID($data->category)',

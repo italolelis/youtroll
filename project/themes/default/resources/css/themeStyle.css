@@ -1755,7 +1755,10 @@ h6.acc-trigger.active a { background-position: 20px -90px; }
     padding: 25px 0 0;
 }
 
-.section-title + .jcarousel-container { margin-top: 15px; } 
+h6.section-title {
+    top: 32px;
+    position: relative;
+} 
 
 .jcarousel-clip {
     overflow: hidden;
