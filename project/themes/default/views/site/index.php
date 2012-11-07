@@ -12,7 +12,7 @@
 
                 <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-<?= $totalPublications ?> jcarousel-item-<?= $totalPublications ?>-horizontal jcarousel-item-li" jcarouselindex="<?= $totalPublications ?>">
                     <a href="single-project.html">
-                        <?= CHtml::image(str_replace('.', '_thumb.', Yii::app()->baseUrl . "/resources/img/user/$publication->owner/$publication->image_path", $publication->title)) ?>
+                        <?= CHtml::image(str_replace('.', '_thumb.', Yii::app()->baseUrl . "/resources/img/user/$publication->owner/$publication->image_path"), $publication->title) ?>
                         <h5 class="title"><?= $publication->title ?></h5>
                         <span class="categories"><?= Category::getNameByID($publication->category) ?></span>
                     </a>
