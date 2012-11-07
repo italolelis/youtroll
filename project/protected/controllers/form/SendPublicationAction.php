@@ -56,7 +56,7 @@ class SendPublicationAction extends CAction
                         $this->_publicationFile->resize(620);
                         
                         if($this->_publicationFile->rename($this->_userPath . $model->image_path)) {
-                            $this->_publicationFile->resize(220, null, true);
+                            $this->_publicationFile->resize(220, 140, true);
                                     
                             HApp::ajaxResponse(array(
                                 'action' => 'redirect',
