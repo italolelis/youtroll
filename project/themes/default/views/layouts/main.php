@@ -6,8 +6,10 @@
     <body cz-shortcut-listen="true">
         <div id="container">
 	    <div id="body" class="center">
-		<header id="header" class="container clearfix">
-		    <?= $this->renderPartial('webroot.themes.' . Yii::app()->theme->name . '.views.layouts.' . Yii::app()->layout . '.header') ?>
+		<header id="header" class="clearfix">
+                    <div class="container">
+                        <?= $this->renderPartial('webroot.themes.' . Yii::app()->theme->name . '.views.layouts.' . Yii::app()->layout . '.header') ?>
+                    </div>
 		</header>
 		<div id="content" class="container clearfix">
                     <?= $this->renderPartial('webroot.themes.' . Yii::app()->theme->name . '.views.layouts.' . Yii::app()->layout . '.view', array('content' => $content)) ?>
