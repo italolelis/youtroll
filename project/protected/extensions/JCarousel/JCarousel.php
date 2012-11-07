@@ -398,7 +398,11 @@ class JCarousel extends CBaseListView
 	 */
 	public $summaryText = false;
 	
-
+        /**
+         * Adaptations...
+         */
+        public $categories = false;
+        
 	/**
 	 * Initializes the grid view.
 	 * This method will initialize required property values and instantiate {@link columns} objects.
@@ -552,7 +556,7 @@ class JCarousel extends CBaseListView
 			$image = '<img src="'.eval('return '.$this->thumbUrl.';').'" alt="'.$altText.'" '.$titleAttr.' />';
 			
 			if (isset($this->target))
-				echo '<li><a href="'.eval('return '.$this->imageUrl.';').'" class="'.eval('return '.$this->linkClass.';').'">'.$image.'</a></li>';
+				echo '<li><a href="'.eval('return '.$this->imageUrl.';').'" class="'.eval('return '.$this->linkClass.';').'">'.$image.($titleText ? '<h5 style="title">'.$titleText.'</h5>' : '').(eval('return '.$this->categories.';') ? '<span class="categories">'.eval('return '.$this->categories.';').'</span>' : '').'</a></li>';
 			else
 				echo '<li>'.$image.'</li>';
 		}
