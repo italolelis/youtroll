@@ -1600,13 +1600,13 @@ h6.acc-trigger.active a { background-position: 20px -90px; }
 /*	Projects Carousel
 /* -------------------------------------------------- */
 
-.no-js .projects-carousel, .no-js .post-carousel {
+.no-js .jcarousel-skin-yt, .no-js .post-carousel {
     border-top: 1px solid #efefef;
     margin: 15px -20px 60px 0;
     padding: 25px 0 0;
 }
 
-.projects-carousel > li, .post-carousel > li, #portfolio-items > article {
+.jcarousel-skin-yt > li, .post-carousel > li, #portfolio-items > article {
     float: left;
     list-style: none;
     margin: 0 20px 0 0;
@@ -1614,57 +1614,57 @@ h6.acc-trigger.active a { background-position: 20px -90px; }
     position: relative;
 }
 
-.projects-carousel > li, .post-carousel > li { width: 220px; }
+.jcarousel-skin-yt > li, .post-carousel > li { width: 220px; }
 
-.projects-carousel, #portfolio-items { font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; }
+.jcarousel-skin-yt, #portfolio-items { font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif; }
 
 .no-js .post-carousel > li {
     display: inline-block;
     float: none;
 }
 
-.no-js .projects-carousel > li, .no-js #portfolio-items > article { margin-bottom: 40px; }
+.no-js .jcarousel-skin-yt > li, .no-js #portfolio-items > article { margin-bottom: 40px; }
 
-.projects-carousel a, #portfolio-items article a {
+.jcarousel-skin-yt a, #portfolio-items article a {
     border-bottom: 1px solid #efefef;
     display: block;
     text-align: center;
     height: 220px;
 }
 
-.projects-carousel a { padding: 20px 0 0; }
+.jcarousel-skin-yt a { padding: 20px 0 0; }
 
 #portfolio-items article a, #portfolio-items article .audio-player, #portfolio-items article .video-player { margin: 0 auto; }
 
-.projects-carousel img, #portfolio-items article img {
+.jcarousel-skin-yt img, #portfolio-items article img {
     background-color: #fff;
     margin: 0 auto -5px;
     filter: alpha(opacity=70); /* Fallback for old IE */
     opacity: 0.7;
 }
 
-.no-js .projects-carousel img, .no-js #portfolio-items article img { margin-bottom: 0; }
+.no-js .jcarousel-skin-yt img, .no-js #portfolio-items article img { margin-bottom: 0; }
 
-.projects-carousel img { margin: -25px auto 20px; }
+.jcarousel-skin-yt img { margin: -25px auto 20px; }
 
-.projects-carousel .title, #portfolio-items > article .title {
+.jcarousel-skin-yt .title, #portfolio-items > article .title {
     font-weight: 400;
     margin-bottom: 0;
 }
 
-.projects-carousel > li .categories, #portfolio-items > article .categories {
+.jcarousel-skin-yt > li .categories, #portfolio-items > article .categories {
     color: #aeaeae;
     display: block;
     font-style: italic;
     margin: -1px 0 20px;
 }
 
-.projects-carousel a:hover, #portfolio-items > article:hover {
+.jcarousel-skin-yt a:hover, #portfolio-items > article:hover {
     background: #f8f8f8;
     border-bottom: 1px solid #db002f;
 }
 
-.not-ie .projects-carousel a:hover:after, .not-ie #portfolio-items > article:hover:after {
+.not-ie .jcarousel-skin-yt a:hover:after, .not-ie #portfolio-items > article:hover:after {
     background: #db002f;
     bottom: -2.5px;
     content: '';
@@ -1681,12 +1681,12 @@ h6.acc-trigger.active a { background-position: 20px -90px; }
     width: 5px;
 }
 
-.projects-carousel a:hover img, #portfolio-items > article:hover img {
+.jcarousel-skin-yt a:hover img, #portfolio-items > article:hover img {
     filter: alpha(opacity=100); /* Fallback for old IE */
     opacity: 1;
 }
 
-.projects-carousel a:hover .title, #portfolio-items > article:hover .title { color: #db002f; }
+.jcarousel-skin-yt a:hover .title, #portfolio-items > article:hover .title { color: #db002f; }
 
 /* -------------------------------------------------- */
 /*	Post Carousel
@@ -3089,7 +3089,7 @@ x:-o-prefocus, .not-ie #footer:before { display: none; } /* Fix for Opera */
     /*	Projects Carousel & Post Carousel
     /* ---------------------------------------- */
 
-    .projects-carousel > li, .post-carousel > li { width: 236px; }
+    .jcarousel-skin-yt > li, .post-carousel > li { width: 236px; }
 
     /* ---------------------------------------- */
     /*	Post Carousel
@@ -3458,7 +3458,7 @@ x:-o-prefocus, .not-ie #footer:before { display: none; } /* Fix for Opera */
     /*	Projects Carousel & Post Carousel
     /* ---------------------------------------- */
 
-    .projects-carousel > li, .post-carousel > li { width: 200px; }
+    .jcarousel-skin-yt > li, .post-carousel > li { width: 200px; }
 
     /* ---------------------------------------- */
     /*	Post Carousel
@@ -3577,7 +3577,7 @@ x:-o-prefocus, .not-ie #footer:before { display: none; } /* Fix for Opera */
     /*	Projects Carousel
     /* ---------------------------------------- */
 
-    .projects-carousel > li, .post-carousel > li { width: 300px; }
+    .jcarousel-skin-yt > li, .post-carousel > li { width: 300px; }
 
     /* ---------------------------------------- */
     /*	Post Carousel
