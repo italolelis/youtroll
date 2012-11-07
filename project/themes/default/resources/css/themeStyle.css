@@ -454,7 +454,7 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
 /* ---------------------------------------------------------------------- */
 
 #header {
-    border-bottom: 1px solid #efefef;
+    border-bottom: 1px dashed #eaeaea;
     height: 86px;
     z-index: 97;
 }
@@ -1629,6 +1629,7 @@ h6.acc-trigger.active a { background-position: 20px -90px; }
     border-bottom: 1px solid #efefef;
     display: block;
     text-align: center;
+    height: 220px;
 }
 
 .projects-carousel a { padding: 20px 0 0; }
@@ -3692,9 +3693,4 @@ x:-o-prefocus, .not-ie #footer:before { display: none; } /* Fix for Opera */
     padding: 0px;
     left: 0px;
     width: 2020px;
-}
-
-.jcarousel-item-li {
-    float: left;
-    list-style: none;
 }
