@@ -5,47 +5,43 @@
         <?= CHtml::button($owner->email, array('class' => 'button large channelStyle')) ?>
         <?= CHtml::button(HApp::t('subscribe'), array('class' => 'button large')) ?>
     </div>
-    
+
     <div id="image" class="marginTop">
         <?= CHtml::image(Yii::app()->baseUrl . "/resources/img/user/$publication->owner/$publication->image_path", $publication->title) ?>
     </div>
-    
+
     <div id="guestUser" class="infobox displayNone">
         <span>
             <?php
             echo Yii::t('app', 'guest', array(
-                    '{login}' => CHtml::link(HApp::t('accessAccount'), array('user/login'), array(
-                        'ajax' => HView::getAjaxMenuArrayConfig('login', 'user')
-                    )),
-                    '{signUp}' => CHtml::link(HApp::t('signUp'), array('user/singUp'), array(
-                        'ajax' => HView::getAjaxMenuArrayConfig('signUp', 'user')
-                    )),
-                ));
+                '{login}' => CHtml::link(HApp::t('accessAccount'), array('user/login'), array(
+                    'ajax' => HView::getAjaxMenuArrayConfig('login', 'user')
+                )),
+                '{signUp}' => CHtml::link(HApp::t('signUp'), array('user/singUp'), array(
+                    'ajax' => HView::getAjaxMenuArrayConfig('signUp', 'user')
+                )),
+            ));
             ?>
         </span>
     </div>
-    
+
     <div id="imageButtonsStats">
         <div id="imageButtons" class="displayInline">
             <?php
-            echo CHtml::ajaxButton(HApp::t('like'), array('publication/assess'),
-                    HView::getAjaxSubmitButtonConfig(array('publication' => HSecurity::urlEncode($publication->id), 'like' => true)),
-                    array(
-                        'id' => 'likeButton',
-                        'class' => 'button medium buttonStyle likeButton' . (is_null($review->like) ? '' : ($review->like ? ' active' : '')),
-                        'live' => false,
+            echo CHtml::ajaxButton(HApp::t('like'), array('publication/assess'), HView::getAjaxSubmitButtonConfig(array('publication' => HSecurity::urlEncode($publication->id), 'like' => true)), array(
+                'id' => 'likeButton',
+                'class' => 'button medium buttonStyle likeButton' . (is_null($review->like) ? '' : ($review->like ? ' active' : '')),
+                'live' => false,
                     )
-                );
+            );
             ?>
             <?php
-            echo CHtml::ajaxButton(HApp::t(''), array('publication/assess'),
-                    HView::getAjaxSubmitButtonConfig(array('publication' => HSecurity::urlEncode($publication->id), 'like' => false)),
-                    array(
-                        'id' => 'unlikeButton',
-                        'class' => 'button medium buttonStyle unlikeButton' . (is_null($review->like) ? '' : (!$review->like ? ' active' : '')),
-                        'live' => false,
+            echo CHtml::ajaxButton(HApp::t(''), array('publication/assess'), HView::getAjaxSubmitButtonConfig(array('publication' => HSecurity::urlEncode($publication->id), 'like' => false)), array(
+                'id' => 'unlikeButton',
+                'class' => 'button medium buttonStyle unlikeButton' . (is_null($review->like) ? '' : (!$review->like ? ' active' : '')),
+                'live' => false,
                     )
-                );
+            );
             ?>
             <?= CHtml::button(HApp::t('share'), array('class' => 'button medium buttonStyle marginLeft')) ?>
             <?= CHtml::button('', array('class' => 'button medium buttonStyle signalButton')) ?>
@@ -54,9 +50,9 @@
             <h3 class="alignRight"><?= $publication->hits + $publication->fake_hits ?></h3>
             <?php
             $reviews = $stats->likes + $stats->unlikes;
-            
+
             $this->widget('zii.widgets.jui.CJuiProgressBar', array(
-                'value' => ($stats->likes * 100) / ($reviews ?: 1),
+                'value' => ($stats->likes * 100) / ($reviews ? : 1),
                 'cssFile' => '',
                 'htmlOptions' => array(
                     'id' => 'likes-unlikes',
@@ -67,11 +63,11 @@
             <p class="alignRight"><?= Yii::t('app', 'publicationStats', array('{likes}' => $stats->likes, '{unlikes}' => $stats->unlikes)) ?></p>
         </div>
     </div>
-    
+
     <div id="imageDate" class="marginTop">
-        <?= Yii::t('app', $owner->name ? 'publicationDateWithName' : 'publicationDate', array('{date}' => $publication->record, '{name}' => $owner->name)); ?>
+<?= Yii::t('app', $owner->name ? 'publicationDateWithName' : 'publicationDate', array('{date}' => $publication->record, '{name}' => $owner->name)); ?>
     </div>
-    
+
     <div id="imageDescription" class="infobox">
         <div><?= $publication->description ?></div>
         <div class="marginTop">
@@ -81,6 +77,23 @@
             <p><?= HApp::t('defaultLicense') ?></p>
         </div>
     </div>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ytroll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Por favor habilite seu javascript para ver os comentários.</a></noscript>
+
 </div>
 
 <div class="one-third">
