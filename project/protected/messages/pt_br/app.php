@@ -10,7 +10,7 @@ return array(
     'powered' => '© 2012 You Troll - Todos os Direitos Reservados.',
     
     // Contact
-    'contactEmail' => 'contato@youtroll.com.br',
+    'contactEmail' => 'youtroll@youtroll.com.br',
     
     // Páginas Gerais - Visíveis a todos os usuários
     'home' => 'Início',
