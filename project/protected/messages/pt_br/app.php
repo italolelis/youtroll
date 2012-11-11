@@ -9,6 +9,9 @@ return array(
     'keywords' => 'imagens, engraçadas, tirinhas, memes, quadrinhos, trollagens, montagens',
     'powered' => '© 2012 You Troll - Todos os Direitos Reservados.',
     
+    // Contact
+    'contactEmail' => 'contato@youtroll.com.br',
+    
     // Páginas Gerais - Visíveis a todos os usuários
     'home' => 'Início',
     
@@ -93,7 +96,6 @@ return array(
     'emailInvalid' => 'E-mail inválido.',
     'imageUnselected' => 'Selecione uma imagem.',
     'invalidCharacters' => 'Caracteres inválidos.',
-    'invalidTags' => 'As TAGs devem ser separadas por "," e não devem conter caracteres especiais.',
     'requiredField' => 'Este campo é obrigatório.',
     'invalidAccess' => 'Dados de acesso inválidos.',
     'invalidOption' => 'A opção selecionada não existe.',
@@ -103,6 +105,7 @@ return array(
     'tooShort' => 'Este campo, deve ter no mínimo {min} caracteres.',
     'tooMany' => 'Você pode enviar no máximo {maxFiles} arquivo(s).',
     'wrongType' => 'O tipo do arquivo enviado não é suportado. Os tipos permitidos são: {types}.',
+    'invalidTags' => 'As TAGs devem ser separadas por "," e não devem conter caracteres especiais.',
     'passwordStrength' => 'A senha deve ter 8 caracteres, letras (maiúsculas e minúsculas), números e caracteres especiais.',
     
     // Extensão EAjaxUpload

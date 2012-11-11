@@ -1,37 +1,42 @@
 <div class="container">
-    <div class="three-fourth">
+    <div id="footer-nav" class="clearfix">
+        <?php
+        $this->widget('zii.widgets.CMenu', array(
+            'id' => 'footerMenu',
+//            'activeCssClass' => 'current',
+            'items' => array(
+                array(
+                    'label' => HApp::t('home'),
+                    'url' => array('site/index'),
+                    'itemOptions' => array('id' => 'indexNav'),
+                    'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('index', 'site')),
+                ),
+                array(
+                    'label' => HApp::t('categories'),
+                    'url' => array('site/categories'),
+                    'items' => $categories,
+                    'itemOptions' => array('id' => 'categoriesNav'),
+                    'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('categories', 'site')),
+                ),
+                array(
+                    'label' => HApp::t('about'),
+                    'url' => array('site/about'),
+                    'itemOptions' => array('id' => 'aboutNav'),
+                    'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('about')),
+                ),
+            ),
+        ));
+        ?>
+    </div>
 
-        <nav id="footer-nav" class="clearfix">
+    <ul class="contact-info">
+        <li class="email"><?= CHtml::link(HApp::t('contactEmail'), 'mailto:'.HApp::t('contactEmail')) ?></li>
+    </ul>
 
-            <ul>
-                <li><a href="<?= Yii::app()->baseUrl ?>">Home</a></li>
-                <li><a href="<?= Yii::app()->baseUrl . "/about" ?>">Sobre</a></li>
-                <li><a href="<?= Yii::app()->baseUrl . "/terms" ?>">Termos de privacidade</a></li>
-                <li><a href="<?= Yii::app()->baseUrl . "/contact" ?>">Contato</a></li>
-            </ul>
-
-        </nav><!-- end #footer-nav -->
-
-        <ul class="contact-info">
-            <li class="address">012 Some Street. New York, NY, 12345. USA</li>
-            <li class="phone">(123) 456-7890</li>
-            <li class="email"><a href="mailto:contato@youtroll.com.br">contato@youtroll.com.br</a></li>
-        </ul><!-- end .contact-info -->
-
-    </div><!-- end .three-fourth -->
-
-    <div class="one-fourth last">
-
-        <span class="title"><?= HApp::t('Esteja em contato'); ?></span>
-
-        <ul class="social-links">
-            <li class="twitter"><a href="#">Twitter</a></li>
-            <li class="facebook"><a href="#">Facebook</a></li>
-            <li class="digg"><a href="#">Digg</a></li>
-            <li class="vimeo"><a href="#">Vimeo</a></li>
-            <li class="youtube"><a href="#">YouTube</a></li>
-            <li class="skype"><a href="#">Skype</a></li>
-        </ul><!-- end .social-links -->
-
-    </div><!-- end .one-fourth.last -->
+    <ul class="social-links floatRight">
+        <li class="twitter"><a href="#">Twitter</a></li>
+        <li class="facebook"><a href="#">Facebook</a></li>
+        <li class="googleplus"><a href="#">Google Plus</a></li>
+        <li class="rss"><a href="#">RSS</a></li>
+    </ul>
 </div>
