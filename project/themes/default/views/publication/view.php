@@ -28,18 +28,20 @@
     <div id="imageButtonsStats">
         <div id="imageButtons" class="displayInline">
             <?php
-            echo CHtml::ajaxButton(HApp::t('like'), array('publication/assess'), HView::getAjaxSubmitButtonConfig(array('publication' => HSecurity::urlEncode($publication->id), 'like' => true)), array(
-                'id' => 'likeButton',
-                'class' => 'button medium buttonStyle likeButton' . (is_null($review->like) ? '' : ($review->like ? ' active' : '')),
-                'live' => false,
+            echo CHtml::ajaxButton(HApp::t('like'), array('publication/assess'), HView::getAjaxSubmitButtonConfig(array('publication' => HSecurity::urlEncode($publication->id), 'like' => true)),
+                    array(
+                        'id' => 'likeButton',
+                        'class' => 'button medium buttonStyle likeButton' . (is_null($review->like) ? '' : ($review->like ? ' active' : '')),
+                        'live' => false,
                     )
             );
             ?>
             <?php
-            echo CHtml::ajaxButton(HApp::t(''), array('publication/assess'), HView::getAjaxSubmitButtonConfig(array('publication' => HSecurity::urlEncode($publication->id), 'like' => false)), array(
-                'id' => 'unlikeButton',
-                'class' => 'button medium buttonStyle unlikeButton' . (is_null($review->like) ? '' : (!$review->like ? ' active' : '')),
-                'live' => false,
+            echo CHtml::ajaxButton(HApp::t(''), array('publication/assess'), HView::getAjaxSubmitButtonConfig(array('publication' => HSecurity::urlEncode($publication->id), 'like' => false)),
+                    array(
+                        'id' => 'unlikeButton',
+                        'class' => 'button medium buttonStyle unlikeButton' . (is_null($review->like) ? '' : (!$review->like ? ' active' : '')),
+                        'live' => false,
                     )
             );
             ?>
@@ -65,7 +67,7 @@
     </div>
 
     <div id="imageDate" class="marginTop">
-<?= Yii::t('app', $owner->name ? 'publicationDateWithName' : 'publicationDate', array('{date}' => $publication->record, '{name}' => $owner->name)); ?>
+        <?= Yii::t('app', $owner->name ? 'publicationDateWithName' : 'publicationDate', array('{date}' => $publication->record, '{name}' => $owner->name)); ?>
     </div>
 
     <div id="imageDescription" class="infobox">
@@ -78,22 +80,20 @@
         </div>
     </div>
 
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'ytroll'; // required: replace example with your forum shortname
+    <div id="imageComments">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'ytroll';
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Por favor habilite seu javascript para ver os comentários.</a></noscript>
-
+            (function() {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+    </div>
 </div>
 
 <div class="one-third">
