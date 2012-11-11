@@ -8,6 +8,10 @@ return array(
         'pt_br',
     ),
     
+    'hitsValue' => 1,
+    'likesValue' => 5,
+    'unlikesValue' => 5,
+    
     'systemListeners' => array(
 	'listener@youtroll.com.br',
     ),
