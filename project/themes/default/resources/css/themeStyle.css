@@ -436,15 +436,15 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
 
 .one-half.last, .one-third.last, .two-third.last, .one-fourth.last, .three-fourth.last { margin-right: 0px; }
 
-.one-half { width: 460px; }
+.one-half { width: 480px; }
 
-.one-third { width: 300px; }
+.one-third { width: 360px; }
 
 .two-third { width: 620px; }
 
-.one-fourth { width: 220px; }
+.one-fourth { width: 240px; }
 
-.three-fourth { width: 700px; }
+.three-fourth { width: 740px; }
 
 /* ---------------------------------------------------------------------- */
 /*	Header
