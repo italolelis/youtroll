@@ -11,16 +11,10 @@ class PublicationController extends Controller {
     }
 
     public function actionList() {
+        $order = HApp::getRequest('GET', 'scope') ?: 'noScope';
         $limit = HApp::getRequest('GET', 'limit');
         
-        switch (HApp::getRequest('GET', 'order')) {
-            case 'recent':
-                HApp::ajaxResponse($this->model->with('category')->orderByRecent()->limit($limit)->findAll(), $this->model->getAttributesPrefix());
-                break;
-            default:
-                HApp::ajaxResponse($this->model->limit($limit)->findAll(), $this->model->getAttributesPrefix());
-                break;
-        }
+        HApp::ajaxResponse($this->model->$order()->limit($limit)->findAll(), $this->model->getAttributesPrefix());
     }
     
     public function actionInsert() {
