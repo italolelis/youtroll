@@ -8,36 +8,21 @@ class IndexAction extends CAction
         if (strpos(Yii::app()->request->getRequestUri(), 'site') !== false || strpos(Yii::app()->request->getRequestUri(), 'index') !== false) {
 	    HApp::throwException(404);
 	}
-        
-        $view = HApp::getRequest('GET', 'view');
-        
-        if(!empty($view)) {
-            $idPublication = HSecurity::urlDecode($view);
-            
-            $publication = PersistenceServer::connect("publication/$idPublication", 'GET');
-            
-            if($publication->status) {
-                $owner = PersistenceServer::connect("user/{$publication->model->owner}", 'GET');
-                $reviewUser = PersistenceServer::connect("reviewUser/{$publication->model->id}", 'GET');
-                
-                if($owner->status) {
-                    $this->controller->render('//publication/view', array(
-                        'publication' => $publication->model,
-                        'stats' => $publication->stats,
-                        'owner' => $owner->model,
-                        'review' => $reviewUser->model,
-                    ));
-                    Yii::app()->end();
-                }
-            }
-            
-            HApp::throwException(404);
-        }
 
-        $recentPublications = PersistenceServer::connect('publication', 'GET', array('order' => 'recent', 'limit' => Yii::app()->params['maxPublications']));
+        $recentPublications = PersistenceServer::connect('publication', 'GET', array('scope' => 'recent', 'limit' => Yii::app()->params['maxPublications']));
+        $mostViewedPublications = PersistenceServer::connect('publication', 'GET', array('scope' => 'hits', 'limit' => Yii::app()->params['maxPublications']));
+        $popularPublications = PersistenceServer::connect('publication', 'GET', array('scope' => 'popular', 'limit' => Yii::app()->params['maxPublications']));
+        $lessViewedPublications = PersistenceServer::connect('publication', 'GET', array('scope' => 'lowHits', 'limit' => Yii::app()->params['maxPublications']));
+        
+        $renderParams = array(
+            'recentPublications' => $recentPublications,
+            'popularPublications' => $popularPublications,
+            'mostViewedPublications' => $mostViewedPublications,
+            'lessViewedPublications' => $lessViewedPublications,
+        );
         
         if (Yii::app()->request->isAjaxRequest) {
-	    $this->controller->renderPartial('index', array('recentPublications' => $recentPublications), false, true);
+	    $this->controller->renderPartial('index', $renderParams, false, true);
 	    Yii::app()->end();
 	}
         
@@ -46,7 +31,7 @@ class IndexAction extends CAction
 	    Yii::app()->user->setState('errorMessage', null);
 	}
         
-        $this->controller->render('index', array('recentPublications' => $recentPublications));
+        $this->controller->render('index', $renderParams);
     }
 
 }
