@@ -26,6 +26,10 @@ class Table extends CActiveRecord
         $this->setAttribute($this->getAttributesPrefix() . 'fk_' . $name, $value);
     }
     
+    public function noScope() {
+        return $this;
+    }
+    
     public function limit($limit)
     {
         $this->getDbCriteria()->mergeWith(array(
