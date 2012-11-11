@@ -2442,7 +2442,7 @@ input[type="reset"] {
 }
 
 .not-ie #footer:before {
-    background: #fff;
+    background: #f5f5f5;
     content: '';
     left: 50%;
     display: block;
