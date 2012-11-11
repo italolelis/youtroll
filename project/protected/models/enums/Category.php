@@ -3,12 +3,15 @@
 class Category
 {
 
-    CONST ADULT = 1;
-    CONST ANIMATION = 2;
-    CONST ASSEMBLY = 3;
-    CONST MEME = 4;
-    CONST STRIP = 5;
-
+    CONST ANIMATION = 1;
+    CONST ASSEMBLY = 2;
+    CONST BLACK_HUMOR = 3;
+    CONST DOUBLE_ENTENDRE = 4;
+    CONST JOKE = 5;
+    CONST MEME = 6;
+    CONST MINDFUCK = 7;
+    CONST STRIP = 8;
+    
     public static function getName($keyName) {
         return HApp::t($keyName, 'categories');
     }
@@ -16,10 +19,13 @@ class Category
     public static function getCategories()
     {
         return array(
-            self::ADULT => Category::getName('adult'),
             self::ANIMATION => Category::getName('animation'),
             self::ASSEMBLY => Category::getName('assembly'),
+            self::BLACK_HUMOR => Category::getName('blackHumor'),
+            self::DOUBLE_ENTENDRE => Category::getName('doubleEntendre'),
+            self::JOKE => Category::getName('joke'),
             self::MEME => Category::getName('meme'),
+            self::MINDFUCK => Category::getName('mindfuck'),
             self::STRIP => Category::getName('strip'),
         );
     }

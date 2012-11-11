@@ -8,9 +8,12 @@
 
 return array(
     // Categorias
-    'adult' => '18+',
     'animation' => 'GIFs & Animações',
     'assembly' => 'Montagens',
+    'blackHumor' => 'Humor Negro',    
+    'doubleEntendre' => 'Duplo Sentido',
+    'joke' => 'Piadas',
     'meme' => 'Memes',
+    'mindfuck' => 'Confusão Cerebral',
     'strip' => 'Tirinhas',
 );
