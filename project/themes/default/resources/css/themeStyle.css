@@ -34,9 +34,6 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-::-moz-selection { background: #db002f; color: #fff; text-shadow: none; }
-::selection { background: #db002f; color: #fff; text-shadow: none; }
-
 h1, h2, h3, h4, h5, h6 {
     color: #474747;
     font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
@@ -601,7 +598,9 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
 /*	Content
 /* ---------------------------------------------------------------------- */
 
-#content { padding-top: 40px; }
+#content {
+    padding: 40px 10px 40px 10px;
+}
 
 .ie7 #content { padding-top: 25px; }
 
@@ -2433,7 +2432,6 @@ input[type="reset"] {
 #footer {
     background: #3a3a3a;
     color: #868686;
-    margin-top: 80px;
     padding: 35px 0 30px;
     position: relative;
 }

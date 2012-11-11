@@ -1,5 +1,6 @@
 div#body {
-    background-image: url("../img/background.png");
+    /*background-image: url("../img/background.png");*/
+    background-color: #ffffff;
 }
 
 .loader {
