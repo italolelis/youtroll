@@ -54,9 +54,12 @@ return array(
                 array('admin/<controller>/delete', 'pattern' => 'admin/<controller:\w+>/<id:\d+>', 'verb' => 'DELETE'),
                 array('admin/<controller>/create', 'pattern' => 'admin/<controller:\w+>', 'verb' => 'POST'),
                 
-                '' => array('site/index'),
                 'admin' => array('admin/panel'),
-                'view/<id:\w+>' => array('site/index/view/<id>'),
+                
+                '' => array('site/index'),
+                '<action:(login|logout)>' => 'user/<action>',
+                '<action:(view)>/<id:\w+>' => 'publication/<action>/view/<id>',
+//                'view' => array('site/index'),
 		'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
 	    ),
 	),
