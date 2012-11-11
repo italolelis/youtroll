@@ -3,7 +3,6 @@
         <?php
         $this->widget('zii.widgets.CMenu', array(
             'id' => 'footerMenu',
-//            'activeCssClass' => 'current',
             'items' => array(
                 array(
                     'label' => HApp::t('home'),
