@@ -1,5 +1,13 @@
 <!DOCTYPE html>
-<html lang="<?= Yii::app()->getLanguage() ?>">
+<!--[if IE 7]>
+    <html class="ie7 no-js" lang="en">
+<![endif]-->
+<!--[if lte IE 8]>
+    <html class="ie8 no-js" lang="en">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+    <html lang="<?= Yii::app()->getLanguage() ?>" class="not-ie no-js">
+<!--<![endif]-->
     <head>
 	<?= $this->renderPartial('webroot.themes.' . Yii::app()->theme->name . '.views.layouts.' . Yii::app()->layout . '.head') ?>
     </head>
