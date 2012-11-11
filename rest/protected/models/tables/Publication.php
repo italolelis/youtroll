@@ -33,10 +33,10 @@ class Publication extends Table
                 'order' => 'pbct_record DESC',
             ),
             'hits' => array(
-                'order' => 'pbct_hits + pbct_fake_hits DESC',
+                'order' => 'pbct_hits + pbct_fake_hits DESC, pbct_record ASC',
             ),
             'lowHits' => array(
-                'order' => 'pbct_hits + pbct_fake_hits ASC',
+                'order' => 'pbct_hits + pbct_fake_hits ASC, pbct_record ASC',
             ),
             'popular' => array(
                 'join' => 'LEFT JOIN tb_reviews_users ON rvw_usr_fk_publication = pbct_id',
