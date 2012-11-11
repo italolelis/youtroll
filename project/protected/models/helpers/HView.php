@@ -29,13 +29,13 @@ class HView
 	    'beforeSend' => "function() {
 //		if($('#{$view}Nav').hasClass('current')) { return false; }
 		
+                showLoading('" . HApp::t('loading') . "');
+
 		$('#menu').children('li.current').removeClass('current');
 		$('#menu').children('li').children('ul').children('li').removeClass('current');
 		$('#{$view}Nav').addClass('current');
 		$('#{$view}Nav').parent().parent().addClass('current');
                 $('#messages').empty();
-
-		showLoading('" . HApp::t('loading') . "');
 	    }",
 	    'success' => "function(response) {
                 setTimeout(function() {
@@ -75,6 +75,7 @@ class HView
                             $('#' + response.menuOption + 'Nav').children('a').click();
                             break;
                         case 'renderView':
+                            showLoading('" . HApp::t('loading') . "');
                             $('#view').html(response.view);
                             break;
                         case 'redirect':
