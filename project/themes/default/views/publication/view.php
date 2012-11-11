@@ -97,5 +97,7 @@
 </div>
 
 <div class="one-third">
-    Tirinhas Relacionadas Aqui
+    <div class="infobox">
+        Tirinhas Relacionadas Aqui
+    </div>
 </div>
