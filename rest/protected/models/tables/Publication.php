@@ -27,6 +27,31 @@ class Publication extends Table
 {
     protected $attributesPrefix = 'pbct_';
     
+    public function scopes() {
+        return array(
+            'recent' => array(
+                'order' => 'pbct_record DESC',
+            ),
+            'hits' => array(
+                'order' => 'pbct_hits + pbct_fake_hits DESC',
+            ),
+            'lowHits' => array(
+                'order' => 'pbct_hits + pbct_fake_hits ASC',
+            ),
+            'popular' => array(
+                'join' => 'LEFT JOIN tb_reviews_users ON rvw_usr_fk_publication = pbct_id',
+                'group' => 'pbct_id',
+                'order' => '
+                    (
+                    (pbct_hits * '.Yii::app()->params['hitsValue'].') +
+                    ((SUM(CASE WHEN rvw_usr_like IS TRUE THEN 1 ELSE 0 END)) * '.Yii::app()->params['likesValue'].') -
+                    ((SUM(CASE WHEN rvw_usr_like IS FALSE THEN 1 ELSE 0 END)) * '.Yii::app()->params['unlikesValue'].')
+                    ) DESC, pbct_record ASC;
+                ',
+            ),
+        );
+    }
+    
     /**
      * Returns the static model of the specified AR class.
      * @param string $className active record class name.
@@ -79,6 +104,7 @@ class Publication extends Table
             'category' => array(self::BELONGS_TO, 'Category', 'pbct_fk_category'),
             'channel' => array(self::BELONGS_TO, 'Channel', 'pbct_fk_channel'),
             'owner' => array(self::BELONGS_TO, 'User', 'pbct_fk_owner'),
+            'revisionsUsers' => array(self::HAS_MANY, 'ReviewUser', 'rvw_usr_fk_publication'),
             'publicationComments' => array(self::HAS_MANY, 'PublicationComment', 'pbct_cmnt_fk_publication'),
             'tags' => array(self::MANY_MANY, 'Tag', 'tb_publications_tags(pbct_tag_fk_publication, pbct_tag_fk_tag)'),
             'reviewers' => array(self::MANY_MANY, 'User', 'tb_reviews_users(rvw_usr_fk_publication, rvw_usr_fk_user)'),
@@ -129,14 +155,5 @@ class Publication extends Table
         return new CActiveDataProvider($this, array(
             'criteria'=>$criteria,
         ));
-    }
-    
-    public function orderByRecent()
-    {
-        $this->getDbCriteria()->mergeWith(array(
-            'order' => 'pbct_record DESC',
-        ));
-        
-        return $this;
     }
 }
