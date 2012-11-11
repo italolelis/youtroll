@@ -1,3 +1,4 @@
+<div class="infobox">
 <?php
 $this->widget('ext.JCarousel.JCarousel', array(
     'dataProvider' => new CArrayDataProvider($publications),
@@ -17,3 +18,4 @@ $this->widget('ext.JCarousel.JCarousel', array(
     'clickCallback' => '',
 ));
 ?>
+</div>
