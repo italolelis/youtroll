@@ -9,8 +9,8 @@ return array(
     ),
     
     'hitsValue' => 1,
-    'likesValue' => 5,
-    'unlikesValue' => 5,
+    'likesValue' => 50,
+    'unlikesValue' => 25,
     
     'systemListeners' => array(
 	'listener@youtroll.com.br',
