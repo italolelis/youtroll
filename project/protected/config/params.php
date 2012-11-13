@@ -16,4 +16,11 @@ return array(
     'systemListeners' => array(
 	'listener@youtroll.com.br',
     ),
+    
+    'team' => array(
+        'Fabiano Carneiro de Oliveira',
+        'Ítalo Lelis de Vietro',
+        'João de Araújo Pessoa Neto',
+        'José Rodolfo Almeida',
+    ),
 );
