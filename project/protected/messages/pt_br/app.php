@@ -10,7 +10,8 @@ return array(
     'powered' => '© 2012 You Troll - Todos os Direitos Reservados.',
     
     // Contact
-    'contactEmail' => 'youtroll@youtroll.com.br',
+    'contactEmail' => 'contato@youtroll.com.br',
+    'jobsEmail' => 'empregos@youtroll.com.br',
     
     // Páginas Gerais - Visíveis a todos os usuários
     'home' => 'Início',
@@ -33,7 +34,7 @@ return array(
     
     
     // Títulos
-    'aboutTitle' => 'Sobre o YouTroll',
+    'aboutTitle' => 'Diversão em um único lugar!',
     'controlPanelTitle' => 'Painel de Controle do Usuário',
     
     // Linguagens
