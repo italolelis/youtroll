@@ -72,10 +72,10 @@
 
     <div id="imageDescription" class="infobox">
         <div><?= $publication->description ?></div>
-        <div class="marginTop">
-            <strong><?= HApp::t('category') ?>:</strong>
+        <div>
+            <p class="marginTop"><strong><?= HApp::t('category') ?>:</strong></p>
             <p><?= Category::getNameByID($publication->category) ?>:</p>
-            <strong><?= HApp::t('license') ?>:</strong>
+            <p class="marginTop"><strong><?= HApp::t('license') ?>:</strong></p>
             <p><?= HApp::t('defaultLicense') ?></p>
         </div>
     </div>

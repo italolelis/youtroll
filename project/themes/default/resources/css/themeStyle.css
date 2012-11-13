@@ -19,7 +19,9 @@ ol { list-style: decimal; }
 ul { list-style: disc; }
 li { margin-left: 30px; }
 img { margin-bottom: 5px; }
-dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset,blockquote,article,p { margin-bottom: 20px; }
+dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address,fieldset,blockquote,article,p {
+    /*margin-bottom: 20px;*/
+}
 
 /* ---------------------------------------------------------------------- */
 /*	Basic Elements & Classes
@@ -39,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
     font-weight: 400;
     line-height: 1.25;
-    margin-bottom: 15px;
+    /*margin-bottom: 15px;*/
 }
 
 h3, h4, h5 { font-weight: 600; }
@@ -430,7 +432,7 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
 
 .one-half, .one-third, .two-third, .one-fourth, .three-fourth {
     float: left;
-    margin-left: 5px;
+    /*margin-left: 5px;*/
     margin-right: 5px;
 }
 
@@ -604,7 +606,7 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
 /* ---------------------------------------------------------------------- */
 
 #content {
-    padding: 25px 10px 25px 10px;
+    padding: 0px 10px 0px 10px;
 }
 
 .ie7 #content { padding-top: 25px; }
@@ -632,7 +634,7 @@ input.placeholder, textarea.placeholder { color: #b0b0b0; }
     padding: 0 0 15px;
 }
 
-.page-title { margin-top: 0; }
+.page-title { margin-top: 20px; }
 
 .page-subdescription { font-size: 20px; }
 
@@ -2716,7 +2718,7 @@ x:-o-prefocus, .not-ie #footer:before { display: none; } /* Fix for Opera */
     margin: 0;
 }
 
-#footer-bottom li:first-child { margin-right: 15px; }
+/*#footer-bottom li:first-child { margin-right: 15px; }*/
 
 #footer-bottom li a {
     border-left: 1px solid #484848;
