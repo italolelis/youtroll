@@ -15,9 +15,11 @@
             <?php
             echo Yii::t('app', 'guest', array(
                 '{login}' => CHtml::link(HApp::t('accessAccount'), array('user/login'), array(
+                    'id' => 'loginLink',
                     'ajax' => HView::getAjaxMenuArrayConfig('login', 'user')
                 )),
-                '{signUp}' => CHtml::link(HApp::t('signUp'), array('user/singUp'), array(
+                '{signUp}' => CHtml::link(HApp::t('signUp'), array('user/signUp'), array(
+                    'id' => 'signUpLink',
                     'ajax' => HView::getAjaxMenuArrayConfig('signUp', 'user')
                 )),
             ));
