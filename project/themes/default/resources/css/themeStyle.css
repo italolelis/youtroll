@@ -292,9 +292,9 @@ ul.dotted + ul.dotted:before {
     padding: 0 0 0 24px;
 }
 
-.arrow li { background: url(../img/list-arrow.png) no-repeat 5px 5px; }
+.arrow li { background: url(../img/list-arrow.png) no-repeat 5px 4px; }
 
-.arrow-2 li { background: url(../img/list-arrow-2.png) no-repeat 2px 4px; }
+.arrow-2 li { background: url(../img/list-arrow-2.png) no-repeat 2px 3px; }
 
 .circle li { background: url(../img/list-circle.png) no-repeat 4px 5px; }
 

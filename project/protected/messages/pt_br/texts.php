@@ -1,6 +1,7 @@
 <?php
 
 return array(
+    // About
     'about_1_1.1' => 'O <strong>YouTroll</strong>, é uma rede de compartilhamento de conteúdo cômico.',
     'about_1_1.2' => 'A proposta é oferecer um local onde os usuários possam visualizar imagens de diversos canais, em um só local, além de possuirem liberdade de publicar suas próprias criações de forma fácil e rápida.',
     
@@ -22,4 +23,37 @@ return array(
     'about_2_2' => 'Participe',
     'about_2_2.1' => 'Deseja colaborar com o YouTroll?',
     'about_2_2.2' => 'Envie-nos seu CV e faça parte de nossa equipe.',
+    
+    // Terms
+    'terms_revision' => '<strong>Data da Última Revisão:</strong> 14/11/2012',
+    'terms_1_1.1' => 'O idioma da versão original deste acordo é o português (Brasil).',
+    'terms_1_1.2' => 'Em caso de conflito de qualquer versão traduzida deste acordo com a versão em português, a versão em português prevalecerá.',
+    
+    'terms_1_2' => 'Declaração de Direitos e Responsabilidades',
+    'terms_1_2.1' => '',
+    
+    'terms_1_3' => 'Aceitação',
+    'terms_1_3.1' => '',
+    
+    'terms_1_4' => 'Privacidade',
+    'terms_1_4.1' => '',
+    
+    'terms_1_5' => 'Compartilhando Conteúdo e Informação',
+    'terms_1_5.1' => '',
+    
+    'terms_1_6' => 'Segurança',
+    'terms_1_6.1' => '',
+    
+    'terms_1_7' => 'Proteção dos Direitos de Outras Pessoas',
+    'terms_1_7.1' => '',
+    
+    'terms_1_8' => 'Alterações',
+    'terms_1_8.1' => '',
+    
+    'terms_1_9' => 'Conclusão',
+    'terms_1_9.1' => '',
+    
+    'terms_1_' => '',
+    'terms_1_.1' => '',
+    
 );

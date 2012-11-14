@@ -10,7 +10,7 @@
                     'label' => HApp::t('terms'),
                     'url' => array('site/terms'),
                     'itemOptions' => array('id' => 'termsNav'),
-                    'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('terms', 'site')),
+                    'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('terms')),
                 ),
             ),
             'htmlOptions' => array('class' => 'floatRight'),
