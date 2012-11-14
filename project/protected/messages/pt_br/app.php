@@ -11,7 +11,7 @@ return array(
     
     // Contact
     'contactEmail' => 'contato@youtroll.com.br',
-    'jobsEmail' => 'empregos@youtroll.com.br',
+    'jobsEmail' => 'oportunidades@youtroll.com.br',
     
     // Páginas Gerais - Visíveis a todos os usuários
     'home' => 'Início',
