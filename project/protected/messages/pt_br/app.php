@@ -16,8 +16,9 @@ return array(
     // Páginas Gerais - Visíveis a todos os usuários
     'home' => 'Início',
     'about' => 'Sobre',
-    'terms' => 'Termos de Uso',
+    'terms' => 'Termos',
     'categories' => 'Categorias',
+    'privacy' => 'Privacidade',
     
     // Páginas Abertas - Visíveis apenas para os visitantes
     'login' => 'Entrar',
@@ -36,6 +37,8 @@ return array(
     
     // Títulos
     'aboutTitle' => 'Diversão em um único lugar!',
+    'privacyTitle' => 'Política de Privacidade',
+    'termsTitle' => 'Termos e Condições de Uso do Serviço',
     'controlPanelTitle' => 'Painel de Controle do Usuário',
     
     // Linguagens
