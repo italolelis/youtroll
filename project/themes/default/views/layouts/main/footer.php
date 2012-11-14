@@ -7,20 +7,20 @@
                 array(
                     'label' => HApp::t('home'),
                     'url' => array('site/index'),
-                    'itemOptions' => array('id' => 'indexNav'),
+                    'itemOptions' => array('id' => 'indexFooterNav'),
                     'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('index', 'site')),
                 ),
                 array(
                     'label' => HApp::t('categories'),
                     'url' => array('site/categories'),
                     'items' => $categories,
-                    'itemOptions' => array('id' => 'categoriesNav'),
+                    'itemOptions' => array('id' => 'categoriesFooterNav'),
                     'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('categories', 'site')),
                 ),
                 array(
                     'label' => HApp::t('about'),
                     'url' => array('site/about'),
-                    'itemOptions' => array('id' => 'aboutNav'),
+                    'itemOptions' => array('id' => 'aboutFooterNav'),
                     'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('about')),
                 ),
             ),
