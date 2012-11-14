@@ -14,7 +14,7 @@ class LoadViewAction extends CAction
 		    $this->controller->redirect(array($controller . '/' . $name));
 		}
 
-		$this->controller->renderPartial($name);
+		$this->controller->renderPartial($name, null, false, true);
 		Yii::app()->end();
 	    }
 
