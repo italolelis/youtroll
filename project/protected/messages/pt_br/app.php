@@ -15,20 +15,21 @@ return array(
     
     // Páginas Gerais - Visíveis a todos os usuários
     'home' => 'Início',
+    'about' => 'Sobre',
+    'terms' => 'Termos de Uso',
+    'categories' => 'Categorias',
     
     // Páginas Abertas - Visíveis apenas para os visitantes
     'login' => 'Entrar',
-    'about' => 'Sobre',
     'signUp' => 'Cadastre-se',
-    'categories' => 'Categorias',
     
     // Páginas Restritas - Vísivéis apenas para os usuários autenticados
+    'logout' => 'Sair',
     'channel' => 'Canal',
     'myChannel' => 'Meu Canal',
-    'controlPanel' => 'Painel de Controle',
-    'createPublication' => 'Criar Imagem',
     'sendPublication' => 'Enviar Imagem',
-    'logout' => 'Sair',
+    'createPublication' => 'Criar Imagem',
+    'controlPanel' => 'Painel de Controle',
     
     // Páginas Especiais - Visíveis apenas quando acessadas
     
