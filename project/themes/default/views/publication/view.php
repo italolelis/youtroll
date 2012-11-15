@@ -82,7 +82,7 @@
         </div>
     </div>
 
-    <div id="imageComments">
+    <div id="imageComments" class="infobox">
         <div id="disqus_thread"></div>
         <script type="text/javascript">
             var disqus_shortname = 'ytroll';
