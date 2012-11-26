@@ -13,6 +13,13 @@ class HApp
     }
 
     /**
+     * Esta função retorna a URL completa que está sendo acessada
+     */
+    public static function getUrl() {
+        return Yii::app()->request->hostInfo . Yii::app()->request->url;
+    }
+    
+    /**
      * Esta função retorna uma mensagem de erro baseando-se no status do mesmo.
      */
     public static function getMessageStatus($status)
