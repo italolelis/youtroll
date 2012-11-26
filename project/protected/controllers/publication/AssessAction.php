@@ -8,11 +8,11 @@ class AssessAction extends CAction
 	if (Yii::app()->request->isPostRequest && Yii::app()->request->isAjaxRequest) {
             $review = HApp::getRequest('POST', 'like');
             
-            if (!empty($review)) {
-                $idPublication = HSecurity::urlDecode(HApp::getRequest('POST', 'publication'));
-                $review = $review === 'true' ? true : false;
-                
+            if (!empty($review)) {                
                 if(!Yii::app()->user->isGuest) {
+                    $idPublication = HSecurity::urlDecode(HApp::getRequest('POST', 'publication'));
+                    $review = $review === 'true' ? true : false;
+                
                     $response = PersistenceServer::connect('publication', 'PUT', array('id' => $idPublication, 'like' => $review));
                     
                     if($response->status) {
@@ -26,11 +26,6 @@ class AssessAction extends CAction
                     
                     HApp::throwException(500);
                 }
-                
-                HApp::ajaxResponse(array(
-                    'action' => 'showDiv',
-                    'div' => 'guestUser',
-                ));
             }
             
             HApp::throwException(403);
