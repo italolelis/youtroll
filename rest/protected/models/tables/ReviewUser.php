@@ -8,6 +8,10 @@
  * @property string $rvw_usr_fk_publication
  * @property string $rvw_usr_fk_user
  * @property integer $rvw_usr_like
+ * 
+ * The followings are the available model relations:
+ * @property Publication $publication
+ * @property User $user
  */
 class ReviewUser extends Table
 {
