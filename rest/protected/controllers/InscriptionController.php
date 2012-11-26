@@ -41,4 +41,18 @@ class InscriptionController extends Controller {
             }
         }
     }
+    
+    public function actionDelete($id) {
+        $this->model = $this->model->getInscription($id, $this->headers->Authorization[0])->find();
+
+        if (!$this->model) {
+            HApp::ajaxResponse(array('status' => false, 'message' => HApp::t('idUnknown')));
+        }
+        
+        if($this->model->delete()) {
+            HApp::ajaxResponse(array('status' => true));
+        }
+        
+        HApp::throwException(500);
+    }
 }

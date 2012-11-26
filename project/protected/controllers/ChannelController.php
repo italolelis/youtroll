@@ -8,7 +8,7 @@ class ChannelController extends Controller
     public function filters()
     {
 	return array(
-	    'postOnly + subscribe',
+	    'postOnly + subscribe, unsubiscribe',
 	);
     }
 
@@ -17,6 +17,7 @@ class ChannelController extends Controller
 	return array(
 	    // Ações da Aplicação
 	    'subscribe' => 'application.controllers.channel.SubscribeAction',
+	    'unsubscribe' => 'application.controllers.channel.UnsubscribeAction',
 	);
     }
 
