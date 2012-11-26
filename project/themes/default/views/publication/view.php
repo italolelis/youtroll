@@ -2,8 +2,25 @@
 
 <div id="publication" class="two-third">
     <div id="imageHeader">
-        <?= CHtml::button($owner->email, array('class' => 'button large channelStyle')) ?>
-        <?= CHtml::button(HApp::t('subscribe'), array('class' => 'button large')) ?>
+        <?= CHtml::button($channel->name, array('class' => 'button large channelStyle')) ?>
+        <?php
+        if (!Yii::app()->user->isGuest && Yii::app()->user->getId() != $channel->owner) {
+            echo CHtml::ajaxButton(HApp::t('subscribe'), array('channel/subscribe'), HView::getAjaxSubmitButtonConfig(array('channel' => $publication->channel)),
+                    array(
+                        'id' => 'subscribeButton',
+                        'class' => 'button large subscribeButton',
+                        'live' => false,
+                    )
+            );
+            echo CHtml::ajaxButton(HApp::t('unsubscribe'), array('channel/unsubscribe'), HView::getAjaxSubmitButtonConfig(array('channel' => $publication->channel)),
+                    array(
+                        'id' => 'unsubscribeButton',
+                        'class' => 'button large displayNone',
+                        'live' => false,
+                    )
+            );
+        }
+        ?>
     </div>
 
     <div id="image" class="marginTop">
