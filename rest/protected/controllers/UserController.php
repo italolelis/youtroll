@@ -37,7 +37,7 @@ class UserController extends Controller {
 
             $channel = new Channel();
             $channel->setOutPrefix($this->model->getOutPrefix('id'), 'fk_owner');
-            $channel->setOutPrefix($this->model->getOutPrefix('email'), 'name');
+            $channel->setOutPrefix(uniqid(), 'name');
             $channel->save();
             
             HApp::ajaxResponse('true');
