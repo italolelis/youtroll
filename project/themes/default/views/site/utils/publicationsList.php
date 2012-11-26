@@ -7,7 +7,7 @@ $this->widget('ext.JCarousel.JCarousel', array(
     'imageUrl' => 'Yii::app()->createAbsoluteUrl("", array("view" => HSecurity::urlEncode("{$data->id}")))',
     'target' => '#',
     
-    'summaryText' => '<h6 class="section-title">'.HApp::t($title).'</h6>',
+    'summaryText' => '<h6 class="section-title">' . HApp::t($title) . '</h6>',
     'titleText' => '$data->title',
     'altText' => '$data->title',
     'categories' => 'Category::getNameByID($data->category)',
