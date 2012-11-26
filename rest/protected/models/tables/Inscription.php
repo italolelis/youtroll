@@ -8,9 +8,14 @@
  * @property string $insc_fk_user
  * @property integer $insc_receive_email
  * @property string $insc_record
+ * 
+ * The followings are the available model relations:
+ * @property Channel $channel
+ * @property User $user
  */
-class Inscription extends CActiveRecord
+class Inscription extends Table
 {
+    protected $attributesPrefix = 'insc_';
 
     /**
      * Returns the static model of the specified AR class.
@@ -38,7 +43,7 @@ class Inscription extends CActiveRecord
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('insc_fk_channel, insc_fk_user, insc_record', 'required'),
+            array('insc_fk_channel, insc_fk_user', 'required'),
             array('insc_receive_email', 'numerical', 'integerOnly' => true),
             array('insc_fk_channel, insc_fk_user', 'length', 'max' => 20),
             // The following rule is used by search().
@@ -55,6 +60,8 @@ class Inscription extends CActiveRecord
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
+            'channel' => array(self::BELONGS_TO, 'Channel', 'insc_fk_channel'),
+            'user' => array(self::BELONGS_TO, 'User', 'insc_fk_user'),
         );
     }
 
@@ -90,6 +97,17 @@ class Inscription extends CActiveRecord
         return new CActiveDataProvider($this, array(
                     'criteria' => $criteria,
                 ));
+    }
+    
+    public function getInscription($idChannel, $idUser)
+    {
+        $this->getDbCriteria()->mergeWith(array(
+            'with' => array('channel'),
+            'condition' => 'insc_fk_channel = :insc_fk_channel AND insc_fk_user = :insc_fk_user AND channel.chnl_fk_owner <> :insc_fk_user',
+            'params' => array(':insc_fk_channel' => $idChannel, ':insc_fk_user' => $idUser),
+        ));
+        
+        return $this;
     }
 
 }
