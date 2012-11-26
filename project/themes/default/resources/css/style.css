@@ -35,6 +35,12 @@ div.errorMessage {
     color: #777777;
 }
 
+#unsubscribeButton {
+    background-color: #5eb95e;
+    
+    color: #ffffff;
+}
+
   .likeButton
 , .likeButton:hover 
 , .unlikeButton
