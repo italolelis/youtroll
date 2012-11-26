@@ -8,14 +8,14 @@
             echo CHtml::ajaxButton(HApp::t('subscribe'), array('channel/subscribe'), HView::getAjaxSubmitButtonConfig(array('channel' => $publication->channel)),
                     array(
                         'id' => 'subscribeButton',
-                        'class' => 'button large subscribeButton',
+                        'class' => 'button large subscribeButton ' . ($userSubscribe ? 'displayNone' : ''),
                         'live' => false,
                     )
             );
             echo CHtml::ajaxButton(HApp::t('unsubscribe'), array('channel/unsubscribe'), HView::getAjaxSubmitButtonConfig(array('channel' => $publication->channel)),
                     array(
                         'id' => 'unsubscribeButton',
-                        'class' => 'button large displayNone',
+                        'class' => 'button large ' . (!$userSubscribe ? 'displayNone' : ''),
                         'live' => false,
                     )
             );

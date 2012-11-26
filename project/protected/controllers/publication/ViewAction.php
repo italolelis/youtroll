@@ -17,12 +17,21 @@ class ViewAction extends CAction
                 $owner = PersistenceServer::connect("user/{$publication->model->owner}", 'GET');
                 $reviewUser = PersistenceServer::connect("reviewUser/{$publication->model->id}", 'GET');
                 
+                if(Yii::app()->user->isGuest) {
+                    $userSubscribe = false;
+                } else {
+                    $inscription = PersistenceServer::connect("inscription/{$channel->model->id}", 'GET');
+                    
+                    $userSubscribe = $inscription->status;
+                }
+                
                 $this->controller->render('view', array(
                     'publication' => $publication->model,
                     'stats' => $publication->stats,
                     'channel' => $channel->model,
                     'owner' => $owner->model,
                     'review' => $reviewUser->model,
+                    'userSubscribe' => $userSubscribe,
                 ));
 
                 Yii::app()->end();

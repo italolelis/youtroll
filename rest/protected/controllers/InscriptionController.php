@@ -10,6 +10,16 @@ class InscriptionController extends Controller {
         $this->model = new Inscription();
     }
 
+    public function actionView($id) {
+        $this->model = $this->model->getInscription($id, $this->headers->Authorization[0])->find();
+
+        if (!$this->model) {
+            HApp::ajaxResponse(array('status' => false, 'message' => HApp::t('idUnknown')));
+        }
+        
+        HApp::ajaxResponse(array('status' => true, 'model' => $this->model->attributes), $this->model->getAttributesPrefix());
+    }
+    
     public function actionInsert() {
         if (Yii::app()->request->isPostRequest) {
             $idChannel = HApp::getRequest('POST', 'channel');
