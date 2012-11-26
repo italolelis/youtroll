@@ -53,6 +53,7 @@ return array(
     'top' => 'Voltar ao Topo',
     'myImages' => 'Meus Envios',
     'comments' => 'Comentários',
+    'unsubscribe' => 'Inscrito',
     'loading' => 'Carregando...',
     'subscribe' => 'Inscrever-se',
     'settings' => 'Configurações',
