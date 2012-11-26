@@ -14,6 +14,7 @@ $this->widget('ext.JCarousel.JCarousel', array(
     
     'cssFile' => false,
     'skin' => 'yt',
+    'enablePagination' => false,
     
     'clickCallback' => '',
 ));
