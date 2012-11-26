@@ -62,6 +62,7 @@ return array(
     'recentPublications' => 'Recentes',
     'popularPublications' => 'Populares',
     'accessAccount' => 'Acesse sua Conta',
+    'fbShare' => 'Compartilhar no Facebook',
     'accountStats' => 'Estatísticas da Conta',
     'publicationDate' => 'Publicado dia {date}.',
     'mostViewedPublications' => 'Mais Visualizadas',

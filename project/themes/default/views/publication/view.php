@@ -6,18 +6,18 @@
         <?php
         if (!Yii::app()->user->isGuest && Yii::app()->user->getId() != $channel->owner) {
             echo CHtml::ajaxButton(HApp::t('subscribe'), array('channel/subscribe'), HView::getAjaxSubmitButtonConfig(array('channel' => $publication->channel)),
-                    array(
-                        'id' => 'subscribeButton',
-                        'class' => 'button large subscribeButton ' . ($userSubscribe ? 'displayNone' : ''),
-                        'live' => false,
-                    )
+                array(
+                    'id' => 'subscribeButton',
+                    'class' => 'button large subscribeButton ' . ($userSubscribe ? 'displayNone' : ''),
+                    'live' => false,
+                )
             );
             echo CHtml::ajaxButton(HApp::t('unsubscribe'), array('channel/unsubscribe'), HView::getAjaxSubmitButtonConfig(array('channel' => $publication->channel)),
-                    array(
-                        'id' => 'unsubscribeButton',
-                        'class' => 'button large ' . (!$userSubscribe ? 'displayNone' : ''),
-                        'live' => false,
-                    )
+                array(
+                    'id' => 'unsubscribeButton',
+                    'class' => 'button large ' . (!$userSubscribe ? 'displayNone' : ''),
+                    'live' => false,
+                )
             );
         }
         ?>
@@ -44,6 +44,10 @@
         </span>
     </div>
 
+    <div id="share" class="infobox displayNone">
+        <?= CHtml::link(CHtml::image(Yii::app()->theme->baseUrl . '/resources/img/icon-share-facebook.png', HApp::t('fbShare') . ' - ' . $publication->title), "http://www.facebook.com/sharer.php?u=" . urlencode(HApp::getUrl() . "&t={$publication->title}"), array('target' => '_blank')) ?>
+    </div>
+    
     <div id="imageButtonsStats">
         <div id="imageButtons" class="displayInline">
             <?php
