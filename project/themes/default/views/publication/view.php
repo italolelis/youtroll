@@ -44,31 +44,39 @@
         </span>
     </div>
 
-    <div id="share" class="infobox displayNone">
-        <?= CHtml::link(CHtml::image(Yii::app()->theme->baseUrl . '/resources/img/icon-share-facebook.png', HApp::t('fbShare') . ' - ' . $publication->title), "http://www.facebook.com/sharer.php?u=" . urlencode(HApp::getUrl() . "&t={$publication->title}"), array('target' => '_blank')) ?>
+    <div id="imageShare" class="infobox displayNone">
+        
+        <?= CHtml::textField('url', HApp::getCurrentUrl()) ?>
+        
+        <div id="social" class="floatRight">
+            <?= CHtml::link(CHtml::image(Yii::app()->theme->baseUrl . '/resources/img/icon-share-facebook.png', HApp::t('fbShare') . ' - ' . $publication->title), 'http://www.facebook.com/sharer.php?u=' . HApp::getCurrentUrl() . '&t=' . urlencode($publication->title), array('target' => '_blank')) ?>
+            <?= CHtml::link(CHtml::image(Yii::app()->theme->baseUrl . '/resources/img/icon-share-twitter.png', HApp::t('twitterShare') . ' - ' . $publication->title), 'http://www.twitter.com/share?url=' . HApp::getCurrentUrl() . '&text=' . urlencode($publication->title), array('target' => '_blank')) ?>
+            <?= CHtml::link(CHtml::image(Yii::app()->theme->baseUrl . '/resources/img/icon-share-google.png', HApp::t('g+Share') . ' - ' . $publication->title), 'http://plus.google.com/share?url=' . HApp::getCurrentUrl(), array('target' => '_blank')) ?>
+        </div>
     </div>
     
     <div id="imageButtonsStats">
         <div id="imageButtons" class="displayInline">
             <?php
             echo CHtml::ajaxButton(HApp::t('like'), array('publication/assess'), HView::getAjaxSubmitButtonConfig(array('publication' => HSecurity::urlEncode($publication->id), 'like' => true)),
-                    array(
-                        'id' => 'likeButton',
-                        'class' => 'button medium buttonStyle likeButton' . (is_null($review->like) ? '' : ($review->like ? ' active' : '')),
-                        'live' => false,
-                    )
+                array(
+                    'id' => 'likeButton',
+                    'class' => 'button medium buttonStyle likeButton' . (is_null($review->like) ? '' : ($review->like ? ' active' : '')),
+                    'live' => false,
+                )
             );
-            ?>
-            <?php
             echo CHtml::ajaxButton(HApp::t(''), array('publication/assess'), HView::getAjaxSubmitButtonConfig(array('publication' => HSecurity::urlEncode($publication->id), 'like' => false)),
-                    array(
-                        'id' => 'unlikeButton',
-                        'class' => 'button medium buttonStyle unlikeButton' . (is_null($review->like) ? '' : (!$review->like ? ' active' : '')),
-                        'live' => false,
-                    )
+                array(
+                    'id' => 'unlikeButton',
+                    'class' => 'button medium buttonStyle unlikeButton' . (is_null($review->like) ? '' : (!$review->like ? ' active' : '')),
+                    'live' => false,
+                )
             );
+            echo CHtml::ajaxButton(HApp::t('share'), array('publication/share'), HView::getAjaxSubmitButtonConfig(), array(
+                'id' => 'shareButton',
+                'class' => 'button medium buttonStyle marginLeft',
+            ));
             ?>
-            <?= CHtml::button(HApp::t('share'), array('class' => 'button medium buttonStyle marginLeft')) ?>
             <?= CHtml::button('', array('class' => 'button medium buttonStyle signalButton')) ?>
         </div>
         <div id="imageStats" class="floatRight">

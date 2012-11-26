@@ -13,9 +13,9 @@ class HApp
     }
 
     /**
-     * Esta função retorna a URL completa que está sendo acessada
+     * Esta função retorna a URL completa que está sendo acessada.
      */
-    public static function getUrl() {
+    public static function getCurrentUrl() {
         return Yii::app()->request->hostInfo . Yii::app()->request->url;
     }
     

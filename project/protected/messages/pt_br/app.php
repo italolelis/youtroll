@@ -64,6 +64,8 @@ return array(
     'accessAccount' => 'Acesse sua Conta',
     'fbShare' => 'Compartilhar no Facebook',
     'accountStats' => 'Estatísticas da Conta',
+    'g+Share' => 'Compartilhar no Google Plus',
+    'twitterShare' => 'Compartilhar no Twitter',
     'publicationDate' => 'Publicado dia {date}.',
     'mostViewedPublications' => 'Mais Visualizadas',
     'lessViewedPublications' => 'Menos Visualizadas',
