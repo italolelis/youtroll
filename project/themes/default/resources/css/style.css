@@ -41,6 +41,12 @@ div.errorMessage {
     color: #ffffff;
 }
 
+#unsubscribeButton:hover {
+    background: #3a3a3a;
+    
+    color: #ffffff;
+}
+
   .likeButton
 , .likeButton:hover 
 , .unlikeButton
@@ -81,6 +87,13 @@ div.errorMessage {
     color: #ffffff;
 }
 
+.likeButton.active:hover {
+    background-color: #3a3a3a;
+    background-image: url("../img/icon-like-white.png");
+    
+    color: #ffffff;
+}
+
 .unlikeButton {
     background-image: url("../img/icon-unlike.png");
 }
@@ -91,6 +104,11 @@ div.errorMessage {
 
 .unlikeButton.active {
     background-color: #db002f;
+    background-image: url("../img/icon-unlike-white.png");
+}
+
+.unlikeButton.active:hover {
+    background-color: #3a3a3a;
     background-image: url("../img/icon-unlike-white.png");
 }
 
