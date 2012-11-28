@@ -25,6 +25,7 @@
  */
 class Publication extends Table
 {
+    
     protected $attributesPrefix = 'pbct_';
     
     public function scopes() {
@@ -156,4 +157,5 @@ class Publication extends Table
             'criteria'=>$criteria,
         ));
     }
+       
 }

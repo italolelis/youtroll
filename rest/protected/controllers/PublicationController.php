@@ -14,7 +14,35 @@ class PublicationController extends Controller {
         $order = HApp::getRequest('GET', 'scope') ?: 'noScope';
         $limit = HApp::getRequest('GET', 'limit');
         
-        HApp::ajaxResponse($this->model->$order()->limit($limit)->findAll(), $this->model->getAttributesPrefix());
+        switch ($order) {
+            case 'related':
+                $publications = array();
+                $idsPublications = array();
+                $idPublication = HApp::getRequest('GET', 'publication');
+                
+                $publicationsTags = PublicationTag::model()->getPublicationsRelated($idPublication)->rand()->limit($limit)->findAll();
+                
+                foreach($publicationsTags as $publicationTag)
+                {
+                    $idsPublications[] = $publicationTag->publication->getOutPrefix('id');
+                    $publications[] = $publicationTag->publication->attributes;
+                }
+                
+                $totalPublicationsMissing = $limit - count($publications);
+                
+                if($totalPublicationsMissing > 0) {
+                    $additionalPublications = Publication::model()->rand()->limit($totalPublicationsMissing)->findAll('pbct_id <> :pbct_id AND pbct_id NOT IN (:ids_publications)', array(':pbct_id' => $idPublication, ':ids_publications' => implode(', ', $idsPublications)));
+                    
+                    foreach($additionalPublications as $additionalPublication)
+                    {
+                        $publications[] = $additionalPublication->attributes;
+                    }
+                }
+                
+                HApp::ajaxResponse($publications, $this->model->getAttributesPrefix());
+            default:
+                HApp::ajaxResponse($this->model->$order()->limit($limit)->findAll(), $this->model->getAttributesPrefix());
+        }
     }
     
     public function actionInsert() {
@@ -40,10 +68,10 @@ class PublicationController extends Controller {
                     $tag->save();
                 }
                 
-                $publicationTags = new PublicationTags();
-                $publicationTags->setOutPrefix($this->model->getOutPrefix('id'), 'publication');
-                $publicationTags->setOutPrefix($tag->getOutPrefix('id'), 'tag');
-                $publicationTags->save();
+                $publicationTag = new PublicationTag();
+                $publicationTag->setOutPrefix($this->model->getOutPrefix('id'), 'publication');
+                $publicationTag->setOutPrefix($tag->getOutPrefix('id'), 'tag');
+                $publicationTag->save();
             }
             
             HApp::ajaxResponse($this->model->getOutPrefix('id'));

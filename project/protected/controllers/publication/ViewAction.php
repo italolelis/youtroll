@@ -9,13 +9,14 @@ class ViewAction extends CAction
         
         if(!empty($view)) {
             $idPublication = HSecurity::urlDecode($view);
-            
+            $publicationsRelated = PersistenceServer::connect('publication', 'GET', array('publication' => $idPublication, 'scope' => 'related', 'limit' => Yii::app()->params['maxPublications']));
             $publication = PersistenceServer::connect("publication/$idPublication", 'GET');
             
             if($publication->status) {
                 $channel = PersistenceServer::connect("channel/{$publication->model->channel}", 'GET');
                 $owner = PersistenceServer::connect("user/{$publication->model->owner}", 'GET');
                 $reviewUser = PersistenceServer::connect("reviewUser/{$publication->model->id}", 'GET');
+                $publicationsRelated = PersistenceServer::connect('publication', 'GET', array('publication' => $idPublication, 'scope' => 'related', 'limit' => Yii::app()->params['maxPublications']));
                 
                 if(Yii::app()->user->isGuest) {
                     $userSubscribe = false;
@@ -31,6 +32,7 @@ class ViewAction extends CAction
                     'channel' => $channel->model,
                     'owner' => $owner->model,
                     'review' => $reviewUser->model,
+                    'publicationsRelated' => $publicationsRelated,
                     'userSubscribe' => $userSubscribe,
                 ));
 

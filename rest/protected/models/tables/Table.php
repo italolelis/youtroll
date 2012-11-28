@@ -30,6 +30,14 @@ class Table extends CActiveRecord
         return $this;
     }
     
+    public function rand() {
+        $this->getDbCriteria()->mergeWith(array(
+            'order' => 'RAND()',
+        ));
+        
+        return $this;
+    }
+    
     public function limit($limit)
     {
         $this->getDbCriteria()->mergeWith(array(

@@ -103,7 +103,7 @@ class Inscription extends Table
     {
         $this->getDbCriteria()->mergeWith(array(
             'with' => array('channel'),
-            'condition' => 'insc_fk_channel = :insc_fk_channel AND insc_fk_user = :insc_fk_user AND channel.chnl_fk_owner <> :insc_fk_user',
+            'condition' => 'insc_fk_channel = :insc_fk_channel AND insc_fk_user = :insc_fk_user AND chnl_fk_owner <> :insc_fk_user',
             'params' => array(':insc_fk_channel' => $idChannel, ':insc_fk_user' => $idUser),
         ));
         

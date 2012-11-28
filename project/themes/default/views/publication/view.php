@@ -129,6 +129,18 @@
 
 <div class="one-third">
     <div class="infobox">
-        Tirinhas Relacionadas Aqui
+        <div>   
+            <div class="jcarousel-skin-yt">
+                <ul>
+                    <?php foreach ($publicationsRelated as $publicationRelated): ?>
+                    <a>
+                        <li style="list-style: none;">
+                            <?= CHtml::image(str_replace(".", "_thumb.", Yii::app()->baseUrl . "/resources/img/user/{$publicationRelated->owner}/{$publicationRelated->image_path}")) ?>
+                        </li>
+                    </a>
+                    <?php endforeach ?>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>

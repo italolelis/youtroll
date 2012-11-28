@@ -11,7 +11,7 @@
  * @property Publication $publication
  * @property Tag $tag
  */
-class PublicationTags extends Table
+class PublicationTag extends Table
 {
     
     protected $attributesPrefix = 'pbct_tag_';
@@ -93,4 +93,15 @@ class PublicationTags extends Table
             'criteria'=>$criteria,
         ));
     }
+    
+    public function getPublicationsRelated($idPublication) {
+        $this->getDbCriteria()->mergeWith(array(
+            'with' => array('publication'),
+            'condition' => 'pbct_tag_fk_tag IN (SELECT pbct_tag_fk_tag FROM tb_publications_tags WHERE pbct_tag_fk_publication = :pbct_id) AND pbct_tag_fk_publication <> :pbct_id',
+            'params' => array(':pbct_id' => $idPublication),
+        ));
+        
+        return $this;
+    }
+    
 }
