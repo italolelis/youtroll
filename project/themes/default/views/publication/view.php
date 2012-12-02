@@ -133,11 +133,14 @@
             <div class="jcarousel-skin-yt">
                 <ul>
                     <?php foreach ($publicationsRelated as $publicationRelated): ?>
-                        <li style="list-style: none; margin-bottom: 10px;">
-                            <a style="width: 100%; height: 210px; padding-top: 25px;">
-                                <?= CHtml::image(HView::getThumbUrl($publicationRelated->owner, $publicationRelated->image_path)) ?>
-                                <h5 style="title"><?= $publicationRelated->title ?></h5>
-                            </a>
+                        <li class="publicationRelated">
+                            <?php
+                            echo CHtml::link(
+                                CHtml::image(HView::getThumbUrl($publicationRelated->owner, $publicationRelated->image_path), $publicationRelated->title) . "<h5 style='title'>$publicationRelated->title</h5>" . '<span class="categories">' . Category::getNameByID($publicationRelated->category) . '</span>',
+                                Yii::app()->createAbsoluteUrl('', array('view' => HSecurity::urlEncode("{$publicationRelated->id}"))),
+                                array('class' => 'publicationRelated')
+                            );
+                            ?>
                         </li>
                     <?php endforeach ?>
                 </ul>

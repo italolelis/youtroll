@@ -123,3 +123,14 @@ div.errorMessage {
 #likes-unlikes {
     width: 250px;
 }
+
+li.publicationRelated {
+    list-style: none; margin-bottom: 10px;
+}
+
+a.publicationRelated {
+    padding-top: 25px;
+    
+    width: 100%;
+    height: 220px;
+}
