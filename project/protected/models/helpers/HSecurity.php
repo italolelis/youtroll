@@ -24,7 +24,7 @@ class HSecurity
      */
     public static function urlDecode($value)
     {
-        return strtr(base64_decode(strrev($value)), '+/=', '-%_');
+        return base64_decode(strtr(strrev($value), '+/=', '-%_'));
     }
-
+    
 }

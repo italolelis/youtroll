@@ -114,4 +114,13 @@ class HView
         
         return $return;
     }
+    
+    public static function getImageUrl($owner, $path) {
+        return Yii::app()->baseUrl . "/resources/img/user/$owner/$path";
+    }
+    
+    public static function getThumbUrl($owner, $path) {
+        return str_replace(".", "_thumb.", Yii::app()->baseUrl . "/resources/img/user/$owner/$path");
+    }
+    
 }

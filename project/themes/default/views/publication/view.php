@@ -24,7 +24,7 @@
     </div>
 
     <div id="image" class="marginTop">
-        <?= CHtml::image(Yii::app()->baseUrl . "/resources/img/user/$publication->owner/$publication->image_path", $publication->title) ?>
+        <?= CHtml::image(HView::getImageUrl($publication->owner, $publication->image_path), $publication->title) ?>
     </div>
 
     <div id="guestUser" class="infobox displayNone">
@@ -133,11 +133,12 @@
             <div class="jcarousel-skin-yt">
                 <ul>
                     <?php foreach ($publicationsRelated as $publicationRelated): ?>
-                    <a>
-                        <li style="list-style: none;">
-                            <?= CHtml::image(str_replace(".", "_thumb.", Yii::app()->baseUrl . "/resources/img/user/{$publicationRelated->owner}/{$publicationRelated->image_path}")) ?>
+                        <li style="list-style: none; margin-bottom: 10px;">
+                            <a style="width: 100%; height: 210px; padding-top: 25px;">
+                                <?= CHtml::image(HView::getThumbUrl($publicationRelated->owner, $publicationRelated->image_path)) ?>
+                                <h5 style="title"><?= $publicationRelated->title ?></h5>
+                            </a>
                         </li>
-                    </a>
                     <?php endforeach ?>
                 </ul>
             </div>

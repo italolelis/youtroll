@@ -7,6 +7,7 @@ return array(
     'allowedExtensions' => array('jpg', 'gif', 'png'),
     'maxSizeUpload' => 1048576, // 1MB
     'maxPublications' => 12,
+    'maxRelatedPublications' => 5,
     
     'defaultLanguage' => 'pt_br',
     'supportedLanguages' => array(

@@ -3,7 +3,7 @@
 $this->widget('ext.JCarousel.JCarousel', array(
     'dataProvider' => new CArrayDataProvider($publications),
     
-    'thumbUrl' => 'str_replace(".", "_thumb.", Yii::app()->baseUrl . "/resources/img/user/{$data->owner}/{$data->image_path}")',
+    'thumbUrl' => 'HView::getThumbUrl($data->owner, $data->image_path)',
     'imageUrl' => 'Yii::app()->createAbsoluteUrl("", array("view" => HSecurity::urlEncode("{$data->id}")))',
     'target' => '#',
     
