@@ -1,0 +1,54 @@
+#socialSignUp form {
+    text-align: center;
+}
+
+#socialSignUp .signup-facebook {
+    background-color: #4264b3;
+    background-image: -moz-linear-gradient(#679ace, #4264b3);
+    background-image: -o-linear-gradient(#679ace, #4264b3);
+    background-image: -ms-linear-gradient(#679ace, #4264b3);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #679ace), color-stop(1, #4264b3));
+    background-image: -webkit-linear-gradient(#679ace, #4264b3);
+    border-color: #1b345a;
+    text-shadow: 0 1px 0 #2d449e;
+}
+
+#socialSignUp .signup-btn {
+    display: block;
+    border: 1px solid #136ac1;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 12px 30px 12px 0;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+    text-shadow: 0 1px 0 #1a64bf;
+    cursor: pointer;
+    text-align: left;
+}
+
+#socialSignUp .signup-btn i {
+    height: 24px;
+    width: 20px;
+    background-size: 24px;
+    display: inline-block;
+    vertical-align: text-top;
+    margin-right: 15px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    padding-right: 30px;
+    box-shadow: 1px 0 0px rgba(255, 255, 255, 0.2);
+}
+
+#socialSignUp .signup-btn {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 0 1px 0 #1a64bf;
+    cursor: pointer;
+    text-align: left;
+}
+
+#socialSignUp .signup-facebook i {
+    background: url('../img/icon-facebook-signup.png') center center no-repeat;
+    background-size: 14px auto;
+}

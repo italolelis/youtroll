@@ -10,3 +10,4 @@
 <?= CHtml::cssFile(Yii::app()->theme->baseUrl . '/resources/css/style.css') ?>
 
 <?= CHtml::cssFile(Yii::app()->theme->baseUrl . '/resources/css/bootstrap.css') ?>
+<?= CHtml::cssFile(Yii::app()->theme->baseUrl . '/resources/css/social.css') ?>
