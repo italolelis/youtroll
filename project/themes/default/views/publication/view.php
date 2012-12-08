@@ -114,7 +114,7 @@
     <div id="imageComments" class="infobox">
         <div id="disqus_thread"></div>
         <script type="text/javascript">
-            var disqus_shortname = 'ytroll';
+            var disqus_shortname = <?= Yii::app()->params['disqus_shortname'] ?>;
 
             (function() {
                 var dsq = document.createElement('script');
