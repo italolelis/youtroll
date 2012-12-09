@@ -17,7 +17,11 @@ class ShowAction extends CAction
         if(is_file($imageFile)) {
             header('Content-type: ' . image_type_to_mime_type(exif_imagetype($imageFile))); 
             echo file_get_contents($imageFile);
+            
+            Yii::app()->end();
         }
+        
+        HApp::throwException(404);
     }
 
 }
