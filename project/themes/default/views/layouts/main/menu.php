@@ -1,8 +1,8 @@
 <?php
-foreach (Category::getCategories() as $category) {
+foreach (Category::getNames() as $key => $category) {
     $categories[] = array(
         'label' => $category,
-        'url' => array("category/$categorie->id"),
+        'url' => array('category/' . Category::getKeyNameByID($key)),
     );
 }
 ?>

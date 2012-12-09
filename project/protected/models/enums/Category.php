@@ -15,26 +15,47 @@ class Category
     public static function getName($keyName) {
         return HApp::t($keyName, 'categories');
     }
-    
-    public static function getCategories()
+
+    public static function getKeyName()
     {
         return array(
-            self::ANIMATION => Category::getName('animation'),
-            self::ASSEMBLY => Category::getName('assembly'),
-            self::BLACK_HUMOR => Category::getName('blackHumor'),
-            self::DOUBLE_ENTENDRE => Category::getName('doubleEntendre'),
-            self::JOKE => Category::getName('joke'),
-            self::MEME => Category::getName('meme'),
-            self::MINDFUCK => Category::getName('mindfuck'),
-            self::STRIP => Category::getName('strip'),
+            self::ANIMATION => 'animation',
+            self::ASSEMBLY => 'assembly',
+            self::BLACK_HUMOR => 'blackHumor',
+            self::DOUBLE_ENTENDRE => 'doubleEntendre',
+            self::JOKE => 'joke',
+            self::MEME => 'meme',
+            self::MINDFUCK => 'mindfuck',
+            self::STRIP => 'strip',
         );
     }
-
+    
+    public static function getKeyNameByID($key)
+    {
+        $hashes = Category::getKeyName();
+        
+        return $hashes[$key] ?: '';
+    }
+    
+    public static function getNames()
+    {
+        return array(
+            self::ANIMATION => Category::getName(Category::getKeyNameByID(self::ANIMATION)),
+            self::ASSEMBLY => Category::getName(Category::getKeyNameByID(self::ASSEMBLY)),
+            self::BLACK_HUMOR => Category::getName(Category::getKeyNameByID(self::BLACK_HUMOR)),
+            self::DOUBLE_ENTENDRE => Category::getName(Category::getKeyNameByID(self::DOUBLE_ENTENDRE)),
+            self::JOKE => Category::getName(Category::getKeyNameByID(self::JOKE)),
+            self::MEME => Category::getName(Category::getKeyNameByID(self::MEME)),
+            self::MINDFUCK => Category::getName(Category::getKeyNameByID(self::MINDFUCK)),
+            self::STRIP => Category::getName(Category::getKeyNameByID(self::STRIP)),
+        );
+    }
+    
     public static function getNameByID($key)
     {
-        $categories = Category::getCategories();
+        $names = Category::getNames();
         
-        return $categories[$key] ?: '';
+        return $names[$key] ?: '';
     }
 
 }
