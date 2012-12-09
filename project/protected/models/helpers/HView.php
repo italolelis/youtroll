@@ -3,27 +3,31 @@
 class HView
 {
 
-    private static function _getData($view, $controller = null)
+    private static function _getData($view, $controller = null, $params = null)
     {
 	$data = array('name' => $view);
 
 	if (!empty($controller)) {
 	    $data['controller'] = $controller;
 	}
-
+        
+        if (!empty($params)) {
+	    $data['params'] = $params;
+	}
+        
 	return $data;
     }
 
     /**
      * Esta função retorna um array para configurar o AJAX do Menu
      */
-    public static function getAjaxMenuArrayConfig($view, $controller = null)
+    public static function getAjaxMenuArrayConfig($view, $controller = null, $params = null)
     {
 	return array(
 	    'url' => array('ajax/loadView'),
 	    'type' => 'POST',
 	    'dataType' => 'html',
-	    'data' => HView::_getData($view, $controller),
+	    'data' => HView::_getData($view, $controller, $params),
             'async' => false,
 	    'cache' => false,
 	    'beforeSend' => "function() {
