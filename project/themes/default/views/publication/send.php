@@ -94,7 +94,7 @@
     </div>
     <div class="input-block">
         <?= $form->labelEx($model, 'category') ?>
-        <?= $form->dropDownList($model, 'category', Category::getCategories()) ?>
+        <?= $form->dropDownList($model, 'category', Category::getNames()) ?>
         <?= $form->error($model, 'category') ?>
     </div>
     <div class="input-block">
