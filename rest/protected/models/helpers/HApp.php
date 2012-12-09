@@ -79,4 +79,21 @@ class HApp
 	HApp::throwException(500);
     }
 
+    public static function getHeaders() {
+        if(function_exists('apache_request_headers')) {
+            return apache_request_headers();
+        } else {
+            $response = array();
+            $response['Authorization'] = 'Basic ' . base64_encode($_SERVER['PHP_AUTH_USER'] . ':' . $_SERVER['PHP_AUTH_PW']);
+            
+            foreach($_SERVER as $key => $value) {
+                if (substr($key, 0, 5) == 'HTTP_') {
+                    $key = str_replace(" ", "-", ucwords(strtolower(str_replace("_", " ", substr($key,5)))));
+                    $response[$key] = $value;
+                } 
+            } 
+            return $response;
+        }
+    }
+    
 }

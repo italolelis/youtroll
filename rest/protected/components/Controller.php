@@ -8,7 +8,7 @@ class Controller extends CController
     
     public function init()
     {
-        $this->headers = HConvert::arrayToObject(apache_request_headers());
+        $this->headers = HConvert::arrayToObject(HApp::getHeaders());
 
         if(isSet($this->headers->Authorization)) {
             $this->headers->Authorization = explode(':', base64_decode(substr($this->headers->Authorization, 6)));
