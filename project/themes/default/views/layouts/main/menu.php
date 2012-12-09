@@ -2,7 +2,7 @@
 foreach (Category::getCategories() as $category) {
     $categories[] = array(
         'label' => $category,
-        'url' => '#',//array("categorie/$categorie->id"),
+        'url' => array("category/$categorie->id"),
     );
 }
 ?>

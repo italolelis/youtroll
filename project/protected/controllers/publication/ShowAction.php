@@ -5,11 +5,18 @@ class ShowAction extends CAction
     
     public function run()
     {
-        $image = HView::getRealImageUrl(HApp::getRequest('GET', 'owner'), HApp::getRequest('GET', 'path'));
+        $image = HApp::getRequest('GET', 'image');
         
-        if(is_file($image)) {
-            header('Content-type: ' . image_type_to_mime_type(exif_imagetype($image))); 
-            echo file_get_contents($image);
+        $md5Position = strpos($image, '_') === false ? strpos($image, '.') : strpos($image, '_');
+        
+        $owner = substr($image, 0, $md5Position - 32);
+        $path = substr($image, strlen($owner));
+        
+        $imageFile = HView::getRealImageUrl($owner, $path);
+        
+        if(is_file($imageFile)) {
+            header('Content-type: ' . image_type_to_mime_type(exif_imagetype($imageFile))); 
+            echo file_get_contents($imageFile);
         }
     }
 

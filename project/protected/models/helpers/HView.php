@@ -122,7 +122,7 @@ class HView
     public static function getImageUrl($owner, $path, $thumb = false) {
         $path = $thumb ? str_replace(".", "_thumb.", $path) : $path;
         
-        return Yii::app()->createAbsoluteUrl("show/$owner/$path");
+        return Yii::app()->createAbsoluteUrl("show/$owner$path");
     }
     
 }
