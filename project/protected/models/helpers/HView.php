@@ -3,31 +3,16 @@
 class HView
 {
 
-    private static function _getData($view, $controller = null, $params = null)
-    {
-	$data = array('name' => $view);
-
-	if (!empty($controller)) {
-	    $data['controller'] = $controller;
-	}
-        
-        if (!empty($params)) {
-	    $data['params'] = $params;
-	}
-        
-	return $data;
-    }
-
     /**
      * Esta função retorna um array para configurar o AJAX do Menu
      */
-    public static function getAjaxMenuArrayConfig($view, $controller = null, $params = null)
+    public static function getAjaxMenuArrayConfig($view, $controller = null, $params = null, $showUrl = null)
     {
 	return array(
-	    'url' => array('ajax/loadView'),
+	    'url' => array("$controller/$view"),
 	    'type' => 'POST',
 	    'dataType' => 'html',
-	    'data' => HView::_getData($view, $controller, $params),
+	    'data' => $params,
             'async' => false,
 	    'cache' => false,
 	    'beforeSend' => "function() {
@@ -45,7 +30,7 @@ class HView
                 setTimeout(function() {
 		    removeLoading(function() {
 			$('#view').html(response).fadeIn(125);
-                        window.history.pushState('Object', 'Title', '".Yii::app()->createAbsoluteUrl("$controller/$view")."');
+                        window.history.pushState('Object', 'Title', '" . Yii::app()->createAbsoluteUrl($showUrl ?: "$controller/$view") . "');
 		    });
 		}, 250);
 	    }",
