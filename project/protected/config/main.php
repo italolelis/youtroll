@@ -59,6 +59,7 @@ return array(
                 '' => array('site/index'),
                 '<action:(login|logout)>' => 'user/<action>',
                 '<action:(view)>/<id:\w+>' => 'publication/<action>/view/<id>',
+                '<action:(show)>/<owner:\d+>/<path>' => 'publication/<action>/owner/<owner>/path/<path>',
 		'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
 	    ),
 	),

@@ -134,7 +134,7 @@
                         <li class="publicationRelated">
                             <?php
                             echo CHtml::link(
-                                CHtml::image(HView::getThumbUrl($publicationRelated->owner, $publicationRelated->image_path), $publicationRelated->title) . "<h5 style='title'>$publicationRelated->title</h5>" . '<span class="categories">' . Category::getNameByID($publicationRelated->category) . '</span>',
+                                CHtml::image(HView::getImageUrl($publicationRelated->owner, $publicationRelated->image_path, true), $publicationRelated->title) . "<h5 style='title'>$publicationRelated->title</h5>" . '<span class="categories">' . Category::getNameByID($publicationRelated->category) . '</span>',
                                 Yii::app()->createAbsoluteUrl('', array('view' => HSecurity::urlEncode("{$publicationRelated->id}"))),
                                 array('class' => 'publicationRelated')
                             );

@@ -19,6 +19,7 @@ class PublicationController extends Controller
             'assess' => 'application.controllers.publication.AssessAction',
             'send' => 'application.controllers.publication.SendAction',
             'share' => 'application.controllers.publication.ShareAction',
+            'show' => 'application.controllers.publication.ShowAction',
             'view' => 'application.controllers.publication.ViewAction',
 	);
     }

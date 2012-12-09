@@ -115,12 +115,14 @@ class HView
         return $return;
     }
     
-    public static function getImageUrl($owner, $path) {
-        return Yii::app()->baseUrl . "/resources/img/user/$owner/$path";
+    public static function getRealImageUrl($owner, $path) {
+        return Yii::app()->basePath . "/../resources/img/user/$owner/$path";
     }
     
-    public static function getThumbUrl($owner, $path) {
-        return str_replace(".", "_thumb.", Yii::app()->baseUrl . "/resources/img/user/$owner/$path");
+    public static function getImageUrl($owner, $path, $thumb = false) {
+        $path = $thumb ? str_replace(".", "_thumb.", $path) : $path;
+        
+        return Yii::app()->createAbsoluteUrl("show/$owner/$path");
     }
     
 }
