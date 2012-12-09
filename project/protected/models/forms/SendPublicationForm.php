@@ -28,7 +28,7 @@ class SendPublicationForm extends CFormModel
             array('tags', 'match', 'pattern' => '/^[ ,]*(?:[a-zA-Z0-9]+(?:[ ,]+[a-zA-Z0-9]+){0,5})?[ ,]*$/', 'message' => HApp::t('invalidTags')),
 	    array('title', 'length', 'min' => 3, 'max' => 100, 'tooShort' => HApp::t('tooShort'), 'tooLong' => HApp::t('tooLong')),
 	    array('description', 'length', 'max' => 256, 'tooShort' => HApp::t('tooShort'), 'tooLong' => HApp::t('tooLong')),
-	    array('category', 'in', 'range' => array_keys(Category::getCategories()), 'allowEmpty' => false, 'message' => HApp::t('invalidOption')),
+	    array('category', 'in', 'range' => array_keys(Category::getNames()), 'allowEmpty' => false, 'message' => HApp::t('invalidOption')),
 	    array('image', 'file', 'minSize' => $this->minSizeAnnex, 'allowEmpty' => true,
 		'types' => $this->annexExtensions, 'wrongType' => HApp::t('wrongType'),
 		'maxFiles' => $this->maxAttachments, 'tooMany' => HApp::t('tooMany'),
