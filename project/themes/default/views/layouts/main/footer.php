@@ -12,14 +12,14 @@
                 ),
                 array(
                     'label' => HApp::t('categories'),
-                    'url' => array('site/categories'),
-                    'items' => $categories,
+                    'url' => array('category/list'),
                     'itemOptions' => array('id' => 'categoriesFooterNav'),
-                    'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('categories', 'site')),
+                    'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('list', 'category')),
+                    'visible' => false,
                 ),
                 array(
                     'label' => HApp::t('about'),
-                    'url' => array('site/about'),
+                    'url' => Yii::app()->createAbsoluteUrl('about'),
                     'itemOptions' => array('id' => 'aboutFooterNav'),
                     'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('about')),
                 ),

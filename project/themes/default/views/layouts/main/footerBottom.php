@@ -8,15 +8,15 @@
             'items' => array(                
                 array(
                     'label' => HApp::t('terms'),
-                    'url' => array('site/terms'),
+                    'url' => Yii::app()->createAbsoluteUrl('terms'),
                     'itemOptions' => array('id' => 'termsFooterNav'),
-                    'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('terms')),
+                    'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('loadView', 'ajax', array('view' => 'terms'), 'terms')),
                 ),
                 array(
                     'label' => HApp::t('privacy'),
-                    'url' => array('site/privacy'),
+                    'url' => Yii::app()->createAbsoluteUrl('privacy'),
                     'itemOptions' => array('id' => 'privacyFooterNav'),
-                    'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('privacy')),
+                    'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('loadView', 'ajax', array('view' => 'privacy'), 'privacy')),
                 ),
             ),
             'htmlOptions' => array('class' => 'floatRight'),

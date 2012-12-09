@@ -4,7 +4,7 @@ foreach (Category::getNames() as $key => $category) {
     $categories[] = array(
         'label' => $category,
         'url' => array("category/$keyName"),
-        'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('listCategory', null, array('category' => $keyName))),
+        'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('listCategory', null, array('category' => $keyName), "category/$keyName")),
     );
 }
 ?>
@@ -44,12 +44,14 @@ foreach (Category::getNames() as $key => $category) {
                         'url' => array('user/channel'),
                         'itemOptions' => array('id' => 'channelNav'),
                         'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('channel', 'user')),
+                        'visible' => false,
                     ),
                     array(
                         'label' => HApp::t('createPublication'),
                         'url' => array('publication/create'),
                         'itemOptions' => array('id' => 'createNav'),
                         'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('create', 'publication')),
+                        'visible' => false,
                     ),
                     array(
                         'label' => HApp::t('sendPublication'),
@@ -64,16 +66,16 @@ foreach (Category::getNames() as $key => $category) {
             ),
             array(
                 'label' => HApp::t('categories'),
-                'url' => '#',//array('site/categories'),
+                'url' => '#',//array('category/list'),
                 'items' => $categories,
-                'itemOptions' => array('id' => 'categoriesNav'),
+                'itemOptions' => array('id' => 'categoriesNav', 'onClick' => 'return false;'),
 //                'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('categories', 'site')),
             ),
             array(
                 'label' => HApp::t('about'),
-                'url' => array('site/about'),
+                'url' => Yii::app()->createAbsoluteUrl('about'),
                 'itemOptions' => array('id' => 'aboutNav'),
-                'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('about')),
+                'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('loadView', 'ajax', array('view' => 'about'), 'about')),
             ),
             array(
                 'label' => HApp::t('logout'),
