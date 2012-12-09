@@ -34,6 +34,8 @@ class HApp
 		return Yii::app()->request->getPut($index);
 	    case 'DELETE':
 		return Yii::app()->request->getDelete($index);
+	    case 'PARAM':
+		return Yii::app()->request->getParam($index);
 	    default:
 		HApp::throwException(500);
 	}
