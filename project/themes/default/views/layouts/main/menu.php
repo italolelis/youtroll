@@ -1,8 +1,10 @@
 <?php
 foreach (Category::getNames() as $key => $category) {
+    $keyName = Category::getKeyNameByID($key);
     $categories[] = array(
         'label' => $category,
-        'url' => array('category/' . Category::getKeyNameByID($key)),
+        'url' => array("category/$keyName"),
+        'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('listCategory', null, array('category' => $keyName))),
     );
 }
 ?>
@@ -62,10 +64,10 @@ foreach (Category::getNames() as $key => $category) {
             ),
             array(
                 'label' => HApp::t('categories'),
-                'url' => array('site/categories'),
+                'url' => '#',//array('site/categories'),
                 'items' => $categories,
                 'itemOptions' => array('id' => 'categoriesNav'),
-                'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('categories', 'site')),
+//                'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('categories', 'site')),
             ),
             array(
                 'label' => HApp::t('about'),
