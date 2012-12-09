@@ -12,6 +12,7 @@ return array(
     'maxSizeUpload' => 1048576, // 1MB
     'maxPublications' => 12,
     'maxRelatedPublications' => 5,
+    'maxCategoriesPublications' => 30,
     
     'defaultLanguage' => 'pt_br',
     'supportedLanguages' => array(

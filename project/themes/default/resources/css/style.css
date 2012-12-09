@@ -124,14 +124,20 @@ div.errorMessage {
     width: 250px;
 }
 
-li.publicationRelated {
+li.publicationIndividual {
     margin-bottom: 10px;
     margin-left: 0px; 
     
     list-style: none;
 }
 
-a.publicationRelated {
+li.publicationCategory {
+    width: 33%;
+    
+    display: inline-block;
+}
+
+a.publicationIndividual {
     padding-top: 25px;
     
     width: 100%;

@@ -15,7 +15,7 @@ class CategoryController extends Controller
     {
 	return array(
 	    // Ações da Aplicação
-	    'show' => 'application.controllers.category.ShowAction',
+	    'view' => 'application.controllers.category.ViewAction',
 	);
     }
 

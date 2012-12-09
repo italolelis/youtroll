@@ -131,12 +131,12 @@
             <div class="jcarousel-skin-yt">
                 <ul>
                     <?php foreach ($publicationsRelated as $publicationRelated): ?>
-                        <li class="publicationRelated">
+                        <li class="publicationIndividual">
                             <?php
                             echo CHtml::link(
                                 CHtml::image(HView::getImageUrl($publicationRelated->owner, $publicationRelated->image_path, true), $publicationRelated->title) . "<h5 style='title'>$publicationRelated->title</h5>" . '<span class="categories">' . Category::getNameByID($publicationRelated->category) . '</span>',
                                 Yii::app()->createAbsoluteUrl('', array('view' => HSecurity::urlEncode("{$publicationRelated->id}"))),
-                                array('class' => 'publicationRelated')
+                                array('class' => 'publicationIndividual')
                             );
                             ?>
                         </li>

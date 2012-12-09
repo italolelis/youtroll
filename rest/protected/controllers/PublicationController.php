@@ -44,7 +44,7 @@ class PublicationController extends Controller {
             case 'category':
                 $idCategory = HApp::getRequest('GET', 'category');
                 
-                HApp::ajaxResponse($this->model->getPublicationsByCategory($idCategory)->limit($limit)->recent()->findAll(), $this->model->getAttributesPrefix());
+                HApp::ajaxResponse($this->model->getPublicationsByCategory($idCategory)->rand()->limit($limit)->findAll(), $this->model->getAttributesPrefix());
             default:
                 HApp::ajaxResponse($this->model->$order()->limit($limit)->findAll(), $this->model->getAttributesPrefix());
         }

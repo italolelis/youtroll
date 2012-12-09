@@ -4,7 +4,7 @@ foreach (Category::getNames() as $key => $category) {
     $categories[] = array(
         'label' => $category,
         'url' => array("category/$keyName"),
-        'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('listCategory', null, array('category' => $keyName), "category/$keyName")),
+        'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig($keyName, 'category')),
     );
 }
 ?>

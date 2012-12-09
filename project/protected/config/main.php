@@ -64,6 +64,8 @@ return array(
                 '<action:(login|logout)>' => 'user/<action>',
                 '<view:(about|privacy|terms)>' => 'ajax/loadView/view/<view>',
 		
+                'category/<category:\w+>' => 'category/view/category/<category>',
+                
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
 	    ),
 	),
