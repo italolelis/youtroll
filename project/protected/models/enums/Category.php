@@ -37,6 +37,13 @@ class Category
         return $hashes[$key] ?: '';
     }
     
+    public static function getIDByKeyName($keyName)
+    {
+        $hashes = Category::getKeyName();
+        
+        return array_search($keyName, $hashes);
+    }
+    
     public static function getNames()
     {
         return array(
