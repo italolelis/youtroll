@@ -8,7 +8,7 @@ class AjaxController extends Controller
     public function filters()
     {
 	return array(
-	    'postOnly + deleteFile, loadView, uploadFile',
+	    'postOnly + deleteFile, uploadFile',
 	);
     }
 

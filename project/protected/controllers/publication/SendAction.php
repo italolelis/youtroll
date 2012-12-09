@@ -5,14 +5,18 @@ class SendAction extends CAction
 
     public function run()
     {
-        if (Yii::app()->request->isAjaxRequest) {
+        if(!Yii::app()->user->isGuest) {
             $model = new SendPublicationForm();
-            
-            $this->controller->renderPartial('send', array('model' => $model), false, true);
-            Yii::app()->end();
+
+            if (Yii::app()->request->isAjaxRequest) {
+                $this->controller->renderPartial('send', array('model' => $model), false, true);
+                Yii::app()->end();  
+            }
+        
+            $this->controller->render('send', array('model' => $model));
         }
         
-        HApp::throwException(403);
+        HApp::throwException(401);
     }
 
 }

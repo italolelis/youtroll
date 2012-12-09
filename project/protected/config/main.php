@@ -57,10 +57,14 @@ return array(
                 'admin' => array('admin/panel'),
                 
                 '' => array('site/index'),
-                '<action:(login|logout)>' => 'user/<action>',
+                
                 '<action:(view)>/<id:\w+>' => 'publication/<action>/view/<id>',
                 '<action:(show)>/<image>' => 'publication/<action>/image/<image>',
-		'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+                
+                '<action:(login|logout)>' => 'user/<action>',
+                '<view:(about|privacy|terms)>' => 'ajax/loadView/view/<view>',
+		
+                '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
 	    ),
 	),
         
