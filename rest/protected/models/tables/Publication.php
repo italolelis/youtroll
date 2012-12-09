@@ -157,5 +157,14 @@ class Publication extends Table
             'criteria'=>$criteria,
         ));
     }
+    
+    public function getPublicationsByCategory($idCategory) {
+        $this->getDbCriteria()->mergeWith(array(
+            'condition' => 'pbct_fk_category = :pbct_fk_category',
+            'params' => array(':pbct_fk_category' => $idCategory),
+        ));
+        
+        return $this;
+    }
        
 }
