@@ -1635,7 +1635,7 @@ h6.acc-trigger.active a { background-position: 20px -90px; }
     border-bottom: 1px solid #efefef;
     display: block;
     text-align: center;
-    height: 220px;
+    height: 245px;
 }
 
 .jcarousel-skin-yt a { padding: 20px 0 0; }
@@ -1668,23 +1668,6 @@ h6.acc-trigger.active a { background-position: 20px -90px; }
 .jcarousel-skin-yt a:hover, #portfolio-items > article:hover {
     background: #f8f8f8;
     border-bottom: 1px solid #db002f;
-}
-
-.not-ie .jcarousel-skin-yt a:hover:after, .not-ie #portfolio-items > article:hover:after {
-    background: #db002f;
-    bottom: -2.5px;
-    content: '';
-    left: 50%;
-    display: block;
-    height: 5px;
-    margin: 0 0 0 -2.5px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    position: absolute;
-    width: 5px;
 }
 
 .jcarousel-skin-yt a:hover img, #portfolio-items > article:hover img {
