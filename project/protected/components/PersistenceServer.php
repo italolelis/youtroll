@@ -23,7 +23,7 @@ class PersistenceServer extends CComponent
         $rest = new RESTClient();
 
         $rest->initialize($config);
-        $rest->set_header('application', 'youtroll');
+        $rest->set_header('HTTP_APP', 'youtroll');
 
         switch (strtoupper($verb)) {
             case 'DELETE':
