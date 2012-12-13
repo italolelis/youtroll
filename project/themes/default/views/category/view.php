@@ -1,6 +1,7 @@
 <h1 class="page-title"><?= $categoryName ?></h1>
 <div class="infobox">
-        <div>   
+    <div>
+        <?php if($publications): ?>
             <div class="jcarousel-skin-yt">
                 <ul>
                     <?php foreach ($publications as $publication): ?>
@@ -16,5 +17,8 @@
                     <?php endforeach ?>
                 </ul>
             </div>
-        </div>
+        <?php else: ?>
+            <?= HApp::t('nonePublication') ?>
+        <?php endif ?>
     </div>
+</div>
