@@ -31,7 +31,6 @@
 	    </div>
 	</div>
         <?= CHtml::link(HApp::t('top'), '#', array('id' => 'back-to-top', 'class' => 'displayInline')) ?>
+        <?= $this->renderPartial('webroot.themes.' . Yii::app()->theme->name . '.views.layouts.' . Yii::app()->layout . '.head.scripts') ?>
     </body>
 </html>
-
-<?= $this->renderPartial('webroot.themes.' . Yii::app()->theme->name . '.views.layouts.' . Yii::app()->layout . '.head.scripts') ?>
