@@ -9,12 +9,15 @@ class IndexAction extends CAction
 	    HApp::throwException(404);
 	}
 
+        $model = new SearchForm();
+        
         $recentPublications = PersistenceServer::connect('publication', 'GET', array('scope' => 'recent', 'limit' => Yii::app()->params['maxPublications']));
         $mostViewedPublications = PersistenceServer::connect('publication', 'GET', array('scope' => 'hits', 'limit' => Yii::app()->params['maxPublications']));
         $popularPublications = PersistenceServer::connect('publication', 'GET', array('scope' => 'popular', 'limit' => Yii::app()->params['maxPublications']));
         $lessViewedPublications = PersistenceServer::connect('publication', 'GET', array('scope' => 'lowHits', 'limit' => Yii::app()->params['maxPublications']));
         
         $renderParams = array(
+            'model' => $model,
             'recentPublications' => $recentPublications,
             'popularPublications' => $popularPublications,
             'mostViewedPublications' => $mostViewedPublications,

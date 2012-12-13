@@ -60,6 +60,7 @@ return array(
                 
                 '<action:(view)>/<id:\w+>' => 'publication/<action>/view/<id>',
                 '<action:(show)>/<image>' => 'publication/<action>/image/<image>',
+                '<action:(search)>/<search>' => 'publication/<action>/search/<search>',
                 
                 '<action:(login|logout)>' => 'user/<action>',
                 '<view:(about|privacy|terms)>' => 'ajax/loadView/view/<view>',

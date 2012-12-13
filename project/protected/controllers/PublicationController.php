@@ -17,6 +17,7 @@ class PublicationController extends Controller
 	return array(
 	    // Ações da Aplicação
             'assess' => 'application.controllers.publication.AssessAction',
+            'search' => 'application.controllers.publication.SearchAction',
             'send' => 'application.controllers.publication.SendAction',
             'share' => 'application.controllers.publication.ShareAction',
             'show' => 'application.controllers.publication.ShowAction',

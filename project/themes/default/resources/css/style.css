@@ -24,6 +24,17 @@ div.errorMessage {
     background-color: #ffffff;
 }
 
+#SearchForm_search {
+    width: 75%;
+}
+
+#searchButton {
+    background-image: url("../img/icon-search.png");
+    
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .channelStyle {
     background: #3a3a3a;
     color: #ffffff;

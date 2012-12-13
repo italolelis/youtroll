@@ -118,7 +118,7 @@ blockquote small { font-size: 12px; }
 
 .button.medium { font-size: 13px; }
 
-.button.large { font-size: 15px; }
+.button.large { font-size: 15px; padding: 11px 16px; }
 
 .button.no-bg {
     background: none;

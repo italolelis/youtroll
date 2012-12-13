@@ -15,6 +15,10 @@ textarea {
     display: inline;
 }
 
+.displayBlock {
+    display: block;
+}
+
 .floatLeft {
     float: left;
 }

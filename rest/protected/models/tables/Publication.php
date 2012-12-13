@@ -166,5 +166,14 @@ class Publication extends Table
         
         return $this;
     }
+    
+    public function getPublicationsBySearch($search) {
+        $this->getDbCriteria()->mergeWith(array(
+            'condition' => "pbct_title LIKE :pbct_title",
+            'params' => array(':pbct_title' => "%$search%"),
+        ));
+        
+        return $this;
+    }
        
 }
