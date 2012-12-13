@@ -12,9 +12,10 @@
     <div class="marginTop">
         <?php
         echo Yii::t('texts', 'terms_1_3.1', array(
-            '{privacy}' => CHtml::link(HApp::t('privacyTitle'), array('site/privacy'), array(
-                'id' => 'privacyLink',
-                'ajax' => HView::getAjaxMenuArrayConfig('privacy')
+            '{privacy}' => CHtml::link(HApp::t('privacyTitle'), Yii::app()->createAbsoluteUrl('privacy'),
+                HView::getAjaxRenderConfig('ajax', 'loadView', array('view' => 'privacy'), 'privacy', array(
+                    'id' => 'privacyLink',
+                )
             ))
         ));
         ?>

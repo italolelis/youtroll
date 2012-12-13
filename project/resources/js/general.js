@@ -1,3 +1,5 @@
+var url = window.location.href.substr(0, window.location.href.indexOf('project') + 7) + '/';
+
 $.fn.reset = function () {
     $(this).each (function() {
 	this.reset();

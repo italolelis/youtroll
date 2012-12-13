@@ -2,46 +2,15 @@
 
 class HView
 {
-
+    
     /**
-     * Esta função retorna um array para configurar o AJAX do Menu
+     * Esta função retorna a configuração para o evendo AJAX de clique nos links do site.
      */
-    public static function getAjaxMenuArrayConfig($view, $controller = null, $params = null, $showUrl = null)
+    public static function getAjaxRenderConfig($controller = '', $view = '', $params = 'undefined', $showUrl = 'undefined', $additionalOptions = array())
     {
-	return array(
-	    'url' => array("$controller/$view"),
-	    'type' => 'POST',
-	    'dataType' => 'html',
-	    'data' => $params,
-            'async' => false,
-	    'cache' => false,
-	    'beforeSend' => "function() {
-//		if($('#{$view}Nav').hasClass('current')) { return false; }
-		
-                showLoading('" . HApp::t('loading') . "');
-
-		$('#menu').children('li.current').removeClass('current');
-		$('#menu').children('li').children('ul').children('li').removeClass('current');
-		$('#{$view}Nav').addClass('current');
-		$('#{$view}Nav').parent().parent().addClass('current');
-                $('#messages').empty();
-	    }",
-	    'success' => "function(response) {
-                setTimeout(function() {
-		    removeLoading(function() {
-			$('#view').html(response).fadeIn(125);
-                        window.history.pushState('Object', 'Title', '" . Yii::app()->createAbsoluteUrl($showUrl ?: "$controller/$view") . "');
-		    });
-		}, 250);
-	    }",
-	    'error' => "function(error, b, c, d, e) {
-		setTimeout(function() {
-		    removeLoading(function() {
-			setAlertMessage(error.responseText, 'error', 'messages', true);
-		    });
-		}, 250);
-	    }",
-	);
+        return array_merge($additionalOptions, array(
+            'onClick' => "renderView('" . $controller . "', '" . $view . "', " . CJSON::encode($params) . " , " . $showUrl . ", '" . HApp::t('loading') . "'); return false;"
+        ));
     }
     
     /**
@@ -79,6 +48,9 @@ class HView
                             break;
                         case 'removeClass':
                             $('#' + response.activeButton).removeClass(response.class);
+                            break;
+                        case 'inputFocus':
+                            $('#' + response.input).focus();
                             break;
                         case 'reload':
                             location.reload();

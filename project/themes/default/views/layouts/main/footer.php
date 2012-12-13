@@ -8,20 +8,20 @@
                     'label' => HApp::t('home'),
                     'url' => array('site/index'),
                     'itemOptions' => array('id' => 'indexFooterNav'),
-                    'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('index', 'site')),
+                    'linkOptions' => HView::getAjaxRenderConfig('site', 'index'),
                 ),
                 array(
                     'label' => HApp::t('categories'),
                     'url' => array('category/list'),
                     'itemOptions' => array('id' => 'categoriesFooterNav'),
-                    'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('list', 'category')),
+                    'linkOptions' => HView::getAjaxRenderConfig('category', 'list'),
                     'visible' => false,
                 ),
                 array(
                     'label' => HApp::t('about'),
                     'url' => Yii::app()->createAbsoluteUrl('about'),
                     'itemOptions' => array('id' => 'aboutFooterNav'),
-                    'linkOptions' => array('ajax' => HView::getAjaxMenuArrayConfig('about')),
+                    'linkOptions' => HView::getAjaxRenderConfig('ajax', 'loadView', array('view' => 'about'), 'about'),
                 ),
             ),
         ));
