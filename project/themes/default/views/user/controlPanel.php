@@ -24,22 +24,22 @@
 
     <div class="tabs-container">
         <div class="tab-content" id="controlPanelTab1">
-            À Fazer...
+            <?= HApp::t('developing') ?>
         </div>
         <div class="tab-content displayNone" id="controlPanelTab2">
-            À Fazer...
+            <?= HApp::t('developing') ?>
         </div>
         <div class="tab-content displayNone" id="controlPanelTab3">
-            À Fazer...
+            <?= HApp::t('developing') ?>
         </div>
         <div class="tab-content displayNone" id="controlPanelTab4">
-            À Fazer...
+            <?= HApp::t('developing') ?>
         </div>
         <div class="tab-content displayNone" id="controlPanelTab5">
-            À Fazer...
+            <?= HApp::t('developing') ?>
         </div>
         <div class="tab-content displayNone" id="controlPanelTab6">
-            À Fazer...
+            <?= HApp::t('developing') ?>
         </div>
     </div>
 
