@@ -101,8 +101,11 @@
         <?= $form->labelEx($model, 'tags') ?>
         <?= $form->textField($model, 'tags') ?>
         <?= $form->error($model, 'tags') ?>
+        <ul class="arrow-2 dotted">
+            <li><?= HApp::t('tagsNote') ?></li>
+        </ul>
     </div>
-
+    
     <div>
         <?php
         echo CHtml::ajaxButton(HApp::t('sendPublicationButton'), array('form/sendPublication'),
