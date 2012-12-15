@@ -103,7 +103,7 @@
         <div><?= $publication->description ?></div>
         <div>
             <p class="marginTop"><strong><?= HApp::t('category') ?>:</strong></p>
-            <p><?= Category::getNameByID($publication->category) ?>:</p>
+            <p><?= Category::getNameByID($publication->category) ?>.</p>
             <p class="marginTop"><strong><?= HApp::t('license') ?>:</strong></p>
             <p><?= HApp::t('defaultLicense') ?></p>
         </div>
