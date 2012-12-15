@@ -14,6 +14,7 @@ class LoginAction extends CAction
             }
         
             $this->controller->render('login', array('model' => $model));
+            Yii::app()->end();
         }
         
         HApp::throwException(401);

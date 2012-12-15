@@ -12,7 +12,10 @@ class ControlPanelAction extends CAction
             }
         
             $this->controller->render('controlPanel');
+            Yii::app()->end();
         }
+        
+        HApp::throwException(401);
     }
 
 }

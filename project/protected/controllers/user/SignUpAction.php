@@ -14,6 +14,7 @@ class SignUpAction extends CAction
             }
         
             $this->controller->render('signUp', array('model' => $model));
+            Yii::app()->end();
         }
         
         HApp::throwException(401);
