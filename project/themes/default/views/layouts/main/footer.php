@@ -8,7 +8,7 @@
                     'label' => HApp::t('home'),
                     'url' => array('site/index'),
                     'itemOptions' => array('id' => 'indexFooterNav'),
-                    'linkOptions' => HView::getAjaxRenderConfig('site', 'index'),
+                    'linkOptions' => HView::getAjaxRenderConfig(),
                 ),
                 array(
                     'label' => HApp::t('categories'),
@@ -33,9 +33,9 @@
     </ul>
 
     <ul class="social-links floatRight">
-        <li class="twitter"><a href="#">Twitter</a></li>
-        <li class="facebook"><a href="#">Facebook</a></li>
-        <li class="googleplus"><a href="#">Google Plus</a></li>
-        <li class="rss"><a href="#">RSS</a></li>
+        <li class="twitter"><?= CHtml::link('Twitter', 'https://twitter.com/y_troll', array('target' => '_blank')) ?></li>
+        <li class="facebook"><?= CHtml::link('Facebook', 'https://www.facebook.com/pages/You-Troll/114115288756333', array('target' => '_blank')) ?></li>
+        <li class="googleplus"><?= CHtml::link('Google Plus', 'https://plus.google.com/110941706737458001266', array('target' => '_blank')) ?></li>
+        <li class="youtube"><?= CHtml::link('You Tube', 'http://www.youtube.com/YouTrollVideos', array('target' => '_blank')) ?></li>
     </ul>
 </div>
