@@ -14,11 +14,9 @@ class SiteController extends Controller
     public function actions()
     {
         return array(
-            'about' => 'application.controllers.site.AboutAction',
             'error' => 'application.controllers.site.ErrorAction',
+            'feed' => 'application.controllers.site.FeedAction',
             'index' => 'application.controllers.site.IndexAction',
-            'privacy' => 'application.controllers.site.PrivacyAction',
-            'terms' => 'application.controllers.site.TermsAction',
         );
     }
 

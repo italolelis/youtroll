@@ -37,5 +37,6 @@
         <li class="facebook"><?= CHtml::link('Facebook', 'https://www.facebook.com/pages/You-Troll/114115288756333', array('target' => '_blank')) ?></li>
         <li class="googleplus"><?= CHtml::link('Google Plus', 'https://plus.google.com/110941706737458001266', array('target' => '_blank')) ?></li>
         <li class="youtube"><?= CHtml::link('You Tube', 'http://www.youtube.com/YouTrollVideos', array('target' => '_blank')) ?></li>
+        <li class="rss"><?= CHtml::link('RSS', Yii::app()->createAbsoluteUrl('feed'), array('target' => '_blank')) ?></li>
     </ul>
 </div>

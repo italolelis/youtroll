@@ -11,6 +11,7 @@ return array(
     'allowedExtensions' => array('jpg', 'gif', 'png'),
     'maxSizeUpload' => 1048576, // 1MB
     'maxPublications' => 12,
+    'maxFeedPublications' => 50,
     'maxRelatedPublications' => 5,
     'maxSearchPublications' => 30,
     'maxCategoriesPublications' => 30,
