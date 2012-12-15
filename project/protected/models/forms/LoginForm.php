@@ -14,7 +14,7 @@ class LoginForm extends CFormModel
 	return array(
 	    array('email, password', 'required', 'message' => HApp::t('requiredField')),
 	    array('email', 'email', 'message' => HApp::t('emailInvalid')),
-            array('password', 'match', 'pattern' => '/^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*[\d])(?=\S*[\W])\S*$/', 'message' => HApp::t('passwordStrength')),
+            array('password', 'match', 'pattern' => Yii::app()->params['passwordStrength'], 'message' => HApp::t('passwordStrength')),
 	    array('email', 'length', 'min' => 5, 'max' => 50, 'tooShort' => HApp::t('tooShort'), 'tooLong' =>HApp::t('tooLong')),
 	    array('password', 'length', 'min' => 8, 'max' => 25, 'tooShort' => HApp::t('tooShort'), 'tooLong' => HApp::t('tooLong')),
             array('password', 'authenticate', 'message' => HApp::t('invalidAccess')),

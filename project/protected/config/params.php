@@ -15,6 +15,8 @@ return array(
     'maxSearchPublications' => 30,
     'maxCategoriesPublications' => 30,
     
+    'passwordStrength' => '/^(?=.*(\d|\W)).{8,}$/',
+    
     'defaultLanguage' => 'pt_br',
     'supportedLanguages' => array(
         'pt_br',
