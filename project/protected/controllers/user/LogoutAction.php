@@ -7,7 +7,7 @@ class LogoutAction extends CAction
     {
         Yii::app()->user->logout();
 
-        $this->controller->redirect(Yii::app()->baseUrl);
+        $this->controller->redirect(Yii::app()->getBaseUrl(true));
     }
 
 }
