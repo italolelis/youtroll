@@ -9,7 +9,7 @@ class HView
     public static function getAjaxRenderConfig($controller = '', $view = '', $params = 'undefined', $showUrl = 'undefined', $additionalOptions = array())
     {
         return array_merge($additionalOptions, array(
-            'onClick' => "renderView('" . $controller . "', '" . $view . "', " . CJSON::encode($params) . " , " . $showUrl . ", '" . HApp::t('loading') . "'); return false;"
+                'onClick' => "renderView('" . $controller . "', '" . $view . "', " . CJSON::encode($params) . ", '" . $showUrl . "', '" . HApp::t('loading') . "'); return false;"
         ));
     }
     
@@ -21,7 +21,7 @@ class HView
         $return = array(
             'type' => 'POST',
             'dataType' => 'json',
-            'async' => false,
+            'async' => true,
             'cache' => false,
             'beforeSend' => "function() {
                 clearErrorsMesages();

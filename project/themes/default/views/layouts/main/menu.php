@@ -4,6 +4,7 @@ foreach (Category::getNames() as $key => $category) {
     $categories[] = array(
         'label' => $category,
         'url' => array("category/$keyName"),
+        'itemOptions' => array('id' => "{$keyName}Nav"),
         'linkOptions' => HView::getAjaxRenderConfig('category', $keyName),
     );
 }
@@ -25,7 +26,7 @@ foreach (Category::getNames() as $key => $category) {
                 'label' => HApp::t('login'),
                 'url' => array('user/login'),
                 'itemOptions' => array('id' => 'loginNav'),
-                'linkOptions' => HView::getAjaxRenderConfig('user', 'login'),
+                'linkOptions' => HView::getAjaxRenderConfig('user', 'login', null, 'login'),
                 'visible' => Yii::app()->user->isGuest,
             ),
             array(
@@ -48,10 +49,9 @@ foreach (Category::getNames() as $key => $category) {
                     ),
                     array(
                         'label' => HApp::t('createPublication'),
-                        'url' => array('publication/create'),
+                        'url' => array('#'),
                         'itemOptions' => array('id' => 'createNav'),
-                        'linkOptions' => HView::getAjaxRenderConfig('publication', 'create'),
-                        'visible' => false,
+                        'linkOptions' => array('onClick' => 'return false;'),
                     ),
                     array(
                         'label' => HApp::t('sendPublication'),
@@ -59,23 +59,33 @@ foreach (Category::getNames() as $key => $category) {
                         'itemOptions' => array('id' => 'sendNav'),
                         'linkOptions' => HView::getAjaxRenderConfig('publication', 'send'),
                     ),
+                    array(
+                        'label' => HApp::t('linkPublication'),
+                        'url' => array('#'),
+                        'itemOptions' => array('id' => 'linkNav'),
+                        'linkOptions' => array('onClick' => 'return false;'),
+                        'visible' => false,
+                    ),
                 ),
                 'itemOptions' => array('id' => 'controlPanelNav'),
                 'linkOptions' => HView::getAjaxRenderConfig('user', 'controlPanel'),
                 'visible' => !Yii::app()->user->isGuest,
+                'active' => strpos(HApp::getCurrentUrl(), 'publication') !== false,
             ),
             array(
                 'label' => HApp::t('categories'),
                 'url' => '#',//array('category/list'),
                 'items' => $categories,
-                'itemOptions' => array('id' => 'categoriesNav', 'onClick' => 'return false;'),
+                'itemOptions' => array('id' => 'categoryNav', 'onClick' => 'return false;'),
 //                'linkOptions' => HView::getAjaxRenderConfig('categories', 'list'),
+                'active' => $this->route === 'category/view',
             ),
             array(
                 'label' => HApp::t('about'),
                 'url' => Yii::app()->createAbsoluteUrl('about'),
                 'itemOptions' => array('id' => 'aboutNav'),
                 'linkOptions' => HView::getAjaxRenderConfig('ajax', 'loadView', array('view' => 'about'), 'about'),
+                'active' => strpos(HApp::getCurrentUrl(), 'about') !== false,
             ),
             array(
                 'label' => HApp::t('logout'),

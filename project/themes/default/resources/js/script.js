@@ -27,24 +27,26 @@ function renderView(controller, view, params, showUrl, loadingMessage) {
         type: 'POST',
         dataType: 'html',
         data: params,
-        async: false,
+        async: true,
         cache: false,
         beforeSend: function() {
 //            if($('#{$view}Nav').hasClass('current')) { return false; }
 		
             showLoading(loadingMessage);
 
+            idNav = showUrl === 'undefined' ? (view === '' ? 'index' : view) : showUrl;
+
             $('#menu').children('li.current').removeClass('current');
             $('#menu').children('li').children('ul').children('li').removeClass('current');
-            $('#' + view + 'Nav').addClass('current');
-            $('#' + view + 'Nav').parent().parent().addClass('current');
+            $('#' + idNav + 'Nav').addClass('current');
+            $('#' + idNav + 'Nav').parent().parent().addClass('current');
             $('#messages').empty();
         },
         success: function(response) {
             setTimeout(function() {
                 removeLoading(function() {
                     $('#view').html(response).fadeIn(125);
-                    window.history.pushState('Object', 'Title', showUrl === undefined ? ajaxUrl  : url + showUrl);
+                    window.history.pushState('Object', 'Title', showUrl === 'undefined' ? ajaxUrl : url + showUrl);
                 });
             }, 250);
         },
