@@ -1,7 +1,7 @@
 <?= CHtml::metaTag('text/html; charset=UTF-8', null, 'Content-Type') ?>
 <?= CHtml::metaTag('author', 'author') ?>
 <?= CHtml::metaTag(Yii::app()->params['adminEmail'], 'reply-to') ?>
-<?= CHtml::metaTag(HApp::t('description'), 'description') ?>
+<?= CHtml::metaTag(HApp::t('siteDescription'), 'description') ?>
 <?= CHtml::metaTag(HApp::t('keywords'), 'keywords') ?>
 <?= CHtml::metaTag('NetBeans IDE 7.0.1', 'generator') ?>
 <?= CHtml::metaTag('index, follow', 'robots') ?>
