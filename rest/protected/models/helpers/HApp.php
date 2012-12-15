@@ -79,6 +79,9 @@ class HApp
 	HApp::throwException(500);
     }
 
+    /**
+     * Substituí a função apache_request_headers se a mesma não existir.
+     */
     public static function getHeaders() {
         if(function_exists('apache_request_headers')) {
             return apache_request_headers();
