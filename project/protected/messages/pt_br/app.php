@@ -5,7 +5,7 @@ return array(
     'name' => 'You Troll',
     'slogan' => 'Você, Trollando na Internet!',
     'author' => 'Grupo de Trolls da Faculdade Estácio - Fabiano, Ítalo, João e Rodolfo.',
-    'description' => 'You Troll - O melhor site de Tirinhas da Internet!',
+    'siteDescription' => 'You Troll - O melhor site de Trollagem da Internet!',
     'keywords' => 'imagens, engraçadas, tirinhas, memes, quadrinhos, trollagens, montagens',
     'powered' => '© 2012 You Troll - Todos os Direitos Reservados.',
     
@@ -29,8 +29,9 @@ return array(
     'channel' => 'Canal',
     'myChannel' => 'Meu Canal',
     'sendPublication' => 'Enviar Imagem',
-    'createPublication' => 'Criar Imagem',
     'controlPanel' => 'Painel de Controle',
+    'createPublication' => 'Criar Imagem - Em Breve!',
+    'linkPublication' => 'Vincular Imagem - Em Breve!',
     
     // Páginas Especiais - Visíveis apenas quando acessadas
     
@@ -64,6 +65,7 @@ return array(
     'searching' => 'Busca por: {search}',
     'popularPublications' => 'Populares',
     'accessAccount' => 'Acesse sua Conta',
+    'developing' => 'Em Desenvolvimento...',
     'fbShare' => 'Compartilhar no Facebook',
     'accountStats' => 'Estatísticas da Conta',
     'g+Share' => 'Compartilhar no Google Plus',
@@ -73,6 +75,7 @@ return array(
     'lessViewedPublications' => 'Menos Visualizadas',
     'defaultLicense' => 'Licença Padrão do YouTroll.',
     'nonePublication' => 'Nenhuma publicação encontrada.',
+    'tagsNote' => 'As TAGs devem ser separadas por "," vírgula.',
     'publicationDateWithName' => 'Publicado dia {date} por {name}.',
     'guest' => '<strong>{login}</strong> ou <strong>{signUp}</strong> agora!',
     'publicationStats' => "{likes} pessoas gostaram e {unlikes} não gostaram.",
@@ -118,7 +121,7 @@ return array(
     'tooMany' => 'Você pode enviar no máximo {maxFiles} arquivo(s).',
     'wrongType' => 'O tipo do arquivo enviado não é suportado. Os tipos permitidos são: {types}.',
     'invalidTags' => 'As TAGs devem ser separadas por "," e não devem conter caracteres especiais.',
-    'passwordStrength' => 'A senha deve ter 8 caracteres, letras (maiúsculas e minúsculas), números e caracteres especiais.',
+    'passwordStrength' => 'Sua senha deve conter letras e números e possuir ao menos 8 caracteres.',
     
     // Extensão EAjaxUpload
     'eauEmptyFile' => 'O arquivo está vazio.',
