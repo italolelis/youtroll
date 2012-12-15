@@ -15,7 +15,7 @@ class ShowAction extends CAction
         $imageFile = HView::getRealImageUrl($owner, $path);
         
         if(is_file($imageFile)) {
-            header('Content-type: ' . image_type_to_mime_type(exif_imagetype($imageFile))); 
+            header('Content-type: ' . image_type_to_mime_type(HApp::getImageType($imageFile))); 
             echo file_get_contents($imageFile);
             
             Yii::app()->end();

@@ -114,4 +114,17 @@ class HApp
 	HApp::throwException(500);
     }
 
+    /**
+     * Substituí a função exif_imagetype se a mesma não existir.
+     */
+    public static function getImageType($imageFile) {
+        if(function_exists('exif_imagetype')) {
+            return exif_imagetype($imageFile);
+        } else {
+            if ((list($width, $height, $type, $attr) = getimagesize($imageFile)) !== false) {
+                return $type;
+            }
+        }
+    }
+
 }
