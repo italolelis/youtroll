@@ -98,8 +98,7 @@ class PublicationController extends Controller {
 
         $this->model->setOutPrefix($this->model->getOutPrefix('hits') + 1, 'hits');
         $this->model->update();
-        
-        $this->model->setOutPrefix(date(HApp::t('dateTimeFormat'), strtotime($this->model->getOutPrefix('record'))), 'record');
+
         $this->model->setOutPrefix(date(HApp::t('dateTimeFormat'), strtotime($this->model->getOutPrefix('record'))), 'record');
         
         $likes = (int) $this->model->likes;
