@@ -25,6 +25,7 @@ class FeedAction extends CAction
         
         foreach ($recentPublications as $publication) {
             $owner = PersistenceServer::connect("user/{$publication->owner}", 'GET');
+            $imageFile = HView::getRealImageUrl($publication->owner, $publication->image_path);
             
             $item = $feed->createNewItem();
         
@@ -32,6 +33,7 @@ class FeedAction extends CAction
             $item->link = Yii::app()->createAbsoluteUrl('', array('view' => HSecurity::urlEncode($publication->id)));
             $item->date = $publication->record;
             $item->description = $publication->description;
+            $item->setEncloser(HView::getImageUrl($publication->owner, $publication->image_path), filesize($imageFile), image_type_to_mime_type(HApp::getImageType($imageFile)));
 
             if($owner->name) {
                 $item->addTag('author', $owner->name);
